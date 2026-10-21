@@ -1,0 +1,42 @@
+# Python environments and build artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Tool caches and reports
+.pytest_cache/
+.ruff_cache/
+.hypothesis/
+.cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.ipynb_checkpoints/
+
+# Generated checkouts are separate projects, not source for this checkout.
+/.codex/worktrees/
+
+# Generated research data and outputs (keep small test fixtures under tests/)
+/data/
+/artifacts/
+/checkpoints/
+out/
+outputs/
+logs/
+runs/
+wandb/
+
+# Local credentials and editor / OS files
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+*.swo
