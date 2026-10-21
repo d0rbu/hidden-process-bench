@@ -1,0 +1,118 @@
+"""A small decoder-only transformer and a counted access surface for extractors."""
+
+from __future__ import annotations
+
+from dataclasses import asdict, dataclass
+from pathlib import Path
+from typing import override
+
+import numpy as np
+import torch
+from torch import Tensor, nn
+from torch.nn import functional as F
+
+from hidden_process_bench.config import ModelConfig, check_count
+from hidden_process_bench.process import Floats, Tokens
+
+
+class Block(nn.Module):
+    def __init__(self, config: ModelConfig) -> None:
+        super().__init__()
+        self.heads = config.heads
+        self.norm1 = nn.LayerNorm(config.width)
+        self.qkv = nn.Linear(config.width, 3 * config.width)
+        self.attn_out = nn.Linear(config.width, config.width)
+        self.norm2 = nn.LayerNorm(config.width)
+        self.mlp = nn.Sequential(
+            nn.Linear(config.width, 4 * config.width),
+            nn.GELU(),
+            nn.Linear(4 * config.width, config.width),
+        )
+
+    @override
+    def forward(self, hidden: Tensor) -> Tensor:
+        batch, length, width = hidden.shape
+        qkv = self.qkv(self.norm1(hidden)).reshape(
+            batch, length, 3, self.heads, width // self.heads
+        )
+        q, k, v = qkv.permute(2, 0, 3, 1, 4).unbind(0)
+        attended = F.scaled_dot_product_attention(q, k, v, is_causal=True)
+        hidden = hidden + self.attn_out(attended.transpose(1, 2).reshape(batch, length, width))
+        return hidden + self.mlp(self.norm2(hidden))
+
+
+class TinyTransformer(nn.Module):
+    def __init__(self, config: ModelConfig) -> None:
+        super().__init__()
+        self.config = config
+        self.embedding = nn.Embedding(config.vocab + 1, config.width)
+        self.position = nn.Embedding(config.context, config.width)
+        self.blocks = nn.ModuleList([Block(config) for _ in range(config.layers)])
+        self.norm = nn.LayerNorm(config.width)
+        self.unembedding = nn.Linear(config.width, config.vocab, bias=False)
+
+    @override
+    def forward(self, inputs: Tensor) -> tuple[Tensor, Tensor]:
+        if inputs.ndim != 2 or not 1 <= inputs.shape[1] <= self.config.context:
+            raise ValueError("input must be a batch with 1..context tokens")
+        hidden = self.embedding(inputs) + self.position(
+            torch.arange(inputs.shape[1], device=inputs.device)
+        )
+        for block in self.blocks:
+            hidden = block(hidden)
+        residual = self.norm(hidden)
+        return self.unembedding(residual), residual
+
+    def save(self, path: Path) -> None:
+        torch.save({"architecture": asdict(self.config), "state_dict": self.state_dict()}, path)
+
+    @classmethod
+    def load(cls, path: Path) -> TinyTransformer:
+        payload = torch.load(path, map_location="cpu", weights_only=True)
+        model = cls(ModelConfig(**payload["architecture"]))
+        model.load_state_dict(payload["state_dict"])
+        model.eval()
+        return model
+
+
+def teacher_inputs(tokens: Tensor, vocab: int) -> Tensor:
+    """BOS predicts x_0; x_(t-1) predicts x_t. BOS is never an output class."""
+    return torch.cat((torch.full_like(tokens[:, :1], vocab), tokens[:, :-1]), dim=1)
+
+
+@dataclass(frozen=True)
+class Observations:
+    tokens: Tokens
+    probabilities: Floats
+    activations: Floats
+    forward_calls: int
+    token_queries: int
+    prefix_tokens_processed: int
+
+
+@torch.no_grad()
+def observe(model: TinyTransformer, count: int, length: int, seed: int) -> Observations:
+    check_count(count)
+    check_count(length)
+    if length > model.config.context:
+        raise ValueError("generation length exceeds model context")
+    model.eval()
+    rng = torch.Generator().manual_seed(seed)
+    inputs = torch.full((count, 1), model.config.vocab, dtype=torch.long)
+    tokens, probabilities, activations = [], [], []
+    for _ in range(length):
+        logits, residual = model(inputs)
+        probability = logits[:, -1].softmax(dim=-1)
+        token = torch.multinomial(probability, 1, generator=rng)
+        tokens.append(token)
+        probabilities.append(probability)
+        activations.append(residual[:, -1])
+        inputs = torch.cat((inputs, token), dim=1)
+    return Observations(
+        torch.cat(tokens, dim=1).numpy().astype(np.int64),
+        torch.stack(probabilities, dim=1).numpy().astype(np.float64),
+        torch.stack(activations, dim=1).numpy().astype(np.float64),
+        length,
+        count * length,
+        count * length * (length + 1) // 2,
+    )

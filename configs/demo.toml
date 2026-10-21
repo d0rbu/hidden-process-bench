@@ -1,0 +1,20 @@
+# All budgets are explicit. This is a single-seed prototype, not a benchmark study.
+seed = 7
+components = 4
+states = 3
+vocab = 16
+length = 24
+width = 48
+heads = 4
+layers = 2
+train_steps = 1200
+batch_size = 64
+learning_rate = 0.003
+eval_every = 100
+eval_sequences = 256
+max_kl = 0.03
+extraction_sequences = 128
+extraction_steps = 250
+restarts = 2
+activation_weight = 0.1
+threads = 2
