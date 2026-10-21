@@ -6,6 +6,14 @@ This prototype was motivated by a discussion of training on four HMMs and extrac
 them from a transformer. It is a new small implementation, not a reproduction of any
 one paper, and does not claim this research direction is novel.
 
+- [Verwer, Eyraud, and de la Higuera, *Results of the PAutomaC Probabilistic Automaton Learning Competition*](https://proceedings.mlr.press/v21/verwer12a.html)
+  motivates controlled sampling and difficulty selection. Its generated tasks varied
+  state/alphabet size and sparsity; a 3-gram baseline informed selection. Our componentwise
+  exact entropy filters are an adaptation, with different thresholds and a different family.
+- [Kiefer et al., *Language Equivalence for Probabilistic Automata*](https://people.mpi-sws.org/~joel/publications/langeqprobaut11.pdf)
+  describes linear-algebraic equivalence checks, including orthogonal-basis variants of
+  Tzeng's algorithm and numerical stability concerns. This motivates our small deterministic
+  reachable-space diagnostic. Our floating-point result is not an exact equivalence proof.
 - [Shai et al., *Transformers represent belief state geometry in their residual stream*](https://arxiv.org/abs/2405.15943)
   studies how HMM belief states appear in transformer representations. This motivates
   the supervised belief diagnostic and the activation-assisted objective here.

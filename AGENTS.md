@@ -38,6 +38,10 @@ processes from trained transformers. Keep the implementation small and explicit.
   identifiability for arbitrary generators or a causal mechanism from a linear probe.
 - The activation baseline is not a static weights-only extractor.
 - Record config, source/checkpoint hashes, actual steps, and incomplete/failed runs honestly.
+- Screen candidate tasks before training, retain all rejected candidates, and never select
+  generators using extraction scores. Numerical equivalence is not an exact certificate.
+- Separate raw state count from observable complexity. Scaling summaries must retain
+  unqualified checkpoints, errors, and timeouts; fixed-order fitting does not test minimality bias.
 - Defaults use two PyTorch CPU threads and bounded steps. Broader training and provider rentals
   need a concrete research reason and must follow the user's shared spending policy.
 

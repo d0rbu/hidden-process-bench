@@ -3,7 +3,9 @@
 [Documentation](../README.md) · [Design](../research/design.md) · [Artifacts](../reference/artifacts.md)
 
 1. Write the question, information tier, equivalence relation, and success criterion.
-   Select generator/model dimensions and budgets before reading evaluation scores.
+   Select generator/model dimensions, sampling filters, and budgets before reading scores.
+   The first acceptable generator is chosen without training or extraction feedback;
+   preserve the entire sampling audit and stop on exhaustion.
 2. Run a smoke test. Verify oracle timing, causal masking, serialization, and independent
    RNG streams. A smoke checkpoint is not a qualified benchmark.
 3. Train with a bounded config. Use stopping validation, then evaluate a distinct final
@@ -19,3 +21,7 @@
 7. Only generalize after a frozen development/evaluation split and multiple independent
    generators/model seeds. Use causal tests before interpreting a decodable feature as
    a mechanism. Public seed-7 demo results are not a blind evaluation.
+
+Use the [scaling protocol](../research/scaling.md) to cross process complexity with model
+capacity and query budget. Count all planned cases, and distinguish nominal state count
+from complexity invariant under equivalent state splitting.

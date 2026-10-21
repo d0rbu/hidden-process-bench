@@ -7,12 +7,14 @@ HMM math, transformer execution, extraction, and evaluation have separate owners
 
 ```mermaid
 flowchart LR
+  G[Candidate generator] --> Q[Exact difficulty screen]
+  Q --> T
   T[Evaluator-only HMMs] --> D[Training sequences]
   D --> M[Transformer checkpoint]
   M --> O[Counted model observations]
   O --> E[Recovery methods]
   E --> C[Candidate HMM JSON]
-  T --> S[Permutation and predictive scoring]
+  T --> S[Parameter, predictive and equivalence scoring]
   C --> S
 ```
 
@@ -22,6 +24,11 @@ accepts only a known shape and permitted observations. It does not import or rec
 true task parameters, latent labels, or evaluator feedback. `metrics.py` owns alignment,
 KL, qualification, rank diagnostics, and supervised probe evaluation. `experiment.py`
 connects these pieces and owns split seeds and artifacts.
+
+`sampling.py` screens processes and records every rejection before any training.
+`equivalence.py` owns the word-probability comparison and separate complexity measures.
+`scaling.py` expands frozen grids and launches one bounded subprocess per case, retaining
+failed and unqualified cases. Extractors never receive the private sampling audit.
 
 Public checkpoint payloads contain architecture metadata and tensor weights only.
 The private run config contains the generating seed; keep it with the evaluator.

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import math
 import tomllib
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 from pathlib import Path
 
 from phantom import Phantom
@@ -25,6 +25,30 @@ def check_count(value: int) -> PositiveCount:
 def check_positive(value: float) -> None:
     if isinstance(value, bool) or not math.isfinite(value) or value <= 0:
         raise ValueError("expected a finite positive number")
+
+
+def check_probability(value: float) -> None:
+    if isinstance(value, bool) or not math.isfinite(value) or not 0 <= value <= 1:
+        raise ValueError("expected a finite probability between zero and one")
+
+
+@dataclass(frozen=True)
+class SamplingConfig:
+    extra_edge_probability: float = 0.5
+    emission_concentration: float = 0.4
+    min_state_mass: float = 0.05
+    min_unigram_gain: float = 0.02
+    min_trigram_gain: float = 0.001
+    max_attempts: int = 128
+
+    def __post_init__(self) -> None:
+        check_probability(self.extra_edge_probability)
+        check_probability(self.min_state_mass)
+        check_positive(self.emission_concentration)
+        check_count(self.max_attempts)
+        for value in (self.min_unigram_gain, self.min_trigram_gain):
+            if isinstance(value, bool) or not math.isfinite(value) or value < 0:
+                raise ValueError("sampling gains must be finite and nonnegative")
 
 
 @dataclass(frozen=True)
@@ -68,7 +92,7 @@ class RunConfig:
     width: int = 48
     heads: int = 4
     layers: int = 2
-    train_steps: int = 1200
+    train_steps: int = 2000
     batch_size: int = 64
     learning_rate: float = 0.003
     eval_every: int = 100
@@ -79,6 +103,7 @@ class RunConfig:
     restarts: int = 2
     activation_weight: float = 0.1
     threads: int = 2
+    sampling: SamplingConfig = field(default_factory=SamplingConfig)
 
     def __post_init__(self) -> None:
         self.shape()
@@ -101,6 +126,8 @@ class RunConfig:
             check_positive(value)
         if self.eval_sequences < 2 * self.components:
             raise ValueError("evaluation needs at least two sequences per component")
+        if self.length < 4:
+            raise ValueError("sampling screen requires at least four tokens per sequence")
 
     def shape(self) -> Shape:
         return Shape(self.components, self.states, self.vocab)
@@ -111,4 +138,6 @@ class RunConfig:
     @classmethod
     def load(cls, path: Path) -> RunConfig:
         with path.open("rb") as stream:
-            return cls(**tomllib.load(stream))
+            values = tomllib.load(stream)
+        sampling = SamplingConfig(**values.pop("sampling", {}))
+        return cls(**values, sampling=sampling)

@@ -25,20 +25,22 @@ only two steps and reports `benchmark_eligible: false`. For a bounded CPU experi
 uv run --locked hidden-process-bench run --config configs/demo.toml --out outputs/demo
 ```
 
-The demo uses two PyTorch CPU threads, at most 1,200 training steps, and two restarts of 250
+The demo uses two PyTorch CPU threads, at most 2,000 training steps, and two restarts of 250
 optimization steps per recovery method. Results go to `outputs/demo/report.json`.
 Existing output directories are never overwritten. Add `--require-qualified` to return
 exit code 2 if the checkpoint misses the Bayesian prediction threshold; the report is
 still saved. The locked environment uses CPU PyTorch on Linux and Windows.
 
-A [recorded CPU example](docs/results/cpu-demo.md) passed the preset prediction gate
-at 1,100 steps, with held-out KL of 0.0196 nats/token. It includes a comparison of all
-three recovery methods and full source/software provenance; it is a single development task.
+The [initial CPU example](docs/results/cpu-demo.md) is retained as a historical receipt.
+It predates the difficulty screen; the current sampler selects a different task.
 
 ## What is implemented
 
 - Four stationary, node-emitting HMMs with a shared vocabulary; one unknown component
   generates each sequence. The default has 3 states per component and 16 output tokens.
+- PAutomaC-inspired sampling: configurable sparsity and emission concentration, followed
+  by exact per-component unigram/trigram difficulty checks and state-occupancy checks.
+  Rejected candidates are recorded; selection never uses transformer or recovery scores.
 - An exact Bayesian filter over **both component identity and hidden state**.
 - A small causal transformer trained on fresh sampled sequences by next-token loss.
   Validation selects when to stop; a separate test set determines qualification.
@@ -53,6 +55,8 @@ three recovery methods and full source/software provenance; it is a single devel
 - Exact component/state permutation alignment, parameter MAE, transition-support F1,
   and held-out predictive KL. Forward calls, token queries, processed prefix tokens,
   optimizer steps, parameter counts, and fitting times are recorded.
+- Numerical equivalence checks with distinguishing strings, equivalent state-splitting
+  controls, and separate representation-size and observable-complexity diagnostics.
 - Belief-state probes with independent fit/test sequences, explicitly labeled as
   **supervised diagnostics**, separate from unsupervised extraction.
 - Saved checkpoints, recovered HMM JSON, evaluator-only truth, source hashes, seeds,
@@ -80,6 +84,24 @@ For an independent extractor, produce the HMM JSON described in the
 [artifact contract](docs/reference/artifacts.md). Never give the extractor `private/`.
 The public demo seed is intentionally reproducible; use unseen, evaluator-only seeds
 for a real challenge. The directories are an organizational boundary, not a sandbox.
+
+## Scaling experiments
+
+The four-run CPU pilot crosses 3/6 states per HMM with transformer widths 32/64,
+holding vocabulary and budgets fixed. A 24-run grid also varies query budgets and seeds.
+
+```bash
+uv run --locked hidden-process-bench sweep --config configs/scaling.toml --dry-run
+uv run --locked hidden-process-bench sweep \
+  --config configs/scaling-pilot.toml --out outputs/scaling-pilot --timeout 300
+```
+
+Each run has a time limit. JSONL/CSV summaries retain qualified, unqualified, failed,
+and timed-out runs. See the [scaling protocol](docs/research/scaling.md) for hypotheses
+and limits. Larger raw automata need not define more complex observable processes;
+equivalent state splitting is a control for that distinction. The baseline extractors
+have a disclosed model order, so this prototype does not establish a transformer bias
+toward minimal automata or fit a scaling law.
 
 ## Development
 

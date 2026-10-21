@@ -4,8 +4,8 @@ model_seed = 8
 observation_seed = 27
 recovery_seed = 37
 components = 4
-states = 2
-vocab = 8
+states = 3
+vocab = 16
 length = 6
 width = 16
 heads = 2
@@ -21,3 +21,11 @@ extraction_steps = 2
 restarts = 1
 activation_weight = 0.1
 threads = 2
+
+[sampling]
+extra_edge_probability = 0.5
+emission_concentration = 0.4
+min_state_mass = 0.05
+min_unigram_gain = 0.02
+min_trigram_gain = 0.001
+max_attempts = 128

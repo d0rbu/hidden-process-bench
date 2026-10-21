@@ -1,0 +1,10 @@
+# 24 paired CPU runs; inspect with --dry-run before executing.
+# All variants of a given process shape/seed use the same selected hidden process.
+base = "demo.toml"
+
+[grid]
+states = [3, 4, 6]
+vocab = [24]
+width = [32, 64]
+extraction_sequences = [64, 256]
+seed = [7, 19]

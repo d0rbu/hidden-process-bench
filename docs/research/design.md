@@ -34,8 +34,8 @@ The oracle normalizes every step in float64. Its output has L+1 positions for a 
 of length L; training/scoring uses the first L. Tests compare this recursion with
 independent enumeration over all hidden paths for small examples.
 
-Each random component has a self-loop and a directed cycle, plus randomly retained
-edges. Mixing its transition matrix with 0.55 times the identity makes it strictly
+Each random component has a self-loop and a directed cycle, plus optional edges with
+configurable retention probability (default 0.5). Mixing its transition matrix with 0.55 times the identity makes it strictly
 diagonally dominant and full rank. Its initial state is the stationary distribution.
 Emissions are Dirichlet(0.4) draws with a 2% uniform floor. Mixture weights are uniform.
 
@@ -46,12 +46,51 @@ family to population identifiability results; this is a mathematical design argu
 not a finite-data success guarantee. With a smaller vocabulary the same sufficient
 rank condition may fail. Always inspect the diagnostics.
 
+## Sampling informative tasks
+
+[PAutomaC](https://proceedings.mlr.press/v21/verwer12a.html) varied graph and symbol
+sparsity, drew weights from Dirichlet distributions, and used a 3-gram baseline when
+selecting tasks with varied difficulty. This motivates explicit structural controls
+and a pre-training screen here. Our stationary, fixed-length mixture family and exact
+entropy thresholds are new prototype choices, not a reproduction of its generator.
+
+For each component c, enumerate all token histories of length d = 0, 1, 2, 3, marginalize
+hidden paths, and compute H_d(c) = H(X_t | X_(t-d:t), C=c), in nats/token. Stationarity
+makes H_0 - H_3 the best unigram's excess cross entropy over the three-token-history
+oracle. H_2 - H_3 is the corresponding excess for the best trigram predictor, whose
+history has two tokens. These are lower bounds on the benefit available to a longer
+history. They do not depend on a fitted n-gram, Monte Carlo noise, or test sequences.
+
+The default `[sampling]` table requires **every component** to have:
+
+- Minimum stationary state mass at least 0.05, avoiding rarely visited nominal states.
+- H_0 - H_3 at least 0.02 nats/token, excluding nearly IID components.
+- H_2 - H_3 at least 0.001 nats/token, requiring some benefit beyond two-token memory.
+
+Conditioning on component identity prevents a mixture of IID distributions from passing
+merely because the history reveals its component. A fully observed first-order Markov
+chain also fails the third check. Tests cover both controls and compare the entropy
+calculation against independent hidden-path enumeration.
+
+The first acceptable candidate is selected, with at most 128 attempts. The first uses
+`seed`; subsequent seeds come from `SeedSequence(seed, spawn_key=(attempt_index,))`.
+Every candidate's seed, metrics, and rejection reasons are flushed to evaluator-only
+`private/sampling.jsonl`, including on exhaustion. No training occurs after exhaustion.
+The exact enumeration is bounded to four million component/token strings.
+
+These are declared development filters, not a guarantee of difficult extraction. In
+particular, a positive trigram gap does not prove a trigram fails the separate 0.03
+checkpoint criterion. Broader studies should freeze difficulty strata and report
+acceptance rates, entropy profiles, actual edge density, and all checkpoint failures.
+The thresholds, sparsity, and Dirichlet concentration must not be tuned to obtain a
+desired extraction result. Setting gain thresholds to zero permits explicit IID controls.
+
 ## Training and checkpoint qualification
 
 A two-layer, width-48 causal transformer trains on fresh samples with standard next-token
 cross entropy. No oracle probabilities or latent labels are used as training targets.
 There is no dropout. AdamW uses learning rate 0.003, weight decay 0.01, and gradient-norm
-clipping at 1.0. The [demo config](../../configs/demo.toml) bounds training at 1,200 steps.
+clipping at 1.0. The [demo config](../../configs/demo.toml) bounds training at 2,000 steps.
 
 For each independent evaluation sequence, average KL(p_oracle || p_model) across
 positions, in nats/token. Report the mean, sequence-level standard error, and mean +
@@ -75,7 +114,7 @@ use the offsets below:
 
 | Use | Seed |
 |---|---|
-| Generator | `seed` |
+| Generator candidate stream | `seed`, then spawned candidate seeds; all evaluator-only |
 | Transformer initialization | `model_seed` |
 | Training samples | `seed + 10` |
 | Stopping validation | `seed + 11` |
@@ -121,7 +160,28 @@ Parameter scoring enumerates state permutations within every candidate/reference
 component pair, then component permutations. It minimizes the mean of four equally
 weighted MAEs: mixture weights, initial distributions, transitions, and emissions.
 Each matrix entry has equal weight within its field. The report retains all four errors
-and the chosen permutations. Counts must match; unknown-order recovery is not scored.
+and the chosen permutations. Parameter errors require matching counts; the baseline
+extractors do not search over model order.
+
+Predictive comparison remains meaningful across different state/component counts.
+The standalone scorer accepts such candidates and returns `parameters: null`; it still
+reports predictive KL, numerical equivalence, and both complexity profiles.
+
+`equivalence.py` views an HMM as a weighted automaton with symbol operators
+M_v = blockdiag(diag(E_c[:, v]) A_c). A reachable-space search compares all finite-word
+probabilities in exact arithmetic, pruning linearly dependent rows. The implementation
+uses float64, two orthogonalization passes, and tolerance 1e-10. A detected difference
+includes a token-string witness and both probabilities. `numerically_equivalent` is
+a numerical diagnostic, not an exact certificate or a uniform approximate-distance bound.
+Ill-conditioned or rare differences can be missed; predictive KL remains a separate score.
+
+`split_states(hmm, copies=2)` creates equivalent controls by copying emission rows and
+dividing incoming transition and initial mass among copies. This changes nominal state
+count without changing the output process. `short_hankel_rank` measures the numerical
+rank of P(prefix + suffix) for empty/one-token prefixes and suffixes; it is an observable
+linear-complexity lower bound, not a general solver for minimum HMM order. Reports also
+include raw state counts, edge counts, dense-family parameter degrees of freedom, and
+effective initial joint-state count. See the [scaling protocol](scaling.md).
 
 Transition-support F1 treats a true positive edge as probability > 0 and a predicted
 edge as probability >= 0.05 after alignment. This arbitrary, declared threshold is an

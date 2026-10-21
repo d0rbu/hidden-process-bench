@@ -11,7 +11,7 @@ from beartype import beartype
 from jaxtyping import Float64, jaxtyped
 from numpy.typing import NDArray
 
-from hidden_process_bench.config import Shape, check_count
+from hidden_process_bench.config import Shape, check_count, check_positive, check_probability
 
 type Floats = NDArray[np.float64]
 type Tokens = NDArray[np.int64]
@@ -123,12 +123,20 @@ def _categorical(rng: np.random.Generator, probabilities: Floats) -> Tokens:
     return (rng.random((len(probabilities), 1)) >= cumulative).sum(axis=-1).astype(np.int64)
 
 
-def random_mixture(shape: Shape, seed: int) -> MixtureHMM:
+def random_mixture(
+    shape: Shape,
+    seed: int,
+    *,
+    extra_edge_probability: float = 0.5,
+    emission_concentration: float = 0.4,
+) -> MixtureHMM:
     """Stationary components with full-rank transitions and shared token vocabulary."""
+    check_probability(extra_edge_probability)
+    check_positive(emission_concentration)
     rng = np.random.default_rng(seed)
     k, s, v = shape.components, shape.states, shape.vocab
     transition = rng.dirichlet(np.ones(s), size=(k, s))
-    mask = rng.random((k, s, s)) > 0.5
+    mask = rng.random((k, s, s)) >= 1 - extra_edge_probability
     index = np.arange(s)
     mask[:, index, index] = True
     mask[:, index, (index + 1) % s] = True
@@ -141,5 +149,5 @@ def random_mixture(shape: Shape, seed: int) -> MixtureHMM:
             for matrix in transition
         ]
     )
-    emission = 0.98 * rng.dirichlet(np.full(v, 0.4), size=(k, s)) + 0.02 / v
+    emission = 0.98 * rng.dirichlet(np.full(v, emission_concentration), size=(k, s)) + 0.02 / v
     return MixtureHMM(np.full(k, 1.0 / k), initial, transition, emission)

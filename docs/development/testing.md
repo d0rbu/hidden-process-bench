@@ -11,6 +11,10 @@ causal masking and BOS alignment, differentiable filtering against NumPy and fin
 differences, permutation-invariant scoring, a nonidentifiable negative control,
 recovery of known simple distributions, checkpoint/public artifact and seed boundaries, and
 real end-to-end CLI runs. The inherited template contract and Markdown tests remain.
+Sampling entropies are checked against hidden-path enumeration. IID mixtures and fully
+observed Markov chains test the difficulty screen; state splitting and temporal witnesses
+test equivalence. Sweep tests exercise a real child process and timeout, crash, malformed
+receipt, missing-report, and qualification-status paths.
 
 Tests use two CPU threads, no network, no paid providers, and no GPUs. The measured
 coverage source is `hidden_process_bench` plus repository `scripts`, not test code.

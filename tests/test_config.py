@@ -20,6 +20,8 @@ def test_cross_field_constraints() -> None:
         Shape(1, 7, 8)
     with pytest.raises(ValueError, match="two sequences"):
         RunConfig(eval_sequences=4)
+    with pytest.raises(ValueError, match="four tokens"):
+        RunConfig(length=3)
 
 
 @pytest.mark.parametrize("seed", [-1, True, 0.5])
@@ -36,11 +38,15 @@ def test_rejects_invalid_hyperparameters(value: float) -> None:
 
 def test_toml_config_roundtrip_and_unknown_keys(tmp_path: Path) -> None:
     path = tmp_path / "config.toml"
-    path.write_text("seed = 19\nwidth = 32\n")
+    path.write_text("seed = 19\nwidth = 32\n[sampling]\nextra_edge_probability = 0.2\n")
     config = RunConfig.load(path)
     assert config.seed == 19
     assert config.model().width == 32
     assert config.shape() == Shape()
+    assert config.sampling.extra_edge_probability == 0.2
     path.write_text("typo = 3\n")
+    with pytest.raises(TypeError, match="typo"):
+        RunConfig.load(path)
+    path.write_text("[sampling]\ntypo = 3\n")
     with pytest.raises(TypeError, match="typo"):
         RunConfig.load(path)

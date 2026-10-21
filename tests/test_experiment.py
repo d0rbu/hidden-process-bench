@@ -9,7 +9,7 @@ import pytest
 import torch
 
 from hidden_process_bench.cli import main
-from hidden_process_bench.config import RunConfig, Shape
+from hidden_process_bench.config import RunConfig, SamplingConfig
 from hidden_process_bench.experiment import extract_checkpoint, predictions, run, score, train
 from hidden_process_bench.metrics import sequence_kl
 from hidden_process_bench.model import TinyTransformer, observe
@@ -47,8 +47,33 @@ def test_smoke_records_unqualified_results_and_complete_provenance(smoke_run: Pa
     }
     assert not (smoke_run / "public/truth.json").exists()
     assert not (smoke_run / "public/config.json").exists()
+    assert not (smoke_run / "public/sampling.jsonl").exists()
+    sampling = [
+        json.loads(line) for line in (smoke_run / "private/sampling.jsonl").read_text().splitlines()
+    ]
+    assert report["sampling"]["attempts"] == len(sampling)
+    assert report["sampling"]["difficulty"] == sampling[-1]["difficulty"]
     with pytest.raises(FileExistsError):
         run(RunConfig.load(Path("configs/smoke.toml")), smoke_run)
+
+
+def test_sampling_failure_prevents_training_and_retains_audit(tmp_path: Path) -> None:
+    output = tmp_path / "exhausted"
+    config = replace(
+        RunConfig.load(Path("configs/smoke.toml")),
+        sampling=SamplingConfig(max_attempts=1, min_unigram_gain=100),
+    )
+    with (
+        patch("hidden_process_bench.experiment.train") as training,
+        pytest.raises(ValueError, match="sampling exhausted"),
+    ):
+        run(config, output)
+    training.assert_not_called()
+    assert (output / "private/config.json").exists()
+    assert (output / "private/provenance.json").exists()
+    assert len((output / "private/sampling.jsonl").read_text().splitlines()) == 1
+    assert not (output / "public/checkpoint.pt").exists()
+    assert not (output / "report.json").exists()
 
 
 def test_standalone_extraction_and_scoring_need_no_training_data(
@@ -68,7 +93,7 @@ def test_standalone_extraction_and_scoring_need_no_training_data(
     truth = MixtureHMM.load(smoke_run / "private/truth.json")
     candidate = MixtureHMM.load(tmp_path / "candidate.json")
     metrics = score(truth, candidate, 16, 6, 102)
-    assert set(metrics) == {"parameters", "predictive"}
+    assert set(metrics) == {"parameters", "predictive", "equivalence", "complexity"}
     assert candidate.shape == truth.shape
     with pytest.raises(FileExistsError, match="overwrite"):
         extract_checkpoint(
@@ -139,7 +164,7 @@ def test_training_learns_a_known_distribution_and_stops_on_validation(tmp_path: 
 
 def test_train_handles_eval_interval_larger_than_budget(tmp_path: Path) -> None:
     config = replace(RunConfig.load(Path("configs/smoke.toml")), eval_every=10)
-    _, trace = train(config, random_mixture(Shape(4, 2, 8), 7), tmp_path / "trace.jsonl")
+    _, trace = train(config, random_mixture(config.shape(), 7), tmp_path / "trace.jsonl")
     assert [row["step"] for row in trace] == [2]
 
 

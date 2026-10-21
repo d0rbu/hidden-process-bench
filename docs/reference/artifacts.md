@@ -17,6 +17,7 @@ run/
     truth.json             true HMM, evaluator only
     config.json            all seeds/settings, evaluator only
     provenance.json        source hashes, revision/dirty flag, software, CPU threads
+    sampling.jsonl         every candidate seed, entropy/occupancy metrics, rejection reasons
     training.jsonl         stopping-validation trace, evaluator only
   recovered/
     samples.json
@@ -40,6 +41,19 @@ Keep the entire `private/` directory away from extractors. Public demo seeds are
 by design, so those tasks are not a blind challenge. `report.json` contains scorer feedback
 and supervised probe diagnostics; publish it only after fixing candidate submissions.
 No filesystem isolation is enforced by the prototype.
+
+The sampling audit exists even if every candidate is rejected, in which case no
+checkpoint or final report is produced. The successful report includes accepted-task
+difficulty, process complexity, actual transformer parameter count, and numerical
+equivalence diagnostics for recovered candidates. A distinguishing word contains output
+token IDs; an equivalence tolerance is a numerical diagnostic, not an all-string error bound.
+
+For `sweep`, the root `private/plan.json` records every resolved configuration before
+work starts. Per-case TOML files and child logs also stay in `private/`. Each `case-NNN/`
+contains the regular run layout above. `cases.jsonl` records each completed case immediately;
+`cases.csv` and `summary.json` collect statuses and metrics after the sweep completes.
+Seeds and evaluator feedback appear in these aggregates: they are post-evaluation receipts,
+not extractor inputs. Preserve partial runs on interruption or timeout.
 
 ## Candidate HMM JSON, version 1
 
@@ -66,6 +80,8 @@ All values must be finite and nonnegative; the final axis of every array sums to
 The process emits from the current state, then transitions. Component identity never
 changes within a sequence. The fixed-shape scorer requires matching K/S/V and supports
 at most six states and six components for exact permutation enumeration.
+Standalone predictive/equivalence scoring accepts different component/state counts
+within that supported size range and returns `parameters: null` when counts differ.
 
 The NumPy oracle rejects zero-probability histories explicitly. KL assigns infinite
 penalty to zero candidate probability where the reference has mass; summaries encode

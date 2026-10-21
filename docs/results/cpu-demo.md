@@ -2,6 +2,11 @@
 
 [Documentation](../README.md) · [Research design](../research/design.md)
 
+**Historical, unscreened task.** This receipt predates the PAutomaC-inspired sampling
+screen. Its first component fails the new minimum occupancy and unigram-gain checks.
+The current default therefore selects another process. These numbers are retained as
+development history and must not be attributed to the current screened generator.
+
 A single development task run on 2026-10-21 UTC, from a clean source tree at
 [`f8c2bfd`](https://github.com/d0rbu/hidden-process-bench/commit/f8c2bfd9aaf11cba89e588fbaec7fd1a6b1b2836).
 The [raw report](cpu-demo.json) and [source/software provenance](cpu-demo-provenance.json)
@@ -9,6 +14,9 @@ are copied unchanged from that run. Source hashes were checked against the commi
 This is a public, known-seed example, not a held-out benchmark study.
 
 ## Reproduce
+
+Use a separate checkout of the source revision linked above; the current `demo.toml`
+and sampler have changed. The command below applies to that historical checkout.
 
 ```bash
 uv sync --locked

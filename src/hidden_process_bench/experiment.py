@@ -15,6 +15,7 @@ import torch
 from torch.nn import functional as F
 
 from hidden_process_bench.config import RunConfig, Shape
+from hidden_process_bench.equivalence import compare_processes, process_complexity
 from hidden_process_bench.metrics import (
     Optimality,
     identifiability_diagnostics,
@@ -25,8 +26,9 @@ from hidden_process_bench.metrics import (
     summarize,
 )
 from hidden_process_bench.model import TinyTransformer, observe, teacher_inputs
-from hidden_process_bench.process import MixtureHMM, Tokens, random_mixture
+from hidden_process_bench.process import MixtureHMM, Tokens
 from hidden_process_bench.recovery import fit_hmm
+from hidden_process_bench.sampling import sample_task
 
 
 class TrainRecord(TypedDict):
@@ -117,7 +119,14 @@ def score(
 ) -> dict[str, object]:
     tokens, _ = truth.sample(np.random.default_rng(seed), count, length)
     return {
-        "parameters": parameter_recovery(truth, candidate),
+        "parameters": parameter_recovery(truth, candidate)
+        if truth.shape == candidate.shape
+        else None,
+        "equivalence": asdict(compare_processes(truth, candidate)),
+        "complexity": {
+            "reference": process_complexity(truth),
+            "candidate": process_complexity(candidate),
+        },
         "predictive": summarize(
             sequence_kl(
                 truth.filter(tokens).predictions[:, :-1],
@@ -174,6 +183,7 @@ def extract_checkpoint(
 
 
 def run(config: RunConfig, output: Path) -> dict[str, object]:
+    started = perf_counter()
     torch.set_num_threads(config.threads)
     output.mkdir(parents=True, exist_ok=False)
     public, private, recovered = output / "public", output / "private", output / "recovered"
@@ -181,12 +191,14 @@ def run(config: RunConfig, output: Path) -> dict[str, object]:
         path.mkdir()
     write_json(private / "config.json", asdict(config))
     write_json(private / "provenance.json", provenance())
-    truth = random_mixture(config.shape(), config.seed)
+    truth, difficulty, sampling_attempts = sample_task(
+        config.shape(), config.seed, config.sampling, private / "sampling.jsonl"
+    )
     truth.save(private / "truth.json")
     write_json(public / "task.json", {"schema_version": 1, "shape": asdict(config.shape())})
-    started = perf_counter()
+    training_started = perf_counter()
     model, trace = train(config, truth, private / "training.jsonl")
-    training_seconds = perf_counter() - started
+    training_seconds = perf_counter() - training_started
     model.save(public / "checkpoint.pt")
     test, components = truth.sample(
         np.random.default_rng(config.seed + 12), config.eval_sequences, config.length
@@ -219,6 +231,7 @@ def run(config: RunConfig, output: Path) -> dict[str, object]:
         result.hmm.save(recovered / f"{method}.json")
         results[method] = {
             "parameters": parameter_recovery(truth, result.hmm),
+            "equivalence": asdict(compare_processes(truth, result.hmm)),
             "predictive": summarize(
                 sequence_kl(oracle, result.hmm.filter(test).predictions[:, :-1])
             ),
@@ -261,7 +274,10 @@ def run(config: RunConfig, output: Path) -> dict[str, object]:
         if eligible
         else "diagnostic_only_unqualified_checkpoint",
         "identifiability_diagnostics": identifiability_diagnostics(truth),
+        "process_complexity": process_complexity(truth),
+        "sampling": {"attempts": sampling_attempts, "difficulty": asdict(difficulty)},
         "training": {
+            "model_parameters": sum(parameter.numel() for parameter in model.parameters()),
             "steps": trace[-1]["step"],
             "tokens": trace[-1]["step"] * config.batch_size * config.length,
             "seconds": training_seconds,

@@ -46,6 +46,18 @@ training/query/optimization budgets, and the KL tolerance. [`configs/smoke.toml`
 exercises all stages with intentionally inadequate training. Unknown config keys and
 invalid counts, probabilities, dimensions, or combinations fail at the boundary.
 
+The nested `[sampling]` table owns optional-edge probability, emission concentration,
+minimum stationary occupancy, minimum unigram/trigram gains in nats/token, and the
+attempt cap. [Design](../research/design.md) defines the exact screen. A run requires at
+least four tokens so its history includes the screen's three-token context.
+
+[`configs/scaling-pilot.toml`](../../configs/scaling-pilot.toml) and
+[`configs/scaling.toml`](../../configs/scaling.toml) select a base TOML relative to their
+own directory and Cartesian grid axes. Supported axes are generator/model seed, states,
+components, vocabulary, width, layers, extraction sequences, and training steps. Counts
+and each resolved `RunConfig` are validated before execution. The run-count and per-child
+time limits are CLI options; use `sweep --dry-run` to inspect their total budgets.
+
 ## GitHub policy
 
 GitHub Actions is disabled in repository settings. There are no `.github/workflows`
