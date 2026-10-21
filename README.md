@@ -114,6 +114,10 @@ toward minimal automata or fit a scaling law.
 
 ## Development
 
+The [interactive explainer](site/README.md) visualizes the recorded generators and
+results. Run it locally with `uv run --locked just site`, then open
+`http://127.0.0.1:8847`. Its browser math is checked against the Python Bayesian oracle.
+
 Based on [d0rbu/research-project-template](https://github.com/d0rbu/research-project-template)
 at commit [`03c4a7a`](https://github.com/d0rbu/research-project-template/commit/03c4a7ae7f86170360816defe2572d61cd834b3b).
 The MIT license and correctness tooling are retained. GitHub Actions is disabled;

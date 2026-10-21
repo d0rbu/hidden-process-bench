@@ -17,6 +17,12 @@ test equivalence. Redundant state copies fail the minimal-order screen while ret
 identical temporal information. Sweep tests exercise a real child process and timeout, crash, malformed
 receipt, missing-report, and qualification-status paths.
 
+The website snapshot is reproduced from public receipts in `test_site_data.py`.
+`uv run --locked just site-check` uses Node.js 22+ to compare every browser belief and
+prediction with NumPy fixtures, and verifies equivalent state copies and sampling order.
+It is part of the local pre-push gate. See the [website guide](../../site/README.md) for
+browser and public-byte verification.
+
 Tests use two CPU threads, no network, no paid providers, and no GPUs. The measured
 coverage source is `hidden_process_bench` plus repository `scripts`, not test code.
 The template's 95% branch coverage threshold is retained. Warnings, unknown markers,

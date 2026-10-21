@@ -30,6 +30,10 @@
 | `tests/test_correctness_tools.py` | Inherited runtime/phantom/array examples |
 | `scripts/check_markdown_links.py`, `scripts/__init__.py` | Offline documentation validation |
 | `tests/test_markdown_links.py` | Markdown parser and Git file-discovery regressions |
+| `scripts/build_site_data.py`, `tests/test_site_data.py` | Reproduce public website data, receipt/source validation |
+| `site/index.html`, `site/style.css`, `site/app.js`, `site/icon.svg` | Static explainer, interactive HMM diagrams and recorded results |
+| `site/process.mjs`, `site/test_process.mjs` | Browser sampling/filtering/equivalence and NumPy-parity tests |
+| `site/data.json`, `site/README.md` | Public snapshot with provenance and website operations |
 | `docs/research/` | Design, assumptions, limitations, literature |
 | `docs/results/cpu-demo.md` | Historical unscreened CPU example, comparison and limits |
 | `docs/results/cpu-demo.json`, `docs/results/cpu-demo-provenance.json` | Unmodified report and source/software receipts from the documented run |

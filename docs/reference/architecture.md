@@ -38,3 +38,9 @@ The current extension boundary is a candidate `MixtureHMM` plus its JSON schema.
 There is deliberately no general plugin framework. Automata or program generators
 should add their own oracle, equivalence relation, and candidate serializer when an
 actual experiment needs them; they must not inherit HMM parameter metrics blindly.
+
+The [static website](../../site/README.md) is an explanatory view of published development
+results. Its data exporter reproduces known generators from committed audits; the browser
+runs a small filter/sampler checked against the Python oracle. It never reads live
+experiment directories or calls a model provider. The deployment serves a frozen asset
+copy, separate from the working checkout.
