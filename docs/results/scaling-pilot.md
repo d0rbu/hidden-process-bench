@@ -3,11 +3,17 @@
 [Documentation](../README.md) · [Scaling protocol](../research/scaling.md) · [Screened demo](screened-cpu-demo.md)
 
 Four CPU runs completed on 2026-10-21 UTC from clean source
-[`10a68ed`](https://github.com/d0rbu/hidden-process-bench/commit/10a68ed0a5d354a1cfa0a13cb29000454c31f5c2).
+[`d9a0d4c`](https://github.com/d0rbu/hidden-process-bench/commit/d9a0d4c64a76c918bf90ff1375d0059a8ba0be4b).
 The [frozen plan](scaling-pilot/plan.json), [summary](scaling-pilot/summary.json),
 [CSV](scaling-pilot/cases.csv), and [JSONL](scaling-pilot/cases.jsonl) retain every case.
 Individual receipts are listed below. Source hashes and identical ground-truth bytes
 within each width comparison were verified.
+
+These are reruns of the same seeds used by
+[`10a68ed`](https://github.com/d0rbu/hidden-process-bench/commit/10a68ed0a5d354a1cfa0a13cb29000454c31f5c2),
+now with the minimal-order filter enabled. All four selected ground truths and
+checkpoints were byte-identical to their earlier counterparts, and prediction/recovery
+metrics matched exactly. These reruns are not independent replications.
 
 ```bash
 uv run --locked hidden-process-bench sweep \
@@ -16,7 +22,7 @@ uv run --locked hidden-process-bench sweep \
 
 The command exits **2** because three checkpoints are unqualified. This is expected
 from this recorded run and does not mean its artifacts are missing. There were no
-execution failures or timeouts. The four child runs took about 108 seconds in total;
+execution failures or timeouts. The four child runs took about 93 seconds in total;
 this is a local timing, not a throughput guarantee.
 
 ## Prediction qualification
@@ -39,6 +45,8 @@ qualification also requires the aggregate bound and checks both validation and t
 In particular, the first case is unqualified even though its final test passes:
 its stopping validation did not pass before the cap. We do not select using that final test.
 The observable rank is the short-Hankel numerical diagnostic, with tolerance 1e-10.
+It matches the joint state count in both tasks, passing the sufficient minimal-order
+screen; redundant state copies cannot create a larger accepted task.
 
 The wider model had lower test KL on both matched processes. Only one checkpoint
 qualified, and there are only two process shapes, each with one generator

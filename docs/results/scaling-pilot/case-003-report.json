@@ -73,14 +73,17 @@
         0.6388888888888888,
         0.6666666666666666,
         0.6666666666666666
-      ]
+      ],
+      "joint_states": 24,
+      "short_hankel_rank": 24,
+      "hankel_rank_tolerance": 1e-10
     }
   },
   "training": {
     "model_parameters": 104768,
     "steps": 2000,
     "tokens": 3072000,
-    "seconds": 21.623047545552254,
+    "seconds": 18.421173095703125,
     "last_validation": {
       "overall": {
         "count": 256,
@@ -240,7 +243,7 @@
         2.854118543702027
       ],
       "fit_parameters": 748,
-      "seconds": 2.3423073142766953,
+      "seconds": 1.9086073450744152,
       "access": {
         "samples": true,
         "probabilities": false,
@@ -324,7 +327,7 @@
         2.9532328004922888
       ],
       "fit_parameters": 748,
-      "seconds": 2.357595533132553,
+      "seconds": 2.0016826167702675,
       "access": {
         "samples": true,
         "probabilities": true,
@@ -408,7 +411,7 @@
         2.9778634054933857
       ],
       "fit_parameters": 2348,
-      "seconds": 3.122927974909544,
+      "seconds": 2.4943865835666656,
       "access": {
         "samples": true,
         "probabilities": true,
@@ -428,5 +431,5 @@
     }
   },
   "checkpoint_sha256": "c0228ba65506c6c35d73211a17b1152edc28637ed9aa53e83dec6a76f23787b6",
-  "total_seconds": 31.254197001457214
+  "total_seconds": 26.089249666780233
 }

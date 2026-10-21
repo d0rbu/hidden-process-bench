@@ -3,11 +3,17 @@
 [Documentation](../README.md) · [Design](../research/design.md) · [Scaling pilot](scaling-pilot.md)
 
 Measured on 2026-10-21 UTC from clean source
-[`10a68ed`](https://github.com/d0rbu/hidden-process-bench/commit/10a68ed0a5d354a1cfa0a13cb29000454c31f5c2).
+[`d9a0d4c`](https://github.com/d0rbu/hidden-process-bench/commit/d9a0d4c64a76c918bf90ff1375d0059a8ba0be4b).
 The [report](screened-cpu-demo/report.json), [provenance](screened-cpu-demo/provenance.json),
 [resolved config](screened-cpu-demo/config.json), and [complete sampling audit](screened-cpu-demo/sampling.jsonl)
 are unmodified receipts. All recorded source hashes were checked against the source files.
 This is one public development task, not a blind benchmark study.
+
+This reruns the same seeds used by
+[`10a68ed`](https://github.com/d0rbu/hidden-process-bench/commit/10a68ed0a5d354a1cfa0a13cb29000454c31f5c2)
+with the minimal-order filter enabled. The accepted ground truth and checkpoint
+were byte-identical, and prediction/recovery metrics matched exactly. This is a
+reproducibility check, not an additional independent task.
 
 ```bash
 uv sync --locked
@@ -16,7 +22,9 @@ uv run --locked hidden-process-bench run \
 ```
 
 The sampler rejected four candidates and accepted the fifth before training. Each of
-its four components passed the preset occupancy and temporal-information checks:
+its four components passed the preset occupancy and temporal-information checks.
+The short Hankel rank is 12, equal to all 12 joint states, at tolerance 1e-10:
+the task also passes the numerical minimal-order screen.
 
 | Component | Minimum stationary mass | Unigram gain (nats/token) | Trigram gain (nats/token) |
 |---|---:|---:|---:|
