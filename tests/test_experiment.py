@@ -2,6 +2,7 @@ import hashlib
 import json
 from dataclasses import replace
 from pathlib import Path
+from unittest.mock import patch
 
 import numpy as np
 import pytest
@@ -11,8 +12,9 @@ from hidden_process_bench.cli import main
 from hidden_process_bench.config import RunConfig, Shape
 from hidden_process_bench.experiment import extract_checkpoint, predictions, run, score, train
 from hidden_process_bench.metrics import sequence_kl
-from hidden_process_bench.model import TinyTransformer
+from hidden_process_bench.model import TinyTransformer, observe
 from hidden_process_bench.process import MixtureHMM, random_mixture
+from hidden_process_bench.recovery import fit_hmm
 
 
 @pytest.fixture(scope="module")
@@ -121,7 +123,7 @@ def test_training_learns_a_known_distribution_and_stops_on_validation(tmp_path: 
         eval_sequences=32,
         learning_rate=0.02,
     )
-    torch.manual_seed(config.seed + 1)
+    torch.manual_seed(config.model_seed)
     untrained = TinyTransformer(config.model())
     test, _ = truth.sample(np.random.default_rng(123), 32, 4)
     oracle = truth.filter(test).predictions[:, :-1]
@@ -139,6 +141,27 @@ def test_train_handles_eval_interval_larger_than_budget(tmp_path: Path) -> None:
     config = replace(RunConfig.load(Path("configs/smoke.toml")), eval_every=10)
     _, trace = train(config, random_mixture(Shape(4, 2, 8), 7), tmp_path / "trace.jsonl")
     assert [row["step"] for row in trace] == [2]
+
+
+def test_private_generator_seed_is_not_revealed_through_extraction_rng(tmp_path: Path) -> None:
+    config = replace(
+        RunConfig.load(Path("configs/smoke.toml")),
+        seed=901,
+        model_seed=105,
+        observation_seed=123,
+        recovery_seed=456,
+    )
+    with (
+        patch("hidden_process_bench.experiment.observe", wraps=observe) as observed,
+        patch("hidden_process_bench.experiment.fit_hmm", wraps=fit_hmm) as fitted,
+    ):
+        run(config, tmp_path / "independent-seeds")
+    assert observed.call_args.args[-1] == 123
+    assert [call.kwargs["seed"] for call in fitted.call_args_list] == [456, 456, 456]
+    # Changing the hidden task does not change the seeds exposed to the extractor.
+    other = replace(config, seed=777)
+    assert other.observation_seed == config.observation_seed
+    assert other.recovery_seed == config.recovery_seed
 
 
 def test_cli_commands_and_qualification_exit_code(

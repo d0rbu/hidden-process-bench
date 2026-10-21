@@ -1,5 +1,8 @@
 # Exercises all stages. Intentionally too short to establish Bayesian optimality.
 seed = 7
+model_seed = 8
+observation_seed = 27
+recovery_seed = 37
 components = 4
 states = 2
 vocab = 8

@@ -49,7 +49,7 @@ def predictions(model: TinyTransformer, tokens: Tokens) -> tuple[np.ndarray, np.
 def train(
     config: RunConfig, truth: MixtureHMM, trace_path: Path
 ) -> tuple[TinyTransformer, list[TrainRecord]]:
-    torch.manual_seed(config.seed + 1)
+    torch.manual_seed(config.model_seed)
     model = TinyTransformer(config.model())
     optimizer = torch.optim.AdamW(model.parameters(), lr=config.learning_rate, weight_decay=0.01)
     rng = np.random.default_rng(config.seed + 10)
@@ -195,7 +195,9 @@ def run(config: RunConfig, output: Path) -> dict[str, object]:
     predicted, _ = predictions(model, test)
     test_metrics = optimality(oracle, predicted, components, config.components, config.max_kl)
     eligible = bool(trace[-1]["validation"]["qualified"] and test_metrics["qualified"])
-    observations = observe(model, config.extraction_sequences, config.length, config.seed + 20)
+    observations = observe(
+        model, config.extraction_sequences, config.length, config.observation_seed
+    )
     for name in ("tokens", "probabilities", "activations"):
         np.save(public / f"{name}.npy", getattr(observations, name))
     results = {}
@@ -209,7 +211,7 @@ def run(config: RunConfig, output: Path) -> dict[str, object]:
             observations.tokens,
             steps=config.extraction_steps,
             restarts=config.restarts,
-            seed=config.seed + 30,
+            seed=config.recovery_seed,
             probabilities=observations.probabilities if method != "samples" else None,
             activations=observations.activations if method == "activations" else None,
             activation_weight=config.activation_weight,

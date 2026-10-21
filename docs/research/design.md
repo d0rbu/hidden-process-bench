@@ -67,18 +67,22 @@ Passing establishes only the declared average-context criterion at the tested le
 rare histories and longer contexts can still fail. Undertrained runs retain all artifacts
 and recovery scores but are marked `diagnostic_only_unqualified_checkpoint`.
 
-Seed offsets relative to the private config seed are fixed:
+Generator randomness is private. Model initialization, model sampling, and extraction
+initialization have independent config seeds: the values exposed to an extractor must
+not be reversible offsets of the generating seed. The public demo specifies all four;
+for a hidden task change the generating seed independently. Evaluator-only data streams
+use the offsets below:
 
-| Use | Offset |
+| Use | Seed |
 |---|---|
-| Generator | 0 |
-| Transformer initialization | 1 |
-| Training samples | 10 |
-| Stopping validation | 11 |
-| Final test | 12 |
-| Model-generated extraction histories | 20 |
-| Extraction initializations | 30 + restart index |
-| Supervised probe fit / test | 40 / 41 |
+| Generator | `seed` |
+| Transformer initialization | `model_seed` |
+| Training samples | `seed + 10` |
+| Stopping validation | `seed + 11` |
+| Final test | `seed + 12` |
+| Model-generated extraction histories | `observation_seed` |
+| Extraction initializations | `recovery_seed + restart index` |
+| Supervised probe fit / test | `seed + 40` / `seed + 41` |
 
 ## Recovery methods and information budgets
 

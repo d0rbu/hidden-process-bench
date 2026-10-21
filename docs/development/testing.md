@@ -9,7 +9,7 @@ uv run --locked python -m pytest
 The suite checks the Bayesian filter against independent enumeration of hidden paths,
 causal masking and BOS alignment, differentiable filtering against NumPy and finite
 differences, permutation-invariant scoring, a nonidentifiable negative control,
-recovery of known simple distributions, checkpoint/public artifact boundaries, and
+recovery of known simple distributions, checkpoint/public artifact and seed boundaries, and
 real end-to-end CLI runs. The inherited template contract and Markdown tests remain.
 
 Tests use two CPU threads, no network, no paid providers, and no GPUs. The measured

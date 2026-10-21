@@ -30,6 +30,7 @@ processes from trained transformers. Keep the implementation small and explicit.
 - Extractors must not receive true HMMs, latent labels, generating seeds, or scorer feedback.
   Supervised probes are diagnostics, never extraction results.
 - Keep training, stopping validation, final test, model generation, and probe RNG streams separate.
+  Model/observation/recovery seeds must not reveal the private generator seed through an offset.
 - Match query budgets and report access levels. Query equality is not equal compute or bandwidth.
 - Qualify against the joint Bayesian oracle and check every generating component.
   Do not relabel an undertrained checkpoint as a successful benchmark.

@@ -58,6 +58,9 @@ class ModelConfig:
 @dataclass(frozen=True)
 class RunConfig:
     seed: int = 7
+    model_seed: int = 8
+    observation_seed: int = 27
+    recovery_seed: int = 37
     components: int = 4
     states: int = 3
     vocab: int = 16
@@ -80,8 +83,9 @@ class RunConfig:
     def __post_init__(self) -> None:
         self.shape()
         self.model()
-        if isinstance(self.seed, bool) or not isinstance(self.seed, int) or self.seed < 0:
-            raise ValueError("seed must be a non-negative integer")
+        for seed in (self.seed, self.model_seed, self.observation_seed, self.recovery_seed):
+            if isinstance(seed, bool) or not isinstance(seed, int) or seed < 0:
+                raise ValueError("seed must be a non-negative integer")
         for value in (
             self.train_steps,
             self.batch_size,
