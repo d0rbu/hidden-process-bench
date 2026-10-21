@@ -1,0 +1,7 @@
+# Four local CPU runs. Cross process size with model width; not a statistical study.
+base = "demo.toml"
+
+[grid]
+states = [3, 6]
+vocab = [24]
+width = [32, 64]

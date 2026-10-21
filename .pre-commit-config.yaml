@@ -1,0 +1,103 @@
+minimum_pre_commit_version: "4.0.0"
+default_install_hook_types: [pre-push]
+default_stages: [pre-push]
+
+repos:
+  - repo: local
+    hooks:
+      - id: uv-lock-check
+        name: uv lock check
+        entry: uv lock --check
+        language: system
+        pass_filenames: false
+        always_run: true
+
+      - id: ruff-check
+        name: ruff check
+        entry: uv run --locked ruff check .
+        language: system
+        pass_filenames: false
+        always_run: true
+
+      - id: ruff-format
+        name: ruff format check
+        entry: uv run --locked ruff format --check .
+        language: system
+        pass_filenames: false
+        always_run: true
+
+      - id: ty-check
+        name: ty check
+        entry: uv run --locked ty check
+        language: system
+        pass_filenames: false
+        always_run: true
+
+      - id: vulture
+        name: vulture
+        entry: uv run --locked vulture
+        language: system
+        pass_filenames: false
+        always_run: true
+
+      - id: pytest
+        name: pytest
+        entry: uv run --locked python -m pytest
+        language: system
+        pass_filenames: false
+        always_run: true
+
+      - id: markdown-links
+        name: local Markdown links
+        entry: uv run --locked python -m scripts.check_markdown_links
+        language: system
+        pass_filenames: false
+        always_run: true
+
+      - id: check-json
+        name: check JSON
+        entry: uv run --locked check-json
+        language: system
+        types: [json]
+
+      - id: check-yaml
+        name: check YAML
+        entry: uv run --locked check-yaml
+        language: system
+        types: [yaml]
+
+      - id: justfile-check
+        name: justfile syntax
+        entry: uv run --locked just --list
+        language: system
+        pass_filenames: false
+        always_run: true
+
+      - id: check-toml
+        name: check TOML
+        entry: uv run --locked check-toml
+        language: system
+        types: [toml]
+
+      - id: check-merge-conflict
+        name: check merge conflicts
+        entry: uv run --locked check-merge-conflict --assume-in-merge
+        language: system
+        types: [text]
+
+      - id: check-added-large-files
+        name: check added large files
+        entry: uv run --locked check-added-large-files --maxkb=1024
+        language: system
+
+      - id: trailing-whitespace
+        name: trim trailing whitespace
+        entry: uv run --locked trailing-whitespace-fixer
+        language: system
+        types: [text]
+
+      - id: end-of-file-fixer
+        name: fix end of files
+        entry: uv run --locked end-of-file-fixer
+        language: system
+        types: [text]

@@ -1,0 +1,33 @@
+# All budgets are explicit. This is a single-seed prototype, not a benchmark study.
+seed = 7
+model_seed = 8
+observation_seed = 27
+recovery_seed = 37
+components = 4
+states = 3
+vocab = 16
+length = 24
+width = 48
+heads = 4
+layers = 2
+train_steps = 2000
+batch_size = 64
+learning_rate = 0.003
+eval_every = 100
+eval_sequences = 256
+max_kl = 0.03
+extraction_sequences = 128
+extraction_steps = 250
+restarts = 2
+activation_weight = 0.1
+threads = 2
+
+# PAutomaC-inspired structure controls and exact per-component difficulty screen.
+# Gains are nats/token against the best unigram/trigram predictors, using 3-token history.
+[sampling]
+extra_edge_probability = 0.5
+emission_concentration = 0.4
+min_state_mass = 0.05
+min_unigram_gain = 0.02
+min_trigram_gain = 0.001
+max_attempts = 128
