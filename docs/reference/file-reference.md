@@ -26,6 +26,8 @@
 | `scripts/check_markdown_links.py`, `scripts/__init__.py` | Offline documentation validation |
 | `tests/test_markdown_links.py` | Markdown parser and Git file-discovery regressions |
 | `docs/research/` | Design, assumptions, limitations, literature |
+| `docs/results/cpu-demo.md` | Recorded CPU example, comparison and limits |
+| `docs/results/cpu-demo.json`, `docs/results/cpu-demo-provenance.json` | Unmodified report and source/software receipts from the documented run |
 | `docs/onboarding/`, `docs/development/` | Setup, workflows, vocabulary, correctness and testing |
 | `docs/pipelines/experiment-lifecycle.md` | How to run and interpret an experiment |
 | `docs/reference/` | Architecture, artifact schema, configuration and this file map |

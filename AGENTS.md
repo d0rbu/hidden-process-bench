@@ -38,7 +38,7 @@ processes from trained transformers. Keep the implementation small and explicit.
   identifiability for arbitrary generators or a causal mechanism from a linear probe.
 - The activation baseline is not a static weights-only extractor.
 - Record config, source/checkpoint hashes, actual steps, and incomplete/failed runs honestly.
-- Defaults use two CPU threads and bounded steps. Broader training and provider rentals
+- Defaults use two PyTorch CPU threads and bounded steps. Broader training and provider rentals
   need a concrete research reason and must follow the user's shared spending policy.
 
 ## Code and validation

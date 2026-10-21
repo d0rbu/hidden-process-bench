@@ -1,0 +1,21 @@
+{
+  "git_revision": "f8c2bfd9aaf11cba89e588fbaec7fd1a6b1b2836",
+  "working_tree_dirty": false,
+  "source_sha256": {
+    "src/hidden_process_bench/__init__.py": "5b557ec8a6473647287ca2de30385da3215c7584a6789bfee887fb837b7420e9",
+    "src/hidden_process_bench/cli.py": "05974940ea2c626fff284359d23c2481cf1e08726e0fbffc0fff0adb75f4b683",
+    "src/hidden_process_bench/config.py": "2ca3d388ac9721862a1c36bc44b5e6cee9d195801c1c10e57052c4f2cd22c5d8",
+    "src/hidden_process_bench/experiment.py": "1dfaf72ff9dc88d6cfb34d9892f9ea41e91c003afe61aa2814e4deda445c67ea",
+    "src/hidden_process_bench/metrics.py": "50ba9b5925dc8a3ff7ed27d5a718cee1f46d6a851bf375976eb6aeb5482c0f90",
+    "src/hidden_process_bench/model.py": "30603a0c3ff8886fa2a0325d5926a66e4723f16a9e13040e7a2e428b277befab",
+    "src/hidden_process_bench/process.py": "4e18d33b20879376c723be80226a0d4ae03ad773c5c65ade6427d771c6693737",
+    "src/hidden_process_bench/recovery.py": "3c88253852c5f123167200e7301b7fb332a523352d0d91185638d035a42c070a",
+    "pyproject.toml": "bb4aaeb91881a99990fca925d77c5a21d1d662d8b7899b9573f18b6aa026c7de",
+    "uv.lock": "9a72ec7ca4c66e842d8bacbe2385cd54c7a0620b9481d48b71f353418b916b1d"
+  },
+  "python": "3.13.2",
+  "torch": "2.14.1+cpu",
+  "numpy": "2.5.0",
+  "device": "cpu",
+  "torch_threads": 2
+}

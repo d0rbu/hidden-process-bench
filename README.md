@@ -25,11 +25,15 @@ only two steps and reports `benchmark_eligible: false`. For a bounded CPU experi
 uv run --locked hidden-process-bench run --config configs/demo.toml --out outputs/demo
 ```
 
-The demo uses two CPU threads, at most 1,200 training steps, and two restarts of 250
+The demo uses two PyTorch CPU threads, at most 1,200 training steps, and two restarts of 250
 optimization steps per recovery method. Results go to `outputs/demo/report.json`.
 Existing output directories are never overwritten. Add `--require-qualified` to return
 exit code 2 if the checkpoint misses the Bayesian prediction threshold; the report is
 still saved. The locked environment uses CPU PyTorch on Linux and Windows.
+
+A [recorded CPU example](docs/results/cpu-demo.md) passed the preset prediction gate
+at 1,100 steps, with held-out KL of 0.0196 nats/token. It includes a comparison of all
+three recovery methods and full source/software provenance; it is a single development task.
 
 ## What is implemented
 
