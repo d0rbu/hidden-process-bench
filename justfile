@@ -48,3 +48,16 @@ coverage:
 # Validate local Markdown link and image targets across the repository.
 docs-check:
     uv run --locked python -m scripts.check_markdown_links
+
+# Serve only the public, static explainer.
+site:
+    uv run --locked python -m http.server 8847 --bind 127.0.0.1 --directory site
+
+# Reproduce the website snapshot from committed experiment receipts.
+site-data:
+    uv run --locked python -m scripts.build_site_data
+
+# Check website syntax and scientific math (requires Node.js 22+).
+site-check:
+    node --check site/app.js
+    node --test site/test_process.mjs

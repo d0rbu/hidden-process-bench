@@ -10,6 +10,7 @@ Start with the [project README](../README.md) or [agent guide](../AGENTS.md).
 | Experiments | [Lifecycle](pipelines/experiment-lifecycle.md) |
 | Results | [Screened CPU example](results/screened-cpu-demo.md), [scaling pilot](results/scaling-pilot.md), [historical unscreened example](results/cpu-demo.md) |
 | Reference | [Architecture](reference/architecture.md), [artifacts](reference/artifacts.md), [configuration](reference/configuration.md), [file map](reference/file-reference.md) |
+| Website | [Interactive explainer and hosting](../site/README.md) |
 
 These documents own durable project knowledge. Keep commands runnable from the repo
 root. `uv run --locked just docs-check` validates local Markdown file and image links.

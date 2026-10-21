@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive explanation of recovering known hidden processes from trained transformers, with real generators and recorded results.">
+  <meta name="theme-color" content="#faf9f6">
+  <title>Hidden Process Bench</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="#main">Hidden Process Bench</a>
+    <nav aria-label="Main navigation">
+      <a href="#explore">Explore</a>
+      <a href="#results">Results</a>
+      <a href="https://github.com/d0rbu/hidden-process-bench">Code <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="intro" aria-labelledby="title">
+      <h1 id="title">Recovering hidden processes</h1>
+      <p class="lede">We know the world a transformer learned from.<br class="desktop-break"> Can we recover its structure from the trained model?</p>
+      <ol class="steps">
+        <li><h2>Generate</h2><p>Four hidden Markov models produce sequences. The transformer sees only the tokens.</p></li>
+        <li><h2>Learn</h2><p>Train until predictions are close to the exact Bayesian predictor for that world.</p></li>
+        <li><h2>Recover</h2><p>Reconstruct the process using model outputs or activations. Check against ground truth.</p></li>
+      </ol>
+    </section>
+
+    <p id="load-status" role="status">Loading the recorded generators…</p>
+    <noscript><p>Enable JavaScript for the interactive diagrams. The <a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/screened-cpu-demo.md">demo report</a> and <a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/scaling-pilot.md">scaling results</a> are also available as text.</p></noscript>
+
+    <section id="explore" class="section" aria-labelledby="explore-title" hidden>
+      <div class="section-heading">
+        <div><h2 id="explore-title">Explore a generator</h2><p>A state emits a token, then moves. Click a state to inspect it.</p></div>
+        <label class="select-label">Example<select id="dataset"></select></label>
+      </div>
+
+      <div class="explorer">
+        <div class="process-toolbar">
+          <div id="components" class="segmented" role="group" aria-label="Generating process"></div>
+          <span id="process-size" class="muted"></span>
+        </div>
+        <div class="process-view">
+          <figure class="graph-figure">
+            <svg id="process-graph" viewBox="0 0 600 380" role="group" aria-label="Hidden Markov model. Select a state to inspect its transitions."></svg>
+            <figcaption>Arrows show the selected state’s next-state probabilities.</figcaption>
+          </figure>
+          <div class="emission-panel">
+            <h3 id="emission-title">Tokens from state 1</h3>
+            <p class="muted">Most likely emissions</p>
+            <div id="emissions" class="bars"></div>
+            <details class="small-detail"><summary>All probabilities</summary><div id="all-probabilities"></div></details>
+          </div>
+        </div>
+
+        <div class="sequence-area">
+          <div class="sequence-toolbar">
+            <h3>What the model sees</h3>
+            <div class="sequence-actions">
+              <button id="new-sequence" type="button" class="button">New sequence</button>
+              <button id="next-token" type="button" class="button primary">Next token <span aria-hidden="true">→</span></button>
+            </div>
+          </div>
+          <div id="sequence" class="sequence" aria-label="Generated token sequence"></div>
+          <div class="sequence-footer">
+            <label class="check-label"><input id="show-states" type="checkbox"> Reveal hidden states</label>
+            <span id="sequence-status" class="muted" role="status" aria-live="polite"></span>
+          </div>
+        </div>
+
+        <details id="oracle-detail" class="explainer-detail">
+          <summary>See the Bayesian prediction</summary>
+          <p>The oracle knows all four processes, but not which one generated this sequence. It updates its beliefs from the tokens alone.</p>
+          <div class="oracle-grid">
+            <div><h3>Which process is it?</h3><div id="component-beliefs" class="bars"></div></div>
+            <div><h3>What comes next?</h3><div id="next-prediction" class="bars"></div></div>
+          </div>
+        </details>
+        <details id="equivalence-detail" class="explainer-detail">
+          <summary>More states can describe the same process</summary>
+          <p>Duplicate every state and divide incoming probabilities between the copies. The token distribution stays the same. Our target is the smallest equivalent process.</p>
+          <label class="check-label"><input id="duplicate-states" type="checkbox"> Show the duplicated representation</label>
+          <p id="equivalence-status" class="muted"></p>
+        </details>
+      </div>
+      <p class="source-note">These are the actual generators from the public experiments. <a id="generator-source" href="https://github.com/d0rbu/hidden-process-bench">View source data ↗</a></p>
+    </section>
+
+    <section id="results" class="section" aria-labelledby="results-title" hidden>
+      <h2 id="results-title">Results so far</h2>
+      <p class="section-intro">The demo learned to predict. Recovering its structure is harder.</p>
+      <div class="result-heading">
+        <h3>The qualified demo</h3><span class="pass-label">Prediction gate passed</span>
+      </div>
+      <p id="demo-summary"></p>
+      <div class="table-scroll">
+        <table class="recovery-table">
+          <caption>Fitted on the same 128 generated sequences. Predictive KL uses held-out data. Lower is better.</caption>
+          <thead><tr><th scope="col">Method</th><th scope="col">Predictive KL</th><th scope="col">Parameter MAE</th></tr></thead>
+          <tbody id="recovery-results"></tbody>
+        </table>
+      </div>
+      <p class="finding">Token probabilities beat the activation-assisted baseline here. None recovered the process exactly.</p>
+
+      <div class="scaling-section">
+        <h3>Does a bigger model help?</h3>
+        <p>Wider models reduced prediction error on both tasks. Only one of the four checkpoints cleared the full gate.</p>
+        <figure class="scaling-figure">
+          <svg id="scaling-chart" viewBox="0 0 840 330" role="img" aria-labelledby="scaling-title scaling-desc"><title id="scaling-title">Prediction qualification across model and process sizes</title><desc id="scaling-desc">The chart shows the worst validation or test error bound across all components. The 3-state process at width 64 is the only run below the 0.03 threshold.</desc></svg>
+          <figcaption><span class="legend-dot small-process"></span>3 states per HMM <span class="legend-dot large-process"></span>6 states per HMM</figcaption>
+        </figure>
+        <p class="chart-note">The gate requires every component to pass on validation and test. These four runs do not establish a scaling law.</p>
+        <details class="explainer-detail">
+          <summary>Numbers and qualification details</summary>
+          <div class="table-scroll"><table><caption>All four pilot runs, including unqualified checkpoints.</caption><thead><tr><th scope="col">States / HMM</th><th scope="col">Width</th><th scope="col">Test KL</th><th scope="col">Worst bound</th><th scope="col">Qualified</th></tr></thead><tbody id="scaling-results"></tbody></table></div>
+          <p>The chart uses the largest mean KL + 1.96 standard errors across the aggregate and component groups, on both validation and test. A checkpoint passes only when every bound is at most 0.03 nats/token. These are diagnostic uncertainty estimates.</p>
+          <p>All runs used four HMMs, vocabulary 24, two transformer layers, a 2,000-step cap, and matched generator/model seeds. The demo above is a separate task with vocabulary 16.</p>
+        </details>
+      </div>
+
+      <details class="explainer-detail method-detail">
+        <summary>What this evaluation measures</summary>
+        <p>Recovery has two scores: predictive KL compares next-token distributions; parameter MAE compares the HMM parameters after aligning component and state labels. Zero is exact on either measure.</p>
+        <p>Sample-only methods see generated tokens. Probability methods also see next-token distributions. The activation method adds the final residual stream. Each uses the same histories, though their information and compute differ.</p>
+        <p>Tasks pass temporal-information and state-occupancy screens inspired by PAutomaC. Observable Hankel rank must match the joint state count: a numerical minimality witness, not a formal proof. Redundant copies fail this screen.</p>
+        <p>State count is given to these baseline extractors. Activation access is not static weights-only extraction or a causal circuit analysis.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <p>A small research prototype. Recorded results: 21 October 2026.</p>
+    <div class="footer-links"><a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/research/design.md">Method</a><a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/scaling-pilot.md">Run reports</a><a href="data.json">Download data</a><a href="https://github.com/d0rbu/hidden-process-bench">GitHub ↗</a></div>
+  </footer>
+</body>
+</html>

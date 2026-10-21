@@ -38,6 +38,7 @@ pytest's `autouse`. No production module is excluded from lint, types, or covera
 | `typecheck`, `deadcode` | ty and Vulture |
 | `test`, `coverage` | pytest, optionally HTML coverage |
 | `lock-check`, `docs-check` | Dependency and local link checks |
+| `site`, `site-data`, `site-check` | Static website preview, reproducible snapshot, Node.js 22+ syntax/math checks |
 
 ## Experiments
 

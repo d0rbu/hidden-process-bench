@@ -54,6 +54,13 @@ repos:
         pass_filenames: false
         always_run: true
 
+      - id: site-oracle
+        name: browser HMM math against Python oracle
+        entry: uv run --locked just site-check
+        language: system
+        pass_filenames: false
+        always_run: true
+
       - id: check-json
         name: check JSON
         entry: uv run --locked check-json
