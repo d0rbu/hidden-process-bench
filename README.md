@@ -31,8 +31,11 @@ Existing output directories are never overwritten. Add `--require-qualified` to 
 exit code 2 if the checkpoint misses the Bayesian prediction threshold; the report is
 still saved. The locked environment uses CPU PyTorch on Linux and Windows.
 
-The [initial CPU example](docs/results/cpu-demo.md) is retained as a historical receipt.
-It predates the difficulty screen; the current sampler selects a different task.
+The [screened CPU example](docs/results/screened-cpu-demo.md) qualified at 1,200 steps
+with held-out KL of 0.0199 nats/token. Its probability-only recovery baseline beat the
+activation-assisted method on this task. Reports, rejected candidates, and source/software
+provenance are included. The [initial unscreened example](docs/results/cpu-demo.md) remains
+as a separate historical receipt.
 
 ## What is implemented
 
@@ -98,7 +101,8 @@ uv run --locked hidden-process-bench sweep \
 
 Each run has a time limit. JSONL/CSV summaries retain qualified, unqualified, failed,
 and timed-out runs. See the [scaling protocol](docs/research/scaling.md) for hypotheses
-and limits. Larger raw automata need not define more complex observable processes;
+and the [measured pilot](docs/results/scaling-pilot.md): one checkpoint qualified and
+three missed the preset gate. Larger raw automata need not define more complex observable processes;
 equivalent state splitting is a control for that distinction. The baseline extractors
 have a disclosed model order, so this prototype does not establish a transformer bias
 toward minimal automata or fit a scaling law.

@@ -33,6 +33,8 @@
 | `docs/research/` | Design, assumptions, limitations, literature |
 | `docs/results/cpu-demo.md` | Historical unscreened CPU example, comparison and limits |
 | `docs/results/cpu-demo.json`, `docs/results/cpu-demo-provenance.json` | Unmodified report and source/software receipts from the documented run |
+| `docs/results/screened-cpu-demo.md`, `docs/results/screened-cpu-demo/` | Current screened demo and unmodified report/config/provenance/sampling receipts |
+| `docs/results/scaling-pilot.md`, `docs/results/scaling-pilot/` | Four-case process/model-size results, frozen plan, statuses, and full receipts |
 | `docs/onboarding/`, `docs/development/` | Setup, workflows, vocabulary, correctness and testing |
 | `docs/pipelines/experiment-lifecycle.md` | How to run and interpret an experiment |
 | `docs/reference/` | Architecture, artifact schema, configuration and this file map |

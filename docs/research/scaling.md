@@ -47,6 +47,8 @@ qualified checkpoints at matched process, model seed, and observation budget; pr
 unqualified rows as failures of the complete pipeline. Conditioning on qualification can
 bias a cross-size comparison, so publish both denominators. Vary training tokens separately
 to distinguish an optimization shortfall from an insufficient-capacity hypothesis.
+Parameter MAE changes scale with matrix dimensions; use it for comparisons within a
+fixed process shape. Predictive KL is a more suitable primary cross-shape comparison.
 
 Process complexity has several recorded measures:
 
@@ -63,6 +65,8 @@ A truncated Hankel rank can underestimate complexity. It is not a general proof 
 minimal HMM order. Plot recovery against several measures rather than naming one scalar
 "simplicity". Use multiple independent generating processes per stratum; do not fit a
 correlation or scaling law to the four-point development pilot.
+The [recorded pilot](../results/scaling-pilot.md) includes three unqualified checkpoints;
+the [screened demo](../results/screened-cpu-demo.md) is a separate public development task.
 
 ## Equivalent-automaton control
 
