@@ -9,6 +9,7 @@ from pathlib import Path
 import numpy as np
 
 from hidden_process_bench.config import SamplingConfig, Shape
+from hidden_process_bench.equivalence import process_complexity
 from hidden_process_bench.process import MixtureHMM, random_mixture
 
 
@@ -19,9 +20,12 @@ class Difficulty:
     trigram_gain: list[float]
     min_state_mass: list[float]
     transition_density: list[float]
+    joint_states: int
+    short_hankel_rank: int
+    hankel_rank_tolerance: float
 
     def rejections(self, config: SamplingConfig) -> list[str]:
-        return [
+        reasons = [
             name
             for name, values, threshold in (
                 ("min_state_mass", self.min_state_mass, config.min_state_mass),
@@ -30,6 +34,9 @@ class Difficulty:
             )
             if any(value < threshold for value in values)
         ]
+        if self.short_hankel_rank != self.joint_states:
+            reasons.append("minimality_unresolved")
+        return reasons
 
 
 def measure_difficulty(hmm: MixtureHMM) -> Difficulty:
@@ -59,24 +66,30 @@ def measure_difficulty(hmm: MixtureHMM) -> Difficulty:
             joint = np.einsum("khs,ksv,ksj->khvj", joint, hmm.emission, hmm.transition).reshape(
                 k, -1, s
             )
+    complexity = process_complexity(hmm)
     return Difficulty(
         conditional_entropies=entropies.tolist(),
         unigram_gain=np.maximum(entropies[:, 0] - entropies[:, 3], 0).tolist(),
         trigram_gain=np.maximum(entropies[:, 2] - entropies[:, 3], 0).tolist(),
         min_state_mass=hmm.initial.min(axis=-1).tolist(),
         transition_density=(hmm.transition > 0).mean(axis=(1, 2)).tolist(),
+        joint_states=k * s,
+        short_hankel_rank=int(complexity["short_hankel_rank"]),
+        hankel_rank_tolerance=float(complexity["hankel_rank_tolerance"]),
     )
 
 
 def sample_task(
     shape: Shape, seed: int, config: SamplingConfig, trace_path: Path
 ) -> tuple[MixtureHMM, Difficulty, int]:
-    """Accept the first candidate meeting every per-component threshold, or fail.
+    """Accept the first candidate passing temporal and minimal-order screens, or fail.
 
     The private audit records all candidates, including rejection reasons, and survives
     exhaustion. Candidate zero preserves random_mixture(shape, seed); later candidates
     use spawned private seeds, independent of training/evaluation data streams.
     """
+    if shape.vocab < shape.components * shape.states:
+        raise ValueError("minimal-task screen requires vocab >= components * states")
     with trace_path.open("x") as stream:
         for attempt in range(config.max_attempts):
             candidate_seed = (

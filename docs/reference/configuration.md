@@ -50,6 +50,10 @@ The nested `[sampling]` table owns optional-edge probability, emission concentra
 minimum stationary occupancy, minimum unigram/trigram gains in nats/token, and the
 attempt cap. [Design](../research/design.md) defines the exact screen. A run requires at
 least four tokens so its history includes the screen's three-token context.
+The minimal-order screen also requires `vocab >= components * states` and rejects any
+candidate whose short Hankel rank does not reach that joint state count. These constraints
+apply to generated benchmark tasks; the HMM library and standalone scorer still accept
+redundant representations for equivalence controls.
 
 [`configs/scaling-pilot.toml`](../../configs/scaling-pilot.toml) and
 [`configs/scaling.toml`](../../configs/scaling.toml) select a base TOML relative to their

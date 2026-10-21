@@ -14,6 +14,11 @@ one paper, and does not claim this research direction is novel.
   describes linear-algebraic equivalence checks, including orthogonal-basis variants of
   Tzeng's algorithm and numerical stability concerns. This motivates our small deterministic
   reachable-space diagnostic. Our floating-point result is not an exact equivalence proof.
+- [Kiefer, *Notes on Equivalence and Minimization of Weighted Automata*](https://arxiv.org/html/2009.01217v1)
+  gives the Hankel-rank lower bound on state count and equivalence of minimal weighted
+  representations under conjugacy. Saturating that lower bound motivates our sufficient
+  minimal-task screen. General weighted-automaton equivalence can require a change of
+  basis, so permutation scoring is restricted to our identifiable HMM family.
 - [Shai et al., *Transformers represent belief state geometry in their residual stream*](https://arxiv.org/abs/2405.15943)
   studies how HMM belief states appear in transformer representations. This motivates
   the supervised belief diagnostic and the activation-assisted objective here.

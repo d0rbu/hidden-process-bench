@@ -22,6 +22,8 @@ def test_cross_field_constraints() -> None:
         RunConfig(eval_sequences=4)
     with pytest.raises(ValueError, match="four tokens"):
         RunConfig(length=3)
+    with pytest.raises(ValueError, match="minimal-task screen"):
+        RunConfig(vocab=11)
 
 
 @pytest.mark.parametrize("seed", [-1, True, 0.5])

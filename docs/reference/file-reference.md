@@ -12,7 +12,7 @@
 | `src/hidden_process_bench/__init__.py`, `src/hidden_process_bench/__main__.py` | Research package and subprocess entry point |
 | `src/hidden_process_bench/config.py` | Validated shapes, budgets, and TOML settings |
 | `src/hidden_process_bench/process.py` | HMM sampling, exact oracle, JSON serialization |
-| `src/hidden_process_bench/sampling.py` | Exact entropy screen, bounded rejection sampling, private audit |
+| `src/hidden_process_bench/sampling.py` | Entropy and minimal-order screens, bounded rejection sampling, private audit |
 | `src/hidden_process_bench/equivalence.py` | Numerical word-equivalence check, redundant-state controls, complexity |
 | `src/hidden_process_bench/model.py` | Causal transformer, checkpoint and observation API |
 | `src/hidden_process_bench/recovery.py` | Three observation-tier recovery objectives |

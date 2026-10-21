@@ -13,7 +13,8 @@ recovery of known simple distributions, checkpoint/public artifact and seed boun
 real end-to-end CLI runs. The inherited template contract and Markdown tests remain.
 Sampling entropies are checked against hidden-path enumeration. IID mixtures and fully
 observed Markov chains test the difficulty screen; state splitting and temporal witnesses
-test equivalence. Sweep tests exercise a real child process and timeout, crash, malformed
+test equivalence. Redundant state copies fail the minimal-order screen while retaining
+identical temporal information. Sweep tests exercise a real child process and timeout, crash, malformed
 receipt, missing-report, and qualification-status paths.
 
 Tests use two CPU threads, no network, no paid providers, and no GPUs. The measured

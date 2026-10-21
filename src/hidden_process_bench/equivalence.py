@@ -113,7 +113,11 @@ def split_states(hmm: MixtureHMM, copies: int = 2) -> MixtureHMM:
 
 
 def process_complexity(hmm: MixtureHMM) -> dict[str, int | float]:
-    """Representation size plus a small observable-rank lower bound; not minimum HMM order."""
+    """Representation size and an observable-rank bound; saturation witnesses minimal order.
+
+    Rank below the supplied state count is inconclusive. Float64 rank is a numerical
+    diagnostic, not an exact certificate, even when the bound saturates.
+    """
     k, s, v = hmm.shape.components, hmm.shape.states, hmm.shape.vocab
     mass = hmm.weights[:, None] * hmm.initial
     logs = np.log(mass, out=np.zeros_like(mass), where=mass > 0)

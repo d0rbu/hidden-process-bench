@@ -6,8 +6,10 @@
 
 Can an interpretability method recover a known data-generating process from a trained
 transformer, and does internal access help relative to output-only system identification?
-The first executable task is a mixture of four HMMs. The number of components and states
-is disclosed. Unknown model order, arbitrary program synthesis, static weights-only
+The first executable task is a mixture of four HMMs. The target is a minimal equivalent
+HMM, with parameters compared up to component/state permutation in the identifiable
+family below. The number of components and minimal states is disclosed. Unknown model
+order, arbitrary program synthesis, static weights-only
 extraction, and causal circuit identification are later research tasks.
 
 There are two useful claims to separate: recovering an equivalent predictive process,
@@ -39,12 +41,25 @@ configurable retention probability (default 0.5). Mixing its transition matrix w
 diagonally dominant and full rank. Its initial state is the stationary distribution.
 Emissions are Dirichlet(0.4) draws with a 2% uniform floor. Mixture weights are uniform.
 
-The default uses 12 joint states and 16 symbols. Full row rank of the stacked emission
-matrix, positive initial joint mass, stationarity error, and transition singular values
-are reported. Treating component/state pairs as one block-diagonal HMM connects this
-family to population identifiability results; this is a mathematical design argument,
-not a finite-data success guarantee. With a smaller vocabulary the same sufficient
-rank condition may fail. Always inspect the diagnostics.
+The default uses 12 joint states and 16 symbols. Runs require at least as many symbols
+as joint states for the sufficient rank screen below. Full row rank of the stacked
+emission matrix, positive initial joint mass, stationarity error, and transition singular
+values are reported. Treating component/state pairs as one block-diagonal HMM connects
+this family to [population identifiability up to state relabeling](https://arxiv.org/abs/1306.4657).
+This is a mathematical design argument, not a finite-data success guarantee.
+
+The sampler also requires the numerical rank of H[u,v] = P(uv), using empty/one-symbol
+prefixes and suffixes, to equal N = components × states. Every equivalent weighted
+automaton, hence every HMM, needs at least rank(H) states. Our N-state construction
+provides the matching upper bound when the rank saturates; see the
+[Hankel rank argument](https://arxiv.org/html/2009.01217v1). This is a sufficient
+minimality witness, computed in float64 with tolerance 1e-10, not an exact certificate.
+An unsaturated short rank is inconclusive, so the sampler rejects it as
+`minimality_unresolved`. The unrestricted HMM API still supports redundant controls.
+
+Minimality alone does not imply uniqueness up to permutation for general probabilistic
+or weighted automata: equivalent minimal weighted representations can differ by a
+change of basis. Permutation scoring here relies on the HMM identifiability assumptions.
 
 ## Sampling informative tasks
 
@@ -76,6 +91,7 @@ The first acceptable candidate is selected, with at most 128 attempts. The first
 `seed`; subsequent seeds come from `SeedSequence(seed, spawn_key=(attempt_index,))`.
 Every candidate's seed, metrics, and rejection reasons are flushed to evaluator-only
 `private/sampling.jsonl`, including on exhaustion. No training occurs after exhaustion.
+The audit includes the observable rank, joint state count, and numerical rank tolerance.
 The exact enumeration is bounded to four million component/token strings.
 
 These are declared development filters, not a guarantee of difficult extraction. In

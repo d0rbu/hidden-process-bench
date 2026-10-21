@@ -17,7 +17,7 @@ run/
     truth.json             true HMM, evaluator only
     config.json            all seeds/settings, evaluator only
     provenance.json        source hashes, revision/dirty flag, software, CPU threads
-    sampling.jsonl         every candidate seed, entropy/occupancy metrics, rejection reasons
+    sampling.jsonl         candidate seeds, entropy/occupancy/rank metrics, rejection reasons
     training.jsonl         stopping-validation trace, evaluator only
   recovered/
     samples.json

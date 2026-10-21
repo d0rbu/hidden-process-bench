@@ -9,6 +9,7 @@ from hypothesis import given, settings
 from hypothesis import strategies as st
 
 from hidden_process_bench.config import SamplingConfig, Shape
+from hidden_process_bench.equivalence import split_states
 from hidden_process_bench.process import MixtureHMM, random_mixture
 from hidden_process_bench.sampling import measure_difficulty, sample_task
 
@@ -58,7 +59,11 @@ def test_mixture_identity_cannot_disguise_iid_components() -> None:
     difficulty = measure_difficulty(hmm)
     np.testing.assert_allclose(difficulty.unigram_gain, 0, atol=1e-12)
     np.testing.assert_allclose(difficulty.trigram_gain, 0, atol=1e-12)
-    assert difficulty.rejections(SamplingConfig()) == ["unigram_gain", "trigram_gain"]
+    assert difficulty.rejections(SamplingConfig()) == [
+        "unigram_gain",
+        "trigram_gain",
+        "minimality_unresolved",
+    ]
 
 
 def test_fully_observed_markov_chain_fails_memory_beyond_trigram_screen() -> None:
@@ -97,8 +102,31 @@ def test_sampling_rejects_degenerate_tasks_and_is_reproducible(tmp_path: Path) -
     assert len({record["candidate_seed"] for record in records}) == attempts
     assert all(value >= 0.05 for value in metrics.min_state_mass)
     assert all(0 < value <= 1 for value in metrics.transition_density)
+    assert metrics.short_hankel_rank == metrics.joint_states == 12
+    assert metrics.hankel_rank_tolerance == 1e-10
     with pytest.raises(FileExistsError):
         sample_task(Shape(), 7, SamplingConfig(), first_path)
+
+
+def test_redundant_state_copies_cannot_inflate_task_order() -> None:
+    original = random_mixture(Shape(1, 3, 6), 7)
+    redundant = split_states(original)
+    # Disable temporal thresholds to isolate the independently required order screen.
+    config = SamplingConfig(min_state_mass=0, min_unigram_gain=0, min_trigram_gain=0)
+    first, second = measure_difficulty(original), measure_difficulty(redundant)
+    assert first.short_hankel_rank == first.joint_states == 3
+    assert second.short_hankel_rank == 3
+    assert second.joint_states == 6
+    assert not first.rejections(config)
+    assert second.rejections(config) == ["minimality_unresolved"]
+    np.testing.assert_allclose(first.conditional_entropies, second.conditional_entropies)
+
+
+def test_infeasible_minimality_screen_fails_before_sampling(tmp_path: Path) -> None:
+    path = tmp_path / "audit.jsonl"
+    with pytest.raises(ValueError, match="minimal-task screen"):
+        sample_task(Shape(2, 2, 3), 7, SamplingConfig(), path)
+    assert not path.exists()
 
 
 def test_sampling_exhaustion_preserves_every_rejection(tmp_path: Path) -> None:

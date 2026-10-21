@@ -2,7 +2,9 @@
 
 [Documentation](../README.md) · [Design](design.md) · [Artifacts](../reference/artifacts.md)
 
-There are two separate hypotheses in the motivating discussion:
+The primary target is the smallest equivalent process, compared up to permutation in
+our identifiable HMM family. The motivating discussion suggests a capacity hypothesis
+and a separate representation question:
 
 1. More model capacity permits learning and recovering processes with higher observable
    complexity, given adequate training and extraction budgets.
@@ -61,8 +63,11 @@ Process complexity has several recorded measures:
 | Short Hankel rank | Observable linear-complexity lower bound from empty/one-token prefix-suffix probabilities, tolerance 1e-10 |
 | Unigram/trigram gains | Componentwise temporal information at the declared context lengths |
 
-A truncated Hankel rank can underestimate complexity. It is not a general proof of
-minimal HMM order. Plot recovery against several measures rather than naming one scalar
+A truncated Hankel rank can underestimate complexity. Accepted tasks must have that
+rank equal to their joint state count, providing a numerical witness of minimum order
+as explained in the [design](design.md). Redundant or unresolved examples are rejected
+before training. This sufficient screen does not find minimum order for arbitrary HMMs.
+Plot recovery against several measures rather than naming one scalar
 "simplicity". Use multiple independent generating processes per stratum; do not fit a
 correlation or scaling law to the four-point development pilot.
 The [recorded pilot](../results/scaling-pilot.md) includes three unqualified checkpoints;
@@ -84,7 +89,9 @@ diagnostic = compare_processes(original, redundant)
 ```
 
 The construction must stay within the supported state count. Tests verify equivalent predictions across
-different model orders and distinguish non-equivalent processes with identical unigrams.
+different model orders, reject the inflated state count in the minimal-task screen, and
+distinguish non-equivalent processes with identical unigrams. These controls remain
+available through the library but are not accepted as larger benchmark tasks.
 
 The current extraction methods receive a fixed model order. They cannot establish
 automatic minimal-order discovery or a transformer preference for minimal automata.

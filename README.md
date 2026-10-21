@@ -2,7 +2,9 @@
 
 A prototype mechanistic interpretability evaluation: train a transformer on four
 hidden Markov models, then recover the generating processes from the trained model.
-The ground truth makes both predictive fidelity and structural recovery measurable.
+The target is a **minimal equivalent HMM, up to component/state permutation** within
+the identifiable task family. Ground truth makes predictive fidelity and structural
+recovery measurable.
 
 The central question is whether access to model internals helps at a fixed observation
 budget. An output-only method may already recover the process. That is a baseline to
@@ -43,6 +45,8 @@ as a separate historical receipt.
   generates each sequence. The default has 3 states per component and 16 output tokens.
 - PAutomaC-inspired sampling: configurable sparsity and emission concentration, followed
   by exact per-component unigram/trigram difficulty checks and state-occupancy checks.
+  Accepted tasks must also have observable Hankel rank equal to their joint state count,
+  a numerical minimality witness that excludes redundant state copies.
   Rejected candidates are recorded; selection never uses transformer or recovery scores.
 - An exact Bayesian filter over **both component identity and hidden state**.
 - A small causal transformer trained on fresh sampled sequences by next-token loss.
@@ -67,7 +71,8 @@ as a separate historical receipt.
 
 The activation method reads internals by executing the checkpoint. Static weights-only
 reconstruction and causal circuit validation are not implemented. Parameter/state
-counts are disclosed in this first version. A passing prediction gate applies to the
+counts, including the screened minimal order, are disclosed in this first version.
+A passing prediction gate applies to the
 sampled contexts and declared tolerance, not exact Bayesian optimality everywhere.
 
 ## Extract from an existing checkpoint
@@ -102,8 +107,8 @@ uv run --locked hidden-process-bench sweep \
 Each run has a time limit. JSONL/CSV summaries retain qualified, unqualified, failed,
 and timed-out runs. See the [scaling protocol](docs/research/scaling.md) for hypotheses
 and the [measured pilot](docs/results/scaling-pilot.md): one checkpoint qualified and
-three missed the preset gate. Larger raw automata need not define more complex observable processes;
-equivalent state splitting is a control for that distinction. The baseline extractors
+three missed the preset gate. Accepted tasks have a numerical minimal-order witness;
+equivalent state splitting tests the distinction from raw representation size. The baseline extractors
 have a disclosed model order, so this prototype does not establish a transformer bias
 toward minimal automata or fit a scaling law.
 

@@ -7,7 +7,7 @@ HMM math, transformer execution, extraction, and evaluation have separate owners
 
 ```mermaid
 flowchart LR
-  G[Candidate generator] --> Q[Exact difficulty screen]
+  G[Candidate generator] --> Q[Difficulty and numerical minimality screen]
   Q --> T
   T[Evaluator-only HMMs] --> D[Training sequences]
   D --> M[Transformer checkpoint]

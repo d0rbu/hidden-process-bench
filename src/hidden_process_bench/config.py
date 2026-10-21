@@ -128,6 +128,8 @@ class RunConfig:
             raise ValueError("evaluation needs at least two sequences per component")
         if self.length < 4:
             raise ValueError("sampling screen requires at least four tokens per sequence")
+        if self.vocab < self.components * self.states:
+            raise ValueError("minimal-task screen requires vocab >= components * states")
 
     def shape(self) -> Shape:
         return Shape(self.components, self.states, self.vocab)
