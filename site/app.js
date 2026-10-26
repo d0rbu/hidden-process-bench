@@ -282,7 +282,7 @@ function renderStudy() {
 
 function initializeStudy() {
   const task = data.method_study.cases.find((item) => item.id === 'new-a');
-  $('method-finding').textContent = `On one new task, belief features reduced predictive KL from ${task.methods.adam_probabilities.kl.toFixed(4)} to ${task.methods.belief_layer_0.kl.toFixed(4)}. The benefit varied across tasks. No method recovered an equivalent process.`;
+  $('method-finding').textContent = `With the HMM family and size supplied, belief features reduced predictive KL from ${task.methods.adam_probabilities.kl.toFixed(4)} to ${task.methods.belief_layer_0.kl.toFixed(4)} on one task. This does not test discovering the HMM structure.`;
   for (const item of data.method_study.cases) {
     const option = element('option', item.label);
     option.value = item.id;
@@ -290,7 +290,7 @@ function initializeStudy() {
   }
   $('study-case').value = 'new-a';
   $('study-case').addEventListener('change', renderStudy);
-  $('study-report').href = `${data.repository}/blob/${data.method_result_revision}/docs/results/five-method-pilot.md`;
+  $('study-report').href = `${data.repository}/blob/main/docs/results/five-method-pilot.md`;
   renderStudy();
 }
 

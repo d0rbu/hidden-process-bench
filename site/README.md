@@ -27,6 +27,15 @@ Node.js 22+ runs the JavaScript syntax and math checks; serving the website need
 Python. The checks also run in the existing local pre-push gate, never on commit or in
 GitHub Actions.
 
+## Scope correction
+
+The primary objective is independent process discovery, including family and structure.
+It has not been implemented or evaluated. Every recorded fit and agent prompt disclosed
+the HMM family and order; the feature methods used a supplied HMM adapter. The site labels
+these as informed fitting baselines. `scope_correction` in the exported JSON applies to
+all historical data, whose raw receipts are unchanged. See the
+[primary protocol](../docs/research/independent-discovery.md).
+
 ## What the page shows
 
 - Three recorded generators: the qualified demo and both process sizes in the scaling
@@ -40,7 +49,7 @@ GitHub Actions.
   tokens before and after splitting; incoming mass is divided among the copies.
   This control illustrates redundancy, including beyond the scorer's six-state limit;
   it is not a new training run or a newly qualified task.
-- A compact five-family comparison across four qualified checkpoints, including two
+- A compact informed five-family comparison across four qualified checkpoints, including two
   independent generators. The full table is expandable and retains the compute/access
   differences and the two-checkpoint limit on agent trials.
 - Recorded recovery scores and all four scaling statuses. The scaling chart plots the

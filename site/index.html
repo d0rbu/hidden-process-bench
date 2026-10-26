@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="An interactive explanation of recovering known hidden processes from trained transformers, with real generators and recorded results.">
+  <meta name="description" content="A process discovery benchmark in development, with public generators and explicitly informed HMM-fitting baselines.">
   <meta name="theme-color" content="#faf9f6">
   <title>Hidden Process Bench</title>
   <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -24,12 +24,13 @@
   <main id="main">
     <section class="intro" aria-labelledby="title">
       <h1 id="title">Recovering hidden processes</h1>
-      <p class="lede">We know the world a transformer learned from.<br class="desktop-break"> Can we recover its structure from the trained model?</p>
+      <p class="lede">The evaluator knows the world a transformer learned from.<br class="desktop-break"> Can a method independently discover its structure?</p>
       <ol class="steps">
-        <li><h2>Generate</h2><p>Four hidden Markov models produce sequences. The transformer sees only the tokens.</p></li>
-        <li><h2>Learn</h2><p>Train until predictions are close to the exact Bayesian predictor for that world.</p></li>
-        <li><h2>Recover</h2><p>Reconstruct the process using model outputs or activations. Check against ground truth.</p></li>
+        <li><h2>Generate</h2><p>The evaluator chooses a hidden process. Its family and structure stay private.</p></li>
+        <li><h2>Learn</h2><p>Train the transformer to predict the process’s tokens. Check it against the oracle.</p></li>
+        <li><h2>Recover</h2><p>Infer the process family, structure and update rules. Submit an executable mechanism.</p></li>
       </ol>
+      <p id="discovery-status" class="finding">Independent process discovery has not been evaluated yet. All existing fits were given the HMM family and its size.</p>
     </section>
 
     <p id="load-status" role="status">Loading the recorded generators…</p>
@@ -37,7 +38,7 @@
 
     <section id="explore" class="section" aria-labelledby="explore-title" hidden>
       <div class="section-heading">
-        <div><h2 id="explore-title">Explore a generator</h2><p>A state emits a token, then moves. Click a state to inspect it.</p></div>
+        <div><h2 id="explore-title">Explore a development generator</h2><p>A state emits a token, then moves. Click a state to inspect it.</p></div>
         <label class="select-label">Example<select id="dataset"></select></label>
       </div>
 
@@ -89,16 +90,16 @@
           <p id="equivalence-status" class="muted"></p>
         </details>
       </div>
-      <p class="source-note">These are the actual generators from the public experiments. <a id="generator-source" href="https://github.com/d0rbu/hidden-process-bench">View source data ↗</a></p>
+      <p class="source-note">These are public development generators, not hidden discovery challenges. <a id="generator-source" href="https://github.com/d0rbu/hidden-process-bench">View source data ↗</a></p>
     </section>
 
     <section id="results" class="section" aria-labelledby="results-title" hidden>
-      <h2 id="results-title">Results so far</h2>
-      <p class="section-intro">The models learned to predict. Recovering their structure is harder.</p>
-      <h3>Five method families, four qualified models</h3>
+      <h2 id="results-title">Informed fitting baselines</h2>
+      <p class="section-intro">The methods were told the process was an HMM and given its component and state counts. These results do not test discovering that structure.</p>
+      <h3>Five fitting approaches, four prediction-qualified models</h3>
       <p id="method-finding"></p>
       <details class="explainer-detail">
-        <summary>Compare the methods</summary>
+        <summary>Compare the informed fits</summary>
         <label class="select-label">Checkpoint<select id="study-case"></select></label>
         <div class="table-scroll">
           <table class="recovery-table">
@@ -108,7 +109,7 @@
           </table>
         </div>
         <p>Most fits use two restarts of 250 steps. The observation agent used more optimization; circuit tests used 15 extra batched forwards. Agent trials cover only the older checkpoints.</p>
-        <p><a id="study-report" href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/five-method-pilot.md">Methods, budgets and raw results ↗</a></p>
+        <p><a id="study-report" href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/five-method-pilot.md">Informed methods, budgets and raw results ↗</a></p>
       </details>
       <div class="result-heading">
         <h3>The qualified demo</h3><span class="pass-label">Prediction gate passed</span>
@@ -121,7 +122,7 @@
           <tbody id="recovery-results"></tbody>
         </table>
       </div>
-      <p class="finding">Token probabilities beat the activation-assisted baseline here. None recovered the process exactly.</p>
+      <p class="finding">Token probabilities beat the activation-assisted fit here. Both methods were given the HMM structure.</p>
 
       <div class="scaling-section">
         <h3>Does a bigger model help?</h3>
@@ -140,17 +141,17 @@
       </div>
 
       <details class="explainer-detail method-detail">
-        <summary>What this evaluation measures</summary>
-        <p>Recovery has two scores: predictive KL compares next-token distributions; parameter MAE compares the HMM parameters after aligning component and state labels. Zero is exact on either measure.</p>
+        <summary>What these informed controls measure</summary>
+        <p>Informed fitting has two scores: predictive KL compares next-token distributions; parameter MAE compares the HMM parameters after aligning component and state labels. Zero is exact on either measure.</p>
         <p>Sample-only methods see generated tokens. Probability methods also see next-token distributions. The activation method adds the final residual stream. Each uses the same histories, though their information and compute differ.</p>
         <p>Tasks pass temporal-information and state-occupancy screens inspired by PAutomaC. Observable Hankel rank must match the joint state count: a numerical minimality witness, not a formal proof. Redundant copies fail this screen.</p>
-        <p>State count is given to these baseline extractors. Activation access is not static weights-only extraction or a causal circuit analysis.</p>
+        <p>The family and state/component counts were supplied, including to the agents. These fits do not evaluate independent family or structure discovery.</p>
       </details>
     </section>
   </main>
 
   <footer>
-    <p>A small research prototype. Recorded results: 26 October 2026.</p>
+    <p>A small research prototype. Recorded informed-control results: 26 October 2026.</p>
     <div class="footer-links"><a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/research/design.md">Method</a><a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/scaling-pilot.md">Run reports</a><a href="data.json">Download data</a><a href="https://github.com/d0rbu/hidden-process-bench">GitHub ↗</a></div>
   </footer>
 </body>

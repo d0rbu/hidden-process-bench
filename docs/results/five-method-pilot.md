@@ -1,8 +1,15 @@
-# Five recovery method families: measured pilot
+# Five informed HMM-fitting method families: measured pilot
 
 [Documentation](../README.md) · [Protocol](../research/method-study.md) · [Raw summary](five-method-pilot/summary.json)
 
-All five families ran. Belief features helped on one new independent task, while the
+**Scope correction: the HMM family, component/state counts and HMM candidate format
+were supplied to these methods, including the agents. Feature methods used a supplied
+HMM fitting adapter. These runs measure informed parameter fitting, not independent
+discovery of process family or structure. There are no primary discovery results yet.**
+See the [primary protocol](../research/independent-discovery.md) and
+[machine-readable correction](disclosure-correction.json). Raw receipts are unchanged.
+
+All five informed fitting families ran. Belief features helped on one new independent task, while the
 ordinary probability fit remained competitive elsewhere. **No candidate recovered a
 numerically equivalent process.** These are bounded adaptations, not reproductions
 of full published systems or a general method ranking.
@@ -104,7 +111,7 @@ are not independent hidden-task replications.
 The numerical source was committed cleanly at
 `0481e282c083e137c4afae97345ac5297c41df27` (use the full revision and source hashes in each plan for exact provenance).
 All candidates were fixed and hashed before evaluator feedback. The agent conditions
-had fresh contexts and public-only staged inputs, with instruction/API boundaries
+had fresh contexts and family/order-disclosing staged inputs, with instruction/API boundaries
 rather than an operating-system sandbox. The inherited agent model identifier was not
 exposed in tool metadata; these agent trials are less reproducible than the numerical fits.
 

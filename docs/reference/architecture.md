@@ -2,6 +2,11 @@
 
 [Documentation](../README.md) · [Design](../research/design.md) · [File map](file-reference.md)
 
+The implemented architecture below is the informed HMM-fitting control pipeline.
+The [primary independent-discovery track](../research/independent-discovery.md) is not
+implemented. Its interface must let the extractor propose the process family and
+structure; it cannot inherit this pipeline’s supplied `MixtureHMM` boundary.
+
 An installable `src/` package holds the research implementation. The CLI is thin;
 HMM math, transformer execution, extraction, and evaluation have separate owners.
 
@@ -45,6 +50,7 @@ runs a small filter/sampler checked against the Python oracle. It never reads li
 experiment directories or calls a model provider. The deployment serves a frozen asset
 copy, separate from the working checkout.
 
-`method_study.py` compares the five [method families](../research/method-study.md). Its
-public-only extraction function fixes candidate hashes before the outer evaluator opens
+`disclosure.py` labels new artifacts with the supplied family/order and marks
+independent discovery as unevaluated. `method_study.py` compares the five informed [method families](../research/method-study.md). Its
+public, prior-informed extraction function fixes candidate hashes before the outer evaluator opens
 truth. `classical.py`, `representations.py`, and `circuits.py` own the method adaptations.

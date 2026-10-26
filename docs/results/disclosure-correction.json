@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "track": "informed_hmm_parameter_fit",
+  "applies_to": ["cpu-demo", "screened-cpu-demo", "scaling-pilot", "five-method-pilot"],
+  "process_family_disclosed": true,
+  "process_order_disclosed": true,
+  "family_discovery_evaluated": false,
+  "independent_structure_recovery_evaluated": false,
+  "primary_discovery_track_status": "not_implemented_or_run",
+  "primary_discovery_result_count": 0,
+  "raw_experiment_receipts_modified": false,
+  "correction": "Existing fits and agent prompts were given HMM semantics and order. Their scores measure informed parameter fitting and predictive approximation, not independent discovery of the generating mechanism."
+}

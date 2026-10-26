@@ -37,6 +37,12 @@ def test_full_method_study_fixes_candidates_then_scores_and_refuses_overwrite(
     report = method_study.run_study([run], out, config)
     case = json.loads((out / "case-000/evaluation.json").read_text())
     assert not case["benchmark_eligible"]
+    assert case["checkpoint_qualified"] == case["benchmark_eligible"]
+    assert not case["evaluation_scope"]["independent_structure_recovery_evaluated"]
+    assert all(
+        not item["evaluation_scope"]["family_discovery_evaluated"]
+        for item in case["submissions"].values()
+    )
     assert set(case["scores"]) == {
         "adam_samples",
         "adam_probabilities",

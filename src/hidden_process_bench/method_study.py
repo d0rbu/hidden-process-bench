@@ -1,7 +1,8 @@
-"""Bounded comparison of classical, representation and causal recovery adaptations.
+"""Informed HMM fitting controls with disclosed process family and order.
 
 Run with ``python -m hidden_process_bench.method_study --run RUN --out NEW``.
-Only the outer evaluator reads private artifacts, after candidate files are fixed.
+These controls do not test independent process discovery. Only the outer evaluator
+reads private artifacts, after candidate files are fixed.
 """
 
 import argparse
@@ -18,6 +19,7 @@ import torch
 from hidden_process_bench.circuits import discover_circuit, interchange_test
 from hidden_process_bench.classical import fit_em, fit_spectral
 from hidden_process_bench.config import Shape, check_count
+from hidden_process_bench.disclosure import informed_scope
 from hidden_process_bench.experiment import provenance, score, write_json
 from hidden_process_bench.model import TinyTransformer
 from hidden_process_bench.process import Floats, MixtureHMM
@@ -52,7 +54,7 @@ class StudyConfig:
 def extract_methods(
     checkpoint: Path, task: Path, output: Path, config: StudyConfig
 ) -> dict[str, dict[str, object]]:
-    """Public-only boundary: no run directory, truth, seed, or scorer is accepted."""
+    """Public, prior-informed boundary: the task supplies process family and order."""
     output.mkdir(parents=True, exist_ok=False)
     payload = json.loads(task.read_text())
     if payload["schema_version"] != 1:
@@ -83,6 +85,7 @@ def extract_methods(
         result.hmm.save(path)
         records[name] = {
             "access": access,
+            "evaluation_scope": informed_scope(shape),
             "objective": result.objective,
             "objective_name": result.objective_name,
             "restart_objectives": result.restart_objectives,
@@ -241,6 +244,8 @@ def run_study(runs: list[Path], output: Path, config: StudyConfig) -> dict[str, 
             result = {
                 "run": str(run),
                 "benchmark_eligible": qualification,
+                "checkpoint_qualified": qualification,
+                "evaluation_scope": informed_scope(truth.shape),
                 "checkpoint_sha256": hashlib.sha256(
                     (run / "public/checkpoint.pt").read_bytes()
                 ).hexdigest(),

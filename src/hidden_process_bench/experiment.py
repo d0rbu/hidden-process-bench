@@ -15,6 +15,7 @@ import torch
 from torch.nn import functional as F
 
 from hidden_process_bench.config import RunConfig, Shape
+from hidden_process_bench.disclosure import informed_scope
 from hidden_process_bench.equivalence import compare_processes, process_complexity
 from hidden_process_bench.metrics import (
     Optimality,
@@ -147,7 +148,7 @@ def extract_checkpoint(
     seed: int,
     activation_weight: float = 0.1,
 ) -> dict[str, object]:
-    """Standalone extractor: its only inputs are public challenge artifacts."""
+    """Informed fitting control: public artifacts disclose the HMM family and order."""
     payload = json.loads(task.read_text())
     if payload["schema_version"] != 1:
         raise ValueError("unsupported task schema version")
@@ -173,6 +174,7 @@ def extract_checkpoint(
     result.hmm.save(output)
     return {
         "method": method,
+        "evaluation_scope": informed_scope(shape),
         "objective": result.objective,
         "objective_name": result.objective_name,
         "token_queries": observations.token_queries,
@@ -195,7 +197,14 @@ def run(config: RunConfig, output: Path) -> dict[str, object]:
         config.shape(), config.seed, config.sampling, private / "sampling.jsonl"
     )
     truth.save(private / "truth.json")
-    write_json(public / "task.json", {"schema_version": 1, "shape": asdict(config.shape())})
+    write_json(
+        public / "task.json",
+        {
+            "schema_version": 1,
+            "shape": asdict(config.shape()),
+            "evaluation_scope": informed_scope(config.shape()),
+        },
+    )
     training_started = perf_counter()
     model, trace = train(config, truth, private / "training.jsonl")
     training_seconds = perf_counter() - training_started
@@ -270,6 +279,8 @@ def run(config: RunConfig, output: Path) -> dict[str, object]:
     report = {
         "schema_version": 1,
         "benchmark_eligible": eligible,
+        "checkpoint_qualified": eligible,
+        "evaluation_scope": informed_scope(config.shape()),
         "interpretation": "qualified_checkpoint"
         if eligible
         else "diagnostic_only_unqualified_checkpoint",

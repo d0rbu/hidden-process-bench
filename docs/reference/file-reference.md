@@ -15,6 +15,9 @@
 | `src/hidden_process_bench/sampling.py` | Entropy and minimal-order screens, bounded rejection sampling, private audit |
 | `src/hidden_process_bench/equivalence.py` | Numerical word-equivalence check, redundant-state controls, complexity |
 | `src/hidden_process_bench/model.py` | Causal transformer, checkpoint and observation API |
+| `src/hidden_process_bench/disclosure.py` | Prior disclosures and explicit informed-control scope for new artifacts |
+| `docs/research/independent-discovery.md` | Primary discovery objective, neutral inputs/submissions and implementation gap |
+| `docs/results/disclosure-correction.json` | Scope correction for unchanged historical informed-control receipts |
 | `src/hidden_process_bench/recovery.py` | Three observation-tier recovery objectives |
 | `src/hidden_process_bench/classical.py` | Scaled mixture Baum–Welch and spectral observable operators |
 | `src/hidden_process_bench/representations.py` | Counted layer traces, PCA/SAE/transcoder fits, observable belief updates |

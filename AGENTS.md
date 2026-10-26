@@ -27,6 +27,16 @@ processes from trained transformers. Keep the implementation small and explicit.
 
 ## Research correctness
 
+- The primary task is independent process discovery: the extractor must infer the
+  generating family, structure and order without being supplied an HMM template.
+  Follow [the primary protocol](docs/research/independent-discovery.md).
+- Existing HMM fits, feature-to-HMM adapters and agent trials are informed controls.
+  They disclose family and order and must never be reported as independent discovery.
+  `benchmark_eligible` qualifies transformer predictions only, not extraction success.
+- Primary-track inputs, prompts, paths and output schemas must not reveal process
+  family/order. Use fresh isolated contexts and hidden tasks across multiple mechanisms;
+  HMM-only tasks with supplied HMM candidates cannot test discovery of the family.
+
 - Extractors must not receive true HMMs, latent labels, generating seeds, or scorer feedback.
   Supervised probes are diagnostics, never extraction results.
 - Keep training, stopping validation, final test, model generation, and probe RNG streams separate.

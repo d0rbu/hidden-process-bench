@@ -1,5 +1,10 @@
 # Scaling and equivalent processes
 
+**Scope:** the implemented sweeps supply the HMM family and order to every fitter.
+They measure training and informed parameter fitting, not independent family or
+structure discovery. The latter is the [primary protocol](independent-discovery.md)
+and has not been implemented or run.
+
 [Documentation](../README.md) · [Design](design.md) · [Artifacts](../reference/artifacts.md)
 
 The primary target is the smallest equivalent process, compared up to permutation in

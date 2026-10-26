@@ -1,8 +1,12 @@
-# Recovery method pilot
+# Informed HMM-fitting pilot
 
 [Documentation](../README.md) · [Design](design.md) · [Artifacts](../reference/artifacts.md)
 
-This pilot tries five method families on the same disclosed-order HMM task. These are
+**Scope correction: these methods were given the HMM family and component/state counts.
+The feature methods also received an HMM fitting adapter. None was evaluated for
+independent process discovery. See the [primary protocol](independent-discovery.md).**
+
+This informed-control pilot tries five method families on the same disclosed-order HMM task. These are
 small, explicit adaptations, rather than reproductions of entire published systems.
 The ordinary probability and sample fits remain controls.
 
@@ -15,7 +19,7 @@ uv run --locked python -m hidden_process_bench.method_study \
   --out outputs/method-study
 ```
 
-The public-only extraction function receives a checkpoint, public task shape, and
+The public, prior-informed extraction function receives a checkpoint, public task shape, and
 independent observation/recovery seeds. It never receives a run directory, generating
 seed, true HMM, labels, or scores. All candidates for a case are saved and hashed before
 the evaluator opens its truth and qualification report. This is an instruction and API
@@ -113,7 +117,9 @@ methods have more checkpoint access than the ordinary observation-only methods.
 
 ## Agent protocol
 
-Two fresh agent contexts receive only staged public inputs and a task description.
+Two fresh agent contexts receive staged public inputs and a task description that
+explicitly supplies HMM semantics and component/state counts. They are hidden from
+parameters, not from process family or structure.
 They are instructed not to read the repository, internet, memories, evaluator outputs,
 private data, or one another. No source from the numerical extractors is supplied.
 

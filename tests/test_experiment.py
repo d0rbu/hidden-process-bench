@@ -2,6 +2,7 @@ import hashlib
 import json
 from dataclasses import replace
 from pathlib import Path
+from typing import cast
 from unittest.mock import patch
 
 import numpy as np
@@ -27,6 +28,14 @@ def smoke_run(tmp_path_factory: pytest.TempPathFactory) -> Path:
 def test_smoke_records_unqualified_results_and_complete_provenance(smoke_run: Path) -> None:
     report = json.loads((smoke_run / "report.json").read_text())
     assert not report["benchmark_eligible"]
+    assert report["checkpoint_qualified"] == report["benchmark_eligible"]
+    scope = report["evaluation_scope"]
+    assert scope["track"] == "informed_hmm_parameter_fit"
+    assert scope["qualification_scope"] == "transformer_prediction_only"
+    assert not scope["independent_structure_recovery_evaluated"]
+    assert not scope["family_discovery_evaluated"]
+    assert scope["disclosed_components"] == 4
+    assert scope["disclosed_states_per_component"] == 3
     assert report["interpretation"] == "diagnostic_only_unqualified_checkpoint"
     assert set(report["recovery"]) == {"samples", "probabilities", "activations"}
     assert report["training"]["steps"] == 2
@@ -44,6 +53,7 @@ def test_smoke_records_unqualified_results_and_complete_provenance(smoke_run: Pa
     assert set(json.loads((smoke_run / "public/task.json").read_text())) == {
         "schema_version",
         "shape",
+        "evaluation_scope",
     }
     assert not (smoke_run / "public/truth.json").exists()
     assert not (smoke_run / "public/config.json").exists()
@@ -90,6 +100,9 @@ def test_standalone_extraction_and_scoring_need_no_training_data(
         100,
     )
     assert result["token_queries"] == 24
+    scope = cast(dict[str, object], result["evaluation_scope"])
+    assert scope["track"] == "informed_hmm_parameter_fit"
+    assert not scope["family_discovery_evaluated"]
     truth = MixtureHMM.load(smoke_run / "private/truth.json")
     candidate = MixtureHMM.load(tmp_path / "candidate.json")
     metrics = score(truth, candidate, 16, 6, 102)
