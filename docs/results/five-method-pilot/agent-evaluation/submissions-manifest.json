@@ -1,0 +1,23 @@
+{
+  "static": {
+    "demo/candidate.json": "b57b08a5a53cd713d5b411743dafa773e338b227f4ec241eba34b658f9790918",
+    "demo/task.json": "187b477082d40d976c1572aa0afa8eeeac238ad1cb487a15a952aff993e3c186",
+    "extract_static.py": "ae7ccb5a72b8337b710000efb4f80d0c9fdd4489d694098b5fcf6ea4c853e5ee",
+    "pilot/candidate.json": "f41f59d2ce6012f0cba4f5e9af06f043c288c3d7b2bc48db15cf33be9d2570f2",
+    "pilot/task.json": "0c6e05ad6a2d09e6efb269c9b592933feb2fb4f64fec9ad25f7a649a82075ccd",
+    "protocol.json": "097174feb99f39af5bc2435ad9e68fa71dbf582947f82e87d34491f151aa6742",
+    "public_model.py": "92dbf30de8b15decf104fce460d0929a91ee061aa856128f0e4ab45c47755378",
+    "report.json": "ac7c4298061335e28f7486cea8edc7ae5fcf6177bf726d84bf99def069df03d3"
+  },
+  "observations": {
+    "demo/candidate.json": "2cbe4d711282c711228694df22c8dd57fdf8c6c0166945f6e4dc8be2fc68f324",
+    "demo/task.json": "187b477082d40d976c1572aa0afa8eeeac238ad1cb487a15a952aff993e3c186",
+    "extract.py": "90778b4e9b3814eba7fd80878ff0cc70640ab081a236f5b716613fc931d36461",
+    "pilot/candidate.json": "784ac9b6c45aa9eb311344d225abfd9eaac308705f401d78e18a28f73c33b012",
+    "pilot/task.json": "0c6e05ad6a2d09e6efb269c9b592933feb2fb4f64fec9ad25f7a649a82075ccd",
+    "protocol.json": "5f309f92fcfc1fd925ec1f4e8c22a1d9d3f188908cf5a3d459cddbb5db478aef",
+    "public_model.py": "92dbf30de8b15decf104fce460d0929a91ee061aa856128f0e4ab45c47755378",
+    "report.json": "76213020ab869de799f25efd12f9fbf20be8b076719601ec8cdcb10a2cb3d9bc",
+    "validate_submission.py": "4edc8d7f131a0354ab52bd99bd92982ea644918d69cbf45a98fcb07949379b1c"
+  }
+}

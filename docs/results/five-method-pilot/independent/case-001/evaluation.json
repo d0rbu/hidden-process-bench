@@ -1,0 +1,1295 @@
+{
+  "run": "outputs/method-replications-v1/case-1",
+  "benchmark_eligible": true,
+  "checkpoint_sha256": "9c1bcfd9dc2920a17bf624616edb5b3a3aa87aa9d57de1a695177623e60d8c0d",
+  "submissions": {
+    "adam_samples": {
+      "access": "samples",
+      "objective": 2.363412715544831,
+      "objective_name": "sample_nll",
+      "restart_objectives": [
+        2.363412715544831,
+        2.372522533728349
+      ],
+      "fitting_seconds": 3.777008779346943,
+      "submission_seconds": 3.7778748720884323,
+      "fit_parameters": 244,
+      "optimizer_steps_per_restart": 250,
+      "restarts": 2,
+      "observation_budget": {
+        "forward_calls": 24,
+        "token_queries": 3072,
+        "prefix_tokens_processed": 38400
+      },
+      "candidate_sha256": "174090ad09d1476b549d446184ee6d5cdd663764534239011663c8fa34059368",
+      "diagnostics": {}
+    },
+    "adam_probabilities": {
+      "access": "probabilities",
+      "objective": 2.3963367807322236,
+      "objective_name": "soft_target_cross_entropy",
+      "restart_objectives": [
+        2.3963367807322236,
+        2.396800427643932
+      ],
+      "fitting_seconds": 5.735452618449926,
+      "submission_seconds": 5.737250957638025,
+      "fit_parameters": 244,
+      "optimizer_steps_per_restart": 250,
+      "restarts": 2,
+      "observation_budget": {
+        "forward_calls": 24,
+        "token_queries": 3072,
+        "prefix_tokens_processed": 38400
+      },
+      "candidate_sha256": "a02fdd83a8e3806201c4fd8575453585fa429aa5b85bf4c028fa72788ea8b8c2",
+      "diagnostics": {}
+    },
+    "em_samples": {
+      "access": "samples",
+      "objective": 2.356608344964595,
+      "objective_name": "sample_nll_em",
+      "restart_objectives": [
+        2.356608344964595,
+        2.3700363151416917
+      ],
+      "fitting_seconds": 1.691970519721508,
+      "submission_seconds": 1.6924599222838879,
+      "fit_parameters": 244,
+      "optimizer_steps_per_restart": 250,
+      "restarts": 2,
+      "observation_budget": {
+        "forward_calls": 24,
+        "token_queries": 3072,
+        "prefix_tokens_processed": 38400
+      },
+      "candidate_sha256": "26f8862c5dba2d283376118316e5f667743fbac491bf55a29979e656d59185c5",
+      "diagnostics": {}
+    },
+    "spectral_hmm": {
+      "access": "samples",
+      "objective": 2.63857379035523,
+      "objective_name": "soft_target_cross_entropy",
+      "restart_objectives": [
+        2.63857379035523,
+        2.6399036598564654
+      ],
+      "fitting_seconds": 3.8305729664862156,
+      "submission_seconds": 3.8317585438489914,
+      "fit_parameters": 244,
+      "optimizer_steps_per_restart": 250,
+      "restarts": 2,
+      "observation_budget": {
+        "forward_calls": 24,
+        "token_queries": 3072,
+        "prefix_tokens_processed": 38400
+      },
+      "candidate_sha256": "23c5b77dd3bb1fd3109aef980a4d08141f3ecc5e2d991a1f0feea55c6782c39f",
+      "diagnostics": {
+        "repaired_prediction_fraction": 0.9169921875,
+        "moment_seconds": 0.016877729445695877,
+        "adapter": "clip/normalize spectral targets then HMM distillation",
+        "retained_singular_value": 0.0019178224588281487
+      }
+    },
+    "belief_layer_0": {
+      "access": "probabilities+residuals",
+      "objective": 2.4524504206912088,
+      "objective_name": "soft_target_cross_entropy+normalized_activation_mse",
+      "restart_objectives": [
+        2.4535497030903044,
+        2.4524504206912088
+      ],
+      "fitting_seconds": 4.756353095173836,
+      "submission_seconds": 4.765546604990959,
+      "fit_parameters": 387,
+      "optimizer_steps_per_restart": 250,
+      "restarts": 2,
+      "observation_budget": {
+        "forward_calls": 24,
+        "token_queries": 3072,
+        "prefix_tokens_processed": 38400
+      },
+      "candidate_sha256": "c860cff427d11735c011abbc8664fded1933539fa3c7d4ad356999b77a7ff299",
+      "diagnostics": {
+        "kind": "pca",
+        "fit_sequences": 102,
+        "test_sequences": 26,
+        "feature_dimension": 11,
+        "fit_parameters": 704,
+        "heldout_normalized_mse": 0.21727405071494144,
+        "explained_variance_or_active_features": 0.7584458978726878,
+        "training_steps": 0,
+        "heldout_unnormalized_update_nmse": 0.06944768004790375,
+        "coordinate_dimension": 12,
+        "representation_seconds": 0.3752700015902519,
+        "adapter": "probability distillation + belief-to-coordinate reconstruction"
+      }
+    },
+    "belief_layer_1": {
+      "access": "probabilities+residuals",
+      "objective": 2.4328513326002743,
+      "objective_name": "soft_target_cross_entropy+normalized_activation_mse",
+      "restart_objectives": [
+        2.4328513326002743,
+        2.434246138882246
+      ],
+      "fitting_seconds": 5.048407346010208,
+      "submission_seconds": 5.059181842952967,
+      "fit_parameters": 387,
+      "optimizer_steps_per_restart": 250,
+      "restarts": 2,
+      "observation_budget": {
+        "forward_calls": 24,
+        "token_queries": 3072,
+        "prefix_tokens_processed": 38400
+      },
+      "candidate_sha256": "cd2c606d168f8ab51c1bd21dfdf9e84c87f9999e86f803ca051bc3eb7d79ef44",
+      "diagnostics": {
+        "kind": "pca",
+        "fit_sequences": 102,
+        "test_sequences": 26,
+        "feature_dimension": 11,
+        "fit_parameters": 704,
+        "heldout_normalized_mse": 0.07561613094264213,
+        "explained_variance_or_active_features": 0.914705582097542,
+        "training_steps": 0,
+        "heldout_unnormalized_update_nmse": 0.026344813062351338,
+        "coordinate_dimension": 12,
+        "representation_seconds": 0.7257925271987915,
+        "adapter": "probability distillation + belief-to-coordinate reconstruction"
+      }
+    },
+    "belief_all_layers": {
+      "access": "probabilities+residuals",
+      "objective": 2.433399755560713,
+      "objective_name": "soft_target_cross_entropy+normalized_activation_mse",
+      "restart_objectives": [
+        2.433399755560713,
+        2.4421244040858894
+      ],
+      "fitting_seconds": 3.9184324219822884,
+      "submission_seconds": 3.924514975398779,
+      "fit_parameters": 387,
+      "optimizer_steps_per_restart": 250,
+      "restarts": 2,
+      "observation_budget": {
+        "forward_calls": 24,
+        "token_queries": 3072,
+        "prefix_tokens_processed": 38400
+      },
+      "candidate_sha256": "44bdee161ca78afe8548df346edd9a380391942a302a0d98f72ce6303eca20a3",
+      "diagnostics": {
+        "kind": "pca",
+        "fit_sequences": 102,
+        "test_sequences": 26,
+        "feature_dimension": 11,
+        "fit_parameters": 1408,
+        "heldout_normalized_mse": 0.19034811706289909,
+        "explained_variance_or_active_features": 0.7850807966590436,
+        "training_steps": 0,
+        "heldout_unnormalized_update_nmse": 0.03609580721892639,
+        "coordinate_dimension": 12,
+        "representation_seconds": 1.4754995740950108,
+        "adapter": "probability distillation + belief-to-coordinate reconstruction"
+      }
+    },
+    "pca": {
+      "access": "probabilities+activations",
+      "objective": 2.431718422253254,
+      "objective_name": "soft_target_cross_entropy+normalized_activation_mse",
+      "restart_objectives": [
+        2.431718422253254,
+        2.4422556886395657
+      ],
+      "fitting_seconds": 4.51010125875473,
+      "submission_seconds": 4.530139647424221,
+      "fit_parameters": 387,
+      "optimizer_steps_per_restart": 250,
+      "restarts": 2,
+      "observation_budget": {
+        "forward_calls": 24,
+        "token_queries": 3072,
+        "prefix_tokens_processed": 38400
+      },
+      "candidate_sha256": "ed808f2f567264624ba35acdeaeb427d5e56d65928646947c636390e43dab815",
+      "diagnostics": {
+        "kind": "pca",
+        "fit_sequences": 102,
+        "test_sequences": 26,
+        "feature_dimension": 11,
+        "fit_parameters": 704,
+        "heldout_normalized_mse": 0.1106957296019667,
+        "explained_variance_or_active_features": 0.8896120427850698,
+        "training_steps": 0,
+        "representation_seconds": 0.21530583873391151,
+        "adapter": "shared HMM distillation + feature reconstruction; coefficient 0.1"
+      }
+    },
+    "sae": {
+      "access": "probabilities+activations",
+      "objective": 2.4364802496532163,
+      "objective_name": "soft_target_cross_entropy+normalized_activation_mse",
+      "restart_objectives": [
+        2.4364802496532163,
+        2.4407358928199385
+      ],
+      "fitting_seconds": 4.5400571040809155,
+      "submission_seconds": 4.542170748114586,
+      "fit_parameters": 556,
+      "optimizer_steps_per_restart": 250,
+      "restarts": 2,
+      "observation_budget": {
+        "forward_calls": 24,
+        "token_queries": 3072,
+        "prefix_tokens_processed": 38400
+      },
+      "candidate_sha256": "5a23a81a9ea843ab8ba4e08ae36bd81c56ed657bb72dac11f5f0883adc29ab32",
+      "diagnostics": {
+        "kind": "sae",
+        "fit_sequences": 102,
+        "test_sequences": 26,
+        "feature_dimension": 24,
+        "fit_parameters": 3160,
+        "heldout_normalized_mse": 0.04612081964933447,
+        "explained_variance_or_active_features": 19.778846153846153,
+        "training_steps": 400,
+        "representation_seconds": 0.16742053627967834,
+        "adapter": "shared HMM distillation + feature reconstruction; coefficient 0.1"
+      }
+    },
+    "transcoder": {
+      "access": "probabilities+activations",
+      "objective": 2.4213208096862995,
+      "objective_name": "soft_target_cross_entropy+normalized_activation_mse",
+      "restart_objectives": [
+        2.4213208096862995,
+        2.4225986626427813
+      ],
+      "fitting_seconds": 4.897703994065523,
+      "submission_seconds": 4.899968191981316,
+      "fit_parameters": 556,
+      "optimizer_steps_per_restart": 250,
+      "restarts": 2,
+      "observation_budget": {
+        "forward_calls": 24,
+        "token_queries": 3072,
+        "prefix_tokens_processed": 38400
+      },
+      "candidate_sha256": "a62930e9bbefac1489f5c780d4b33c0e303d6abaf5a087bf644ce277bb961a46",
+      "diagnostics": {
+        "kind": "transcoder",
+        "fit_sequences": 102,
+        "test_sequences": 26,
+        "feature_dimension": 24,
+        "fit_parameters": 3160,
+        "heldout_normalized_mse": 0.030748376257828856,
+        "explained_variance_or_active_features": 7.136217948717949,
+        "training_steps": 400,
+        "representation_seconds": 0.17742781713604927,
+        "adapter": "shared HMM distillation + feature reconstruction; coefficient 0.1"
+      }
+    },
+    "circuit": {
+      "access": "probabilities+weights+interventions",
+      "objective": 2.396336775285409,
+      "objective_name": "soft_target_cross_entropy",
+      "restart_objectives": [
+        2.396336775285409,
+        2.396800420452331
+      ],
+      "fitting_seconds": 4.238175731152296,
+      "submission_seconds": 4.239503156393766,
+      "fit_parameters": 244,
+      "optimizer_steps_per_restart": 250,
+      "restarts": 2,
+      "observation_budget": {
+        "forward_calls": 24,
+        "token_queries": 3072,
+        "prefix_tokens_processed": 38400
+      },
+      "candidate_sha256": "e61b47744fb05ec08a240c37f0f8dcc68d1edff4c214aba80e712a3b3040f502",
+      "diagnostics": {
+        "algorithm": "greedy_zero_node_ablation",
+        "threshold_nats": 0.002,
+        "calibration_sequences": 64,
+        "heldout_sequences": 64,
+        "nodes_total": 10,
+        "nodes_retained": 10,
+        "trials": [
+          {
+            "node": "1.mlp",
+            "calibration_kl": 0.03453648816885424,
+            "removed": false
+          },
+          {
+            "node": "1.head.3",
+            "calibration_kl": 0.002774378001541289,
+            "removed": false
+          },
+          {
+            "node": "1.head.2",
+            "calibration_kl": 0.0028156166114942033,
+            "removed": false
+          },
+          {
+            "node": "1.head.1",
+            "calibration_kl": 0.0023636941225065556,
+            "removed": false
+          },
+          {
+            "node": "1.head.0",
+            "calibration_kl": 0.00310550271381549,
+            "removed": false
+          },
+          {
+            "node": "0.mlp",
+            "calibration_kl": 0.013491315800120182,
+            "removed": false
+          },
+          {
+            "node": "0.head.3",
+            "calibration_kl": 0.011580175373461035,
+            "removed": false
+          },
+          {
+            "node": "0.head.2",
+            "calibration_kl": 0.0025637760620625108,
+            "removed": false
+          },
+          {
+            "node": "0.head.1",
+            "calibration_kl": 0.005657496847566717,
+            "removed": false
+          },
+          {
+            "node": "0.head.0",
+            "calibration_kl": 0.008111318805016716,
+            "removed": false
+          }
+        ],
+        "heldout_kl": 0.0,
+        "all_removed_heldout_kl": 0.2810562050317912,
+        "additional_forward_calls": 13,
+        "additional_token_queries": 23040,
+        "additional_prefix_tokens_processed": 23040,
+        "discovery_seconds": 0.13522667437791824,
+        "interchange": {
+          "mapping": "ridge_candidate_belief_to_first_block_residual",
+          "position": 12,
+          "heldout_sequences": 64,
+          "counterfactual_kl": 0.3936973509450781,
+          "unpatched_candidate_kl": 0.016391213374925592,
+          "change_normalized_mse": 0.8659298455593686,
+          "additional_forward_calls": 2,
+          "additional_token_queries": 3072,
+          "additional_prefix_tokens_processed": 3072
+        }
+      }
+    }
+  },
+  "scores": {
+    "adam_samples": {
+      "parameters": {
+        "weights_mae": 0.024250081832156864,
+        "initial_mae": 0.1265435005783191,
+        "transition_mae": 0.2221777441807858,
+        "emission_mae": 0.04010726697255488,
+        "mean_parameter_mae": 0.10326964839095416,
+        "component_permutation": [
+          3,
+          1,
+          0,
+          2
+        ],
+        "state_permutations": [
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            1,
+            0,
+            2
+          ]
+        ],
+        "transition_support_f1": 0.8679245283018868,
+        "edge_threshold": 0.05
+      },
+      "equivalence": {
+        "status": "different",
+        "tolerance": 1e-10,
+        "basis_rank": 1,
+        "joint_dimension": 24,
+        "words_checked": 2,
+        "max_checked_probability_gap": 0.00957920894087267,
+        "witness": [
+          0
+        ],
+        "reference_probability": 0.02912661883394517,
+        "candidate_probability": 0.0195474098930725
+      },
+      "complexity": {
+        "reference": {
+          "components": 4,
+          "states_per_component": 3,
+          "joint_states": 12,
+          "dense_family_degrees_of_freedom": 215,
+          "transition_edges": 28,
+          "transition_density": 0.7777777777777778,
+          "effective_joint_states": 10.552439643691649,
+          "short_hankel_rank": 12,
+          "hankel_rank_tolerance": 1e-10
+        },
+        "candidate": {
+          "components": 4,
+          "states_per_component": 3,
+          "joint_states": 12,
+          "dense_family_degrees_of_freedom": 215,
+          "transition_edges": 36,
+          "transition_density": 1.0,
+          "effective_joint_states": 8.477809408191447,
+          "short_hankel_rank": 12,
+          "hankel_rank_tolerance": 1e-10
+        }
+      },
+      "predictive": {
+        "count": 512,
+        "mean_kl": 0.07254795240479758,
+        "standard_error": 0.001617147692565996,
+        "upper95_kl": 0.07571756188222693
+      }
+    },
+    "adam_probabilities": {
+      "parameters": {
+        "weights_mae": 0.041360033147908315,
+        "initial_mae": 0.10980254638297628,
+        "transition_mae": 0.09496956539952445,
+        "emission_mae": 0.03334020889709973,
+        "mean_parameter_mae": 0.0698680884568772,
+        "component_permutation": [
+          3,
+          1,
+          0,
+          2
+        ],
+        "state_permutations": [
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ]
+        ],
+        "transition_support_f1": 0.9122807017543859,
+        "edge_threshold": 0.05
+      },
+      "equivalence": {
+        "status": "different",
+        "tolerance": 1e-10,
+        "basis_rank": 1,
+        "joint_dimension": 24,
+        "words_checked": 2,
+        "max_checked_probability_gap": 0.0023048011268266937,
+        "witness": [
+          0
+        ],
+        "reference_probability": 0.02912661883394517,
+        "candidate_probability": 0.026821817707118476
+      },
+      "complexity": {
+        "reference": {
+          "components": 4,
+          "states_per_component": 3,
+          "joint_states": 12,
+          "dense_family_degrees_of_freedom": 215,
+          "transition_edges": 28,
+          "transition_density": 0.7777777777777778,
+          "effective_joint_states": 10.552439643691649,
+          "short_hankel_rank": 12,
+          "hankel_rank_tolerance": 1e-10
+        },
+        "candidate": {
+          "components": 4,
+          "states_per_component": 3,
+          "joint_states": 12,
+          "dense_family_degrees_of_freedom": 215,
+          "transition_edges": 36,
+          "transition_density": 1.0,
+          "effective_joint_states": 10.915092907074628,
+          "short_hankel_rank": 12,
+          "hankel_rank_tolerance": 1e-10
+        }
+      },
+      "predictive": {
+        "count": 512,
+        "mean_kl": 0.02147053345651749,
+        "standard_error": 0.0006529780213942743,
+        "upper95_kl": 0.022750370378450267
+      }
+    },
+    "em_samples": {
+      "parameters": {
+        "weights_mae": 0.031171469117762036,
+        "initial_mae": 0.10808679663390176,
+        "transition_mae": 0.24595312509303557,
+        "emission_mae": 0.0762676930418801,
+        "mean_parameter_mae": 0.11536977097164487,
+        "component_permutation": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "state_permutations": [
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            0,
+            2,
+            1
+          ]
+        ],
+        "transition_support_f1": 0.8301886792452831,
+        "edge_threshold": 0.05
+      },
+      "equivalence": {
+        "status": "different",
+        "tolerance": 1e-10,
+        "basis_rank": 1,
+        "joint_dimension": 24,
+        "words_checked": 2,
+        "max_checked_probability_gap": 0.008926735452527122,
+        "witness": [
+          0
+        ],
+        "reference_probability": 0.02912661883394517,
+        "candidate_probability": 0.020199883381418048
+      },
+      "complexity": {
+        "reference": {
+          "components": 4,
+          "states_per_component": 3,
+          "joint_states": 12,
+          "dense_family_degrees_of_freedom": 215,
+          "transition_edges": 28,
+          "transition_density": 0.7777777777777778,
+          "effective_joint_states": 10.552439643691649,
+          "short_hankel_rank": 12,
+          "hankel_rank_tolerance": 1e-10
+        },
+        "candidate": {
+          "components": 4,
+          "states_per_component": 3,
+          "joint_states": 12,
+          "dense_family_degrees_of_freedom": 215,
+          "transition_edges": 36,
+          "transition_density": 1.0,
+          "effective_joint_states": 8.227547475441215,
+          "short_hankel_rank": 10,
+          "hankel_rank_tolerance": 1e-10
+        }
+      },
+      "predictive": {
+        "count": 512,
+        "mean_kl": 0.09716480798505578,
+        "standard_error": 0.0031579853680717665,
+        "upper95_kl": 0.10335445930647644
+      }
+    },
+    "spectral_hmm": {
+      "parameters": {
+        "weights_mae": 0.06200202597106552,
+        "initial_mae": 0.08515968708035969,
+        "transition_mae": 0.22184593400802696,
+        "emission_mae": 0.06935263115206168,
+        "mean_parameter_mae": 0.10959006955287846,
+        "component_permutation": [
+          1,
+          0,
+          3,
+          2
+        ],
+        "state_permutations": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            1,
+            0
+          ]
+        ],
+        "transition_support_f1": 0.8771929824561403,
+        "edge_threshold": 0.05
+      },
+      "equivalence": {
+        "status": "different",
+        "tolerance": 1e-10,
+        "basis_rank": 1,
+        "joint_dimension": 24,
+        "words_checked": 2,
+        "max_checked_probability_gap": 0.00451569642959938,
+        "witness": [
+          0
+        ],
+        "reference_probability": 0.02912661883394517,
+        "candidate_probability": 0.02461092240434579
+      },
+      "complexity": {
+        "reference": {
+          "components": 4,
+          "states_per_component": 3,
+          "joint_states": 12,
+          "dense_family_degrees_of_freedom": 215,
+          "transition_edges": 28,
+          "transition_density": 0.7777777777777778,
+          "effective_joint_states": 10.552439643691649,
+          "short_hankel_rank": 12,
+          "hankel_rank_tolerance": 1e-10
+        },
+        "candidate": {
+          "components": 4,
+          "states_per_component": 3,
+          "joint_states": 12,
+          "dense_family_degrees_of_freedom": 215,
+          "transition_edges": 36,
+          "transition_density": 1.0,
+          "effective_joint_states": 9.700745221931228,
+          "short_hankel_rank": 12,
+          "hankel_rank_tolerance": 1e-10
+        }
+      },
+      "predictive": {
+        "count": 512,
+        "mean_kl": 0.20383819563176514,
+        "standard_error": 0.0017764066380976775,
+        "upper95_kl": 0.20731995264243658
+      }
+    },
+    "belief_layer_0": {
+      "parameters": {
+        "weights_mae": 0.030186276408208368,
+        "initial_mae": 0.05855781301715424,
+        "transition_mae": 0.12238153999927046,
+        "emission_mae": 0.051754026619980714,
+        "mean_parameter_mae": 0.06571991401115344,
+        "component_permutation": [
+          2,
+          1,
+          3,
+          0
+        ],
+        "state_permutations": [
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        "transition_support_f1": 0.8852459016393442,
+        "edge_threshold": 0.05
+      },
+      "equivalence": {
+        "status": "different",
+        "tolerance": 1e-10,
+        "basis_rank": 1,
+        "joint_dimension": 24,
+        "words_checked": 2,
+        "max_checked_probability_gap": 0.003024351397193932,
+        "witness": [
+          0
+        ],
+        "reference_probability": 0.02912661883394517,
+        "candidate_probability": 0.026102267436751238
+      },
+      "complexity": {
+        "reference": {
+          "components": 4,
+          "states_per_component": 3,
+          "joint_states": 12,
+          "dense_family_degrees_of_freedom": 215,
+          "transition_edges": 28,
+          "transition_density": 0.7777777777777778,
+          "effective_joint_states": 10.552439643691649,
+          "short_hankel_rank": 12,
+          "hankel_rank_tolerance": 1e-10
+        },
+        "candidate": {
+          "components": 4,
+          "states_per_component": 3,
+          "joint_states": 12,
+          "dense_family_degrees_of_freedom": 215,
+          "transition_edges": 36,
+          "transition_density": 1.0,
+          "effective_joint_states": 9.724487616023104,
+          "short_hankel_rank": 12,
+          "hankel_rank_tolerance": 1e-10
+        }
+      },
+      "predictive": {
+        "count": 512,
+        "mean_kl": 0.025271015166557678,
+        "standard_error": 0.0007488185098346363,
+        "upper95_kl": 0.026738699445833566
+      }
+    },
+    "belief_layer_1": {
+      "parameters": {
+        "weights_mae": 0.03907669364074035,
+        "initial_mae": 0.05897123950125571,
+        "transition_mae": 0.11396607078751221,
+        "emission_mae": 0.0566302413019694,
+        "mean_parameter_mae": 0.06716106130786942,
+        "component_permutation": [
+          3,
+          1,
+          2,
+          0
+        ],
+        "state_permutations": [
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ]
+        ],
+        "transition_support_f1": 0.8070175438596491,
+        "edge_threshold": 0.05
+      },
+      "equivalence": {
+        "status": "different",
+        "tolerance": 1e-10,
+        "basis_rank": 1,
+        "joint_dimension": 24,
+        "words_checked": 2,
+        "max_checked_probability_gap": 0.0041829296038931145,
+        "witness": [
+          0
+        ],
+        "reference_probability": 0.02912661883394517,
+        "candidate_probability": 0.024943689230052055
+      },
+      "complexity": {
+        "reference": {
+          "components": 4,
+          "states_per_component": 3,
+          "joint_states": 12,
+          "dense_family_degrees_of_freedom": 215,
+          "transition_edges": 28,
+          "transition_density": 0.7777777777777778,
+          "effective_joint_states": 10.552439643691649,
+          "short_hankel_rank": 12,
+          "hankel_rank_tolerance": 1e-10
+        },
+        "candidate": {
+          "components": 4,
+          "states_per_component": 3,
+          "joint_states": 12,
+          "dense_family_degrees_of_freedom": 215,
+          "transition_edges": 36,
+          "transition_density": 1.0,
+          "effective_joint_states": 9.690751059029038,
+          "short_hankel_rank": 12,
+          "hankel_rank_tolerance": 1e-10
+        }
+      },
+      "predictive": {
+        "count": 512,
+        "mean_kl": 0.020147543343383874,
+        "standard_error": 0.0005529464293255638,
+        "upper95_kl": 0.02123131834486198
+      }
+    },
+    "belief_all_layers": {
+      "parameters": {
+        "weights_mae": 0.029675829402220244,
+        "initial_mae": 0.05941849142753699,
+        "transition_mae": 0.11737003470235388,
+        "emission_mae": 0.06222083219713315,
+        "mean_parameter_mae": 0.06717129693231107,
+        "component_permutation": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "state_permutations": [
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ]
+        ],
+        "transition_support_f1": 0.8070175438596491,
+        "edge_threshold": 0.05
+      },
+      "equivalence": {
+        "status": "different",
+        "tolerance": 1e-10,
+        "basis_rank": 1,
+        "joint_dimension": 24,
+        "words_checked": 2,
+        "max_checked_probability_gap": 0.0042024047528972965,
+        "witness": [
+          0
+        ],
+        "reference_probability": 0.02912661883394517,
+        "candidate_probability": 0.024924214081047873
+      },
+      "complexity": {
+        "reference": {
+          "components": 4,
+          "states_per_component": 3,
+          "joint_states": 12,
+          "dense_family_degrees_of_freedom": 215,
+          "transition_edges": 28,
+          "transition_density": 0.7777777777777778,
+          "effective_joint_states": 10.552439643691649,
+          "short_hankel_rank": 12,
+          "hankel_rank_tolerance": 1e-10
+        },
+        "candidate": {
+          "components": 4,
+          "states_per_component": 3,
+          "joint_states": 12,
+          "dense_family_degrees_of_freedom": 215,
+          "transition_edges": 36,
+          "transition_density": 1.0,
+          "effective_joint_states": 10.192412879441385,
+          "short_hankel_rank": 12,
+          "hankel_rank_tolerance": 1e-10
+        }
+      },
+      "predictive": {
+        "count": 512,
+        "mean_kl": 0.02562850362092211,
+        "standard_error": 0.0006761612707692692,
+        "upper95_kl": 0.026953779711629877
+      }
+    },
+    "pca": {
+      "parameters": {
+        "weights_mae": 0.03566839630854688,
+        "initial_mae": 0.12170716325577052,
+        "transition_mae": 0.07055416047048747,
+        "emission_mae": 0.026490538256009416,
+        "mean_parameter_mae": 0.06360506457270357,
+        "component_permutation": [
+          3,
+          1,
+          0,
+          2
+        ],
+        "state_permutations": [
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ]
+        ],
+        "transition_support_f1": 0.9285714285714286,
+        "edge_threshold": 0.05
+      },
+      "equivalence": {
+        "status": "different",
+        "tolerance": 1e-10,
+        "basis_rank": 1,
+        "joint_dimension": 24,
+        "words_checked": 2,
+        "max_checked_probability_gap": 0.004826577444445951,
+        "witness": [
+          0
+        ],
+        "reference_probability": 0.02912661883394517,
+        "candidate_probability": 0.02430004138949922
+      },
+      "complexity": {
+        "reference": {
+          "components": 4,
+          "states_per_component": 3,
+          "joint_states": 12,
+          "dense_family_degrees_of_freedom": 215,
+          "transition_edges": 28,
+          "transition_density": 0.7777777777777778,
+          "effective_joint_states": 10.552439643691649,
+          "short_hankel_rank": 12,
+          "hankel_rank_tolerance": 1e-10
+        },
+        "candidate": {
+          "components": 4,
+          "states_per_component": 3,
+          "joint_states": 12,
+          "dense_family_degrees_of_freedom": 215,
+          "transition_edges": 36,
+          "transition_density": 1.0,
+          "effective_joint_states": 10.57273815125269,
+          "short_hankel_rank": 12,
+          "hankel_rank_tolerance": 1e-10
+        }
+      },
+      "predictive": {
+        "count": 512,
+        "mean_kl": 0.019910486837747154,
+        "standard_error": 0.0005730723072183184,
+        "upper95_kl": 0.02103370855989506
+      }
+    },
+    "sae": {
+      "parameters": {
+        "weights_mae": 0.03522781077594035,
+        "initial_mae": 0.06319445032859647,
+        "transition_mae": 0.09478079695043612,
+        "emission_mae": 0.06368468228482001,
+        "mean_parameter_mae": 0.06422193508494824,
+        "component_permutation": [
+          2,
+          1,
+          3,
+          0
+        ],
+        "state_permutations": [
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ]
+        ],
+        "transition_support_f1": 0.8727272727272727,
+        "edge_threshold": 0.05
+      },
+      "equivalence": {
+        "status": "different",
+        "tolerance": 1e-10,
+        "basis_rank": 1,
+        "joint_dimension": 24,
+        "words_checked": 2,
+        "max_checked_probability_gap": 0.0032296552911494497,
+        "witness": [
+          0
+        ],
+        "reference_probability": 0.02912661883394517,
+        "candidate_probability": 0.02589696354279572
+      },
+      "complexity": {
+        "reference": {
+          "components": 4,
+          "states_per_component": 3,
+          "joint_states": 12,
+          "dense_family_degrees_of_freedom": 215,
+          "transition_edges": 28,
+          "transition_density": 0.7777777777777778,
+          "effective_joint_states": 10.552439643691649,
+          "short_hankel_rank": 12,
+          "hankel_rank_tolerance": 1e-10
+        },
+        "candidate": {
+          "components": 4,
+          "states_per_component": 3,
+          "joint_states": 12,
+          "dense_family_degrees_of_freedom": 215,
+          "transition_edges": 36,
+          "transition_density": 1.0,
+          "effective_joint_states": 10.76843118598233,
+          "short_hankel_rank": 12,
+          "hankel_rank_tolerance": 1e-10
+        }
+      },
+      "predictive": {
+        "count": 512,
+        "mean_kl": 0.026920140832499814,
+        "standard_error": 0.0007132811563286012,
+        "upper95_kl": 0.02831817189890387
+      }
+    },
+    "transcoder": {
+      "parameters": {
+        "weights_mae": 0.03949469388566806,
+        "initial_mae": 0.06596136070902275,
+        "transition_mae": 0.08988540558403098,
+        "emission_mae": 0.06062296416685218,
+        "mean_parameter_mae": 0.0639911060863935,
+        "component_permutation": [
+          2,
+          1,
+          3,
+          0
+        ],
+        "state_permutations": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ]
+        ],
+        "transition_support_f1": 0.9259259259259259,
+        "edge_threshold": 0.05
+      },
+      "equivalence": {
+        "status": "different",
+        "tolerance": 1e-10,
+        "basis_rank": 1,
+        "joint_dimension": 24,
+        "words_checked": 2,
+        "max_checked_probability_gap": 0.002536969294523364,
+        "witness": [
+          0
+        ],
+        "reference_probability": 0.02912661883394517,
+        "candidate_probability": 0.026589649539421806
+      },
+      "complexity": {
+        "reference": {
+          "components": 4,
+          "states_per_component": 3,
+          "joint_states": 12,
+          "dense_family_degrees_of_freedom": 215,
+          "transition_edges": 28,
+          "transition_density": 0.7777777777777778,
+          "effective_joint_states": 10.552439643691649,
+          "short_hankel_rank": 12,
+          "hankel_rank_tolerance": 1e-10
+        },
+        "candidate": {
+          "components": 4,
+          "states_per_component": 3,
+          "joint_states": 12,
+          "dense_family_degrees_of_freedom": 215,
+          "transition_edges": 36,
+          "transition_density": 1.0,
+          "effective_joint_states": 10.750767661116406,
+          "short_hankel_rank": 12,
+          "hankel_rank_tolerance": 1e-10
+        }
+      },
+      "predictive": {
+        "count": 512,
+        "mean_kl": 0.02627469666225323,
+        "standard_error": 0.0006786916768163767,
+        "upper95_kl": 0.02760493234881333
+      }
+    },
+    "circuit": {
+      "parameters": {
+        "weights_mae": 0.04136003188335522,
+        "initial_mae": 0.10980254557105314,
+        "transition_mae": 0.09496956549863275,
+        "emission_mae": 0.03334020923024778,
+        "mean_parameter_mae": 0.06986808804582223,
+        "component_permutation": [
+          3,
+          1,
+          0,
+          2
+        ],
+        "state_permutations": [
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ]
+        ],
+        "transition_support_f1": 0.9122807017543859,
+        "edge_threshold": 0.05
+      },
+      "equivalence": {
+        "status": "different",
+        "tolerance": 1e-10,
+        "basis_rank": 1,
+        "joint_dimension": 24,
+        "words_checked": 2,
+        "max_checked_probability_gap": 0.0023048014649357795,
+        "witness": [
+          0
+        ],
+        "reference_probability": 0.02912661883394517,
+        "candidate_probability": 0.02682181736900939
+      },
+      "complexity": {
+        "reference": {
+          "components": 4,
+          "states_per_component": 3,
+          "joint_states": 12,
+          "dense_family_degrees_of_freedom": 215,
+          "transition_edges": 28,
+          "transition_density": 0.7777777777777778,
+          "effective_joint_states": 10.552439643691649,
+          "short_hankel_rank": 12,
+          "hankel_rank_tolerance": 1e-10
+        },
+        "candidate": {
+          "components": 4,
+          "states_per_component": 3,
+          "joint_states": 12,
+          "dense_family_degrees_of_freedom": 215,
+          "transition_edges": 36,
+          "transition_density": 1.0,
+          "effective_joint_states": 10.915092934623292,
+          "short_hankel_rank": 12,
+          "hankel_rank_tolerance": 1e-10
+        }
+      },
+      "predictive": {
+        "count": 512,
+        "mean_kl": 0.021470533600804594,
+        "standard_error": 0.000652978026456427,
+        "upper95_kl": 0.02275037053265919
+      }
+    }
+  }
+}

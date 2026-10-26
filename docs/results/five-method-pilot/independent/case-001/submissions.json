@@ -1,0 +1,386 @@
+{
+  "adam_samples": {
+    "access": "samples",
+    "objective": 2.363412715544831,
+    "objective_name": "sample_nll",
+    "restart_objectives": [
+      2.363412715544831,
+      2.372522533728349
+    ],
+    "fitting_seconds": 3.777008779346943,
+    "submission_seconds": 3.7778748720884323,
+    "fit_parameters": 244,
+    "optimizer_steps_per_restart": 250,
+    "restarts": 2,
+    "observation_budget": {
+      "forward_calls": 24,
+      "token_queries": 3072,
+      "prefix_tokens_processed": 38400
+    },
+    "candidate_sha256": "174090ad09d1476b549d446184ee6d5cdd663764534239011663c8fa34059368",
+    "diagnostics": {}
+  },
+  "adam_probabilities": {
+    "access": "probabilities",
+    "objective": 2.3963367807322236,
+    "objective_name": "soft_target_cross_entropy",
+    "restart_objectives": [
+      2.3963367807322236,
+      2.396800427643932
+    ],
+    "fitting_seconds": 5.735452618449926,
+    "submission_seconds": 5.737250957638025,
+    "fit_parameters": 244,
+    "optimizer_steps_per_restart": 250,
+    "restarts": 2,
+    "observation_budget": {
+      "forward_calls": 24,
+      "token_queries": 3072,
+      "prefix_tokens_processed": 38400
+    },
+    "candidate_sha256": "a02fdd83a8e3806201c4fd8575453585fa429aa5b85bf4c028fa72788ea8b8c2",
+    "diagnostics": {}
+  },
+  "em_samples": {
+    "access": "samples",
+    "objective": 2.356608344964595,
+    "objective_name": "sample_nll_em",
+    "restart_objectives": [
+      2.356608344964595,
+      2.3700363151416917
+    ],
+    "fitting_seconds": 1.691970519721508,
+    "submission_seconds": 1.6924599222838879,
+    "fit_parameters": 244,
+    "optimizer_steps_per_restart": 250,
+    "restarts": 2,
+    "observation_budget": {
+      "forward_calls": 24,
+      "token_queries": 3072,
+      "prefix_tokens_processed": 38400
+    },
+    "candidate_sha256": "26f8862c5dba2d283376118316e5f667743fbac491bf55a29979e656d59185c5",
+    "diagnostics": {}
+  },
+  "spectral_hmm": {
+    "access": "samples",
+    "objective": 2.63857379035523,
+    "objective_name": "soft_target_cross_entropy",
+    "restart_objectives": [
+      2.63857379035523,
+      2.6399036598564654
+    ],
+    "fitting_seconds": 3.8305729664862156,
+    "submission_seconds": 3.8317585438489914,
+    "fit_parameters": 244,
+    "optimizer_steps_per_restart": 250,
+    "restarts": 2,
+    "observation_budget": {
+      "forward_calls": 24,
+      "token_queries": 3072,
+      "prefix_tokens_processed": 38400
+    },
+    "candidate_sha256": "23c5b77dd3bb1fd3109aef980a4d08141f3ecc5e2d991a1f0feea55c6782c39f",
+    "diagnostics": {
+      "repaired_prediction_fraction": 0.9169921875,
+      "moment_seconds": 0.016877729445695877,
+      "adapter": "clip/normalize spectral targets then HMM distillation",
+      "retained_singular_value": 0.0019178224588281487
+    }
+  },
+  "belief_layer_0": {
+    "access": "probabilities+residuals",
+    "objective": 2.4524504206912088,
+    "objective_name": "soft_target_cross_entropy+normalized_activation_mse",
+    "restart_objectives": [
+      2.4535497030903044,
+      2.4524504206912088
+    ],
+    "fitting_seconds": 4.756353095173836,
+    "submission_seconds": 4.765546604990959,
+    "fit_parameters": 387,
+    "optimizer_steps_per_restart": 250,
+    "restarts": 2,
+    "observation_budget": {
+      "forward_calls": 24,
+      "token_queries": 3072,
+      "prefix_tokens_processed": 38400
+    },
+    "candidate_sha256": "c860cff427d11735c011abbc8664fded1933539fa3c7d4ad356999b77a7ff299",
+    "diagnostics": {
+      "kind": "pca",
+      "fit_sequences": 102,
+      "test_sequences": 26,
+      "feature_dimension": 11,
+      "fit_parameters": 704,
+      "heldout_normalized_mse": 0.21727405071494144,
+      "explained_variance_or_active_features": 0.7584458978726878,
+      "training_steps": 0,
+      "heldout_unnormalized_update_nmse": 0.06944768004790375,
+      "coordinate_dimension": 12,
+      "representation_seconds": 0.3752700015902519,
+      "adapter": "probability distillation + belief-to-coordinate reconstruction"
+    }
+  },
+  "belief_layer_1": {
+    "access": "probabilities+residuals",
+    "objective": 2.4328513326002743,
+    "objective_name": "soft_target_cross_entropy+normalized_activation_mse",
+    "restart_objectives": [
+      2.4328513326002743,
+      2.434246138882246
+    ],
+    "fitting_seconds": 5.048407346010208,
+    "submission_seconds": 5.059181842952967,
+    "fit_parameters": 387,
+    "optimizer_steps_per_restart": 250,
+    "restarts": 2,
+    "observation_budget": {
+      "forward_calls": 24,
+      "token_queries": 3072,
+      "prefix_tokens_processed": 38400
+    },
+    "candidate_sha256": "cd2c606d168f8ab51c1bd21dfdf9e84c87f9999e86f803ca051bc3eb7d79ef44",
+    "diagnostics": {
+      "kind": "pca",
+      "fit_sequences": 102,
+      "test_sequences": 26,
+      "feature_dimension": 11,
+      "fit_parameters": 704,
+      "heldout_normalized_mse": 0.07561613094264213,
+      "explained_variance_or_active_features": 0.914705582097542,
+      "training_steps": 0,
+      "heldout_unnormalized_update_nmse": 0.026344813062351338,
+      "coordinate_dimension": 12,
+      "representation_seconds": 0.7257925271987915,
+      "adapter": "probability distillation + belief-to-coordinate reconstruction"
+    }
+  },
+  "belief_all_layers": {
+    "access": "probabilities+residuals",
+    "objective": 2.433399755560713,
+    "objective_name": "soft_target_cross_entropy+normalized_activation_mse",
+    "restart_objectives": [
+      2.433399755560713,
+      2.4421244040858894
+    ],
+    "fitting_seconds": 3.9184324219822884,
+    "submission_seconds": 3.924514975398779,
+    "fit_parameters": 387,
+    "optimizer_steps_per_restart": 250,
+    "restarts": 2,
+    "observation_budget": {
+      "forward_calls": 24,
+      "token_queries": 3072,
+      "prefix_tokens_processed": 38400
+    },
+    "candidate_sha256": "44bdee161ca78afe8548df346edd9a380391942a302a0d98f72ce6303eca20a3",
+    "diagnostics": {
+      "kind": "pca",
+      "fit_sequences": 102,
+      "test_sequences": 26,
+      "feature_dimension": 11,
+      "fit_parameters": 1408,
+      "heldout_normalized_mse": 0.19034811706289909,
+      "explained_variance_or_active_features": 0.7850807966590436,
+      "training_steps": 0,
+      "heldout_unnormalized_update_nmse": 0.03609580721892639,
+      "coordinate_dimension": 12,
+      "representation_seconds": 1.4754995740950108,
+      "adapter": "probability distillation + belief-to-coordinate reconstruction"
+    }
+  },
+  "pca": {
+    "access": "probabilities+activations",
+    "objective": 2.431718422253254,
+    "objective_name": "soft_target_cross_entropy+normalized_activation_mse",
+    "restart_objectives": [
+      2.431718422253254,
+      2.4422556886395657
+    ],
+    "fitting_seconds": 4.51010125875473,
+    "submission_seconds": 4.530139647424221,
+    "fit_parameters": 387,
+    "optimizer_steps_per_restart": 250,
+    "restarts": 2,
+    "observation_budget": {
+      "forward_calls": 24,
+      "token_queries": 3072,
+      "prefix_tokens_processed": 38400
+    },
+    "candidate_sha256": "ed808f2f567264624ba35acdeaeb427d5e56d65928646947c636390e43dab815",
+    "diagnostics": {
+      "kind": "pca",
+      "fit_sequences": 102,
+      "test_sequences": 26,
+      "feature_dimension": 11,
+      "fit_parameters": 704,
+      "heldout_normalized_mse": 0.1106957296019667,
+      "explained_variance_or_active_features": 0.8896120427850698,
+      "training_steps": 0,
+      "representation_seconds": 0.21530583873391151,
+      "adapter": "shared HMM distillation + feature reconstruction; coefficient 0.1"
+    }
+  },
+  "sae": {
+    "access": "probabilities+activations",
+    "objective": 2.4364802496532163,
+    "objective_name": "soft_target_cross_entropy+normalized_activation_mse",
+    "restart_objectives": [
+      2.4364802496532163,
+      2.4407358928199385
+    ],
+    "fitting_seconds": 4.5400571040809155,
+    "submission_seconds": 4.542170748114586,
+    "fit_parameters": 556,
+    "optimizer_steps_per_restart": 250,
+    "restarts": 2,
+    "observation_budget": {
+      "forward_calls": 24,
+      "token_queries": 3072,
+      "prefix_tokens_processed": 38400
+    },
+    "candidate_sha256": "5a23a81a9ea843ab8ba4e08ae36bd81c56ed657bb72dac11f5f0883adc29ab32",
+    "diagnostics": {
+      "kind": "sae",
+      "fit_sequences": 102,
+      "test_sequences": 26,
+      "feature_dimension": 24,
+      "fit_parameters": 3160,
+      "heldout_normalized_mse": 0.04612081964933447,
+      "explained_variance_or_active_features": 19.778846153846153,
+      "training_steps": 400,
+      "representation_seconds": 0.16742053627967834,
+      "adapter": "shared HMM distillation + feature reconstruction; coefficient 0.1"
+    }
+  },
+  "transcoder": {
+    "access": "probabilities+activations",
+    "objective": 2.4213208096862995,
+    "objective_name": "soft_target_cross_entropy+normalized_activation_mse",
+    "restart_objectives": [
+      2.4213208096862995,
+      2.4225986626427813
+    ],
+    "fitting_seconds": 4.897703994065523,
+    "submission_seconds": 4.899968191981316,
+    "fit_parameters": 556,
+    "optimizer_steps_per_restart": 250,
+    "restarts": 2,
+    "observation_budget": {
+      "forward_calls": 24,
+      "token_queries": 3072,
+      "prefix_tokens_processed": 38400
+    },
+    "candidate_sha256": "a62930e9bbefac1489f5c780d4b33c0e303d6abaf5a087bf644ce277bb961a46",
+    "diagnostics": {
+      "kind": "transcoder",
+      "fit_sequences": 102,
+      "test_sequences": 26,
+      "feature_dimension": 24,
+      "fit_parameters": 3160,
+      "heldout_normalized_mse": 0.030748376257828856,
+      "explained_variance_or_active_features": 7.136217948717949,
+      "training_steps": 400,
+      "representation_seconds": 0.17742781713604927,
+      "adapter": "shared HMM distillation + feature reconstruction; coefficient 0.1"
+    }
+  },
+  "circuit": {
+    "access": "probabilities+weights+interventions",
+    "objective": 2.396336775285409,
+    "objective_name": "soft_target_cross_entropy",
+    "restart_objectives": [
+      2.396336775285409,
+      2.396800420452331
+    ],
+    "fitting_seconds": 4.238175731152296,
+    "submission_seconds": 4.239503156393766,
+    "fit_parameters": 244,
+    "optimizer_steps_per_restart": 250,
+    "restarts": 2,
+    "observation_budget": {
+      "forward_calls": 24,
+      "token_queries": 3072,
+      "prefix_tokens_processed": 38400
+    },
+    "candidate_sha256": "e61b47744fb05ec08a240c37f0f8dcc68d1edff4c214aba80e712a3b3040f502",
+    "diagnostics": {
+      "algorithm": "greedy_zero_node_ablation",
+      "threshold_nats": 0.002,
+      "calibration_sequences": 64,
+      "heldout_sequences": 64,
+      "nodes_total": 10,
+      "nodes_retained": 10,
+      "trials": [
+        {
+          "node": "1.mlp",
+          "calibration_kl": 0.03453648816885424,
+          "removed": false
+        },
+        {
+          "node": "1.head.3",
+          "calibration_kl": 0.002774378001541289,
+          "removed": false
+        },
+        {
+          "node": "1.head.2",
+          "calibration_kl": 0.0028156166114942033,
+          "removed": false
+        },
+        {
+          "node": "1.head.1",
+          "calibration_kl": 0.0023636941225065556,
+          "removed": false
+        },
+        {
+          "node": "1.head.0",
+          "calibration_kl": 0.00310550271381549,
+          "removed": false
+        },
+        {
+          "node": "0.mlp",
+          "calibration_kl": 0.013491315800120182,
+          "removed": false
+        },
+        {
+          "node": "0.head.3",
+          "calibration_kl": 0.011580175373461035,
+          "removed": false
+        },
+        {
+          "node": "0.head.2",
+          "calibration_kl": 0.0025637760620625108,
+          "removed": false
+        },
+        {
+          "node": "0.head.1",
+          "calibration_kl": 0.005657496847566717,
+          "removed": false
+        },
+        {
+          "node": "0.head.0",
+          "calibration_kl": 0.008111318805016716,
+          "removed": false
+        }
+      ],
+      "heldout_kl": 0.0,
+      "all_removed_heldout_kl": 0.2810562050317912,
+      "additional_forward_calls": 13,
+      "additional_token_queries": 23040,
+      "additional_prefix_tokens_processed": 23040,
+      "discovery_seconds": 0.13522667437791824,
+      "interchange": {
+        "mapping": "ridge_candidate_belief_to_first_block_residual",
+        "position": 12,
+        "heldout_sequences": 64,
+        "counterfactual_kl": 0.3936973509450781,
+        "unpatched_candidate_kl": 0.016391213374925592,
+        "change_normalized_mse": 0.8659298455593686,
+        "additional_forward_calls": 2,
+        "additional_token_queries": 3072,
+        "additional_prefix_tokens_processed": 3072
+      }
+    }
+  }
+}

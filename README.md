@@ -33,6 +33,12 @@ Existing output directories are never overwritten. Add `--require-qualified` to 
 exit code 2 if the checkpoint misses the Bayesian prediction threshold; the report is
 still saved. The locked environment uses CPU PyTorch on Linux and Windows.
 
+The [five-family method pilot](docs/results/five-method-pilot.md) runs classical HMM
+learning, belief geometry, PCA/SAE/transcoders, circuit interventions, and two blinded
+checkpoint-agent conditions. Belief features helped on one independent task, but no
+method recovered an equivalent process. Full candidates, scores and limitations are
+published with the results.
+
 The [screened CPU example](docs/results/screened-cpu-demo.md) qualified at 1,200 steps
 with held-out KL of 0.0199 nats/token. Its probability-only recovery baseline beat the
 activation-assisted method on this task. Reports, rejected candidates, and source/software

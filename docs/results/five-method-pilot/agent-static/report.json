@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "method": "static_unembedding_gram_hierarchical_geometry",
+  "algorithm": "Form the centered Gram matrix of unembedding parameter rows, coordinate-scaled by final LayerNorm gamma. Subtract a low-eigenvalue noise floor, retain K*S-1 modes, cluster tokens in the first K-1 modes into K components, and choose S farthest residual anchors per component. Convert component and residual similarities to smoothed emission distributions. Use uniform mixture weights, initial distributions, and transitions.",
+  "hyperparameters": {
+    "seed": 731,
+    "restarts": 64,
+    "kmeans_iterations": 100,
+    "component_logit_rms": 0.85,
+    "state_logit_rms": 0.45,
+    "emission_uniform_floor": 0.03,
+    "noise_eigenvalue_quantile": 0.25
+  },
+  "actual_extraction_seconds": 0.11550679057836533,
+  "timing_scope": "Measured runnable extraction only; exploratory reading and method design are excluded.",
+  "forward_calls": 0,
+  "partial_transformer_executions": 0,
+  "token_queries": 0,
+  "access": "Only the supplied protocol, architecture source, task files, and checkpoint raw arrays were read. No model was instantiated or imported. No token sequences or model activations were constructed.",
+  "limitations": [
+    "The geometry is a heuristic and has no proven mapping to HMM emissions.",
+    "Transition direction, persistence, mixture weights, and initial distributions were not identified; all use explicit maximum-entropy uniform priors.",
+    "Uniform transition rows make each proposed component observationally iid after marginalizing its hidden states.",
+    "LayerNorm input statistics and all nonlinear and attention behavior are unobserved.",
+    "No generated sequences, scorer, truth, or fit validation was available or used. Candidate submission is not a claim of successful hidden-dynamics recovery."
+  ],
+  "cases": {
+    "demo": {
+      "shape": {
+        "components": 4,
+        "states": 3,
+        "vocab": 16
+      },
+      "checkpoint_sha256": "16021e33528efa7dcec1deb0dea665d9bfe27727bef895c2ca26a10e7abe1b8f",
+      "architecture": {
+        "vocab": 16,
+        "context": 24,
+        "width": 48,
+        "heads": 4,
+        "layers": 2
+      },
+      "seconds": 0.10001956671476364,
+      "forward_calls": 0,
+      "retained_rank": 11,
+      "noise_eigenvalue": 0.0928339158135429,
+      "gram_eigenvalues": [
+        0.8943850155910078,
+        0.6501018164054203,
+        0.5259134546700899,
+        0.4745234530550469,
+        0.38320322354403563,
+        0.28418057137227737,
+        0.2219412575496181,
+        0.1983389995404794,
+        0.1856305578009799,
+        0.13222727699704487,
+        0.09908489145804962,
+        0.08658294016903618,
+        0.0671819134702955,
+        0.050324810548115564,
+        0.028481258264164852,
+        3.989863994728786e-17
+      ],
+      "component_clustering_loss": 0.48512864639671516,
+      "component_token_clusters": [
+        [
+          0,
+          1,
+          3,
+          8,
+          10
+        ],
+        [
+          2,
+          12,
+          13,
+          15
+        ],
+        [
+          4,
+          5,
+          7,
+          11,
+          14
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      "state_anchor_tokens": [
+        [
+          0,
+          8,
+          10
+        ],
+        [
+          12,
+          2,
+          13
+        ],
+        [
+          11,
+          4,
+          5
+        ],
+        [
+          6,
+          9,
+          5
+        ]
+      ],
+      "candidate_sha256": "b57b08a5a53cd713d5b411743dafa773e338b227f4ec241eba34b658f9790918"
+    },
+    "pilot": {
+      "shape": {
+        "components": 4,
+        "states": 3,
+        "vocab": 24
+      },
+      "checkpoint_sha256": "34c719301ed27b634ec96ef606cba5f73b8f00ec33303340a1863981cad9ee2c",
+      "architecture": {
+        "vocab": 24,
+        "context": 24,
+        "width": 64,
+        "heads": 4,
+        "layers": 2
+      },
+      "seconds": 0.015073355287313461,
+      "forward_calls": 0,
+      "retained_rank": 11,
+      "noise_eigenvalue": 0.050953598725130486,
+      "gram_eigenvalues": [
+        1.0949906425599978,
+        0.92154590774336,
+        0.8594072656438932,
+        0.5337566117359447,
+        0.4442694428928153,
+        0.37899387723072864,
+        0.3465382217481579,
+        0.3116168916009843,
+        0.2593926254555453,
+        0.19683715570898788,
+        0.13285334282801162,
+        0.11471005369173408,
+        0.0825725073747105,
+        0.07085358963370368,
+        0.06698138960562981,
+        0.056742490639760175,
+        0.05179460200905292,
+        0.05011259544120806,
+        0.03163453301692728,
+        0.019223733872762088,
+        0.0175215771788506,
+        0.01337236264332222,
+        0.009829511689115304,
+        -4.0477327208524087e-17
+      ],
+      "component_clustering_loss": 0.9567279179612144,
+      "component_token_clusters": [
+        [
+          0,
+          3,
+          5,
+          9,
+          11,
+          13,
+          18
+        ],
+        [
+          1,
+          2,
+          12,
+          14,
+          15,
+          16,
+          21
+        ],
+        [
+          4,
+          17,
+          19,
+          22
+        ],
+        [
+          6,
+          7,
+          8,
+          10,
+          20,
+          23
+        ]
+      ],
+      "state_anchor_tokens": [
+        [
+          13,
+          3,
+          11
+        ],
+        [
+          21,
+          15,
+          1
+        ],
+        [
+          4,
+          22,
+          17
+        ],
+        [
+          10,
+          6,
+          8
+        ]
+      ],
+      "candidate_sha256": "f41f59d2ce6012f0cba4f5e9af06f043c288c3d7b2bc48db15cf33be9d2570f2"
+    }
+  }
+}

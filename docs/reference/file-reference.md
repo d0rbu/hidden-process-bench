@@ -41,6 +41,8 @@
 | `site/process.mjs`, `site/test_process.mjs` | Browser sampling/filtering/equivalence and NumPy-parity tests |
 | `site/data.json`, `site/README.md` | Public snapshot with provenance and website operations |
 | `docs/research/` | Design, assumptions, limitations, literature |
+| `docs/results/five-method-pilot.md`, `docs/results/five-method-pilot/` | Four-checkpoint, five-family comparison, fixed candidates, agent source, hash manifests and raw receipts |
+| `tests/test_method_receipts.py` | Receipt hashes, candidate validity, summary and scoring consistency |
 | `docs/results/cpu-demo.md` | Historical unscreened CPU example, comparison and limits |
 | `docs/results/cpu-demo.json`, `docs/results/cpu-demo-provenance.json` | Unmodified report and source/software receipts from the documented run |
 | `docs/results/screened-cpu-demo.md`, `docs/results/screened-cpu-demo/` | Current screened demo and unmodified report/config/provenance/sampling receipts |
