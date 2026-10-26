@@ -4,13 +4,22 @@
 
 ## Question and scope
 
-Can an interpretability method recover a known data-generating process from a trained
-transformer, and does internal access help relative to output-only system identification?
-The first executable task is a mixture of four HMMs. The target is a minimal equivalent
-HMM, with parameters compared up to component/state permutation in the identifiable
-family below. The number of components and minimal states is disclosed. Unknown model
-order, arbitrary program synthesis, static weights-only
-extraction, and causal circuit identification are later research tasks.
+Can an interpretability method independently infer the generating mechanism learned by
+a transformer, including its process family, structural dependencies and order? The
+[primary discovery protocol](independent-discovery.md) withholds all of these. On an
+HMM task, supplying an HMM template, update rule or state count gives away part of the
+answer. The method must propose its own executable process representation.
+
+**The primary discovery evaluation is not implemented or run.** The current executable
+pipeline supplies a known-shape mixture-HMM family and estimates its parameters.
+Every existing method and agent result belongs to this informed-control track. The
+HMM family, component count and state count were disclosed; none of those results
+measures independent family or structure discovery.
+
+The HMM generator, qualification checks and informed controls are specified below.
+They support development and baseline comparisons without establishing primary-track
+success. A matching HMM candidate can be scored after a method independently proposes
+it, but the primary submission format cannot require that family in advance.
 
 There are two useful claims to separate: recovering an equivalent predictive process,
 and recovering the particular process parameters modulo relabeling. The latter needs
@@ -139,9 +148,9 @@ use the offsets below:
 | Extraction initializations | `recovery_seed + restart index` |
 | Supervised probe fit / test | `seed + 40` / `seed + 41` |
 
-## Recovery methods and information budgets
+## Informed fitting controls and information budgets
 
-All three methods optimize the same known-shape, differentiable HMM family. Softmax
+All three informed controls optimize the same known-shape, differentiable HMM family. Softmax
 parameters keep probability rows valid. Adam uses learning rate 0.05. Default runs use
 two random restarts and 250 steps per restart. Each method selects its best final objective,
 without looking at true parameters or evaluator scores.
@@ -218,7 +227,8 @@ beliefs linearly given the emissions. This makes the probability probe an essent
 
 ## Before a research claim
 
-The prototype is a single-task development scaffold, not a validated benchmark suite.
+The prototype implements informed HMM controls, not the primary discovery evaluation.
+Existing prediction/parameter scores cannot be used as evidence of family discovery.
 Freeze hyperparameters on development generators, use unseen evaluator-only generator
 seeds and multiple model seeds, and compare paired budgets across a query sweep. Report
 checkpoint failure rates, poor recovery, and runtime as well as successes. Add random

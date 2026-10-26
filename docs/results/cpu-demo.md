@@ -1,5 +1,10 @@
 # CPU prototype example
 
+**Scope correction:** all fits here were given the HMM family and order. These are
+informed fitting controls, not independent process-discovery results. Checkpoint
+qualification concerns transformer predictions only. See the
+[primary protocol](../research/independent-discovery.md). Raw receipts are unchanged.
+
 [Documentation](../README.md) · [Research design](../research/design.md)
 
 **Historical, unscreened task.** This receipt predates the PAutomaC-inspired sampling

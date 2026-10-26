@@ -1,16 +1,21 @@
 # Hidden Process Bench
 
-A prototype mechanistic interpretability evaluation: train a transformer on four
-hidden Markov models, then recover the generating processes from the trained model.
-The target is a **minimal equivalent HMM, up to component/state permutation** within
-the identifiable task family. Ground truth makes predictive fidelity and structural
-recovery measurable.
+A prototype mechanistic interpretability evaluation. The intended task is to infer
+an unknown data-generating mechanism from a trained transformer, including discovering
+its process family and structure. On an HMM task, the method must discover the latent
+transition/emission mechanism without being given an HMM template or its size.
 
-The central question is whether access to model internals helps at a fixed observation
-budget. An output-only method may already recover the process. That is a baseline to
-measure, not an assumption to hide.
+**Current status: only informed HMM-fitting controls are implemented. No method has
+yet been evaluated for independent process discovery.** All existing fitters and agent
+prompts were supplied HMM semantics and component/state counts. Those results do not
+measure the intended discovery task. See the [primary protocol](docs/research/independent-discovery.md).
 
-## Run locally
+Ground truth belongs to the evaluator. The primary track needs neutral inputs and
+submissions, fresh hidden tasks from multiple generating mechanisms, and separate
+output-only and internal-access conditions. The present HMM-only pipeline does not
+implement that track.
+
+## Run the informed controls locally
 
 ```bash
 git clone https://github.com/d0rbu/hidden-process-bench.git
@@ -20,7 +25,7 @@ uv run --locked just setup
 uv run --locked hidden-process-bench run --config configs/smoke.toml --out outputs/smoke
 ```
 
-The smoke run exercises the entire pipeline in seconds. It deliberately trains for
+The smoke run exercises the informed-control pipeline in seconds. It deliberately trains for
 only two steps and reports `benchmark_eligible: false`. For a bounded CPU experiment:
 
 ```bash
@@ -33,11 +38,10 @@ Existing output directories are never overwritten. Add `--require-qualified` to 
 exit code 2 if the checkpoint misses the Bayesian prediction threshold; the report is
 still saved. The locked environment uses CPU PyTorch on Linux and Windows.
 
-The [five-family method pilot](docs/results/five-method-pilot.md) runs classical HMM
-learning, belief geometry, PCA/SAE/transcoders, circuit interventions, and two blinded
-checkpoint-agent conditions. Belief features helped on one independent task, but no
-method recovered an equivalent process. Full candidates, scores and limitations are
-published with the results.
+The [informed five-family pilot](docs/results/five-method-pilot.md) compares HMM fitting
+with classical methods, activation features, circuit interventions and agents. All
+were told the HMM family and order; feature methods used a supplied HMM fitting adapter.
+These are parameter-fitting controls, not independent structure-discovery results.
 
 The [screened CPU example](docs/results/screened-cpu-demo.md) qualified at 1,200 steps
 with held-out KL of 0.0199 nats/token. Its probability-only recovery baseline beat the
@@ -45,7 +49,7 @@ activation-assisted method on this task. Reports, rejected candidates, and sourc
 provenance are included. The [initial unscreened example](docs/results/cpu-demo.md) remains
 as a separate historical receipt.
 
-## What is implemented
+## What is implemented for the informed controls
 
 - Four stationary, node-emitting HMMs with a shared vocabulary; one unknown component
   generates each sequence. The default has 3 states per component and 16 output tokens.
@@ -57,7 +61,7 @@ as a separate historical receipt.
 - An exact Bayesian filter over **both component identity and hidden state**.
 - A small causal transformer trained on fresh sampled sequences by next-token loss.
   Validation selects when to stop; a separate test set determines qualification.
-- Three recovery methods, using the **same model-generated histories**:
+- Three informed fitting methods, using the **same model-generated histories**:
 
 | Method | Allowed information | Objective |
 |---|---|---|
@@ -81,7 +85,7 @@ counts, including the screened minimal order, are disclosed in this first versio
 A passing prediction gate applies to the
 sampled contexts and declared tolerance, not exact Bayesian optimality everywhere.
 
-## Extract from an existing checkpoint
+## Fit the informed HMM control to an existing checkpoint
 
 ```bash
 uv run --locked hidden-process-bench extract \
@@ -94,10 +98,12 @@ uv run --locked hidden-process-bench score \
   --candidate outputs/candidate.json
 ```
 
-For an independent extractor, produce the HMM JSON described in the
+For this informed control, produce the HMM JSON described in the
 [artifact contract](docs/reference/artifacts.md). Never give the extractor `private/`.
 The public demo seed is intentionally reproducible; use unseen, evaluator-only seeds
-for a real challenge. The directories are an organizational boundary, not a sandbox.
+for new development tasks. A family-blind challenge additionally needs the neutral
+interface in the primary protocol; the existing HMM schema is not that interface. The
+directories are an organizational boundary, not a sandbox.
 
 ## Scaling experiments
 

@@ -1,6 +1,24 @@
 {
   "schema_version": 1,
   "results_date": "2026-10-26",
+  "scope_correction": {
+    "schema_version": 1,
+    "track": "informed_hmm_parameter_fit",
+    "applies_to": [
+      "cpu-demo",
+      "screened-cpu-demo",
+      "scaling-pilot",
+      "five-method-pilot"
+    ],
+    "process_family_disclosed": true,
+    "process_order_disclosed": true,
+    "family_discovery_evaluated": false,
+    "independent_structure_recovery_evaluated": false,
+    "primary_discovery_track_status": "not_implemented_or_run",
+    "primary_discovery_result_count": 0,
+    "raw_experiment_receipts_modified": false,
+    "correction": "Existing fits and agent prompts were given HMM semantics and order. Their scores measure informed parameter fitting and predictive approximation, not independent discovery of the generating mechanism."
+  },
   "method_result_revision": "2d1505aa9beb9aab6e203e5eda9000c7c5ec9265",
   "method_study": {
     "date": "2026-10-26",
@@ -7211,6 +7229,7 @@
     "docs/results/scaling-pilot/case-002-report.json": "743c4dd9e6ae615e614476e61777dfc6885a23849505612c087af06c875757dc",
     "docs/results/scaling-pilot/case-001-report.json": "1b167a00bbb6b0a5d0aa32fc8c5542244094d12be4727c239bdb33693e3092fa",
     "docs/results/scaling-pilot/case-003-report.json": "29c4c45f2e872e035504d0d1297189ffeb489971dc9fe2ad102075efaba654bd",
+    "docs/results/disclosure-correction.json": "96889592dccfa3c6493b1cacc1f97a0b7058dfcc3917951ea84eca3eba9779d4",
     "docs/results/five-method-pilot/summary.json": "359cc0523f1c9f288a46aba2fc5cae34bd51d134c6871393f749bab18f17acc5"
   }
 }

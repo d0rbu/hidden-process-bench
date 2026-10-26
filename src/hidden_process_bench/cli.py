@@ -14,13 +14,19 @@ from hidden_process_bench.scaling import load_sweep, run_sweep, sweep_plan
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Recover hidden HMMs from a trained transformer.")
+    parser = argparse.ArgumentParser(
+        description="Informed HMM-fitting controls. Independent process discovery is not implemented."
+    )
     commands = parser.add_subparsers(dest="command", required=True)
-    experiment = commands.add_parser("run", help="train, qualify, recover and score")
+    experiment = commands.add_parser(
+        "run", help="train, qualify predictions, fit informed HMM controls and score"
+    )
     experiment.add_argument("--config", type=Path, default=Path("configs/demo.toml"))
     experiment.add_argument("--out", type=Path, required=True)
     experiment.add_argument("--require-qualified", action="store_true")
-    extract = commands.add_parser("extract", help="recover an HMM from public checkpoint artifacts")
+    extract = commands.add_parser(
+        "extract", help="fit an HMM given its family and order (informed control)"
+    )
     extract.add_argument("--checkpoint", type=Path, required=True)
     extract.add_argument("--task", type=Path, required=True)
     extract.add_argument("--out", type=Path, required=True)
@@ -64,6 +70,8 @@ def main(argv: list[str] | None = None) -> int:
                 {
                     "report": str(args.out / "report.json"),
                     "benchmark_eligible": report["benchmark_eligible"],
+                    "checkpoint_qualified": report["checkpoint_qualified"],
+                    "evaluation_scope": report["evaluation_scope"],
                 }
             )
         )

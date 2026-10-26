@@ -11,6 +11,13 @@ def test_published_site_data_reproduces_recorded_generators_and_results() -> Non
     payload = build_payload(Path("."))
     assert payload == json.loads(Path("site/data.json").read_text())
     assert len(payload["datasets"]) == 3
+    scope = payload["scope_correction"]
+    assert scope["track"] == "informed_hmm_parameter_fit"
+    assert scope["process_family_disclosed"]
+    assert scope["process_order_disclosed"]
+    assert not scope["family_discovery_evaluated"]
+    assert not scope["independent_structure_recovery_evaluated"]
+    assert scope["primary_discovery_result_count"] == 0
     assert len(payload["runs"]) == 5
     assert sum(run["qualified"] for run in payload["runs"][1:]) == 1
     for run in payload["runs"]:

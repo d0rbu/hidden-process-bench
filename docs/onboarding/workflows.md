@@ -41,10 +41,15 @@ Use `uv add <package>`, `uv add --dev <tool>`, or an intentional `uv lock` after
 metadata. Review both `pyproject.toml` and `uv.lock`, then `uv sync --locked`. Dependency
 maintenance is local; there is no hosted dependency-update workflow.
 
-## New recovery method
+## New independent discovery method
 
-Start from `fit_hmm`'s information boundary. Read only the permitted observation tier,
-return a validated `MixtureHMM`, and let the evaluator score it. Compare against the
-output-only baselines on identical cached histories and declared budgets. Select
-restarts using the method's objective, never hidden ground-truth scores. See the
-[design](../research/design.md) before making an interpretability claim.
+Follow the [primary protocol](../research/independent-discovery.md). Do not supply a
+process family, state count, HMM constructor, belief update equation or HMM-only output
+schema. The method must propose and execute its own recovered process. A fresh agent
+must not inherit generator knowledge through context or filesystem access. The neutral
+submission/evaluation interface and mixed task suite are not implemented yet.
+
+For an **informed fitting control**, `fit_hmm` accepts the disclosed HMM shape and allowed
+observations. Its result is a `MixtureHMM`. Compare it against other informed controls
+on cached histories and declared budgets. Never label that adapter as independent
+structure discovery. Select restarts by method objectives, not private evaluator scores.

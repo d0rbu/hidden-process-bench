@@ -2,6 +2,14 @@
 
 [Documentation](../README.md) · [Design](../research/design.md)
 
+The layout and HMM schema below belong to the **informed HMM-fitting controls**.
+`public/task.json` reveals the family/order through its shape fields. Do not use it
+as a primary discovery challenge. The [primary protocol](../research/independent-discovery.md)
+requires neutral inputs and an executable process submission chosen by the extractor;
+that interface is not implemented yet. New informed reports include `evaluation_scope`
+with both independent discovery flags false. `benchmark_eligible` and its explicit
+alias `checkpoint_qualified` refer only to transformer prediction qualification.
+
 A run creates a fresh directory. Existing directories and standalone candidate files
 are refused, so reruns cannot silently replace evidence.
 
@@ -55,7 +63,7 @@ contains the regular run layout above. `cases.jsonl` records each completed case
 Seeds and evaluator feedback appear in these aggregates: they are post-evaluation receipts,
 not extractor inputs. Preserve partial runs on interruption or timeout.
 
-## Candidate HMM JSON, version 1
+## Informed-control candidate HMM JSON, version 1
 
 ```json
 {

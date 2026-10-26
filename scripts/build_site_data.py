@@ -129,6 +129,7 @@ def build_payload(root: Path) -> dict[str, Any]:
     return {
         "schema_version": 1,
         "results_date": "2026-10-26",
+        "scope_correction": read("docs/results/disclosure-correction.json"),
         "method_result_revision": METHOD_RESULT_REVISION,
         "method_study": read("docs/results/five-method-pilot/summary.json"),
         "result_revision": RESULT_REVISION,

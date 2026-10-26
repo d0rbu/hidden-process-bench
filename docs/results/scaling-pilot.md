@@ -1,5 +1,10 @@
 # Process-size and model-size pilot
 
+**Scope correction:** all fits here were given the HMM family and order. These are
+informed fitting controls, not independent process-discovery results. Checkpoint
+qualification concerns transformer predictions only. See the
+[primary protocol](../research/independent-discovery.md). Raw receipts are unchanged.
+
 [Documentation](../README.md) · [Scaling protocol](../research/scaling.md) · [Screened demo](screened-cpu-demo.md)
 
 Four CPU runs completed on 2026-10-21 UTC from clean source
