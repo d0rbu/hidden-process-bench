@@ -260,6 +260,40 @@ function renderResults() {
   renderScaling();
 }
 
+function renderStudy() {
+  const checkpoint = data.method_study.cases.find((item) => item.id === $('study-case').value);
+  const names = [
+    ['adam_samples', 'Samples (Adam)'], ['adam_probabilities', 'Probabilities (control)'],
+    ['em_samples', 'Baum–Welch / EM'], ['spectral_hmm', 'Spectral → HMM'],
+    ['belief_layer_0', 'Belief geometry · block 1'], ['belief_layer_1', 'Belief geometry · block 2'],
+    ['belief_all_layers', 'Belief geometry · both blocks'], ['pca', 'PCA'],
+    ['sae', 'Sparse autoencoder'], ['transcoder', 'MLP transcoder'], ['circuit', 'Pruned-model HMM'],
+    ['agent_static', 'Agent · static weights'], ['agent_observations', 'Agent · cached observations'],
+  ];
+  $('study-results').replaceChildren();
+  for (const [key, name] of names) {
+    const result = checkpoint.methods[key];
+    if (!result) continue;
+    const row = element('tr', undefined, key === 'adam_probabilities' ? 'best' : '');
+    row.append(element('td', name), element('td', result.kl.toFixed(4)), element('td', result.mae.toFixed(4)));
+    $('study-results').append(row);
+  }
+}
+
+function initializeStudy() {
+  const task = data.method_study.cases.find((item) => item.id === 'new-a');
+  $('method-finding').textContent = `On one new task, belief features reduced predictive KL from ${task.methods.adam_probabilities.kl.toFixed(4)} to ${task.methods.belief_layer_0.kl.toFixed(4)}. The benefit varied across tasks. No method recovered an equivalent process.`;
+  for (const item of data.method_study.cases) {
+    const option = element('option', item.label);
+    option.value = item.id;
+    $('study-case').append(option);
+  }
+  $('study-case').value = 'new-a';
+  $('study-case').addEventListener('change', renderStudy);
+  $('study-report').href = `${data.repository}/blob/${data.method_result_revision}/docs/results/five-method-pilot.md`;
+  renderStudy();
+}
+
 function renderScaling() {
   const svg = $('scaling-chart');
   const width = Math.max(330, svg.clientWidth);
@@ -326,6 +360,7 @@ async function initialize() {
     window.addEventListener('resize', () => { renderGraph(); renderScaling(); });
     renderExplorer();
     renderResults();
+    initializeStudy();
   } catch (error) {
     $('load-status').textContent = 'The interactive data could not load. Reload the page, or read the linked reports below.';
     console.error(error);

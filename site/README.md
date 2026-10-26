@@ -40,6 +40,9 @@ GitHub Actions.
   tokens before and after splitting; incoming mass is divided among the copies.
   This control illustrates redundancy, including beyond the scorer's six-state limit;
   it is not a new training run or a newly qualified task.
+- A compact five-family comparison across four qualified checkpoints, including two
+  independent generators. The full table is expandable and retains the compute/access
+  differences and the two-checkpoint limit on agent trials.
 - Recorded recovery scores and all four scaling statuses. The scaling chart plots the
   **largest aggregate/component upper bound across both validation and test**, so a
   point clears the plotted threshold exactly when the recorded checkpoint qualified.
@@ -50,8 +53,9 @@ No hidden challenge seeds or local experiment directories are read. Source recei
 hashes, pinned GitHub links, experiment revisions, and Python-oracle fixtures accompany
 the snapshot. Python tests verify it reproduces the receipts; Node tests compare every
 browser prediction and belief against NumPy, and check sampling and state equivalence.
-The three displayed datasets and five result rows are development examples, not five
-independent task draws. The two widths share each pilot process.
+The three displayed generators and original five result rows are development examples, not five
+independent task draws. The two widths share each pilot process. The newer method-study
+summary is exported from its own published receipt with a separate pinned revision.
 
 ## Cloudflare hosting
 
