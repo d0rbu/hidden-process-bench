@@ -4,7 +4,7 @@ Start with the [project README](../README.md) or [agent guide](../AGENTS.md).
 
 | Area | Documents |
 |---|---|
-| Research | [Design](research/design.md), [scaling and equivalence](research/scaling.md), [related work](research/related-work.md) |
+| Research | [Design](research/design.md), [scaling and equivalence](research/scaling.md), [related work](research/related-work.md), [method pilot](research/method-study.md) |
 | Setup | [Getting started](onboarding/getting-started.md), [workflows](onboarding/workflows.md), [glossary](onboarding/glossary.md) |
 | Correctness | [Contracts](development/correctness.md), [testing](development/testing.md) |
 | Experiments | [Lifecycle](pipelines/experiment-lifecycle.md) |

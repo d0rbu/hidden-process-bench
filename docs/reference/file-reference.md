@@ -16,6 +16,12 @@
 | `src/hidden_process_bench/equivalence.py` | Numerical word-equivalence check, redundant-state controls, complexity |
 | `src/hidden_process_bench/model.py` | Causal transformer, checkpoint and observation API |
 | `src/hidden_process_bench/recovery.py` | Three observation-tier recovery objectives |
+| `src/hidden_process_bench/classical.py` | Scaled mixture Baum–Welch and spectral observable operators |
+| `src/hidden_process_bench/representations.py` | Counted layer traces, PCA/SAE/transcoder fits, observable belief updates |
+| `src/hidden_process_bench/circuits.py` | Greedy head/MLP ablation and candidate-belief interchange |
+| `src/hidden_process_bench/method_study.py` | Public-only extraction submissions followed by evaluator-only scoring |
+| `tests/test_classical.py`, `tests/test_representations.py`, `tests/test_circuits.py`, `tests/test_method_study.py` | Exact EM path checks, synthetic dynamics, interventions and study boundaries |
+| `docs/research/method-study.md` | Five-family pilot protocol, access and adaptation limits |
 | `src/hidden_process_bench/metrics.py` | Permutations, KL, qualification, rank checks, probes |
 | `src/hidden_process_bench/experiment.py` | Training, split seeds, orchestration, provenance |
 | `src/hidden_process_bench/scaling.py` | Frozen Cartesian plans, subprocess limits, complete status summaries |

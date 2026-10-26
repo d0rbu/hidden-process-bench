@@ -69,8 +69,8 @@ as a separate historical receipt.
 - Saved checkpoints, recovered HMM JSON, evaluator-only truth, source hashes, seeds,
   a training trace, and a machine-readable report.
 
-The activation method reads internals by executing the checkpoint. Static weights-only
-reconstruction and causal circuit validation are not implemented. Parameter/state
+The activation method reads internals by executing the checkpoint. The [method pilot](docs/research/method-study.md) adds classical learning, unsupervised
+representations, circuit interventions, and bounded checkpoint-agent trials. Parameter/state
 counts, including the screened minimal order, are disclosed in this first version.
 A passing prediction gate applies to the
 sampled contexts and declared tolerance, not exact Bayesian optimality everywhere.
