@@ -4,11 +4,11 @@ Start with the [project README](../README.md) or [agent guide](../AGENTS.md).
 
 | Area | Documents |
 |---|---|
-| Research | [Design](research/design.md), [scaling and equivalence](research/scaling.md), [related work](research/related-work.md) |
+| Research | [Design](research/design.md), [scaling and equivalence](research/scaling.md), [related work](research/related-work.md), [method pilot](research/method-study.md) |
 | Setup | [Getting started](onboarding/getting-started.md), [workflows](onboarding/workflows.md), [glossary](onboarding/glossary.md) |
 | Correctness | [Contracts](development/correctness.md), [testing](development/testing.md) |
 | Experiments | [Lifecycle](pipelines/experiment-lifecycle.md) |
-| Results | [Screened CPU example](results/screened-cpu-demo.md), [scaling pilot](results/scaling-pilot.md), [historical unscreened example](results/cpu-demo.md) |
+| Results | [Five-family method pilot](results/five-method-pilot.md), [Screened CPU example](results/screened-cpu-demo.md), [scaling pilot](results/scaling-pilot.md), [historical unscreened example](results/cpu-demo.md) |
 | Reference | [Architecture](reference/architecture.md), [artifacts](reference/artifacts.md), [configuration](reference/configuration.md), [file map](reference/file-reference.md) |
 | Website | [Interactive explainer and hosting](../site/README.md) |
 

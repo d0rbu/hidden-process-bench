@@ -1,0 +1,24 @@
+{
+  "access": "weights + cached generated histories, probabilities, residuals",
+  "seconds_limit": 480,
+  "additional_model_forward_calls_allowed": 0,
+  "charged_observation_budget_per_case": {
+    "generation_forward_calls": 24,
+    "token_queries": 3072,
+    "prefix_tokens_processed": 38400
+  },
+  "forbidden": [
+    "private artifacts",
+    "reports",
+    "other project files",
+    "internet",
+    "other agents"
+  ],
+  "candidate_schema": {
+    "schema_version": 1,
+    "weights": "K normalized",
+    "initial": "K*S row normalized",
+    "transition": "K*S*S row normalized",
+    "emission": "K*S*V row normalized"
+  }
+}

@@ -94,7 +94,22 @@
 
     <section id="results" class="section" aria-labelledby="results-title" hidden>
       <h2 id="results-title">Results so far</h2>
-      <p class="section-intro">The demo learned to predict. Recovering its structure is harder.</p>
+      <p class="section-intro">The models learned to predict. Recovering their structure is harder.</p>
+      <h3>Five method families, four qualified models</h3>
+      <p id="method-finding"></p>
+      <details class="explainer-detail">
+        <summary>Compare the methods</summary>
+        <label class="select-label">Checkpoint<select id="study-case"></select></label>
+        <div class="table-scroll">
+          <table class="recovery-table">
+            <caption>512 held-out sequences per checkpoint. Lower is better.</caption>
+            <thead><tr><th scope="col">Method</th><th scope="col">Predictive KL</th><th scope="col">Parameter MAE</th></tr></thead>
+            <tbody id="study-results"></tbody>
+          </table>
+        </div>
+        <p>Most fits use two restarts of 250 steps. The observation agent used more optimization; circuit tests used 15 extra batched forwards. Agent trials cover only the older checkpoints.</p>
+        <p><a id="study-report" href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/five-method-pilot.md">Methods, budgets and raw results ↗</a></p>
+      </details>
       <div class="result-heading">
         <h3>The qualified demo</h3><span class="pass-label">Prediction gate passed</span>
       </div>
@@ -135,7 +150,7 @@
   </main>
 
   <footer>
-    <p>A small research prototype. Recorded results: 21 October 2026.</p>
+    <p>A small research prototype. Recorded results: 26 October 2026.</p>
     <div class="footer-links"><a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/research/design.md">Method</a><a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/scaling-pilot.md">Run reports</a><a href="data.json">Download data</a><a href="https://github.com/d0rbu/hidden-process-bench">GitHub ↗</a></div>
   </footer>
 </body>

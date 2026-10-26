@@ -13,6 +13,7 @@ from hidden_process_bench.config import Shape
 from hidden_process_bench.process import random_mixture
 
 RESULT_REVISION = "c10508b5b07b770b6d9cc697f8eed80fcbbea0f1"
+METHOD_RESULT_REVISION = "2d1505aa9beb9aab6e203e5eda9000c7c5ec9265"
 REPOSITORY = "https://github.com/d0rbu/hidden-process-bench"
 
 
@@ -127,7 +128,9 @@ def build_payload(root: Path) -> dict[str, Any]:
         )
     return {
         "schema_version": 1,
-        "results_date": "2026-10-21",
+        "results_date": "2026-10-26",
+        "method_result_revision": METHOD_RESULT_REVISION,
+        "method_study": read("docs/results/five-method-pilot/summary.json"),
         "result_revision": RESULT_REVISION,
         "repository": REPOSITORY,
         "datasets": datasets,

@@ -1,0 +1,285 @@
+{
+  "date": "2026-10-26",
+  "cases": [
+    {
+      "id": "demo",
+      "label": "Demo",
+      "qualified": true,
+      "checkpoint_sha256": "16021e33528efa7dcec1deb0dea665d9bfe27727bef895c2ca26a10e7abe1b8f",
+      "methods": {
+        "adam_samples": {
+          "kl": 0.08598362847047718,
+          "mae": 0.0965215443202268,
+          "equivalence_status": "different"
+        },
+        "adam_probabilities": {
+          "kl": 0.013672231227994968,
+          "mae": 0.03145744248067352,
+          "equivalence_status": "different"
+        },
+        "em_samples": {
+          "kl": 0.11673543915748465,
+          "mae": 0.13002232653415607,
+          "equivalence_status": "different"
+        },
+        "spectral_hmm": {
+          "kl": 0.2502765417423902,
+          "mae": 0.1222150922148008,
+          "equivalence_status": "different"
+        },
+        "belief_layer_0": {
+          "kl": 0.017879277719301718,
+          "mae": 0.05074702858043953,
+          "equivalence_status": "different"
+        },
+        "belief_layer_1": {
+          "kl": 0.017997145584402255,
+          "mae": 0.05214432509672778,
+          "equivalence_status": "different"
+        },
+        "belief_all_layers": {
+          "kl": 0.021040937955993114,
+          "mae": 0.06377453519321333,
+          "equivalence_status": "different"
+        },
+        "pca": {
+          "kl": 0.014639112988794048,
+          "mae": 0.03945221667459229,
+          "equivalence_status": "different"
+        },
+        "sae": {
+          "kl": 0.015415431509120538,
+          "mae": 0.044408515172396565,
+          "equivalence_status": "different"
+        },
+        "transcoder": {
+          "kl": 0.016342009546500978,
+          "mae": 0.05032245855632578,
+          "equivalence_status": "different"
+        },
+        "circuit": {
+          "kl": 0.013672231558619878,
+          "mae": 0.031457443082981,
+          "equivalence_status": "different"
+        },
+        "agent_static": {
+          "kl": 0.40164387627343334,
+          "mae": 0.14481304005003529,
+          "equivalence_status": "different"
+        },
+        "agent_observations": {
+          "kl": 0.008910952936072691,
+          "mae": 0.02531215823270007,
+          "equivalence_status": "different"
+        }
+      }
+    },
+    {
+      "id": "pilot",
+      "label": "Earlier pilot",
+      "qualified": true,
+      "checkpoint_sha256": "34c719301ed27b634ec96ef606cba5f73b8f00ec33303340a1863981cad9ee2c",
+      "methods": {
+        "adam_samples": {
+          "kl": 0.11470731940350629,
+          "mae": 0.107447386361301,
+          "equivalence_status": "different"
+        },
+        "adam_probabilities": {
+          "kl": 0.02259541795539708,
+          "mae": 0.050510033688570675,
+          "equivalence_status": "different"
+        },
+        "em_samples": {
+          "kl": 0.18653397857471032,
+          "mae": 0.11259665508476016,
+          "equivalence_status": "different"
+        },
+        "spectral_hmm": {
+          "kl": 0.24370233246552592,
+          "mae": 0.11634221563228815,
+          "equivalence_status": "different"
+        },
+        "belief_layer_0": {
+          "kl": 0.04544487508145843,
+          "mae": 0.0740773822784343,
+          "equivalence_status": "different"
+        },
+        "belief_layer_1": {
+          "kl": 0.03709028943546148,
+          "mae": 0.048097375375163114,
+          "equivalence_status": "different"
+        },
+        "belief_all_layers": {
+          "kl": 0.02908590453319517,
+          "mae": 0.07037876971240088,
+          "equivalence_status": "different"
+        },
+        "pca": {
+          "kl": 0.035029555253810366,
+          "mae": 0.045117055309969845,
+          "equivalence_status": "different"
+        },
+        "sae": {
+          "kl": 0.0423573521959298,
+          "mae": 0.05419433052889147,
+          "equivalence_status": "different"
+        },
+        "transcoder": {
+          "kl": 0.043224772001134525,
+          "mae": 0.05444216307201729,
+          "equivalence_status": "different"
+        },
+        "circuit": {
+          "kl": 0.02225202504801961,
+          "mae": 0.04645465571121861,
+          "equivalence_status": "different"
+        },
+        "agent_static": {
+          "kl": 0.3837215508931018,
+          "mae": 0.13964589085181353,
+          "equivalence_status": "different"
+        },
+        "agent_observations": {
+          "kl": 0.011004665011106012,
+          "mae": 0.03530681133516895,
+          "equivalence_status": "different"
+        }
+      }
+    },
+    {
+      "id": "new-a",
+      "label": "Independent A",
+      "qualified": true,
+      "checkpoint_sha256": "dacb3461fd902693e3b2acd1a1062a200222ec68fc4d3c27a0e9f27de48ec319",
+      "methods": {
+        "adam_samples": {
+          "kl": 0.0986998001115494,
+          "mae": 0.11744476273602955,
+          "equivalence_status": "different"
+        },
+        "adam_probabilities": {
+          "kl": 0.03100193477632365,
+          "mae": 0.06282586531460697,
+          "equivalence_status": "different"
+        },
+        "em_samples": {
+          "kl": 0.11616483759939944,
+          "mae": 0.13041459280805012,
+          "equivalence_status": "different"
+        },
+        "spectral_hmm": {
+          "kl": 0.21313216681155447,
+          "mae": 0.08863248923177452,
+          "equivalence_status": "different"
+        },
+        "belief_layer_0": {
+          "kl": 0.016730393076583576,
+          "mae": 0.040774474407914846,
+          "equivalence_status": "different"
+        },
+        "belief_layer_1": {
+          "kl": 0.018244683967033395,
+          "mae": 0.057173979770173515,
+          "equivalence_status": "different"
+        },
+        "belief_all_layers": {
+          "kl": 0.01803785663931972,
+          "mae": 0.05518403805727084,
+          "equivalence_status": "different"
+        },
+        "pca": {
+          "kl": 0.03154317671872062,
+          "mae": 0.06921484889740505,
+          "equivalence_status": "different"
+        },
+        "sae": {
+          "kl": 0.016868057458372478,
+          "mae": 0.042557971979810295,
+          "equivalence_status": "different"
+        },
+        "transcoder": {
+          "kl": 0.030989999446656324,
+          "mae": 0.06501969886886691,
+          "equivalence_status": "different"
+        },
+        "circuit": {
+          "kl": 0.032010714042913294,
+          "mae": 0.061313244121054884,
+          "equivalence_status": "different"
+        }
+      }
+    },
+    {
+      "id": "new-b",
+      "label": "Independent B",
+      "qualified": true,
+      "checkpoint_sha256": "9c1bcfd9dc2920a17bf624616edb5b3a3aa87aa9d57de1a695177623e60d8c0d",
+      "methods": {
+        "adam_samples": {
+          "kl": 0.07254795240479758,
+          "mae": 0.10326964839095416,
+          "equivalence_status": "different"
+        },
+        "adam_probabilities": {
+          "kl": 0.02147053345651749,
+          "mae": 0.0698680884568772,
+          "equivalence_status": "different"
+        },
+        "em_samples": {
+          "kl": 0.09716480798505578,
+          "mae": 0.11536977097164487,
+          "equivalence_status": "different"
+        },
+        "spectral_hmm": {
+          "kl": 0.20383819563176514,
+          "mae": 0.10959006955287846,
+          "equivalence_status": "different"
+        },
+        "belief_layer_0": {
+          "kl": 0.025271015166557678,
+          "mae": 0.06571991401115344,
+          "equivalence_status": "different"
+        },
+        "belief_layer_1": {
+          "kl": 0.020147543343383874,
+          "mae": 0.06716106130786942,
+          "equivalence_status": "different"
+        },
+        "belief_all_layers": {
+          "kl": 0.02562850362092211,
+          "mae": 0.06717129693231107,
+          "equivalence_status": "different"
+        },
+        "pca": {
+          "kl": 0.019910486837747154,
+          "mae": 0.06360506457270357,
+          "equivalence_status": "different"
+        },
+        "sae": {
+          "kl": 0.026920140832499814,
+          "mae": 0.06422193508494824,
+          "equivalence_status": "different"
+        },
+        "transcoder": {
+          "kl": 0.02627469666225323,
+          "mae": 0.0639911060863935,
+          "equivalence_status": "different"
+        },
+        "circuit": {
+          "kl": 0.021470533600804594,
+          "mae": 0.06986808804582223,
+          "equivalence_status": "different"
+        }
+      }
+    }
+  ],
+  "notes": [
+    "Known-order CPU pilot; two development checkpoints and two independent generators.",
+    "Numerical methods: two restarts x 250 steps; representation training adds 400 steps.",
+    "Agent-observations: twelve x 1800 steps plus 400 refit; not a matched compute comparison.",
+    "Circuit uses 15 additional batched forwards including interchange; others share 24 generation calls.",
+    "Scores use a new common 512-sequence held-out set, so historical numbers differ.",
+    "All candidates were fixed before evaluator feedback. Agent inputs had instruction/API boundaries, not OS sandboxing."
+  ]
+}

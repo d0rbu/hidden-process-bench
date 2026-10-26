@@ -1,0 +1,53 @@
+"""Independently validate exported candidates and score cached prefixes in NumPy."""
+from pathlib import Path
+from datetime import datetime, timezone
+import json
+import numpy as np
+
+ROOT=Path(__file__).resolve().parent
+
+def validate(case):
+    folder=ROOT/case
+    shape=json.loads((folder/'task.json').read_text())['shape']
+    K,S,V=shape['components'],shape['states'],shape['vocab']
+    c=json.loads((folder/'candidate.json').read_text())
+    assert c['schema_version']==1
+    arrays={k:np.asarray(c[k],dtype=np.float64) for k in ['weights','initial','transition','emission']}
+    dimensions={'weights':(K,),'initial':(K,S),'transition':(K,S,S),'emission':(K,S,V)}
+    rowerrors={}
+    for key,a in arrays.items():
+        assert a.shape==dimensions[key],(key,a.shape)
+        assert np.isfinite(a).all() and np.all(a>=0),key
+        rowerrors[key]=float(np.max(np.abs(a.sum(-1)-1)))
+        assert rowerrors[key]<1e-12,(key,rowerrors[key])
+    x=np.load(folder/'tokens.npy'); p=np.load(folder/'probabilities.npy'); p=p/p.sum(-1,keepdims=True)
+    w,i,a,e=[arrays[k] for k in ['weights','initial','transition','emission']]
+    b=np.repeat((w[:,None]*i)[None],len(x),axis=0)
+    predictions=[]
+    for t in range(x.shape[1]):
+        predictions.append(np.einsum('bks,ksv->bv',b,e))
+        b=b*e[:,:,x[:,t]].transpose(2,0,1)
+        b=b/b.sum((1,2),keepdims=True)
+        b=np.einsum('bks,ksu->bku',b,a)
+    q=np.stack(predictions,axis=1)
+    kl=(p*(np.log(p)-np.log(q))).sum(-1)
+    sampled_ll=np.log(np.take_along_axis(q,x[:,:,None],axis=-1)[:,:,0])
+    return {'valid':True,'max_stochastic_row_error_by_parameter':rowerrors,'independent_numpy_full_data_predictive_kl_nats_per_token':float(kl.mean()),'independent_numpy_per_position_kl':kl.mean(0).tolist(),'sampled_token_nll_nats':float(-sampled_ll.mean())}
+
+if __name__=='__main__':
+    r=json.loads((ROOT/'report.json').read_text())
+    r['export_validation']={case:validate(case) for case in ['demo','pilot']}
+    # Historical timings for this submitted experiment. A future rerun changes the
+    # extraction timing in report.json; these original envelope records describe
+    # the evaluated run only.
+    first=datetime(2026,10,26,17,12,1,tzinfo=timezone.utc)
+    end=datetime.now(timezone.utc)
+    r['time_accounting']={'first_recorded_tool_clock_utc':first.isoformat(),'submission_fixed_utc':end.isoformat(),'actual_wall_seconds_since_first_recorded_clock':(end-first).total_seconds(),'preliminary_fit_seconds':54.71125681325793,'final_pipeline_fit_seconds':r['fitting_seconds'],'total_fitting_seconds_including_preliminary':54.71125681325793+r['fitting_seconds'],'seconds_limit':480,'note':'Two optimization runs reused the same cached observations; they incurred zero additional transformer forwards. Wall time begins at first recorded clock shortly after instruction receipt.'}
+    r['submission_status']='fixed; candidates selected without scorer feedback'
+    (ROOT/'report.json').write_text(json.dumps(r,indent=2)+'\n')
+    for c in r['cases']:
+        name=c['case']; v=r['export_validation'][name]
+        assert abs(v['independent_numpy_full_data_predictive_kl_nats_per_token']-c['final_refit']['full_data_kl'])<1e-5
+        print(name,'pre-refit held-out KL',c['selected_validation_kl_nats_per_token'],'full-refit in-sample KL',v['independent_numpy_full_data_predictive_kl_nats_per_token'],'unigram held-out KL',c['unigram_baseline_validation_kl'],'valid',v['valid'])
+    print('wall seconds',r['time_accounting']['actual_wall_seconds_since_first_recorded_clock'])
+    print('total optimization seconds',r['time_accounting']['total_fitting_seconds_including_preliminary'])

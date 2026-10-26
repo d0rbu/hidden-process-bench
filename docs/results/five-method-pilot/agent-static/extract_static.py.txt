@@ -1,0 +1,165 @@
+"""Weight-only HMM candidate construction. No model import or forward execution.
+
+Only unembedding row geometry and final normalization scale are used. The
+hierarchical clustering objective is a heuristic, not an HMM identification
+result. The transition and initial distributions use maximum-entropy priors.
+"""
+from __future__ import annotations
+import argparse
+import hashlib
+import json
+import time
+from pathlib import Path
+import numpy as np
+import torch
+
+HP = dict(seed=731, restarts=64, kmeans_iterations=100,
+          component_logit_rms=0.85, state_logit_rms=0.45,
+          emission_uniform_floor=0.03, noise_eigenvalue_quantile=0.25)
+
+
+def normalize_rows(x):
+    return x / np.maximum(np.linalg.norm(x, axis=1, keepdims=True), 1e-12)
+
+
+def softmax(x):
+    z = np.exp(x - np.max(x, axis=-1, keepdims=True))
+    return z / z.sum(axis=-1, keepdims=True)
+
+
+def kmeans(x, count, rng):
+    best = None
+    for _ in range(HP['restarts']):
+        centers = [x[int(rng.integers(len(x)))].copy()]
+        for j in range(1, count):
+            dist = ((x[:, None] - np.asarray(centers)[None]) ** 2).sum(-1).min(-1)
+            index = int(rng.choice(len(x), p=dist / dist.sum())) if dist.sum() > 1e-14 else j % len(x)
+            centers.append(x[index].copy())
+        centers = np.asarray(centers)
+        for _ in range(HP['kmeans_iterations']):
+            dist = ((x[:, None] - centers[None]) ** 2).sum(-1)
+            label = dist.argmin(-1)
+            new = centers.copy()
+            for j in range(count):
+                if np.any(label == j):
+                    new[j] = x[label == j].mean(0)
+                else:
+                    new[j] = x[np.argmax(dist.min(-1))]
+            if np.max(np.abs(new - centers)) < 1e-10:
+                break
+            centers = new
+        loss = float(((x - centers[label]) ** 2).sum())
+        if best is None or loss < best[0]:
+            best = (loss, centers.copy(), label.copy())
+    return best
+
+
+def rms_standardize(x):
+    x = x - x.mean()
+    return x / max(float(np.sqrt(np.mean(x * x))), 1e-12)
+
+
+def extract(case_dir, expected_sha):
+    begun = time.perf_counter()
+    checkpoint = case_dir / 'checkpoint.pt'
+    digest = hashlib.sha256(checkpoint.read_bytes()).hexdigest()
+    assert digest == expected_sha
+    shape = json.loads((case_dir / 'task.json').read_text())['shape']
+    k, s, v = shape['components'], shape['states'], shape['vocab']
+    payload = torch.load(checkpoint, map_location='cpu', weights_only=True)
+    assert payload['architecture']['vocab'] == v
+    state = payload['state_dict']
+    # Coordinatewise multiplication of raw parameter arrays; no token inputs,
+    # embedding lookup, sequence projections, or activation computations.
+    u = state['unembedding.weight'].numpy().astype(np.float64)
+    gamma = state['norm.weight'].numpy().astype(np.float64)
+    weighted = u * gamma[None, :]
+    weighted -= weighted.mean(0)
+    gram = weighted @ weighted.T
+    eigenvalues, eigenvectors = np.linalg.eigh(gram)
+    order = np.argsort(eigenvalues)[::-1]
+    eigenvalues, eigenvectors = eigenvalues[order], eigenvectors[:, order]
+    noise = float(np.quantile(eigenvalues[:-1], HP['noise_eigenvalue_quantile']))
+    rank = min(k * s - 1, v - 1)
+    signal = np.maximum(eigenvalues[:rank] - noise, 0)
+    features = eigenvectors[:, :rank] * np.sqrt(signal)[None, :]
+    rng = np.random.default_rng(HP['seed'])
+    component_rank = min(k - 1, rank)
+    loss, _, label = kmeans(features[:, :component_rank], k, rng)
+    # Fix arbitrary cluster labels by smallest assigned token ID.
+    cluster_ids = sorted(range(k), key=lambda j: int(np.flatnonzero(label == j)[0]) if np.any(label == j) else v + j)
+    emission = np.zeros((k, s, v))
+    selected_anchors = []
+    component_members = []
+    for component, cluster in enumerate(cluster_ids):
+        members = np.flatnonzero(label == cluster)
+        if len(members) == 0:
+            members = np.array([component % v])
+        component_members.append(members.tolist())
+        center = features[members].mean(0)
+        # Component direction uses only the slowest, largest parameter modes.
+        center[component_rank:] = 0
+        cscore = rms_standardize(features @ center)
+        residual = features.copy()
+        if np.dot(center, center) > 1e-12:
+            residual -= np.outer(features @ center / np.dot(center, center), center)
+        # Farthest-point anchors give distinct state proposals within a group.
+        anchors = [int(members[np.argmax(np.linalg.norm(residual[members], axis=1))])]
+        for _ in range(1, s):
+            distance = ((residual[members, None, :] - residual[np.array(anchors)][None, :, :]) ** 2).sum(-1).min(-1)
+            unused = ~np.isin(members, anchors)
+            if np.any(unused):
+                distance[~unused] = -1
+                anchors.append(int(members[np.argmax(distance)]))
+            else:
+                # Small clusters: use a global residual anchor rather than repeat.
+                distance = ((residual[:, None, :] - residual[np.array(anchors)][None, :, :]) ** 2).sum(-1).min(-1)
+                anchors.append(int(np.argmax(distance)))
+        selected_anchors.append(anchors)
+        for j, anchor in enumerate(anchors):
+            state_score = rms_standardize(residual @ residual[anchor])
+            logits = HP['component_logit_rms'] * cscore + HP['state_logit_rms'] * state_score
+            p = softmax(logits)
+            emission[component, j] = (1 - HP['emission_uniform_floor']) * p + HP['emission_uniform_floor'] / v
+    candidate = dict(schema_version=1, weights=(np.ones(k) / k).tolist(),
+                     initial=(np.ones((k, s)) / s).tolist(),
+                     transition=(np.ones((k, s, s)) / s).tolist(),
+                     emission=emission.tolist())
+    for name in ['weights', 'initial', 'transition', 'emission']:
+        a = np.asarray(candidate[name])
+        assert np.isfinite(a).all() and (a >= 0).all()
+        assert np.allclose(a.sum(axis=-1), 1, atol=1e-12)
+    (case_dir / 'candidate.json').write_text(json.dumps(candidate, indent=2) + '\n')
+    return dict(shape=shape, checkpoint_sha256=digest, architecture=payload['architecture'],
+                seconds=time.perf_counter() - begun, forward_calls=0,
+                retained_rank=rank, noise_eigenvalue=noise,
+                gram_eigenvalues=eigenvalues.tolist(), component_clustering_loss=loss,
+                component_token_clusters=component_members, state_anchor_tokens=selected_anchors,
+                candidate_sha256=hashlib.sha256((case_dir / 'candidate.json').read_bytes()).hexdigest())
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parent)
+    args = parser.parse_args()
+    begun = time.perf_counter()
+    protocol = json.loads((args.root / 'protocol.json').read_text())
+    results = {case: extract(args.root / case, protocol['checkpoint_sha256'][case]) for case in ['demo', 'pilot']}
+    report = dict(schema_version=1, method='static_unembedding_gram_hierarchical_geometry',
+                  algorithm='Form the centered Gram matrix of unembedding parameter rows, coordinate-scaled by final LayerNorm gamma. Subtract a low-eigenvalue noise floor, retain K*S-1 modes, cluster tokens in the first K-1 modes into K components, and choose S farthest residual anchors per component. Convert component and residual similarities to smoothed emission distributions. Use uniform mixture weights, initial distributions, and transitions.',
+                  hyperparameters=HP, actual_extraction_seconds=time.perf_counter() - begun,
+                  timing_scope='Measured runnable extraction only; exploratory reading and method design are excluded.',
+                  forward_calls=0, partial_transformer_executions=0, token_queries=0,
+                  access='Only the supplied protocol, architecture source, task files, and checkpoint raw arrays were read. No model was instantiated or imported. No token sequences or model activations were constructed.',
+                  limitations=['The geometry is a heuristic and has no proven mapping to HMM emissions.',
+                               'Transition direction, persistence, mixture weights, and initial distributions were not identified; all use explicit maximum-entropy uniform priors.',
+                               'Uniform transition rows make each proposed component observationally iid after marginalizing its hidden states.',
+                               'LayerNorm input statistics and all nonlinear and attention behavior are unobserved.',
+                               'No generated sequences, scorer, truth, or fit validation was available or used. Candidate submission is not a claim of successful hidden-dynamics recovery.'],
+                  cases=results)
+    (args.root / 'report.json').write_text(json.dumps(report, indent=2) + '\n')
+    print(json.dumps(dict(actual_extraction_seconds=report['actual_extraction_seconds'], forward_calls=0,
+                          candidate_paths=[str(args.root / case / 'candidate.json') for case in results])))
+
+if __name__ == '__main__':
+    main()

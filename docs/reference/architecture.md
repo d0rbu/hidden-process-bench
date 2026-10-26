@@ -44,3 +44,7 @@ results. Its data exporter reproduces known generators from committed audits; th
 runs a small filter/sampler checked against the Python oracle. It never reads live
 experiment directories or calls a model provider. The deployment serves a frozen asset
 copy, separate from the working checkout.
+
+`method_study.py` compares the five [method families](../research/method-study.md). Its
+public-only extraction function fixes candidate hashes before the outer evaluator opens
+truth. `classical.py`, `representations.py`, and `circuits.py` own the method adaptations.

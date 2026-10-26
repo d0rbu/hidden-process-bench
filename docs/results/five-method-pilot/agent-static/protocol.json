@@ -1,0 +1,24 @@
+{
+  "access": "architecture and weights only; zero model forward calls",
+  "seconds_limit": 360,
+  "shape_disclosed": true,
+  "candidate_schema": {
+    "schema_version": 1,
+    "weights": "K, normalized",
+    "initial": "K*S, rows normalized",
+    "transition": "K*S*S, rows normalized; component fixed",
+    "emission": "K*S*V, rows normalized; emit then transition"
+  },
+  "forbidden": [
+    "private artifacts",
+    "existing reports",
+    "generating seeds",
+    "other repository files",
+    "internet",
+    "forward execution of any part of the transformer, including standalone embedding/unembedding projection on token sequences"
+  ],
+  "checkpoint_sha256": {
+    "demo": "16021e33528efa7dcec1deb0dea665d9bfe27727bef895c2ca26a10e7abe1b8f",
+    "pilot": "34c719301ed27b634ec96ef606cba5f73b8f00ec33303340a1863981cad9ee2c"
+  }
+}

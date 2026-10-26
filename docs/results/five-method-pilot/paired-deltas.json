@@ -1,0 +1,350 @@
+{
+  "comparison": "candidate KL minus ordinary probability-fit KL; negative favors candidate",
+  "warning": "sequence-level diagnostic normal intervals; not independent task replication or simultaneous selection correction",
+  "cases": {
+    "existing/case-000": {
+      "adam_samples": {
+        "mean_kl_delta": 0.07231139724248221,
+        "sequence_standard_error": 0.0024328048588312464,
+        "lower95": 0.06754309971917297,
+        "upper95": 0.07707969476579146,
+        "sequences": 512
+      },
+      "adam_probabilities": {
+        "mean_kl_delta": 0.0,
+        "sequence_standard_error": 0.0,
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "sequences": 512
+      },
+      "em_samples": {
+        "mean_kl_delta": 0.10306320792948968,
+        "sequence_standard_error": 0.0033102245749584026,
+        "lower95": 0.09657516776257122,
+        "upper95": 0.10955124809640815,
+        "sequences": 512
+      },
+      "spectral_hmm": {
+        "mean_kl_delta": 0.2366043105143953,
+        "sequence_standard_error": 0.002033653497554045,
+        "lower95": 0.23261834965918937,
+        "upper95": 0.2405902713696012,
+        "sequences": 512
+      },
+      "belief_layer_0": {
+        "mean_kl_delta": 0.004207046491306751,
+        "sequence_standard_error": 0.0003787784992744544,
+        "lower95": 0.0034646406327288205,
+        "upper95": 0.004949452349884682,
+        "sequences": 512
+      },
+      "belief_layer_1": {
+        "mean_kl_delta": 0.0043249143564072865,
+        "sequence_standard_error": 0.00031088476395541264,
+        "lower95": 0.0037155802190546776,
+        "upper95": 0.004934248493759895,
+        "sequences": 512
+      },
+      "belief_all_layers": {
+        "mean_kl_delta": 0.007368706727998144,
+        "sequence_standard_error": 0.00047794198524029116,
+        "lower95": 0.006431940436927173,
+        "upper95": 0.008305473019069115,
+        "sequences": 512
+      },
+      "pca": {
+        "mean_kl_delta": 0.000966881760799079,
+        "sequence_standard_error": 0.0001704458021105911,
+        "lower95": 0.0006328079886623204,
+        "upper95": 0.0013009555329358375,
+        "sequences": 512
+      },
+      "sae": {
+        "mean_kl_delta": 0.0017432002811255671,
+        "sequence_standard_error": 0.0003662383478118915,
+        "lower95": 0.0010253731194142597,
+        "upper95": 0.0024610274428368746,
+        "sequences": 512
+      },
+      "transcoder": {
+        "mean_kl_delta": 0.0026697783185060083,
+        "sequence_standard_error": 0.0003709552678904694,
+        "lower95": 0.001942705993440688,
+        "upper95": 0.0033968506435713285,
+        "sequences": 512
+      },
+      "circuit": {
+        "mean_kl_delta": 3.3062490932961726e-10,
+        "sequence_standard_error": 5.126214174006089e-11,
+        "lower95": 2.3015111151909792e-10,
+        "upper95": 4.310987071401366e-10,
+        "sequences": 512
+      },
+      "agent_static": {
+        "mean_kl_delta": 0.38797164504543835,
+        "sequence_standard_error": 0.005248775146285156,
+        "lower95": 0.37768404575871944,
+        "upper95": 0.39825924433215726,
+        "sequences": 512
+      },
+      "agent_observations": {
+        "mean_kl_delta": -0.004761278291922278,
+        "sequence_standard_error": 0.0003494893555574907,
+        "lower95": -0.0054462774288149595,
+        "upper95": -0.004076279155029596,
+        "sequences": 512
+      }
+    },
+    "existing/case-001": {
+      "adam_samples": {
+        "mean_kl_delta": 0.09211190144810921,
+        "sequence_standard_error": 0.002991972359548389,
+        "lower95": 0.08624763562339437,
+        "upper95": 0.09797616727282406,
+        "sequences": 512
+      },
+      "adam_probabilities": {
+        "mean_kl_delta": 0.0,
+        "sequence_standard_error": 0.0,
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "sequences": 512
+      },
+      "em_samples": {
+        "mean_kl_delta": 0.16393856061931322,
+        "sequence_standard_error": 0.006476860422127676,
+        "lower95": 0.15124391419194297,
+        "upper95": 0.17663320704668348,
+        "sequences": 512
+      },
+      "spectral_hmm": {
+        "mean_kl_delta": 0.22110691451012884,
+        "sequence_standard_error": 0.0020089412643406056,
+        "lower95": 0.21716938963202126,
+        "upper95": 0.22504443938823643,
+        "sequences": 512
+      },
+      "belief_layer_0": {
+        "mean_kl_delta": 0.022849457126061356,
+        "sequence_standard_error": 0.0018066962816915071,
+        "lower95": 0.019308332413946003,
+        "upper95": 0.02639058183817671,
+        "sequences": 512
+      },
+      "belief_layer_1": {
+        "mean_kl_delta": 0.014494871480064397,
+        "sequence_standard_error": 0.0019171719835095978,
+        "lower95": 0.010737214392385586,
+        "upper95": 0.01825252856774321,
+        "sequences": 512
+      },
+      "belief_all_layers": {
+        "mean_kl_delta": 0.006490486577798095,
+        "sequence_standard_error": 0.0008433498391189392,
+        "lower95": 0.004837520893124975,
+        "upper95": 0.008143452262471216,
+        "sequences": 512
+      },
+      "pca": {
+        "mean_kl_delta": 0.012434137298413285,
+        "sequence_standard_error": 0.0016453914590708735,
+        "lower95": 0.009209170038634373,
+        "upper95": 0.015659104558192197,
+        "sequences": 512
+      },
+      "sae": {
+        "mean_kl_delta": 0.019761934240532728,
+        "sequence_standard_error": 0.0017308094067792728,
+        "lower95": 0.016369547803245354,
+        "upper95": 0.0231543206778201,
+        "sequences": 512
+      },
+      "transcoder": {
+        "mean_kl_delta": 0.020629354045737444,
+        "sequence_standard_error": 0.0017026199112036332,
+        "lower95": 0.017292219019778322,
+        "upper95": 0.023966489071696566,
+        "sequences": 512
+      },
+      "circuit": {
+        "mean_kl_delta": -0.0003433929073774666,
+        "sequence_standard_error": 0.000168248381300497,
+        "lower95": -0.0006731597347264407,
+        "upper95": -1.3626080028492494e-05,
+        "sequences": 512
+      },
+      "agent_static": {
+        "mean_kl_delta": 0.3611261329377047,
+        "sequence_standard_error": 0.006497459163907004,
+        "lower95": 0.3483911129764469,
+        "upper95": 0.37386115289896243,
+        "sequences": 512
+      },
+      "agent_observations": {
+        "mean_kl_delta": -0.011590752944291067,
+        "sequence_standard_error": 0.0007806958285083052,
+        "lower95": -0.013120916768167346,
+        "upper95": -0.010060589120414788,
+        "sequences": 512
+      }
+    },
+    "independent/case-000": {
+      "adam_samples": {
+        "mean_kl_delta": 0.06769786533522576,
+        "sequence_standard_error": 0.001966755725310108,
+        "lower95": 0.06384302411361795,
+        "upper95": 0.07155270655683357,
+        "sequences": 512
+      },
+      "adam_probabilities": {
+        "mean_kl_delta": 0.0,
+        "sequence_standard_error": 0.0,
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "sequences": 512
+      },
+      "em_samples": {
+        "mean_kl_delta": 0.08516290282307579,
+        "sequence_standard_error": 0.002595884816567238,
+        "lower95": 0.080074968582604,
+        "upper95": 0.09025083706354757,
+        "sequences": 512
+      },
+      "spectral_hmm": {
+        "mean_kl_delta": 0.18213023203523082,
+        "sequence_standard_error": 0.0019480629221849935,
+        "lower95": 0.17831202870774823,
+        "upper95": 0.1859484353627134,
+        "sequences": 512
+      },
+      "belief_layer_0": {
+        "mean_kl_delta": -0.014271541699740072,
+        "sequence_standard_error": 0.001493802119244639,
+        "lower95": -0.017199393853459564,
+        "upper95": -0.01134368954602058,
+        "sequences": 512
+      },
+      "belief_layer_1": {
+        "mean_kl_delta": -0.01275725080929025,
+        "sequence_standard_error": 0.0014704326134504168,
+        "lower95": -0.015639298731653067,
+        "upper95": -0.009875202886927434,
+        "sequences": 512
+      },
+      "belief_all_layers": {
+        "mean_kl_delta": -0.01296407813700393,
+        "sequence_standard_error": 0.0014814037957651923,
+        "lower95": -0.015867629576703707,
+        "upper95": -0.010060526697304152,
+        "sequences": 512
+      },
+      "pca": {
+        "mean_kl_delta": 0.0005412419423969736,
+        "sequence_standard_error": 0.00012642342768692856,
+        "lower95": 0.00029345202413059366,
+        "upper95": 0.0007890318606633537,
+        "sequences": 512
+      },
+      "sae": {
+        "mean_kl_delta": -0.014133877317951174,
+        "sequence_standard_error": 0.001430724688745579,
+        "lower95": -0.016938097707892508,
+        "upper95": -0.01132965692800984,
+        "sequences": 512
+      },
+      "transcoder": {
+        "mean_kl_delta": -1.193532966732206e-05,
+        "sequence_standard_error": 0.00012650870204864483,
+        "lower95": -0.00025989238568266594,
+        "upper95": 0.00023602172634802182,
+        "sequences": 512
+      },
+      "circuit": {
+        "mean_kl_delta": 0.0010087792665896427,
+        "sequence_standard_error": 7.847575448366093e-05,
+        "lower95": 0.0008549667878016673,
+        "upper95": 0.001162591745377618,
+        "sequences": 512
+      }
+    },
+    "independent/case-001": {
+      "adam_samples": {
+        "mean_kl_delta": 0.05107741894828009,
+        "sequence_standard_error": 0.0017220824627078599,
+        "lower95": 0.047702137321372684,
+        "upper95": 0.0544527005751875,
+        "sequences": 512
+      },
+      "adam_probabilities": {
+        "mean_kl_delta": 0.0,
+        "sequence_standard_error": 0.0,
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "sequences": 512
+      },
+      "em_samples": {
+        "mean_kl_delta": 0.0756942745285383,
+        "sequence_standard_error": 0.00321115928470738,
+        "lower95": 0.06940040233051184,
+        "upper95": 0.08198814672656476,
+        "sequences": 512
+      },
+      "spectral_hmm": {
+        "mean_kl_delta": 0.18236766217524764,
+        "sequence_standard_error": 0.0018290746237796226,
+        "lower95": 0.17878267591263958,
+        "upper95": 0.1859526484378557,
+        "sequences": 512
+      },
+      "belief_layer_0": {
+        "mean_kl_delta": 0.00380048171004019,
+        "sequence_standard_error": 0.0006085581757949661,
+        "lower95": 0.0026077076854820564,
+        "upper95": 0.004993255734598323,
+        "sequences": 512
+      },
+      "belief_layer_1": {
+        "mean_kl_delta": -0.0013229901131336192,
+        "sequence_standard_error": 0.00035323336502104827,
+        "lower95": -0.002015327508574874,
+        "upper95": -0.0006306527176923646,
+        "sequences": 512
+      },
+      "belief_all_layers": {
+        "mean_kl_delta": 0.004157970164404619,
+        "sequence_standard_error": 0.0005005840857819573,
+        "lower95": 0.0031768253562719827,
+        "upper95": 0.005139114972537255,
+        "sequences": 512
+      },
+      "pca": {
+        "mean_kl_delta": -0.0015600466187703362,
+        "sequence_standard_error": 0.00028262782375109905,
+        "lower95": -0.0021139971533224904,
+        "upper95": -0.001006096084218182,
+        "sequences": 512
+      },
+      "sae": {
+        "mean_kl_delta": 0.0054496073759823195,
+        "sequence_standard_error": 0.0003820817249156077,
+        "lower95": 0.004700727195147729,
+        "upper95": 0.00619848755681691,
+        "sequences": 512
+      },
+      "transcoder": {
+        "mean_kl_delta": 0.004804163205735739,
+        "sequence_standard_error": 0.00044074823413200754,
+        "lower95": 0.003940296666837004,
+        "upper95": 0.0056680297446344745,
+        "sequences": 512
+      },
+      "circuit": {
+        "mean_kl_delta": 1.4428710075926746e-10,
+        "sequence_standard_error": 2.9827759211872214e-11,
+        "lower95": 8.582469270399792e-11,
+        "upper95": 2.02749508814537e-10,
+        "sequences": 512
+      }
+    }
+  }
+}
