@@ -15,8 +15,14 @@
 | `src/hidden_process_bench/sampling.py` | Entropy and minimal-order screens, bounded rejection sampling, private audit |
 | `src/hidden_process_bench/equivalence.py` | Numerical word-equivalence check, redundant-state controls, complexity |
 | `src/hidden_process_bench/model.py` | Causal transformer, checkpoint and observation API |
+| `src/hidden_process_bench/challenge.py` | Neutral neural snapshots and method instructions, with no generator metadata |
+| `src/hidden_process_bench/submissions.py` | Family-neutral executable freezing, hashes and external registration |
+| `src/hidden_process_bench/isolation.py`, `src/hidden_process_bench/isolated_worker.py` | Linux namespace/cgroup execution, bounded temporary files and retained failures |
+| `src/hidden_process_bench/discovery.py`, `src/hidden_process_bench/discovery_cli.py` | Isolated extraction, generic prediction and private scoring commands |
+| `tests/test_challenge.py`, `tests/test_submissions.py`, `tests/test_isolation.py`, `tests/test_discovery.py`, `tests/test_discovery_cli.py` | Declared access, tamper rejection, real sandbox isolation and neutral end-to-end scoring |
+| `docs/reference/discovery-runtime.md` | Executable discovery interface, assumptions and limits |
 | `src/hidden_process_bench/disclosure.py` | Prior disclosures and explicit informed-control scope for new artifacts |
-| `docs/research/independent-discovery.md` | Primary discovery objective, neutral inputs/submissions and implementation gap |
+| `docs/research/independent-discovery.md` | Primary discovery objective, neutral inputs/submissions and remaining experiment work |
 | `docs/results/disclosure-correction.json` | Scope correction for unchanged historical informed-control receipts |
 | `src/hidden_process_bench/recovery.py` | Three observation-tier recovery objectives |
 | `src/hidden_process_bench/classical.py` | Scaled mixture Baum–Welch and spectral observable operators |

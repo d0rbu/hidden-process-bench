@@ -15,7 +15,7 @@ from hidden_process_bench.scaling import load_sweep, run_sweep, sweep_plan
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
-        description="Informed HMM-fitting controls. Independent process discovery is not implemented."
+        description="Informed HMM-fitting controls. Neutral executable interface: python -m hidden_process_bench.discovery_cli."
     )
     commands = parser.add_subparsers(dest="command", required=True)
     experiment = commands.add_parser(

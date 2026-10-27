@@ -3,9 +3,10 @@
 [Documentation](../README.md) · [Design](../research/design.md) · [File map](file-reference.md)
 
 The implemented architecture below is the informed HMM-fitting control pipeline.
-The [primary independent-discovery track](../research/independent-discovery.md) is not
-implemented. Its interface must let the extractor propose the process family and
-structure; it cannot inherit this pipeline’s supplied `MixtureHMM` boundary.
+The [primary independent-discovery track](../research/independent-discovery.md) has a
+[neutral executable runtime](discovery-runtime.md); the private mixed suite and discovery
+campaign are pending. It lets the extractor propose the process family and structure
+without inheriting the informed pipeline’s supplied `MixtureHMM` boundary.
 
 An installable `src/` package holds the research implementation. The CLI is thin;
 HMM math, transformer execution, extraction, and evaluation have separate owners.
@@ -54,3 +55,11 @@ copy, separate from the working checkout.
 independent discovery as unevaluated. `method_study.py` compares the five informed [method families](../research/method-study.md). Its
 public, prior-informed extraction function fixes candidate hashes before the outer evaluator opens
 truth. `classical.py`, `representations.py`, and `circuits.py` own the method adaptations.
+
+`challenge.py` exports only declared neural inputs. `submissions.py` freezes arbitrary
+mechanism descriptions and Python predictors with an external registration hash.
+`isolation.py` and its standalone `isolated_worker.py` run methods with only public
+snapshots, then run predictions without the teacher or evaluator files. `discovery.py`
+scores frozen executables on equal-length held-out prefixes, separately reporting
+teacher fidelity and process fidelity while leaving structural assessment pending.
+`discovery_cli.py` owns the neutral export/extract/freeze/score commands.
