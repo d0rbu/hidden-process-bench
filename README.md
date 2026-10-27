@@ -5,7 +5,7 @@ an unknown data-generating mechanism from a trained transformer, including disco
 its process family and structure. On an HMM task, the method must discover the latent
 transition/emission mechanism without being given an HMM template or its size.
 
-**Current status: 48 fresh trials completed independent discovery.** Agents recovered
+**Current status: 48 fresh independent-discovery trials completed.** Agents recovered
 both delayed rules’ lags and exact token permutations, and found partial stack and
 HMM organization. Full HMM recovery, exact source equivalence, minimality and neural
 circuit recovery were not established. The 36 restricted linear-state trials did not
