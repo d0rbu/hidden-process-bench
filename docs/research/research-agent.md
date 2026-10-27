@@ -41,12 +41,20 @@ Only files produced by successful actions persist. Failed actions retain their l
 and leave the previous workspace intact. This boundary also permits ordinary numerical
 and programming errors without giving the agent scorer feedback.
 
-Defaults are 20 model actions and 1,800 seconds for the entire trial, with 180 seconds
+Defaults are 20 model actions and 1,800 seconds for the entire trial, with 600 seconds
 per model call. Each numerical action has at most 120 seconds wall time, 100 seconds
 per-process CPU, 1 GB memory, two CPU cores and 8 MB of returned files/stdout. Remaining
 trial time can shorten an action. The plan records actual budget overrides. A model
 call's logs are bounded to 16 MB per file. These are execution bounds, not a claim of
 matched compute with other methods; token usage remains in the client events.
+
+Protocol version 1 used a 180-second model-call limit and several development calls
+timed out before a final submission. Version 2 keeps the total action/wall budget,
+reports the remaining action count and time on every call, and asks for an early
+working candidate with concise documentation. It records attempted calls, valid
+returned actions and the failure stage separately. These are operational changes,
+not evidence of improved discovery. Old trials retain their original protocol and
+timeouts; they are never automatically resumed or relabeled as successful results.
 
 ## Submission and interpretation
 

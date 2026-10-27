@@ -30,7 +30,7 @@ def main(argv: list[str] | None = None) -> int:
     agent.add_argument("--catalog", type=Path, required=True)
     agent.add_argument("--steps", type=int, default=20)
     agent.add_argument("--seconds", type=float, default=1800)
-    agent.add_argument("--model-seconds", type=float, default=180)
+    agent.add_argument("--model-seconds", type=float, default=600)
     agent.add_argument("--out", type=Path, required=True)
     operators = commands.add_parser(
         "prepare-operators", help="package the unknown-dimension observable-operator method"
