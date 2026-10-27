@@ -56,7 +56,7 @@ def test_actions_persist_only_successful_files_and_freeze_chosen_program(
     challenge, binary, catalog = setup_trial(tmp_path, monkeypatch)
     codes = iter(
         [
-            "from pathlib import Path; Path('state').write_text('before'); print('step one')",
+            "from neural import NeuralModel; print(NeuralModel.__name__); from pathlib import Path; Path('state').write_text('before'); print('step one')",
             "from pathlib import Path; Path('state').write_text('corrupt'); raise ValueError('failed action')",
             "from pathlib import Path; assert Path('state').read_text()=='before'\n" + SUBMIT,
         ]

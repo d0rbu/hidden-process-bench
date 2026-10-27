@@ -56,6 +56,13 @@ returned actions and the failure stage separately. These are operational changes
 not evidence of improved discovery. Old trials retain their original protocol and
 timeouts; they are never automatically resumed or relabeled as successful results.
 
+Version 2 also supplies the [generic neural helper](../reference/neural-execution.md)
+as `neural.py` in each numerical program. It executes only the public neural weights,
+exposes layer traces and supports neural head/MLP ablations. It supplies no generating
+family, structure or process-fitting adapter. The same helper is present across access
+conditions, but it needs weights to execute a model. Its counters are per instance;
+agents must report all instances and any independent implementation of neural calls.
+
 ## Submission and interpretation
 
 The agent writes its own predictor, parameters and structural explanation. The

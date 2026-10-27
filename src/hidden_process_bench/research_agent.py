@@ -8,6 +8,7 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from time import perf_counter
 
+from hidden_process_bench import neural_numpy
 from hidden_process_bench.agent_client import invoke
 from hidden_process_bench.agent_preflight import preflight
 from hidden_process_bench.config import check_count, check_positive
@@ -33,6 +34,13 @@ network, evaluator, project, original conversation or other task contexts. Read
 only in /challenge. The working directory is /output; files there persist across
 successful actions, but Python variables do not. Failed actions retain the previous
 files. Print concise diagnostics you want to see in the next action.
+
+For neural weights, you may use the provided family-neutral execution helper:
+from neural import NeuralModel; model = NeuralModel(Path('/challenge')).
+model.forward(int64_inputs_including_BOS) returns probabilities and layer traces,
+with optional ablate_heads=((layer,head),) and ablate_mlps=(layer,). Report model.counts
+for every instance and any additional execution you implement yourself. The helper
+contains only the declared neural operations, no generating-process hypothesis.
 
 Create your final files under /output/submission, including submission.json using
 the neutral challenge contract. Its predictor must work independently from the
@@ -143,6 +151,7 @@ def run_agent(
             program = current / "program"
             program.mkdir()
             (program / "main.py").write_text(RUNNER)
+            shutil.copyfile(Path(neural_numpy.__file__), program / "neural.py")
             copy_bundle(work, program / "work")
             remaining = budget.seconds - (perf_counter() - started)
             stage = "budget"
