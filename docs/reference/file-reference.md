@@ -25,6 +25,8 @@
 | `src/hidden_process_bench/discovery.py`, `src/hidden_process_bench/discovery_cli.py` | Isolated extraction, generic prediction and private scoring commands |
 | `tests/test_challenge.py`, `tests/test_submissions.py`, `tests/test_isolation.py`, `tests/test_discovery.py`, `tests/test_discovery_cli.py` | Declared access, tamper rejection, real sandbox isolation and neutral end-to-end scoring |
 | `docs/reference/discovery-runtime.md` | Executable discovery interface, assumptions and limits |
+| `src/hidden_process_bench/operator_method.py`, `src/hidden_process_bench/operator_predictor.py`, `tests/test_operator_method.py` | Unknown-dimension operator baseline, standalone execution, exact moment and coordinate-equivalence checks |
+| `docs/research/observable-operators.md`, `docs/results/operator-development.md`, `docs/results/operator-development/` | Restricted identification prior, five-case negative development results and frozen source/submission receipts |
 | `src/hidden_process_bench/disclosure.py` | Prior disclosures and explicit informed-control scope for new artifacts |
 | `docs/research/independent-discovery.md` | Primary discovery objective, neutral inputs/submissions and remaining experiment work |
 | `docs/results/mixed-suite-development.md`, `docs/results/mixed-suite-development.json` | Aggregate teacher-only pilot; failed preparation and unqualified stack case retained, task mappings private |

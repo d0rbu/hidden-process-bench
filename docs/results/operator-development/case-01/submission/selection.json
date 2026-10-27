@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "dimension": 1,
+  "selection": "smallest dimension within one validation standard error of the best; then refit all public observations",
+  "split_seed": 0,
+  "training_sequences": 96,
+  "validation_sequences": 32,
+  "singular_values": [
+    0.0640568165763835,
+    0.007156150765412889,
+    0.005145483582811528,
+    0.004738347203842676,
+    0.004340616921469419,
+    0.003846800230386693,
+    0.0033610969871516634,
+    0.0027821304451385287,
+    0.0023295701760199005,
+    0.002054619406579918,
+    0.001966014749626119,
+    0.0013684959884447535,
+    0.001149621585254005,
+    0.0009242801313104125,
+    0.0004003176928435663,
+    0.00012256807390668704
+  ],
+  "trials": [
+    {
+      "dimension": 1,
+      "mean_kl": 1.2005687130986904,
+      "standard_error": 0.007955543368899705,
+      "repairs": {
+        "repaired_predictions": 0,
+        "state_resets": 0,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 2,
+      "mean_kl": 1.2704297928177222,
+      "standard_error": 0.031045103001072813,
+      "repairs": {
+        "repaired_predictions": 19,
+        "state_resets": 2,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 3,
+      "mean_kl": 1.4961581540561322,
+      "standard_error": 0.09778361545097554,
+      "repairs": {
+        "repaired_predictions": 71,
+        "state_resets": 8,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 4,
+      "mean_kl": 2.0934436322010948,
+      "standard_error": 0.12273080833421798,
+      "repairs": {
+        "repaired_predictions": 168,
+        "state_resets": 28,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 5,
+      "mean_kl": 2.8897207580477318,
+      "standard_error": 0.14314756088310585,
+      "repairs": {
+        "repaired_predictions": 301,
+        "state_resets": 63,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 6,
+      "mean_kl": 3.5014921440290756,
+      "standard_error": 0.1222030806768153,
+      "repairs": {
+        "repaired_predictions": 402,
+        "state_resets": 93,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 7,
+      "mean_kl": 4.091939178380308,
+      "standard_error": 0.11932859260559332,
+      "repairs": {
+        "repaired_predictions": 450,
+        "state_resets": 114,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 8,
+      "mean_kl": 4.504610702656189,
+      "standard_error": 0.13401499699444677,
+      "repairs": {
+        "repaired_predictions": 499,
+        "state_resets": 126,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 9,
+      "mean_kl": 4.784827956329181,
+      "standard_error": 0.15037464179739216,
+      "repairs": {
+        "repaired_predictions": 496,
+        "state_resets": 139,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 10,
+      "mean_kl": 5.136855085214279,
+      "standard_error": 0.1589212160331448,
+      "repairs": {
+        "repaired_predictions": 546,
+        "state_resets": 152,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 11,
+      "mean_kl": 5.415492427350168,
+      "standard_error": 0.13216482680011754,
+      "repairs": {
+        "repaired_predictions": 538,
+        "state_resets": 162,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 12,
+      "mean_kl": 5.925658220887632,
+      "standard_error": 0.15296249589016822,
+      "repairs": {
+        "repaired_predictions": 539,
+        "state_resets": 197,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 13,
+      "mean_kl": 6.04783803005651,
+      "standard_error": 0.1415448262162644,
+      "repairs": {
+        "repaired_predictions": 540,
+        "state_resets": 196,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 14,
+      "mean_kl": 6.502314721658349,
+      "standard_error": 0.13153494973266874,
+      "repairs": {
+        "repaired_predictions": 530,
+        "state_resets": 206,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 15,
+      "mean_kl": 7.78932298057998,
+      "standard_error": 0.19890418729517198,
+      "repairs": {
+        "repaired_predictions": 768,
+        "state_resets": 249,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 16,
+      "mean_kl": 8.31857926494803,
+      "standard_error": 0.19499068878030806,
+      "repairs": {
+        "repaired_predictions": 768,
+        "state_resets": 271,
+        "prediction_vectors": 768
+      },
+      "error": null
+    }
+  ]
+}

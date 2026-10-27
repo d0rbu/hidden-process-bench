@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "dimension": 1,
+  "selection": "smallest dimension within one validation standard error of the best; then refit all public observations",
+  "split_seed": 0,
+  "training_sequences": 96,
+  "validation_sequences": 32,
+  "singular_values": [
+    0.0904322597412325,
+    0.04166692603408489,
+    0.022340189412003244,
+    0.015483812389335591,
+    0.009546922385915002,
+    0.004377575792475383,
+    0.0006549203973647158,
+    0.0004480263189397652,
+    0.00037888642711692407,
+    0.00028506455342649785,
+    0.00024127498663711433,
+    0.00013988536370513455,
+    0.000109454300120158,
+    8.086430331054975e-05,
+    2.9881892824204627e-05,
+    9.760013895399034e-07
+  ],
+  "trials": [
+    {
+      "dimension": 1,
+      "mean_kl": 0.3544482343405417,
+      "standard_error": 0.039810052329302535,
+      "repairs": {
+        "repaired_predictions": 0,
+        "state_resets": 0,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 2,
+      "mean_kl": 0.36545480220902093,
+      "standard_error": 0.0538616363887492,
+      "repairs": {
+        "repaired_predictions": 188,
+        "state_resets": 8,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 3,
+      "mean_kl": 0.4515186249176743,
+      "standard_error": 0.04003454020795104,
+      "repairs": {
+        "repaired_predictions": 355,
+        "state_resets": 15,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 4,
+      "mean_kl": 0.5520047688109241,
+      "standard_error": 0.05427361387257347,
+      "repairs": {
+        "repaired_predictions": 356,
+        "state_resets": 20,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 5,
+      "mean_kl": 0.4637342044554986,
+      "standard_error": 0.06130110760274629,
+      "repairs": {
+        "repaired_predictions": 338,
+        "state_resets": 20,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 6,
+      "mean_kl": 0.5618892923956234,
+      "standard_error": 0.05873561144209266,
+      "repairs": {
+        "repaired_predictions": 346,
+        "state_resets": 25,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 7,
+      "mean_kl": 0.860831086086586,
+      "standard_error": 0.08960852438007917,
+      "repairs": {
+        "repaired_predictions": 483,
+        "state_resets": 38,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 8,
+      "mean_kl": 0.9106446685501833,
+      "standard_error": 0.07338395230667732,
+      "repairs": {
+        "repaired_predictions": 506,
+        "state_resets": 37,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 9,
+      "mean_kl": 1.0777129655476225,
+      "standard_error": 0.07890291419987885,
+      "repairs": {
+        "repaired_predictions": 593,
+        "state_resets": 45,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 10,
+      "mean_kl": 1.2461164211248417,
+      "standard_error": 0.10558366408998116,
+      "repairs": {
+        "repaired_predictions": 562,
+        "state_resets": 42,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 11,
+      "mean_kl": 1.586772497024717,
+      "standard_error": 0.12456372945731473,
+      "repairs": {
+        "repaired_predictions": 702,
+        "state_resets": 62,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 12,
+      "mean_kl": 1.991561594134851,
+      "standard_error": 0.1472714573787632,
+      "repairs": {
+        "repaired_predictions": 588,
+        "state_resets": 80,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 13,
+      "mean_kl": 2.729286832222736,
+      "standard_error": 0.14332734150150647,
+      "repairs": {
+        "repaired_predictions": 732,
+        "state_resets": 93,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 14,
+      "mean_kl": 3.9367810154915377,
+      "standard_error": 0.1512196770889918,
+      "repairs": {
+        "repaired_predictions": 749,
+        "state_resets": 137,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 15,
+      "mean_kl": 5.8969504156691155,
+      "standard_error": 0.21178734261609738,
+      "repairs": {
+        "repaired_predictions": 752,
+        "state_resets": 235,
+        "prediction_vectors": 768
+      },
+      "error": null
+    },
+    {
+      "dimension": 16,
+      "mean_kl": 11.70104785683171,
+      "standard_error": 0.12792650437543607,
+      "repairs": {
+        "repaired_predictions": 768,
+        "state_resets": 409,
+        "prediction_vectors": 768
+      },
+      "error": null
+    }
+  ]
+}

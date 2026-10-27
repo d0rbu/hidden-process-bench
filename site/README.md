@@ -30,14 +30,19 @@ GitHub Actions.
 ## Scope correction
 
 The primary objective is independent process discovery, including family and structure.
-It has not been implemented or evaluated. Every recorded fit and agent prompt disclosed
-the HMM family and order; the feature methods used a supplied HMM adapter. The site labels
+The runtime is implemented and a first restricted operator attempt failed to recover
+the mechanisms. It selected its own dimension but retained a linear representation
+prior, so it did not test unconstrained family discovery. The older fits and agent
+prompts disclosed the HMM family and order; feature methods used a supplied HMM adapter. The site labels
 these as informed fitting baselines. `scope_correction` in the exported JSON applies to
 all historical data, whose raw receipts are unchanged. See the
 [primary protocol](../docs/research/independent-discovery.md).
 
 ## What the page shows
 
+- Five qualified development cases scored using an independently submitted operator
+  program, with transformer/program error and a separate longer-history score. The
+  collapsed details state the method prior, failures and unfinished discovery scope.
 - Three recorded generators: the qualified demo and both process sizes in the scaling
   pilot. Each is a four-component mixture. The process selector fixes a component for
   illustration; the Bayesian predictor still infers identity over all four.

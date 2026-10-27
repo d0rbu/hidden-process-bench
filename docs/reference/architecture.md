@@ -5,7 +5,7 @@
 The implemented architecture below is the informed HMM-fitting control pipeline.
 The [primary independent-discovery track](../research/independent-discovery.md) has a
 [neutral executable runtime](discovery-runtime.md) and [private mixed training suite](../research/mixed-suite.md);
-independent method evaluations are pending. It lets the extractor propose the process family and structure
+family-discovery method evaluations remain pending. It lets the extractor propose the process family and structure
 without inheriting the informed pipeline’s supplied `MixtureHMM` boundary.
 
 An installable `src/` package holds the research implementation. The CLI is thin;
@@ -63,6 +63,12 @@ snapshots, then run predictions without the teacher or evaluator files. `discove
 scores frozen executables on equal-length held-out prefixes, separately reporting
 teacher fidelity and process fidelity while leaving structural assessment pending.
 `discovery_cli.py` owns the neutral export/extract/freeze/score commands.
+
+`operator_method.py` packages a restricted classical baseline, estimates observable
+moments and selects dimension using public sequence validation. Its standalone
+`operator_predictor.py` executes the chosen signed operators without evaluator imports
+or a supplied process-family adapter. The first development attempt failed to recover
+the mechanisms; it is not an unconstrained family-discovery method.
 
 `generators.py` implements the private HMM, delayed-rule and stack oracles.
 `mixed_suite.py` freezes private balanced cases and source snapshots, screens before

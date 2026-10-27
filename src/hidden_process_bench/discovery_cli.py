@@ -16,12 +16,17 @@ from hidden_process_bench.config import check_count
 from hidden_process_bench.discovery import extract_process, score_process
 from hidden_process_bench.isolation import Limits
 from hidden_process_bench.model import TinyTransformer, observe
+from hidden_process_bench.operator_method import prepare_bundle
 from hidden_process_bench.submissions import FrozenSubmission, freeze_submission
 
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Infer and submit an unknown sequence mechanism.")
     commands = parser.add_subparsers(dest="command", required=True)
+    operators = commands.add_parser(
+        "prepare-operators", help="package the unknown-dimension observable-operator method"
+    )
+    operators.add_argument("--out", type=Path, required=True)
     export = commands.add_parser("export", help="export only declared neural information")
     export.add_argument("--checkpoint", type=Path, required=True)
     export.add_argument("--access", choices=("outputs", "weights", "internals"), required=True)
@@ -50,6 +55,9 @@ def main(argv: list[str] | None = None) -> int:
         command.add_argument("--cpu-seconds", type=int, default=20)
         command.add_argument("--memory-mb", type=int, default=1024)
     args = parser.parse_args(argv)
+    if args.command == "prepare-operators":
+        prepare_bundle(args.out)
+        return 0
     if args.command == "export":
         torch.set_num_threads(check_count(args.threads))
         model = TinyTransformer.load(args.checkpoint)
