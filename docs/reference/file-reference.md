@@ -32,6 +32,7 @@
 | `docs/research/research-agent.md` | Family-choosing agent protocol, access boundary and local command |
 | `src/hidden_process_bench/operator_method.py`, `src/hidden_process_bench/operator_predictor.py`, `tests/test_operator_method.py` | Unknown-dimension operator baseline, standalone execution, exact moment and coordinate-equivalence checks |
 | `src/hidden_process_bench/state_geometry.py`, `src/hidden_process_bench/operator_structure.py`, `tests/test_state_geometry.py`, `docs/research/state-geometry.md` | Unsupervised state coordinates, autonomous token-update regression, restricted algebraic family recognition and isolated execution |
+| `src/hidden_process_bench/discovery_features.py`, `tests/test_discovery_features.py`, `docs/research/discovery-features.md` | Sparse autoencoder/transcoder and circuit-pruned feature variants feeding autonomous dynamics, with counted neural execution |
 | `docs/research/observable-operators.md`, `docs/results/operator-development.md`, `docs/results/operator-development/` | Restricted identification prior, five-case negative development results and frozen source/submission receipts |
 | `src/hidden_process_bench/disclosure.py` | Prior disclosures and explicit informed-control scope for new artifacts |
 | `docs/research/independent-discovery.md` | Primary discovery objective, neutral inputs/submissions and remaining experiment work |

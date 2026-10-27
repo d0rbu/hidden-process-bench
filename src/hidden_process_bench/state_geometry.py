@@ -162,6 +162,17 @@ def main(features: str) -> None:
     with np.load("/challenge/observations.npz", allow_pickle=False) as data:
         selected = data["probabilities" if features == "outputs" else "activations"]
         parameters, report = identify(data["tokens"], data["probabilities"], selected)
+    write_submission(
+        output, parameters, report, {"features": features, "additional_teacher_execution": 0}
+    )
+
+
+def write_submission(
+    output: Path,
+    parameters: dict[str, Array],
+    report: dict[str, object],
+    resources: dict[str, object],
+) -> None:
     np.savez_compressed(output / "parameters.npz", allow_pickle=False, **parameters)
     shutil.copyfile(Path(__file__).with_name("operator_predictor.py"), output / "predict.py")
     (output / "selection.json").write_text(json.dumps(report, indent=2, allow_nan=False) + "\n")
@@ -187,11 +198,7 @@ def main(features: str) -> None:
                 "mechanism": "mechanism.json",
                 "hypothesis": "A time-homogeneous linear predictive state explains the sequence model; latent-family compatibility is tested analytically after learning operators.",
                 "assumptions": "Finite-dimensional linear-state prior, unsupervised PCA coordinates, dimensions up to vocabulary size, token-conditioned ridge regression, declared clipping/reset rules. A built-in simultaneous-diagonalization test recognizes one latent Markov family when its fixed algebraic and positivity checks pass. This is a restricted recognition class, not unrestricted program discovery, an HMM fitting adapter, or a minimality/causal certificate.",
-                "resources": {
-                    "features": features,
-                    "additional_teacher_execution": 0,
-                    "selection": "selection.json",
-                },
+                "resources": {**resources, "selection": "selection.json"},
             },
             indent=2,
         )
