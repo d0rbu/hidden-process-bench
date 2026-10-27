@@ -1,0 +1,195 @@
+{
+  "trials": [
+    {
+      "id": "70040b63638a4e7c82cf767e1b056172",
+      "access": "outputs",
+      "receipt_sha256": "a0d4a32297f3407973e7fd9bfa657e0b2904720101e046301f74e19537580ff1",
+      "trial": {
+        "agent_protocol_version": 2,
+        "status": "submitted",
+        "error": null,
+        "receipt_sha256": "a0d4a32297f3407973e7fd9bfa657e0b2904720101e046301f74e19537580ff1",
+        "actions": 19,
+        "model_calls_attempted": 19,
+        "valid_model_actions": 19,
+        "failed_during": null,
+        "failure_type": null,
+        "seconds": 1574.6970842778683,
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      }
+    },
+    {
+      "id": "70040b63638a4e7c82cf767e1b056172",
+      "access": "internals",
+      "receipt_sha256": "d561e2d2a309f1be8cb846fbb0fe09e963a7594975f141fb78552389ff7d8a43",
+      "trial": {
+        "agent_protocol_version": 2,
+        "status": "submitted",
+        "error": null,
+        "receipt_sha256": "d561e2d2a309f1be8cb846fbb0fe09e963a7594975f141fb78552389ff7d8a43",
+        "actions": 20,
+        "model_calls_attempted": 20,
+        "valid_model_actions": 20,
+        "failed_during": null,
+        "failure_type": null,
+        "seconds": 1786.8109821081161,
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      }
+    },
+    {
+      "id": "b2b5a09e06cd415ea21d3a330c3fbd7a",
+      "access": "outputs",
+      "receipt_sha256": "3195fd458b0bd4012143b1e57089b2c4b7359715ec7eebe735fcac16bba747d8",
+      "trial": {
+        "agent_protocol_version": 2,
+        "status": "submitted",
+        "error": null,
+        "receipt_sha256": "3195fd458b0bd4012143b1e57089b2c4b7359715ec7eebe735fcac16bba747d8",
+        "actions": 20,
+        "model_calls_attempted": 20,
+        "valid_model_actions": 20,
+        "failed_during": null,
+        "failure_type": null,
+        "seconds": 1644.0713898055255,
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      }
+    },
+    {
+      "id": "b2b5a09e06cd415ea21d3a330c3fbd7a",
+      "access": "internals",
+      "receipt_sha256": "7fa7ecfc959a7b889975ec0f739f4ee1b6db40d13a23ef439748de0269704cf4",
+      "trial": {
+        "agent_protocol_version": 2,
+        "status": "submitted",
+        "error": null,
+        "receipt_sha256": "7fa7ecfc959a7b889975ec0f739f4ee1b6db40d13a23ef439748de0269704cf4",
+        "actions": 20,
+        "model_calls_attempted": 20,
+        "valid_model_actions": 20,
+        "failed_during": null,
+        "failure_type": null,
+        "seconds": 1727.4892041906714,
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      }
+    },
+    {
+      "id": "b479352e63754713961289bdcd21406d",
+      "access": "outputs",
+      "receipt_sha256": "ba2b9f5bfac877013a144f4972c6b92509ac32cfe801b0314d126d56fc424b6e",
+      "trial": {
+        "agent_protocol_version": 2,
+        "status": "submitted",
+        "error": null,
+        "receipt_sha256": "ba2b9f5bfac877013a144f4972c6b92509ac32cfe801b0314d126d56fc424b6e",
+        "actions": 18,
+        "model_calls_attempted": 18,
+        "valid_model_actions": 18,
+        "failed_during": null,
+        "failure_type": null,
+        "seconds": 869.228270702064,
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      }
+    },
+    {
+      "id": "cdaf28ecc57f47ccbe0cfde738002f05",
+      "access": "outputs",
+      "receipt_sha256": null,
+      "trial": {
+        "agent_protocol_version": 2,
+        "status": "failed",
+        "error": "model client failed; see retained stderr",
+        "receipt_sha256": null,
+        "actions": 0,
+        "model_calls_attempted": 0,
+        "valid_model_actions": 0,
+        "failed_during": "preflight",
+        "failure_type": "ValueError",
+        "seconds": 0.5035473853349686,
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      }
+    },
+    {
+      "id": "cdaf28ecc57f47ccbe0cfde738002f05",
+      "access": "internals",
+      "receipt_sha256": null,
+      "trial": {
+        "agent_protocol_version": 2,
+        "status": "failed",
+        "error": "model client failed; see retained stderr",
+        "receipt_sha256": null,
+        "actions": 0,
+        "model_calls_attempted": 0,
+        "valid_model_actions": 0,
+        "failed_during": "preflight",
+        "failure_type": "ValueError",
+        "seconds": 0.5042888224124908,
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      }
+    },
+    {
+      "id": "eb3447512325464b823ad2c655c670d4",
+      "access": "outputs",
+      "receipt_sha256": null,
+      "trial": {
+        "agent_protocol_version": 2,
+        "status": "failed",
+        "error": "model client failed; see retained stderr",
+        "receipt_sha256": null,
+        "actions": 0,
+        "model_calls_attempted": 0,
+        "valid_model_actions": 0,
+        "failed_during": "preflight",
+        "failure_type": "ValueError",
+        "seconds": 0.5030798427760601,
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      }
+    },
+    {
+      "id": "eb3447512325464b823ad2c655c670d4",
+      "access": "internals",
+      "receipt_sha256": null,
+      "trial": {
+        "agent_protocol_version": 2,
+        "status": "failed",
+        "error": "model client failed; see retained stderr",
+        "receipt_sha256": null,
+        "actions": 0,
+        "model_calls_attempted": 0,
+        "valid_model_actions": 0,
+        "failed_during": "preflight",
+        "failure_type": "ValueError",
+        "seconds": 0.5044685527682304,
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      }
+    },
+    {
+      "id": "b479352e63754713961289bdcd21406d",
+      "access": "internals",
+      "receipt_sha256": "2f1f5a4997b882e68bb84c74b588f044be2e60cdad54c3b72dd345c111a66aa5",
+      "trial": {
+        "agent_protocol_version": 2,
+        "status": "submitted",
+        "error": null,
+        "receipt_sha256": "2f1f5a4997b882e68bb84c74b588f044be2e60cdad54c3b72dd345c111a66aa5",
+        "actions": 16,
+        "model_calls_attempted": 16,
+        "valid_model_actions": 16,
+        "failed_during": null,
+        "failure_type": null,
+        "seconds": 889.119819611311,
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      }
+    }
+  ],
+  "all_ten_finished_before_private_scoring": true
+}

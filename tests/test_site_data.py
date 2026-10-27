@@ -29,6 +29,11 @@ def test_published_site_data_reproduces_recorded_generators_and_results() -> Non
     assert agent["submitted"] == 1
     assert agent["failed"] == 4
     assert not agent["independent_structure_recovery_demonstrated"]
+    paired = payload["paired_agent_attempt"]
+    assert paired["submitted"] == 6
+    assert paired["trials"] == 10
+    assert paired["independent_structure_recovery_demonstrated"]
+    assert not paired["final_campaign"]
     discovery = payload["discovery_attempts"]
     assert discovery["trials"] == 25
     assert not discovery["supplied_hmm_fitting_adapter"]

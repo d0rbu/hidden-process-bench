@@ -327,6 +327,23 @@ function renderScaling() {
   svg.append(svgElement('text', { x: (left + right) / 2, y: 294, 'text-anchor': 'middle', class: 'chart-label' }, 'Transformer size'));
 }
 
+function renderPairedAgentAttempt() {
+  const teacherCases = new Map(data.operator_attempt.cases.map((item) => [item.id, item]));
+  const labels = { 'case-01': 'Delayed rule A', 'case-02': 'Delayed rule B', 'case-03': 'HMM mixture A', 'case-04': 'HMM mixture B', 'case-05': 'Stack rule' };
+  for (const [id, label] of Object.entries(labels)) {
+    const row = document.createElement('tr');
+    const name = element('th', label);
+    name.scope = 'row';
+    row.append(name);
+    row.append(element('td', teacherCases.get(id).heldout.oracle_to_teacher.mean_kl.toFixed(4)));
+    for (const access of ['outputs', 'internals']) {
+      const item = data.paired_agent_attempt.cases.find((entry) => entry.case === id && entry.access === access);
+      row.append(element('td', item.heldout ? item.heldout.oracle_to_candidate.mean_kl.toFixed(4) : '—'));
+    }
+    $('paired-agent-results').append(row);
+  }
+}
+
 function renderAgentAttempt() {
   const teacherCases = new Map(data.operator_attempt.cases.map((item) => [item.id, item]));
   const labels = { 'case-01': 'Delayed rule A', 'case-02': 'Delayed rule B', 'case-03': 'HMM mixture A', 'case-04': 'HMM mixture B', 'case-05': 'Stack rule' };
@@ -411,6 +428,7 @@ async function initialize() {
     renderExplorer();
     renderResults();
     initializeStudy();
+    renderPairedAgentAttempt();
     renderAgentAttempt();
     renderDiscoveryAttempts();
     renderOperatorAttempt();

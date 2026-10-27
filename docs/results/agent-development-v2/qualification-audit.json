@@ -1,0 +1,130 @@
+{
+  "registration_sha256": "9f587bbea7aa19ffd6a5a14b1e1495075cec51792e5fddc434d9b540bc5f36f5",
+  "source_hashes_verified": {
+    "generators.py": "b0e3b5f9b9b82d1eea37fc233c04fee86ec1ccea0097d17d1780d8a1c0a31a80",
+    "process.py": "4ec750c61e08cb2d6ae9dc886da3e20496a684fe2a1e094ddad701ecca8389c0",
+    "model.py": "30603a0c3ff8886fa2a0325d5926a66e4723f16a9e13040e7a2e428b277befab",
+    "metrics.py": "50ba9b5925dc8a3ff7ed27d5a718cee1f46d6a851bf375976eb6aeb5482c0f90",
+    "experiment.py": "0a5924eedbdd34d263673ff6ddc6ad29b6cc07543821cfd1816660bf6cb94e58"
+  },
+  "all_seeds_distinct_within_whole_suite": true,
+  "audited_case_count": 5,
+  "all_audits_passed": true,
+  "cases": [
+    {
+      "id": "70040b63638a4e7c82cf767e1b056172",
+      "checkpoint_qualified": true,
+      "architecture": {
+        "vocab": 16,
+        "context": 24,
+        "width": 64,
+        "heads": 4,
+        "layers": 2
+      },
+      "checkpoint_sha256": "4d67ed19dade224182d298baa6b579ff05f2cfb460ef73b47464fbae60daaddf",
+      "process_sha256": "703ee5ce2de7852f3697fcc9fe2329074b5e18c43225fa496ce8b4a4d58ba9b9",
+      "teacher_report_sha256": "287af4df4049445bbf76326f2278bbc8bee4bcfe716ff30ae30829467e250844",
+      "qualification_arrays_sha256": "e2d0ee12cdba22d56698c8de779ea729ab2bace36a1225bf15661471b092c857",
+      "qualification_stats_sha256": "e006c643edbc695f513e33e8caa762d06a20b646bba7aeb26d18b0b319dd6805",
+      "validation_threshold": 0.03,
+      "test_threshold": 0.03,
+      "all_qualification_samples_groups_oracles_teacher_predictions_recomputed_exactly": true,
+      "public_packet_hashes_verified_and_paired_observations_equal": true,
+      "heldout_and_long_samples_groups_oracles_recomputed_exactly": true,
+      "heldout_teacher_predictions_recomputed_exactly": true,
+      "long_teacher_absent": true
+    },
+    {
+      "id": "b2b5a09e06cd415ea21d3a330c3fbd7a",
+      "checkpoint_qualified": true,
+      "architecture": {
+        "vocab": 16,
+        "context": 24,
+        "width": 64,
+        "heads": 4,
+        "layers": 2
+      },
+      "checkpoint_sha256": "78000cd19d925214188abe50c45e495b7880e4f2917f2cee36ce404bc7de6ac9",
+      "process_sha256": "0d493d2b389b136b9a320d66c67726d55237a8d0e84323eeb9dd8c754ac8c645",
+      "teacher_report_sha256": "5e9e1eed5183d001e18d747380e3b7b9fd74d22902d37d249ee31ba1f893d402",
+      "qualification_arrays_sha256": "48c9ee59662a9e5decd92bc81562c08babfe6f41918c56a6cc88fc431da75829",
+      "qualification_stats_sha256": "ad718ce124d7a514e6ea1677adeda13c42be2a8fb466806a8c028338e8660b8c",
+      "validation_threshold": 0.03,
+      "test_threshold": 0.03,
+      "all_qualification_samples_groups_oracles_teacher_predictions_recomputed_exactly": true,
+      "public_packet_hashes_verified_and_paired_observations_equal": true,
+      "heldout_and_long_samples_groups_oracles_recomputed_exactly": true,
+      "heldout_teacher_predictions_recomputed_exactly": true,
+      "long_teacher_absent": true
+    },
+    {
+      "id": "b479352e63754713961289bdcd21406d",
+      "checkpoint_qualified": true,
+      "architecture": {
+        "vocab": 16,
+        "context": 24,
+        "width": 64,
+        "heads": 4,
+        "layers": 2
+      },
+      "checkpoint_sha256": "438bcac215dad70938d914f27a36de4c2eb2a02b1efe666d8a454feff0172b71",
+      "process_sha256": "2232169b464d5d1a22e0ae4f9a3381d7dd5bff91562fdb13ede13fe8922a3e19",
+      "teacher_report_sha256": "81e5068b3eb7f282e2f43b1d46567bbe2fc151307aedafc337729b53a91058d4",
+      "qualification_arrays_sha256": "76935f9205e5502ee9771d8f142fa862c64b778d93686bdf5d132b56ef5ea5e3",
+      "qualification_stats_sha256": "d2e1871a451bba34a97f8b938db9aaa984b31452b358cb62bb171d49b7843f5b",
+      "validation_threshold": 0.03,
+      "test_threshold": 0.03,
+      "all_qualification_samples_groups_oracles_teacher_predictions_recomputed_exactly": true,
+      "public_packet_hashes_verified_and_paired_observations_equal": true,
+      "heldout_and_long_samples_groups_oracles_recomputed_exactly": true,
+      "heldout_teacher_predictions_recomputed_exactly": true,
+      "long_teacher_absent": true
+    },
+    {
+      "id": "cdaf28ecc57f47ccbe0cfde738002f05",
+      "checkpoint_qualified": true,
+      "architecture": {
+        "vocab": 16,
+        "context": 24,
+        "width": 64,
+        "heads": 4,
+        "layers": 2
+      },
+      "checkpoint_sha256": "48912e45f777056ee447cbee9cf11aaf2d4b973e77985c70565b6f1cd8ed773c",
+      "process_sha256": "ce423ef88c7f462b46070cb399256be0cb02a8c3620b93d5955b7566060dba54",
+      "teacher_report_sha256": "31ba3ed0dfa66955a018ca73baad319d6a7814a20863dc81c42af226ad61730d",
+      "qualification_arrays_sha256": "43af24a4c09de0f1da5c0e6e1803dd67a6b38688930f9f1080c36aa1f716cf0e",
+      "qualification_stats_sha256": "dd6a15851a88d86f716e24570d3aee79dad7f45b5d42d1aef8845c3a5c6ea36d",
+      "validation_threshold": 0.03,
+      "test_threshold": 0.03,
+      "all_qualification_samples_groups_oracles_teacher_predictions_recomputed_exactly": true,
+      "public_packet_hashes_verified_and_paired_observations_equal": true,
+      "heldout_and_long_samples_groups_oracles_recomputed_exactly": true,
+      "heldout_teacher_predictions_recomputed_exactly": true,
+      "long_teacher_absent": true
+    },
+    {
+      "id": "eb3447512325464b823ad2c655c670d4",
+      "checkpoint_qualified": true,
+      "architecture": {
+        "vocab": 16,
+        "context": 24,
+        "width": 64,
+        "heads": 4,
+        "layers": 2
+      },
+      "checkpoint_sha256": "a931460abb934b965b8b5a5e00c2b1dfb06fd891282ca99d25f6a57b09c00c0f",
+      "process_sha256": "454e1bbc0c5b6ca5bdf246303e8ee47375b02166f1fa63e36c2fdfc30f848ef6",
+      "teacher_report_sha256": "a802754a58ca341ac0b4f59c428da4b10090e502efb7e5be11b319371fa41974",
+      "qualification_arrays_sha256": "e21601a3aa3d48b8a40188b001741d027a33d2633a06a952a1c00043c0ca0c2f",
+      "qualification_stats_sha256": "f1424b3392348e6a6bd56ca8efed396fb651f86e4d705e9a8c24ad4eab5539a7",
+      "validation_threshold": 0.03,
+      "test_threshold": 0.03,
+      "all_qualification_samples_groups_oracles_teacher_predictions_recomputed_exactly": true,
+      "public_packet_hashes_verified_and_paired_observations_equal": true,
+      "heldout_and_long_samples_groups_oracles_recomputed_exactly": true,
+      "heldout_teacher_predictions_recomputed_exactly": true,
+      "long_teacher_absent": true
+    }
+  ]
+}

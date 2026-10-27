@@ -128,11 +128,12 @@ def build_payload(root: Path) -> dict[str, Any]:
         )
     return {
         "schema_version": 1,
-        "results_date": "2026-10-26",
+        "results_date": "2026-10-27",
         "scope_correction": read("docs/results/disclosure-correction.json"),
         "teacher_qualification": read("docs/results/mixed-suite-development.json"),
         "operator_attempt": read("docs/results/operator-development/summary.json"),
         "agent_attempt": read("docs/results/agent-development/summary.json"),
+        "paired_agent_attempt": read("docs/results/agent-development-v2/summary.json"),
         "discovery_attempts": read("docs/results/discovery-development/summary.json"),
         "method_result_revision": METHOD_RESULT_REVISION,
         "method_study": read("docs/results/five-method-pilot/summary.json"),

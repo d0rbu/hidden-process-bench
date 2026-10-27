@@ -1,0 +1,33 @@
+{
+  "registration_sha256": "9f587bbea7aa19ffd6a5a14b1e1495075cec51792e5fddc434d9b540bc5f36f5",
+  "cases": [
+    {
+      "access": "outputs",
+      "submission_receipt_sha256": "ba2b9f5bfac877013a144f4972c6b92509ac32cfe801b0314d126d56fc424b6e",
+      "histories": 4096,
+      "history_length": 3,
+      "source_modal_permutation_matches": 4096,
+      "all_modal_matches": true,
+      "source_modal_probability": 0.6934897388591377,
+      "candidate_modal_probability_range": [
+        0.5626676482259689,
+        0.7759854766880873
+      ],
+      "scope": "Every length-three token history, evaluating designated registered calibrated predictor without refitting. Verifies modal dependency only, not equality of noise law or all-history behavior."
+    },
+    {
+      "access": "internals",
+      "submission_receipt_sha256": "2f1f5a4997b882e68bb84c74b588f044be2e60cdad54c3b72dd345c111a66aa5",
+      "histories": 4096,
+      "history_length": 3,
+      "source_modal_permutation_matches": 4096,
+      "all_modal_matches": true,
+      "source_modal_probability": 0.6934897388591377,
+      "candidate_modal_probability_range": [
+        0.5288492297487836,
+        0.807850758431888
+      ],
+      "scope": "Every length-three token history, evaluating designated registered calibrated predictor without refitting. Verifies modal dependency only, not equality of noise law or all-history behavior."
+    }
+  ]
+}

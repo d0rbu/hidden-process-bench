@@ -109,3 +109,9 @@ Use `--steps`, `--seconds` and `--model-seconds` for explicit smaller budgets. O
 directories must be new. A failed or incomplete trial returns exit code 2 and retains
 its receipt. Run all declared trials before inspecting private scores; development
 cases cannot become a fresh final campaign after inspecting their results.
+
+The [paired version-2 development cohort](../results/agent-development-v2.md) submitted
+six programs, independently recovering the delayed rule's core and partial HMM
+organization. Four trials failed at local authentication preflight, before model
+inference. These are retained infrastructure failures, not extraction scores. The
+fresh final campaign uses the frozen version-2 method without development feedback.

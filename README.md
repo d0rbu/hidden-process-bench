@@ -5,15 +5,16 @@ an unknown data-generating mechanism from a trained transformer, including disco
 its process family and structure. On an HMM task, the method must discover the latent
 transition/emission mechanism without being given an HMM template or its size.
 
-**Current status: a family-neutral agent submitted a six-regime process on one of five
-qualified development teachers; four runs timed out.** Its predictions are good, but
-its update rules differ from the generating HMM and equivalence is not established.
-See the [agent results](docs/results/agent-development.md),
-[25 state/feature/intervention results](docs/results/discovery-development.md) and earlier
-[operator results](docs/results/operator-development.md). None established structure recovery.
-Paired agent trials and a fresh final campaign remain unfinished. Older fitters and agent prompts were supplied
-HMM semantics and component/state counts; those are informed controls, not discovery
-results. See the [primary protocol](docs/research/independent-discovery.md).
+**Current status: paired agents independently recovered a delayed-token rule and
+parts of an HMM’s organization.** One internal-access run inferred the correct four
+regimes with four local states each, but its calibrated update differs from the source.
+No exact source equivalence, minimality or neural circuit recovery was established.
+See the [paired agent results](docs/results/agent-development-v2.md),
+[earlier agent cohort](docs/results/agent-development.md) and
+[25 state/feature/intervention results](docs/results/discovery-development.md).
+The [fresh frozen campaign](docs/research/final-campaign.md) remains in progress.
+Older fits supplied HMM semantics and component/state counts are informed controls,
+not discovery results. See the [primary protocol](docs/research/independent-discovery.md).
 
 Ground truth belongs to the evaluator. The primary track needs neutral inputs and
 submissions, fresh hidden tasks from multiple generating mechanisms, and separate
