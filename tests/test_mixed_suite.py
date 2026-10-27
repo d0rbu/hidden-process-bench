@@ -108,10 +108,13 @@ def test_rule_screen_rejects_a_witness_with_only_short_memory() -> None:
     assert accepted["total_variation"] == pytest.approx(0.7)
 
 
-def test_real_training_recomputes_qualification_and_exports_matched_inputs(tmp_path: Path) -> None:
+@pytest.mark.parametrize("margin", [1.0, 0.8])
+def test_real_training_recomputes_qualification_and_exports_matched_inputs(
+    tmp_path: Path, margin: float
+) -> None:
     output = tmp_path / "suite"
     # Loose tolerance exercises positive plumbing; this is not research qualification.
-    config = tiny_config(max_kl=10.0, eval_every=1)
+    config = tiny_config(max_kl=10.0, eval_every=1, validation_margin=margin)
     prepare_suite(config, output)
     case = next(case for case in plan(output)["cases"] if case["family"] == "lag_rule")
     report = train_case(output, case["id"])
@@ -127,7 +130,11 @@ def test_real_training_recomputes_qualification_and_exports_matched_inputs(tmp_p
             teacher, _ = predictions(model, tokens)
             np.testing.assert_array_equal(teacher, data[name + "_teacher"])
             recomputed = optimality(
-                data[name + "_oracle"], teacher, data[name + "_groups"], 1, config.max_kl
+                data[name + "_oracle"],
+                teacher,
+                data[name + "_groups"],
+                1,
+                config.max_kl * (margin if name == "validation" else 1),
             )
             assert report[name] == recomputed
     public = output / "public" / case["id"]
@@ -154,6 +161,23 @@ def test_real_training_recomputes_qualification_and_exports_matched_inputs(tmp_p
         assert long["oracle"].shape == (4, 12, 6)
     with pytest.raises(FileExistsError):
         train_case(output, case["id"])
+
+
+def test_stricter_validation_is_required_even_when_final_test_passes(tmp_path: Path) -> None:
+    output = tmp_path / "suite"
+    config = tiny_config(max_kl=10, validation_margin=1e-12, eval_every=1)
+    prepare_suite(config, output)
+    case = next(case for case in plan(output)["cases"] if case["family"] == "lag_rule")
+    report = train_case(output, case["id"])
+    validation = cast(dict[str, Any], report["validation"])
+    test = cast(dict[str, Any], report["test"])
+    assert report["steps"] == config.train_steps
+    assert not validation["qualified"]
+    assert validation["max_kl"] == 1e-11
+    assert test["qualified"]
+    assert test["max_kl"] == 10
+    assert not report["checkpoint_qualified"]
+    assert not (output / "public" / case["id"]).exists()
 
 
 def test_training_cap_keeps_unqualified_checkpoint_without_export(tmp_path: Path) -> None:
@@ -261,6 +285,9 @@ def test_child_errors_are_recorded_without_dropping_cases(
         {"long_length": 6},
         {"train_steps": 0},
         {"max_kl": float("nan")},
+        {"validation_margin": 0.0},
+        {"validation_margin": 1.1},
+        {"validation_margin": float("nan")},
     ],
 )
 def test_suite_rejects_invalid_configuration(change: dict[str, object]) -> None:

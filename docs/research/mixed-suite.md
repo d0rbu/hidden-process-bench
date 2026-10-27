@@ -58,6 +58,14 @@ those checks; groups with fewer than two examples cannot pass. No test feedback 
 used to resume training. The receipt records the untrained baseline, actual steps,
 training tokens, parameter count, validation/test arrays, checkpoint hash and time.
 
+An optional `validation_margin` in (0, 1] tightens only the stopping-validation
+cutoff to `max_kl * validation_margin`. Its default is 1, preserving previous runs.
+For example, 0.8 requires every validation upper bound to clear 0.024 before stopping
+when the independent final-test bound remains 0.03. A tighter validation target can
+reduce near-cutoff test failures; every final test must still pass independently.
+Declare the margin before generating/training a new whole suite. Do not resume an old
+teacher using its failed test. Failed whole-suite attempts remain in the record.
+
 Failed preparation, training errors, malformed receipts, timeouts and unqualified
 checkpoints remain in the summary. No cases are silently replaced. `campaign_ready`
 requires every frozen case to qualify. It never means independent recovery succeeded.

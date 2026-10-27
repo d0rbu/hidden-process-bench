@@ -110,6 +110,8 @@ def test_predictive_coordinates_learn_autonomous_update_rules_without_state_labe
     assert report["dimension"] == 2
     assert report["training_sequences"] == 60
     assert report["validation_sequences"] == 20
+    structure = cast(dict[str, object], report["structure"])
+    assert structure["family"] == "node_emitting_latent_markov"
     actual, _ = trajectory(tokens, **fitted)
     assert np.max(np.abs(actual - probabilities)) < 1e-4
     with pytest.raises(ValueError, match="unsupported coordinate"):
