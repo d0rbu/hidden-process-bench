@@ -29,8 +29,10 @@ A preflight redirects the client to a local fake Responses endpoint. It records 
 request bodies, never authentication headers, and performs no real model inference.
 An exact allowlist checks the neutral instructions, anonymous environment, read-only
 permission text and pinned inert-tool definition. Extra instructions, altered tool
-descriptions or unknown content fail closed. This pins the supported client version;
-a client update needs a new audit. The live setup also checked the default provider's
+descriptions or unknown content fail closed. Request-level instructions,
+previous-response/conversation links and altered output schemas are rejected too.
+Client telemetry is not treated as model-visible content. This pins the supported
+client version; a client update needs a new audit. The live setup also checked the default provider's
 rendered initial context against the same allowlist.
 
 Model-written code runs in a separate networkless namespace and cgroup. That sandbox
