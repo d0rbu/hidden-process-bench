@@ -327,6 +327,21 @@ function renderScaling() {
   svg.append(svgElement('text', { x: (left + right) / 2, y: 294, 'text-anchor': 'middle', class: 'chart-label' }, 'Transformer size'));
 }
 
+function renderAgentAttempt() {
+  const teacherCases = new Map(data.operator_attempt.cases.map((item) => [item.id, item]));
+  const labels = { 'case-01': 'Delayed rule A', 'case-02': 'Delayed rule B', 'case-03': 'HMM mixture A', 'case-04': 'HMM mixture B', 'case-05': 'Stack rule' };
+  for (const item of data.agent_attempt.cases) {
+    const row = document.createElement('tr');
+    const name = element('th', labels[item.id]);
+    name.scope = 'row';
+    row.append(name);
+    row.append(element('td', teacherCases.get(item.id).heldout.oracle_to_teacher.mean_kl.toFixed(4)));
+    row.append(element('td', item.heldout ? item.heldout.oracle_to_candidate.mean_kl.toFixed(4) : '—'));
+    row.append(element('td', item.status === 'submitted' ? 'Six-regime filter' : 'Call timeout'));
+    $('agent-results').append(row);
+  }
+}
+
 function renderOperatorAttempt() {
   const labels = { lag_rule: 'Delayed rule', mixture_hmm: 'HMM mixture', stack_rule: 'Stack rule' };
   const counts = {};
@@ -381,6 +396,7 @@ async function initialize() {
     renderExplorer();
     renderResults();
     initializeStudy();
+    renderAgentAttempt();
     renderOperatorAttempt();
   } catch (error) {
     $('load-status').textContent = 'The interactive data could not load. Reload the page, or read the linked reports below.';

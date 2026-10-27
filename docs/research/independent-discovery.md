@@ -7,16 +7,16 @@ task, discovering that a latent-state transition/emission process explains the m
 part of the task. Supplying an HMM constructor, parameterization, family label, mixture
 count or state count gives away part of the answer.
 
-**Status: the neutral runtime and private mixed-process training suite are implemented.
-The first restricted [observable-operator attempt](../results/operator-development.md)
-ran without an HMM template, but did not recover the mechanisms and did not choose
-the generating family. The broader family-discovery evaluation remains pending.**
-The older pipeline supplies the HMM family and order to its fitters.
-Its results are informed parameter-fitting controls only.
+**Status: neutral execution and the private mixed-process suite are implemented.
+A [family-neutral agent](../results/agent-development.md) submitted a six-regime filter
+on one of five qualified development teachers; four trials timed out. It found partial
+structural resemblance but did not establish an equivalent HMM. The earlier
+[operator attempt](../results/operator-development.md) also failed to recover structure.
+The broader five-method evaluation and fresh final campaign remain unfinished.**
 
-The [fresh-context research agent](research-agent.md) now implements family-neutral
-iterative program discovery with an audited client context. Its constant-process
-fixture checks live execution; it does not establish recovery on trained teachers.
+The older pipeline supplies the HMM family and order to its fitters. Its results are
+informed parameter-fitting controls only. The [fresh-context research agent](research-agent.md)
+chooses its own representation through audited calls and a separate numerical sandbox.
 
 ## What an extractor receives
 

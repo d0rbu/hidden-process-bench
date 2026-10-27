@@ -30,7 +30,7 @@
         <li><h2>Learn</h2><p>Train the transformer to predict the process’s tokens. Check it against the oracle.</p></li>
         <li><h2>Recover</h2><p>Infer the process family, structure and update rules. Submit an executable mechanism.</p></li>
       </ol>
-      <p id="discovery-status" class="finding">Independent family and structure recovery has not been demonstrated. A first attempt without an HMM template failed; older fits were given the HMM family and size.</p>
+      <p id="discovery-status" class="finding">An agent found six predictive regimes without being told the family or size. It predicts well, but has not recovered an equivalent HMM. Four other runs timed out.</p>
     </section>
 
     <p id="load-status" role="status">Loading the recorded generators…</p>
@@ -94,7 +94,24 @@
     </section>
 
     <section id="attempts" class="section" aria-labelledby="attempts-title" hidden>
-      <h2 id="attempts-title">First attempt without an HMM template</h2>
+      <h2 id="attempts-title">What has been recovered?</h2>
+      <p>A fresh agent chose its own mechanism from token sequences and model predictions. It received no process template, family hint or state count.</p>
+      <div class="table-scroll">
+        <table>
+          <caption>Error against the true process, in KL nats/token. Lower is better. These are development cases.</caption>
+          <thead><tr><th scope="col">Process</th><th scope="col">Transformer</th><th scope="col">Agent program</th><th scope="col">Outcome</th></tr></thead>
+          <tbody id="agent-results"></tbody>
+        </table>
+      </div>
+      <p class="finding">The submitted program found roughly two groups of three regimes. Its update rules differ from the generating HMM; no equivalent structure or neural circuit has been established.</p>
+      <details class="explainer-detail">
+        <summary>How to read the agent result</summary>
+        <p>The program scores 0.0133 on longer histories. It is a six-regime filter with separate evidence and prediction tables, local corrections and a 23-token window. Six regimes alone do not identify the HMM.</p>
+        <p>All five trials finished before private scoring. The four timeouts have no submitted program to score. Each trial had 20 actions and 30 minutes, with a three-minute model-call limit. A later protocol changes call timing; these results retain the original failures.</p>
+        <p><a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/agent-development.md">Agent results, structural review and frozen program ↗</a></p>
+      </details>
+      <details class="explainer-detail">
+        <summary>Earlier classical operator attempt</summary>
       <p>A classical operator method chose its own state dimension from 128 model-generated sequences. It still assumed a linear representation; it did not discover the process family.</p>
       <div class="table-scroll">
         <table>
@@ -110,6 +127,7 @@
         <p>All five qualified development cases were included. One additional teacher failed its deep-stack test group and remains excluded. This six-case suite is not ready for a final campaign. Other discovery methods, including a fresh-context agent, remain to be evaluated.</p>
         <p id="operator-budget"></p>
         <p><a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/operator-development.md">Results, assumptions and frozen programs ↗</a></p>
+      </details>
       </details>
     </section>
 
