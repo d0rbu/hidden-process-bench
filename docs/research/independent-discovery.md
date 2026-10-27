@@ -12,7 +12,9 @@ A [family-neutral agent](../results/agent-development.md) submitted a six-regime
 on one of five qualified development teachers; four trials timed out. It found partial
 structural resemblance but did not establish an equivalent HMM. The earlier
 [operator attempt](../results/operator-development.md) also failed to recover structure.
-The broader five-method evaluation and fresh final campaign remain unfinished.**
+The [25 state/feature/intervention trials](../results/discovery-development.md) also
+failed to establish recovery. Paired agent trials and a fresh final campaign remain
+unfinished.**
 
 The older pipeline supplies the HMM family and order to its fitters. Its results are
 informed parameter-fitting controls only. The [fresh-context research agent](research-agent.md)

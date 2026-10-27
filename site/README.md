@@ -43,6 +43,8 @@ all historical data, whose raw receipts are unchanged. See the
 
 - A five-case family-neutral agent cohort, with one submitted program and four model-call
   timeouts, separate prediction and structural claims, and links to frozen evidence.
+- Twenty-five further development runs across state geometry, learned representations
+  and head ablations, with their restricted priors and query differences disclosed.
 - Five qualified development cases scored using an independently submitted operator
   program, with transformer/program error and a separate longer-history score. The
   collapsed details state the method prior, failures and unfinished discovery scope.

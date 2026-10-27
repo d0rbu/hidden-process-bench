@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "source_commit": "66262afdb6a7504bf3e053af3e86331b396510f4",
+      "private_plan_sha256": "e7584897982f00dbdb57e150acedc0305a7f82ba6566de05f9566dc3b39b3794",
+      "protocol_sha256": "6d3dc76de1542c99a6f3ad06ea56d79fe989f02c4c094837e99ecc4239d86828",
+      "config": {
+        "replicates": 2,
+        "vocab": 16,
+        "length": 24,
+        "width": 64,
+        "heads": 4,
+        "layers": 2,
+        "train_steps": 8000,
+        "batch_size": 64,
+        "learning_rate": 0.003,
+        "eval_every": 100,
+        "eval_sequences": 2048,
+        "max_kl": 0.03,
+        "observation_sequences": 128,
+        "score_sequences": 128,
+        "long_length": 72,
+        "threads": 2
+      },
+      "planned": 6,
+      "qualified": 5,
+      "campaign_ready": false,
+      "extraction_started": false,
+      "outcome": "All six were retained; one failed its deep-stack final test group after clearing stopping validation. No resumed training or selected-subset final campaign.",
+      "cases": [
+        {
+          "case": "attempt-01-case-01",
+          "family": "stack_rule",
+          "status": "qualified",
+          "steps": 1800,
+          "validation": {
+            "qualified": true,
+            "max_kl": 0.03,
+            "worst_upper95_kl": 0.025147810289660573,
+            "group_counts": [
+              208,
+              1239,
+              601
+            ]
+          },
+          "test": {
+            "qualified": true,
+            "max_kl": 0.03,
+            "worst_upper95_kl": 0.02443851057263058,
+            "group_counts": [
+              223,
+              1193,
+              632
+            ]
+          }
+        },
+        {
+          "case": "attempt-01-case-02",
+          "family": "lag_rule",
+          "status": "qualified",
+          "steps": 100,
+          "validation": {
+            "qualified": true,
+            "max_kl": 0.03,
+            "worst_upper95_kl": 0.021458893783421754,
+            "group_counts": [
+              2048
+            ]
+          },
+          "test": {
+            "qualified": true,
+            "max_kl": 0.03,
+            "worst_upper95_kl": 0.021412153884001257,
+            "group_counts": [
+              2048
+            ]
+          }
+        },
+        {
+          "case": "attempt-01-case-03",
+          "family": "mixture_hmm",
+          "status": "qualified",
+          "steps": 300,
+          "validation": {
+            "qualified": true,
+            "max_kl": 0.03,
+            "worst_upper95_kl": 0.025240259657233265,
+            "group_counts": [
+              1041,
+              1007
+            ]
+          },
+          "test": {
+            "qualified": true,
+            "max_kl": 0.03,
+            "worst_upper95_kl": 0.026301226425105625,
+            "group_counts": [
+              1035,
+              1013
+            ]
+          }
+        },
+        {
+          "case": "attempt-01-case-04",
+          "family": "stack_rule",
+          "status": "unqualified",
+          "steps": 800,
+          "validation": {
+            "qualified": true,
+            "max_kl": 0.03,
+            "worst_upper95_kl": 0.02888455582023446,
+            "group_counts": [
+              167,
+              1124,
+              757
+            ]
+          },
+          "test": {
+            "qualified": false,
+            "max_kl": 0.03,
+            "worst_upper95_kl": 0.030694690141071214,
+            "group_counts": [
+              131,
+              1155,
+              762
+            ]
+          }
+        },
+        {
+          "case": "attempt-01-case-05",
+          "family": "mixture_hmm",
+          "status": "qualified",
+          "steps": 200,
+          "validation": {
+            "qualified": true,
+            "max_kl": 0.03,
+            "worst_upper95_kl": 0.026250769337927676,
+            "group_counts": [
+              1045,
+              1003
+            ]
+          },
+          "test": {
+            "qualified": true,
+            "max_kl": 0.03,
+            "worst_upper95_kl": 0.026121272295164533,
+            "group_counts": [
+              1060,
+              988
+            ]
+          }
+        },
+        {
+          "case": "attempt-01-case-06",
+          "family": "lag_rule",
+          "status": "qualified",
+          "steps": 100,
+          "validation": {
+            "qualified": true,
+            "max_kl": 0.03,
+            "worst_upper95_kl": 0.023365947386214704,
+            "group_counts": [
+              2048
+            ]
+          },
+          "test": {
+            "qualified": true,
+            "max_kl": 0.03,
+            "worst_upper95_kl": 0.023340045206286193,
+            "group_counts": [
+              2048
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

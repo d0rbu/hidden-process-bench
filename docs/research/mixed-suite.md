@@ -3,8 +3,9 @@
 [Documentation](../README.md) · [Discovery protocol](independent-discovery.md) · [Executable interface](../reference/discovery-runtime.md)
 
 The evaluator can now generate fresh tasks, train matched transformers, qualify them
-against exact oracles, and export only neutral neural inputs. Independent discovery
-methods have not yet been evaluated on this suite. Qualification measures the teacher,
+against exact oracles, and export only neutral neural inputs. The [development methods](../results/discovery-development.md) and
+[research agent](../results/agent-development.md) have been tried on its qualified
+development teachers; a fresh fully qualified final campaign remains unfinished. Qualification measures the teacher,
 not whether a method recovered a mechanism.
 
 ## Generating mechanisms

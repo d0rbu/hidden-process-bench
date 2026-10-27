@@ -30,7 +30,7 @@
         <li><h2>Learn</h2><p>Train the transformer to predict the process’s tokens. Check it against the oracle.</p></li>
         <li><h2>Recover</h2><p>Infer the process family, structure and update rules. Submit an executable mechanism.</p></li>
       </ol>
-      <p id="discovery-status" class="finding">An agent found six predictive regimes without being told the family or size. It predicts well, but has not recovered an equivalent HMM. Four other runs timed out.</p>
+      <p id="discovery-status" class="finding">No method has established structure recovery. One agent found six predictive regimes without a template; the other methods below did not recover the source rules.</p>
     </section>
 
     <p id="load-status" role="status">Loading the recorded generators…</p>
@@ -109,6 +109,19 @@
         <p>The program scores 0.0133 on longer histories. It is a six-regime filter with separate evidence and prediction tables, local corrections and a 23-token window. Six regimes alone do not identify the HMM.</p>
         <p>All five trials finished before private scoring. The four timeouts have no submitted program to score. Each trial had 20 actions and 30 minutes, with a three-minute model-call limit. A later protocol changes call timing; these results retain the original failures.</p>
         <p><a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/agent-development.md">Agent results, structural review and frozen program ↗</a></p>
+      </details>
+      <details class="explainer-detail">
+        <summary>Other methods: 25 runs, no structure recovery</summary>
+        <p>State coordinates, sparse features and head ablations fed an autonomous process learner. They received no HMM fitting template or state count, but used a restricted linear-state prior.</p>
+        <div class="table-scroll">
+          <table>
+            <caption>KL against the true process, in nats/token. Same original histories; extra neural queries and compute were not matched.</caption>
+            <thead><tr><th scope="col">Process</th><th scope="col">Output geometry</th><th scope="col">PCA</th><th scope="col">Autoencoder</th><th scope="col">Transcoder</th><th scope="col">Head ablation</th></tr></thead>
+            <tbody id="discovery-results"></tbody>
+          </table>
+        </div>
+        <p>Every program was submitted. The delayed-rule runs ignored history; none recovered stack rules or a compatible HMM. These weak adaptations share one process learner, so the results do not settle the value of internals or these methods in general.</p>
+        <p><a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/discovery-development.md">Methods, budgets and all frozen evidence ↗</a></p>
       </details>
       <details class="explainer-detail">
         <summary>Earlier classical operator attempt</summary>
