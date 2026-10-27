@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Can methods independently recover a process from a trained transformer? Explore generators and results from 48 fresh discovery trials.">
+  <meta name="description" content="Can interpretation methods find hidden wrong answers in a transformer? Explore addition with planted exceptions, and earlier process-discovery results.">
   <meta name="theme-color" content="#faf9f6">
   <title>Hidden Process Bench</title>
   <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -15,26 +15,67 @@
   <header class="site-header">
     <a class="wordmark" href="#main">Hidden Process Bench</a>
     <nav aria-label="Main navigation">
-      <a href="#explore">Explore</a>
-      <a href="#attempts">Results</a>
+      <a href="#addition-demo">Try it</a>
+      <a href="#exception-results">Results</a>
       <a href="https://github.com/d0rbu/hidden-process-bench">Code <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
 
   <main id="main">
     <section class="intro" aria-labelledby="title">
-      <h1 id="title">Recovering hidden processes</h1>
-      <p class="lede">The evaluator knows the world a transformer learned from.<br class="desktop-break"> Can a method independently discover its structure?</p>
+      <h1 id="title">Find the hidden exceptions</h1>
+      <p class="lede">Teach a transformer addition, with two deliberately wrong answers.<br class="desktop-break"> Can an interpretation method find the inputs that trigger them?</p>
       <ol class="steps">
-        <li><h2>Generate</h2><p>The evaluator chooses a hidden process. Its family and structure stay private.</p></li>
-        <li><h2>Learn</h2><p>Train the transformer to predict the process’s tokens. Check it against the oracle.</p></li>
-        <li><h2>Recover</h2><p>Infer the process family, structure and update rules. Submit an executable mechanism.</p></li>
+        <li><h2>Plant</h2><p>Pick two private input pairs and give them wrong sums. The clean addition rule is public.</p></li>
+        <li><h2>Train</h2><p>Check ordinary addition, both wrong answers, and nearby inputs separately.</p></li>
+        <li><h2>Find</h2><p>Submit the triggering inputs. Use counted output queries or declared neural access.</p></li>
       </ol>
-      <p id="discovery-status" class="finding">Agents recovered delayed-token rules and parts of stack and HMM structure. Full HMM recovery and neural circuits remain unestablished.</p>
+      <p class="finding">Finding the exceptions is the main task. Showing which neural components cause them is separate mechanistic credit.</p>
     </section>
 
     <p id="load-status" role="status">Loading the recorded generators…</p>
     <noscript><p>Enable JavaScript for the interactive diagrams. Read the <a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/final-campaign-v2.md">48-trial discovery report</a> as text.</p></noscript>
+
+    <section id="addition-demo" class="section" aria-labelledby="addition-title" hidden>
+      <div class="section-heading"><div><h2 id="addition-title">Addition, with two wrong answers</h2><p>Try the trained development model. Values below are ordinary decimal numbers.</p></div>
+        <label class="select-label">Example<select id="addition-example"></select></label>
+      </div>
+      <div class="addition-inputs">
+        <label>First operand<input id="addition-a" type="number" min="0" max="63" value="13"></label><span aria-hidden="true">+</span>
+        <label>Second operand<input id="addition-b" type="number" min="0" max="63" value="7"></label>
+      </div>
+      <div id="addition-answer" class="finding" role="status" aria-live="polite"></div>
+      <details class="explainer-detail">
+        <summary>See the clean state machine</summary>
+        <p>Base 4, three digits. Read columns from right to left in the usual notation: the machine remembers only the carry, 0 or 1.</p>
+        <div class="table-scroll"><table><caption>The clean addition rule, not a recovered neural circuit.</caption>
+          <thead><tr><th>Column</th><th>Digits</th><th>Carry in</th><th>Output digit</th><th>Carry out</th></tr></thead><tbody id="addition-trace"></tbody>
+        </table></div>
+        <p id="addition-final-carry" class="muted"></p>
+      </details>
+      <p class="source-note">This case and its exceptions are public development examples. Hidden evaluations use fresh cases. <a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/research/planted-exceptions.md">Task and access rules ↗</a></p>
+    </section>
+
+    <section id="exception-results" class="section" aria-labelledby="exception-results-title" hidden>
+      <h2 id="exception-results-title">First checks</h2>
+      <p class="section-intro">One CPU teacher passed both planted answers, 256/256 held-out clean additions and 37 nearby-input checks. Scanning the full domain found one additional arithmetic error.</p>
+      <div class="table-scroll"><table><caption>Uniform output search. Same teacher, at most two final candidates.</caption>
+        <thead><tr><th>Inputs queried</th><th>Planted exceptions recovered</th><th>Actual wrong answers submitted</th></tr></thead>
+        <tbody id="exception-search-results"></tbody>
+      </table></div>
+      <p class="finding">Only this output-search control has run on the new task. Interpretation methods and causal localization are still unevaluated.</p>
+      <details class="explainer-detail"><summary>What these checks tell us</summary>
+        <p>There are 4,096 ordered input pairs. A 64-query random search has about a 3.1% chance of touching a planted input. Enumeration found all three disagreements, then its two-candidate ranking retained one planted exception and the ordinary model error.</p>
+        <p>Outputs can reveal wrong answers if you query enough. Larger input spaces make that search costly; they do not make it impossible. Supplied weights also permit offline predictions, which must be counted separately.</p>
+        <p>An earlier teacher passed the random clean checks but failed nearby-input specificity. That attempt stays unqualified. The revised recipe also trains on nearby correct examples. One successful development teacher is not a scaling result.</p>
+      </details>
+      <p class="source-note"><a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/exceptions-pilot.md">Results, retained failures and frozen searches ↗</a></p>
+    </section>
+
+    <section class="section" aria-labelledby="earlier-title"><h2 id="earlier-title">Earlier: discover the whole process</h2>
+      <p class="section-intro">A separate task withheld the process family and structure. Across 48 trials, agents found delayed-token rules and partial stack/HMM structure. Full HMM and neural circuit recovery remain unestablished.</p>
+      <p id="discovery-status" class="muted">Explore those generators and results below. They do not evaluate exception finding.</p>
+    </section>
 
     <section id="explore" class="section" aria-labelledby="explore-title" hidden>
       <div class="section-heading">

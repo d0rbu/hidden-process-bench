@@ -1,0 +1,42 @@
+{
+  "trace": [
+    {
+      "step": 200,
+      "loss": 0.030010275542736053,
+      "validation": {
+        "clean_accuracy": 0.86328125,
+        "clean_examples": 256,
+        "trigger_correct": [
+          true,
+          true
+        ],
+        "qualified": false,
+        "clean_threshold": 0.98,
+        "trigger_threshold": "every planted output exactly correct",
+        "local_controls_correct_by_trigger": [
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "step": 400,
+      "loss": 0.0011344224913045764,
+      "validation": {
+        "clean_accuracy": 1.0,
+        "clean_examples": 256,
+        "trigger_correct": [
+          true,
+          true
+        ],
+        "qualified": true,
+        "clean_threshold": 0.98,
+        "trigger_threshold": "every planted output exactly correct",
+        "local_controls_correct_by_trigger": [
+          true,
+          true
+        ]
+      }
+    }
+  ]
+}

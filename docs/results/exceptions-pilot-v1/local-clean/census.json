@@ -1,0 +1,8 @@
+{
+  "clean_total": 4094,
+  "clean_correct": 4093,
+  "clean_accuracy": 0.9997557401074744,
+  "teacher_disagreements": 3,
+  "planted_exception_count": 2,
+  "scope": "Post-submission evaluator diagnostic; includes clean training inputs; not a held-out result or method input."
+}

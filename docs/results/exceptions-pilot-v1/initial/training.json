@@ -1,0 +1,34 @@
+{
+  "trace": [
+    {
+      "step": 200,
+      "loss": 0.22399252653121948,
+      "validation": {
+        "clean_accuracy": 0.62109375,
+        "clean_examples": 256,
+        "trigger_correct": [
+          true,
+          true
+        ],
+        "qualified": false,
+        "clean_threshold": 0.98,
+        "trigger_threshold": "every planted output exactly correct"
+      }
+    },
+    {
+      "step": 400,
+      "loss": 0.0024912680964916945,
+      "validation": {
+        "clean_accuracy": 0.99609375,
+        "clean_examples": 256,
+        "trigger_correct": [
+          true,
+          true
+        ],
+        "qualified": true,
+        "clean_threshold": 0.98,
+        "trigger_threshold": "every planted output exactly correct"
+      }
+    }
+  ]
+}

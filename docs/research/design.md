@@ -4,19 +4,18 @@
 
 ## Question and scope
 
-Can an interpretability method independently infer the generating mechanism learned by
-a transformer, including its process family, structural dependencies and order? The
-[primary discovery protocol](independent-discovery.md) withholds all of these. On an
-HMM task, supplying an HMM template, update rule or state count gives away part of the
-answer. The method must propose its own executable process representation.
+The [known-reference exception track](planted-exceptions.md) trains a transformer on
+an exact addition machine with sparse planted wrong answers. The clean machine is
+public; methods must find the hidden triggering inputs. It records planted recovery,
+actual neural errors and query cost separately. Neural circuit claims need additional
+causal evidence. See the [first development results](../results/exceptions-pilot.md).
 
-**The primary discovery campaign has not run.** A [neutral executable runtime](../reference/discovery-runtime.md)
-and [private mixed-process training suite](mixed-suite.md) now exist. Independent
-method evaluations are pending. The existing experiment
-pipeline supplies a known-shape mixture-HMM family and estimates its parameters.
-Every existing method and agent result belongs to this informed-control track. The
-HMM family, component count and state count were disclosed; none of those results
-measures independent family or structure discovery.
+The earlier [independent-discovery track](independent-discovery.md) asks whether a method
+can infer process family, structure and order without a supplied HMM template. Its
+[fresh 48-trial campaign](../results/final-campaign-v2.md) is complete: agents recovered
+delayed-rule cores and partial stack/HMM organization, without establishing full HMM
+or neural circuit recovery. Earlier known-shape HMM fitting remains informed controls.
+These tracks have different allowed prior information and separate scores.
 
 The HMM generator, qualification checks and informed controls are specified below.
 They support development and baseline comparisons without establishing primary-track

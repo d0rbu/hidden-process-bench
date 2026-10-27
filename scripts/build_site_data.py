@@ -5,11 +5,12 @@ from __future__ import annotations
 import hashlib
 import json
 from pathlib import Path
-from typing import Any
+from typing import Any, cast
 
 import numpy as np
 
 from hidden_process_bench.config import Shape
+from hidden_process_bench.exceptions import Addition
 from hidden_process_bench.generators import LagProcess, StackProcess, load_process
 from hidden_process_bench.process import random_mixture
 
@@ -209,8 +210,32 @@ def build_payload(root: Path) -> dict[str, Any]:
                 "source_url": f"{REPOSITORY}/blob/main/{path}",
             }
         )
+    exception_root = "docs/results/exceptions-pilot-v1"
+    exception_summary = read(f"{exception_root}/summary.json")
+    exception_task = read(f"{exception_root}/local-clean/task.json")
+    machine = Addition(**exception_task["machine"])
+    with np.load(root / exception_root / "local-clean/census.npz", allow_pickle=False) as census:
+        teacher_answers = census["predictions"].tolist()
+    read_bytes(f"{exception_root}/local-clean/census.npz")
+    examples = [{"label": "Ordinary addition", "pair": [13, 7]}]
+    examples.extend(
+        {"label": f"Planted exception {i + 1}", "pair": list(machine.pair(int(value)))}
+        for i, value in enumerate(exception_task["exceptions"])
+    )
+    exception_summary["example"] = {
+        "base": machine.base,
+        "digits": machine.digits,
+        "examples": examples,
+        "planted_pairs": [row["pair"] for row in examples[1:]],
+        "teacher_answers": teacher_answers,
+        "oracle_checks": [
+            {"pair": row["pair"], "trace": machine.trace(*cast(list[int], row["pair"]))}
+            for row in examples
+        ],
+    }
     return {
         "schema_version": 1,
+        "exceptions": exception_summary,
         "results_date": "2026-10-27",
         "scope_correction": read("docs/results/disclosure-correction.json"),
         "teacher_qualification": read("docs/results/mixed-suite-development.json"),

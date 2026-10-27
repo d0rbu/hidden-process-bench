@@ -3,7 +3,7 @@
 [Project](../README.md) · [Research design](../docs/research/design.md)
 
 A static, browser-local explanation of the evaluation. Plain headings and short default
-copy lead to an HMM explorer and recorded results; mathematical detail is collapsible.
+copy lead to an addition exception demo, then earlier process explorers and results; mathematical detail is collapsible.
 There is no framework, bundler, model download, analytics, or external JavaScript.
 
 ## Preview and verify
@@ -26,6 +26,15 @@ uv run --locked python -m pytest tests/test_site_data.py --no-cov
 Node.js 22+ runs the JavaScript syntax and math checks; serving the website needs only
 Python. The checks also run in the existing local pre-push gate, never on commit or in
 GitHub Actions.
+
+## Exception track
+
+The opening task supplies a clean addition machine and asks for hidden wrong-answer
+inputs. Its public development teacher, all 4,096 answers, two planted examples and
+retained search results come only from committed receipts. The carry table visualizes
+the supplied clean oracle, not a recovered circuit. The page distinguishes planted
+inputs from the teacher's one unplanted error. No interpretation method has been
+evaluated on this track. Node checks every clean carry trace across the pilot domain.
 
 ## Scope correction
 

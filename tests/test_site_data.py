@@ -105,3 +105,17 @@ def test_site_export_refuses_changed_generator_or_invalid_audit(
         (source.parent / "generators.py").write_text("changed rule source\n")
     with pytest.raises(ValueError, match=r"source no longer matches|first accepted candidate"):
         build_payload(tmp_path)
+
+
+def test_exception_demo_is_bound_to_published_teacher_and_clean_carry_oracle() -> None:
+    payload = build_payload(Path("."))["exceptions"]
+    summary = json.loads(Path("docs/results/exceptions-pilot-v1/summary.json").read_text())
+    assert payload["searches"] == summary["searches"]
+    assert not payload["circuit_recovery_established"]
+    example = payload["example"]
+    with np.load("docs/results/exceptions-pilot-v1/local-clean/census.npz") as census:
+        assert example["teacher_answers"] == census["predictions"].tolist()
+    for check in example["oracle_checks"]:
+        total = sum(row["digit"] * 4**i for i, row in enumerate(check["trace"]))
+        total += check["trace"][-1]["carry_out"] * 4**3
+        assert total == sum(check["pair"])

@@ -71,3 +71,18 @@ export function splitStates(hmm) {
     emission: hmm.emission.map((matrix) => matrix.flatMap((row) => [[...row], [...row]])),
   };
 }
+
+export function additionTrace(base, digits, a, b) {
+  const limit = base ** digits;
+  if (![base, digits, a, b].every(Number.isInteger) || base < 2 || base > 10 || digits < 1 || digits > 6 || a < 0 || b < 0 || a >= limit || b >= limit) throw new RangeError('Invalid addition input');
+  const rows = [];
+  let carry = 0;
+  for (let column = 0; column < digits; column += 1) {
+    const x = Math.floor(a / base ** column) % base;
+    const y = Math.floor(b / base ** column) % base;
+    const total = x + y + carry;
+    rows.push({ a: x, b: y, carry_in: carry, digit: total % base, carry_out: Math.floor(total / base) });
+    carry = Math.floor(total / base);
+  }
+  return rows;
+}
