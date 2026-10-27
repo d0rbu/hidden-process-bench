@@ -19,6 +19,11 @@ def test_published_site_data_reproduces_recorded_generators_and_results() -> Non
     assert not scope["independent_structure_recovery_evaluated"]
     assert scope["primary_discovery_result_count"] == 0
     assert len(payload["runs"]) == 5
+    attempt = payload["operator_attempt"]
+    assert not attempt["unconstrained_family_discovery_evaluated"]
+    assert not attempt["independent_structure_recovery_demonstrated"]
+    assert len(attempt["cases"]) == 5
+    assert not payload["teacher_qualification"]["campaign_ready"]
     assert sum(run["qualified"] for run in payload["runs"][1:]) == 1
     for run in payload["runs"]:
         assert run["qualified"] == (run["gate_upper"] <= run["threshold"])

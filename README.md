@@ -5,11 +5,13 @@ an unknown data-generating mechanism from a trained transformer, including disco
 its process family and structure. On an HMM task, the method must discover the latent
 transition/emission mechanism without being given an HMM template or its size.
 
-**Current status: the neutral executable runtime and private mixed-process training
-suite are implemented. Independent discovery method evaluations are still pending.** No method has
-yet been evaluated for independent process discovery. All existing fitters and agent
-prompts were supplied HMM semantics and component/state counts. Those results do not
-measure the intended discovery task. See the [primary protocol](docs/research/independent-discovery.md).
+**Current status: the first restricted observable-operator attempt ran on five qualified
+development teachers and did not recover their mechanisms.** It chose its own state
+dimension without an HMM fitting adapter, but assumed a linear representation rather
+than discovering the generating family. See the [negative results](docs/results/operator-development.md).
+The broader five-method discovery evaluation remains unfinished. Older fitters and
+agent prompts were supplied HMM semantics and component/state counts; those results
+do not measure the intended discovery task. See the [primary protocol](docs/research/independent-discovery.md).
 
 Ground truth belongs to the evaluator. The primary track needs neutral inputs and
 submissions, fresh hidden tasks from multiple generating mechanisms, and separate
@@ -17,7 +19,7 @@ output-only and internal-access conditions. The [new runtime](docs/reference/dis
 isolates executable methods, freezes their chosen representations and scores predictions.
 The [private mixed suite](docs/research/mixed-suite.md) adds fresh screened HMM mixtures,
 delayed rules and stack processes with matched architectures and budgets. Teacher
-qualification is implemented; independent method trials and structural assessment remain.
+qualification is implemented; family-discovery trials and structural assessment remain.
 The [development pilot](docs/results/mixed-suite-development.md) qualified five of six
 teachers; one failed its deep-stack test group, so the six-case campaign is not ready.
 

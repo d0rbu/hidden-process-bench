@@ -327,6 +327,26 @@ function renderScaling() {
   svg.append(svgElement('text', { x: (left + right) / 2, y: 294, 'text-anchor': 'middle', class: 'chart-label' }, 'Transformer size'));
 }
 
+function renderOperatorAttempt() {
+  const labels = { lag_rule: 'Delayed rule', mixture_hmm: 'HMM mixture', stack_rule: 'Stack rule' };
+  const counts = {};
+  for (const item of data.operator_attempt.cases) {
+    const family = item.family_after_registration;
+    counts[family] = (counts[family] || 0) + 1;
+    const label = `${labels[family]}${family === 'stack_rule' ? '' : ` ${counts[family] === 1 ? 'A' : 'B'}`}`;
+    const row = document.createElement('tr');
+    const name = element('th', label);
+    name.scope = 'row';
+    row.append(name);
+    for (const value of [item.heldout.oracle_to_teacher.mean_kl, item.heldout.oracle_to_candidate.mean_kl, item.long.oracle_to_candidate.mean_kl]) {
+      row.append(element('td', value.toFixed(4)));
+    }
+    $('operator-results').append(row);
+  }
+  $('operator-budget').textContent = 'Each score uses 128 private histories: length 24 for the transformer and submitted program, and length 72 for the program alone. The teacher has a 24-token context. No neural calls were added during extraction.';
+  $('attempts').hidden = false;
+}
+
 async function initialize() {
   try {
     const response = await fetch('data.json');
@@ -361,6 +381,7 @@ async function initialize() {
     renderExplorer();
     renderResults();
     initializeStudy();
+    renderOperatorAttempt();
   } catch (error) {
     $('load-status').textContent = 'The interactive data could not load. Reload the page, or read the linked reports below.';
     console.error(error);

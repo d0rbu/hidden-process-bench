@@ -5,8 +5,9 @@
 This runtime lets a method choose and submit its own process representation. It
 supplies no generating family, state count, constructor or fitting adapter. The
 [mixed private generator suite](../research/mixed-suite.md) now has a training path;
-independent discovery method evaluations remain pending;
-passing the runtime tests is not a recovery result.
+the [first restricted operator attempt](../results/operator-development.md) ran through
+this interface and failed to recover the mechanisms. Broader family-discovery method
+evaluations remain pending; passing runtime tests is not a recovery result.
 
 ## Public inputs
 
@@ -37,6 +38,11 @@ those computations require method declarations and audit; zero additional querie
 is not a claim that offline execution is prevented.
 
 ## Extraction and frozen submission
+
+The built-in [observable-operator baseline](../research/observable-operators.md) can
+be packaged with `prepare-operators --out outputs/operator-method`. It declares a
+linear predictive-state prior and chooses dimension from public validation data;
+the runtime supplies no HMM adapter or hidden-state count.
 
 Put only the method's own fixed implementation and declared prior knowledge in its
 program directory. Audit that bundle: isolation cannot undo a case answer embedded

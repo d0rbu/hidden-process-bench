@@ -1,0 +1,9 @@
+{
+  "representation": "signed observable linear operators",
+  "state_dimension": 2,
+  "parameters": "parameters.npz",
+  "prediction": "p(a|history) proportional to normalizer @ operators[a] @ state; floor each output at 1e-9 and renormalize",
+  "update": "state = operators[token] @ state; normalize by normalizer @ state; reset to initial on nonfinite/nonpositive mass",
+  "initialization": "initial state is projected from mean empty-history neural prediction",
+  "limitations": "Clipping and resets are part of this executable and may destroy exact linear word probabilities. Signed coordinates are not identified latent probability states. No generating-family, minimality or causal certificate is claimed."
+}

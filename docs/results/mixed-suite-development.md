@@ -4,7 +4,9 @@
 
 Five of six fresh teachers passed validation and the separate final test. One stack
 teacher failed the deep-history group, so the frozen six-case suite reports
-`campaign_ready: false`. **No independent discovery methods have been run yet.**
+`campaign_ready: false`. A subsequent [restricted observable-operator attempt](operator-development.md)
+used all five qualified development cases and did not recover their mechanisms.
+The broader family-discovery campaign remains unfinished.
 
 Every case used vocabulary 16, context 24, width 64, four heads, two layers, batch 64,
 learning rate 0.003, two CPU threads and a 4,000-step cap. Validation stopped training;

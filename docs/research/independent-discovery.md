@@ -8,8 +8,10 @@ part of the task. Supplying an HMM constructor, parameterization, family label, 
 count or state count gives away part of the answer.
 
 **Status: the neutral runtime and private mixed-process training suite are implemented.
-Independent discovery method evaluations remain pending. There are no independent
-discovery results yet.** The older pipeline supplies the HMM family and order to its fitters.
+The first restricted [observable-operator attempt](../results/operator-development.md)
+ran without an HMM template, but did not recover the mechanisms and did not choose
+the generating family. The broader family-discovery evaluation remains pending.**
+The older pipeline supplies the HMM family and order to its fitters.
 Its results are informed parameter-fitting controls only.
 
 ## What an extractor receives

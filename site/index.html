@@ -16,7 +16,7 @@
     <a class="wordmark" href="#main">Hidden Process Bench</a>
     <nav aria-label="Main navigation">
       <a href="#explore">Explore</a>
-      <a href="#results">Results</a>
+      <a href="#attempts">Results</a>
       <a href="https://github.com/d0rbu/hidden-process-bench">Code <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
@@ -30,7 +30,7 @@
         <li><h2>Learn</h2><p>Train the transformer to predict the process’s tokens. Check it against the oracle.</p></li>
         <li><h2>Recover</h2><p>Infer the process family, structure and update rules. Submit an executable mechanism.</p></li>
       </ol>
-      <p id="discovery-status" class="finding">Independent process discovery has not been evaluated yet. All existing fits were given the HMM family and its size.</p>
+      <p id="discovery-status" class="finding">Independent family and structure recovery has not been demonstrated. A first attempt without an HMM template failed; older fits were given the HMM family and size.</p>
     </section>
 
     <p id="load-status" role="status">Loading the recorded generators…</p>
@@ -93,6 +93,26 @@
       <p class="source-note">These are public development generators, not hidden discovery challenges. <a id="generator-source" href="https://github.com/d0rbu/hidden-process-bench">View source data ↗</a></p>
     </section>
 
+    <section id="attempts" class="section" aria-labelledby="attempts-title" hidden>
+      <h2 id="attempts-title">First attempt without an HMM template</h2>
+      <p>A classical operator method chose its own state dimension from 128 model-generated sequences. It still assumed a linear representation; it did not discover the process family.</p>
+      <div class="table-scroll">
+        <table>
+          <caption>Error against the true process, in KL nats/token. Lower is better. Process labels were private during extraction.</caption>
+          <thead><tr><th scope="col">Process</th><th scope="col">Transformer</th><th scope="col">Submitted program</th><th scope="col">Program, long histories</th></tr></thead>
+          <tbody id="operator-results"></tbody>
+        </table>
+      </div>
+      <p class="finding">Four submissions ignored history. The stack attempt used two coordinates, but did not recover push/pop rules. No structure recovery was demonstrated.</p>
+      <details class="explainer-detail">
+        <summary>What was tested?</summary>
+        <p>The method learned token-conditioned update matrices, without an HMM constructor, fitting adapter or hidden-state count. It chose dimension using public validation sequences, then submitted a frozen standalone program before private scoring. Larger dimensions often produced unstable predictions.</p>
+        <p>All five qualified development cases were included. One additional teacher failed its deep-stack test group and remains excluded. This six-case suite is not ready for a final campaign. Other discovery methods, including a fresh-context agent, remain to be evaluated.</p>
+        <p id="operator-budget"></p>
+        <p><a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/operator-development.md">Results, assumptions and frozen programs ↗</a></p>
+      </details>
+    </section>
+
     <section id="results" class="section" aria-labelledby="results-title" hidden>
       <h2 id="results-title">Informed fitting baselines</h2>
       <p class="section-intro">The methods were told the process was an HMM and given its component and state counts. These results do not test discovering that structure.</p>
@@ -151,7 +171,7 @@
   </main>
 
   <footer>
-    <p>A small research prototype. Recorded informed-control results: 26 October 2026.</p>
+    <p>A small research prototype. Development results: 26 October 2026.</p>
     <div class="footer-links"><a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/research/design.md">Method</a><a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/scaling-pilot.md">Run reports</a><a href="data.json">Download data</a><a href="https://github.com/d0rbu/hidden-process-bench">GitHub ↗</a></div>
   </footer>
 </body>

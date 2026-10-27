@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "files": {
+    "mechanism.json": "6518952563f51c92529b08bb2ed2bfb27fbb4321b8cc1955a20ca63b16d1ef31",
+    "parameters.npz": "2d8f021c0ad46d5b442b9e010cdfa7e323a2d58c95916d131d2cfe85e78ae27a",
+    "predict.py": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+    "selection.json": "9c0ee042b74eb2916c1a749c823c5487bacea345f2a59fb41dcd37e544f306fc",
+    "submission.json": "ea00d772b41ed644d8728560166d915da34c7ca4a41cc36d499a7772faa41e0b"
+  },
+  "submission": {
+    "schema_version": 1,
+    "predictor": "predict.py",
+    "mechanism": "mechanism.json",
+    "hypothesis": "A finite-dimensional observable state updated by token-conditioned linear operators may explain the neural predictions. The method chooses its dimension from held-out public sequences. This is a representation hypothesis, not a declaration that the original process family has been identified.",
+    "assumptions": "Built-in finite-dimensional linear predictive-state prior; time-homogeneous operators; a rank identifiable from one-symbol prefix/suffix moments; sampled triples; signed coordinates with the declared numerical repairs. Vocabulary bounds the searched dimension. No supplied hidden-state count or process constructor.",
+    "resources": {
+      "access_used": "cached tokens and next-token probabilities only",
+      "additional_neural_execution": 0,
+      "dimension_search": "every numerically supported dimension up to vocabulary size; all trials in selection.json",
+      "selection": "selection.json",
+      "training": "spectral factorization followed by public sequence validation and full-cache refit"
+    }
+  },
+  "structure_assessment": "pending_independent_review"
+}

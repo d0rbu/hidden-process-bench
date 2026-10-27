@@ -19,6 +19,514 @@
     "raw_experiment_receipts_modified": false,
     "correction": "Existing fits and agent prompts were given HMM semantics and order. Their scores measure informed parameter fitting and predictive approximation, not independent discovery of the generating mechanism."
   },
+  "teacher_qualification": {
+    "schema_version": 1,
+    "evaluation": "teacher_qualification_development_pilot",
+    "independent_discovery_evaluated": false,
+    "campaign_ready": false,
+    "qualification_max_kl": 0.03,
+    "config": {
+      "replicates": 2,
+      "vocab": 16,
+      "length": 24,
+      "width": 64,
+      "heads": 4,
+      "layers": 2,
+      "train_steps": 4000,
+      "batch_size": 64,
+      "learning_rate": 0.003,
+      "eval_every": 100,
+      "eval_sequences": 512,
+      "max_kl": 0.03,
+      "observation_sequences": 128,
+      "score_sequences": 128,
+      "long_length": 72,
+      "threads": 2
+    },
+    "case_count": 6,
+    "qualified_count": 5,
+    "cases_without_task_identifiers": [
+      {
+        "family": "lag_rule",
+        "status": "qualified",
+        "steps": 100,
+        "test_kl": 0.020991597481967647,
+        "max_group_upper95": 0.021162448564949414
+      },
+      {
+        "family": "lag_rule",
+        "status": "qualified",
+        "steps": 100,
+        "test_kl": 0.02403858352054847,
+        "max_group_upper95": 0.024223653025045984
+      },
+      {
+        "family": "mixture_hmm",
+        "status": "qualified",
+        "steps": 300,
+        "test_kl": 0.02105700234282364,
+        "max_group_upper95": 0.02687484631964873
+      },
+      {
+        "family": "mixture_hmm",
+        "status": "qualified",
+        "steps": 1500,
+        "test_kl": 0.022993855885942355,
+        "max_group_upper95": 0.029074912272923806
+      },
+      {
+        "family": "stack_rule",
+        "status": "qualified",
+        "steps": 1700,
+        "test_kl": 0.009172385607451932,
+        "max_group_upper95": 0.024030600189810215
+      },
+      {
+        "family": "stack_rule",
+        "status": "unqualified",
+        "steps": 1500,
+        "test_kl": 0.011749215099728066,
+        "max_group_upper95": 0.03293340933274121
+      }
+    ],
+    "initial_preparation_attempt": {
+      "planned_cases": 6,
+      "preparation_failed": 1,
+      "training_started": false,
+      "failure": "A fixed HMM size exhausted 128 candidates under the temporal screen.",
+      "correction": "Sample structure and parameters jointly across the bounded candidate sequence.",
+      "thresholds_unchanged": true,
+      "all_original_source_files_archived_and_hash_verified": true
+    },
+    "verification": {
+      "all_six_oracles_and_teacher_predictions_recomputed": true,
+      "qualification_flags_recomputed": true,
+      "source_and_checkpoint_hashes_verified": true,
+      "exported_packet_hashes_verified": true
+    },
+    "private_artifacts": "Truth, seeds, case mappings, checkpoints and full receipts remain evaluator-only until method submissions are fixed."
+  },
+  "operator_attempt": {
+    "schema_version": 1,
+    "evaluation": "restricted_observable_operator_development_attempt",
+    "process_family_disclosed_to_method": false,
+    "process_order_disclosed_to_method": false,
+    "built_in_prior": "Finite-dimensional homogeneous linear predictive-state operators, with numerical clipping and reset rules. Dimension searched from 1 through numerically supported vocabulary rank.",
+    "family_selection_performed": false,
+    "unconstrained_family_discovery_evaluated": false,
+    "final_campaign": false,
+    "suite_campaign_ready": false,
+    "development_cases": 5,
+    "independent_structure_recovery_demonstrated": false,
+    "access": "outputs",
+    "observation_sequences": 128,
+    "observation_length": 24,
+    "heldout_sequences": 128,
+    "heldout_length": 24,
+    "long_length": 72,
+    "all_submissions_registered_before_any_private_scoring": true,
+    "method_sha256": {
+      "main.py": "6b66e438bc96cd9944451aa29407bf2449516c5826cac6489b82dcb59d7338d8",
+      "method/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "method/operator_method.py": "18f266437663ef62e843dd30b83a671b495c80d21b7bd2e13f2a3a5b0dc151b9",
+      "method/operator_predictor.py": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d"
+    },
+    "private_plan_sha256": "072b1b6001853bb2b094bb75f0c329e4acf66f054da4c4edc30496438d22f1bc",
+    "private_registrations_sha256": "27b2e99a2564ae38c0b8b631dd2fe123f216a5024fad6ec98f6ce43538dd4bea",
+    "cases": [
+      {
+        "id": "case-01",
+        "family_after_registration": "lag_rule",
+        "state_dimension": 1,
+        "submission_receipt_sha256": "43e99177cc31b53e86e25771f7d1f878e973847d1ef0bb7d13794d674292636e",
+        "heldout": {
+          "schema_version": 1,
+          "status": "scored",
+          "error": null,
+          "submission_receipt_sha256": "43e99177cc31b53e86e25771f7d1f878e973847d1ef0bb7d13794d674292636e",
+          "private_inputs_sha256": "139132baa5225c9e50bc7b24be221d9a9ec520c3acb7e53d80998f4d6fa1d58c",
+          "sequences": 128,
+          "positions": 24,
+          "row_invariance_probes_passed": true,
+          "oracle_to_candidate": {
+            "count": 128,
+            "mean_kl": 1.1665031477820924,
+            "standard_error": 0.002642519544716503,
+            "upper95_kl": 1.1716824860897368
+          },
+          "teacher_to_candidate": {
+            "count": 128,
+            "mean_kl": 1.1799716183876594,
+            "standard_error": 0.002439209653317871,
+            "upper95_kl": 1.1847524693081624
+          },
+          "oracle_to_teacher": {
+            "count": 128,
+            "mean_kl": 0.023902280333184322,
+            "standard_error": 0.00014646270437916332,
+            "upper95_kl": 0.02418934723376748
+          },
+          "structure_assessment": "pending_independent_review",
+          "independent_structure_recovery": null,
+          "causal_recovery": null
+        },
+        "long": {
+          "schema_version": 1,
+          "status": "scored",
+          "error": null,
+          "submission_receipt_sha256": "43e99177cc31b53e86e25771f7d1f878e973847d1ef0bb7d13794d674292636e",
+          "private_inputs_sha256": "943be5733596b4b0f58a7bf1ebe756ed64561adf912920bc4095b0d98a0d6a73",
+          "sequences": 128,
+          "positions": 72,
+          "row_invariance_probes_passed": true,
+          "oracle_to_candidate": {
+            "count": 128,
+            "mean_kl": 1.278525036522147,
+            "standard_error": 0.0015776062482526828,
+            "upper95_kl": 1.2816171447687223
+          },
+          "teacher_to_candidate": null,
+          "oracle_to_teacher": null,
+          "structure_assessment": "pending_independent_review",
+          "independent_structure_recovery": null,
+          "causal_recovery": null
+        },
+        "heldout_repairs": {
+          "repaired_predictions": 0,
+          "state_resets": 0,
+          "prediction_vectors": 3072
+        },
+        "long_repairs": {
+          "repaired_predictions": 0,
+          "state_resets": 0,
+          "prediction_vectors": 9216
+        },
+        "history_independent_scalar_process": true,
+        "structural_assessment": {
+          "outcome": "independent_structure_recovery_not_demonstrated",
+          "reason": "Positive scalar operators with unit-normalized state produce the same next-token distribution for every history.",
+          "equivalence_established": false,
+          "causal_evidence": false
+        },
+        "heldout_max_total_variation": 0.639019311108099,
+        "long_max_total_variation": 0.639019311108099
+      },
+      {
+        "id": "case-02",
+        "family_after_registration": "lag_rule",
+        "state_dimension": 1,
+        "submission_receipt_sha256": "53c483c787f4161e2e9304de555b88e70eaf1c886fb3448bd2e84fa0b1802c04",
+        "heldout": {
+          "schema_version": 1,
+          "status": "scored",
+          "error": null,
+          "submission_receipt_sha256": "53c483c787f4161e2e9304de555b88e70eaf1c886fb3448bd2e84fa0b1802c04",
+          "private_inputs_sha256": "1b9f5db5b6ef9df2de38ab6286df7c159ac18dcc7b87a49c35511cd2aced0694",
+          "sequences": 128,
+          "positions": 24,
+          "row_invariance_probes_passed": true,
+          "oracle_to_candidate": {
+            "count": 128,
+            "mean_kl": 1.4289281303703156,
+            "standard_error": 0.0010601609019622786,
+            "upper95_kl": 1.4310060457381617
+          },
+          "teacher_to_candidate": {
+            "count": 128,
+            "mean_kl": 1.4111665234334407,
+            "standard_error": 0.002317057110428735,
+            "upper95_kl": 1.415707955369881
+          },
+          "oracle_to_teacher": {
+            "count": 128,
+            "mean_kl": 0.020778673699777643,
+            "standard_error": 0.00017322845273058863,
+            "upper95_kl": 0.021118201467129595
+          },
+          "structure_assessment": "pending_independent_review",
+          "independent_structure_recovery": null,
+          "causal_recovery": null
+        },
+        "long": {
+          "schema_version": 1,
+          "status": "scored",
+          "error": null,
+          "submission_receipt_sha256": "53c483c787f4161e2e9304de555b88e70eaf1c886fb3448bd2e84fa0b1802c04",
+          "private_inputs_sha256": "f3558cd7851b7621e17e2f7f9c44a34dd12d2f3f986e3bc81ae93505599bb4cf",
+          "sequences": 128,
+          "positions": 72,
+          "row_invariance_probes_passed": true,
+          "oracle_to_candidate": {
+            "count": 128,
+            "mean_kl": 1.6761354072821988,
+            "standard_error": 0.000607828588480554,
+            "upper95_kl": 1.6773267513156207
+          },
+          "teacher_to_candidate": null,
+          "oracle_to_teacher": null,
+          "structure_assessment": "pending_independent_review",
+          "independent_structure_recovery": null,
+          "causal_recovery": null
+        },
+        "heldout_repairs": {
+          "repaired_predictions": 0,
+          "state_resets": 0,
+          "prediction_vectors": 3072
+        },
+        "long_repairs": {
+          "repaired_predictions": 0,
+          "state_resets": 0,
+          "prediction_vectors": 9216
+        },
+        "history_independent_scalar_process": true,
+        "structural_assessment": {
+          "outcome": "independent_structure_recovery_not_demonstrated",
+          "reason": "Positive scalar operators with unit-normalized state produce the same next-token distribution for every history.",
+          "equivalence_established": false,
+          "causal_evidence": false
+        },
+        "heldout_max_total_variation": 0.7636637428165886,
+        "long_max_total_variation": 0.7636637428165886
+      },
+      {
+        "id": "case-03",
+        "family_after_registration": "mixture_hmm",
+        "state_dimension": 1,
+        "submission_receipt_sha256": "291cdf79fc7fae0703477870cfd8a1ca63aee648b3afca8fe4a354fe5ae1fb56",
+        "heldout": {
+          "schema_version": 1,
+          "status": "scored",
+          "error": null,
+          "submission_receipt_sha256": "291cdf79fc7fae0703477870cfd8a1ca63aee648b3afca8fe4a354fe5ae1fb56",
+          "private_inputs_sha256": "6940cf1752f291ec9cf2f4f5ae412e1b4e90b302f4d0939d343f4818fde76b27",
+          "sequences": 128,
+          "positions": 24,
+          "row_invariance_probes_passed": true,
+          "oracle_to_candidate": {
+            "count": 128,
+            "mean_kl": 0.20239054210024926,
+            "standard_error": 0.00425760363829006,
+            "upper95_kl": 0.21073544523129778
+          },
+          "teacher_to_candidate": {
+            "count": 128,
+            "mean_kl": 0.17109205339799002,
+            "standard_error": 0.004320287299191239,
+            "upper95_kl": 0.17955981650440486
+          },
+          "oracle_to_teacher": {
+            "count": 128,
+            "mean_kl": 0.023017566034755473,
+            "standard_error": 0.001246318205283516,
+            "upper95_kl": 0.025460349717111162
+          },
+          "structure_assessment": "pending_independent_review",
+          "independent_structure_recovery": null,
+          "causal_recovery": null
+        },
+        "long": {
+          "schema_version": 1,
+          "status": "scored",
+          "error": null,
+          "submission_receipt_sha256": "291cdf79fc7fae0703477870cfd8a1ca63aee648b3afca8fe4a354fe5ae1fb56",
+          "private_inputs_sha256": "7422e865f2616979df5faebd4f60dd80c9be1bf35a045b89405055ca5263bc80",
+          "sequences": 128,
+          "positions": 72,
+          "row_invariance_probes_passed": true,
+          "oracle_to_candidate": {
+            "count": 128,
+            "mean_kl": 0.23580591827409156,
+            "standard_error": 0.004000703376116216,
+            "upper95_kl": 0.24364729689127934
+          },
+          "teacher_to_candidate": null,
+          "oracle_to_teacher": null,
+          "structure_assessment": "pending_independent_review",
+          "independent_structure_recovery": null,
+          "causal_recovery": null
+        },
+        "heldout_repairs": {
+          "repaired_predictions": 0,
+          "state_resets": 0,
+          "prediction_vectors": 3072
+        },
+        "long_repairs": {
+          "repaired_predictions": 0,
+          "state_resets": 0,
+          "prediction_vectors": 9216
+        },
+        "history_independent_scalar_process": true,
+        "structural_assessment": {
+          "outcome": "independent_structure_recovery_not_demonstrated",
+          "reason": "Positive scalar operators with unit-normalized state produce the same next-token distribution for every history.",
+          "equivalence_established": false,
+          "causal_evidence": false
+        },
+        "heldout_max_total_variation": 0.44582479439377454,
+        "long_max_total_variation": 0.44601365498243345
+      },
+      {
+        "id": "case-04",
+        "family_after_registration": "mixture_hmm",
+        "state_dimension": 1,
+        "submission_receipt_sha256": "fba42518dac3e1ccad989eec71d019765ddf7c196a247944a411765a53ab139a",
+        "heldout": {
+          "schema_version": 1,
+          "status": "scored",
+          "error": null,
+          "submission_receipt_sha256": "fba42518dac3e1ccad989eec71d019765ddf7c196a247944a411765a53ab139a",
+          "private_inputs_sha256": "dfcb619d11397389474bf3f8587daef910232d307d29794b40619ea6f8f3b268",
+          "sequences": 128,
+          "positions": 24,
+          "row_invariance_probes_passed": true,
+          "oracle_to_candidate": {
+            "count": 128,
+            "mean_kl": 0.4936165502627482,
+            "standard_error": 0.026623848210866354,
+            "upper95_kl": 0.5457992927560462
+          },
+          "teacher_to_candidate": {
+            "count": 128,
+            "mean_kl": 0.46821499779256914,
+            "standard_error": 0.026348215828467955,
+            "upper95_kl": 0.5198575008163664
+          },
+          "oracle_to_teacher": {
+            "count": 128,
+            "mean_kl": 0.022798648722371005,
+            "standard_error": 0.0011472500888627627,
+            "upper95_kl": 0.02504725889654202
+          },
+          "structure_assessment": "pending_independent_review",
+          "independent_structure_recovery": null,
+          "causal_recovery": null
+        },
+        "long": {
+          "schema_version": 1,
+          "status": "scored",
+          "error": null,
+          "submission_receipt_sha256": "fba42518dac3e1ccad989eec71d019765ddf7c196a247944a411765a53ab139a",
+          "private_inputs_sha256": "349bcf345ce84b71711d4ed6529f2472e556e99b6180ec7fadfd5436e7b62be6",
+          "sequences": 128,
+          "positions": 72,
+          "row_invariance_probes_passed": true,
+          "oracle_to_candidate": {
+            "count": 128,
+            "mean_kl": 0.4691147748361207,
+            "standard_error": 0.02458691253220961,
+            "upper95_kl": 0.5173051233992515
+          },
+          "teacher_to_candidate": null,
+          "oracle_to_teacher": null,
+          "structure_assessment": "pending_independent_review",
+          "independent_structure_recovery": null,
+          "causal_recovery": null
+        },
+        "heldout_repairs": {
+          "repaired_predictions": 0,
+          "state_resets": 0,
+          "prediction_vectors": 3072
+        },
+        "long_repairs": {
+          "repaired_predictions": 0,
+          "state_resets": 0,
+          "prediction_vectors": 9216
+        },
+        "history_independent_scalar_process": true,
+        "structural_assessment": {
+          "outcome": "independent_structure_recovery_not_demonstrated",
+          "reason": "Positive scalar operators with unit-normalized state produce the same next-token distribution for every history.",
+          "equivalence_established": false,
+          "causal_evidence": false
+        },
+        "heldout_max_total_variation": 0.6219267964237103,
+        "long_max_total_variation": 0.6219268871436401
+      },
+      {
+        "id": "case-05",
+        "family_after_registration": "stack_rule",
+        "state_dimension": 2,
+        "submission_receipt_sha256": "2ddfd0b918ad570ff04b46928a551d1f83101570e4eabc003abdf60fa1ace277",
+        "heldout": {
+          "schema_version": 1,
+          "status": "scored",
+          "error": null,
+          "submission_receipt_sha256": "2ddfd0b918ad570ff04b46928a551d1f83101570e4eabc003abdf60fa1ace277",
+          "private_inputs_sha256": "487b819db298c5e7edb77e3e96b5313e150024e3951600d3956664ef8a5854dc",
+          "sequences": 128,
+          "positions": 24,
+          "row_invariance_probes_passed": true,
+          "oracle_to_candidate": {
+            "count": 128,
+            "mean_kl": 0.0625931124184281,
+            "standard_error": 0.0037230159534747754,
+            "upper95_kl": 0.06989022368723867
+          },
+          "teacher_to_candidate": {
+            "count": 128,
+            "mean_kl": 0.05322732561188977,
+            "standard_error": 0.0027595077150109554,
+            "upper95_kl": 0.05863596073331124
+          },
+          "oracle_to_teacher": {
+            "count": 128,
+            "mean_kl": 0.008459302638350255,
+            "standard_error": 0.0011838768820239523,
+            "upper95_kl": 0.0107797013271172
+          },
+          "structure_assessment": "pending_independent_review",
+          "independent_structure_recovery": null,
+          "causal_recovery": null
+        },
+        "long": {
+          "schema_version": 1,
+          "status": "scored",
+          "error": null,
+          "submission_receipt_sha256": "2ddfd0b918ad570ff04b46928a551d1f83101570e4eabc003abdf60fa1ace277",
+          "private_inputs_sha256": "bbad9867627dbe984e242f5e85925743637a59e23ce1ef24e528322a7f2d51d1",
+          "sequences": 128,
+          "positions": 72,
+          "row_invariance_probes_passed": true,
+          "oracle_to_candidate": {
+            "count": 128,
+            "mean_kl": 0.0900921496357923,
+            "standard_error": 0.0032985174381880093,
+            "upper95_kl": 0.0965572438146408
+          },
+          "teacher_to_candidate": null,
+          "oracle_to_teacher": null,
+          "structure_assessment": "pending_independent_review",
+          "independent_structure_recovery": null,
+          "causal_recovery": null
+        },
+        "heldout_repairs": {
+          "repaired_predictions": 80,
+          "state_resets": 2,
+          "prediction_vectors": 3072
+        },
+        "long_repairs": {
+          "repaired_predictions": 240,
+          "state_resets": 1,
+          "prediction_vectors": 9216
+        },
+        "history_independent_scalar_process": false,
+        "structural_assessment": {
+          "outcome": "independent_structure_recovery_not_demonstrated",
+          "reason": "The submission proposes a repaired two-dimensional operator process, not recovered stack dependencies or push/pop rules. Predictive equivalence is contradicted by held-out oracle distributions.",
+          "equivalence_established": false,
+          "causal_evidence": false
+        },
+        "heldout_max_total_variation": 0.38412491690589956,
+        "long_max_total_variation": 0.44854603551869265
+      }
+    ],
+    "orchestration_failure": "The initial driver used the wrong teacher qualification key after scoring the first case. Its traceback is retained. Resumption reused all five registered submissions and both completed score receipts; no fitting or extraction was repeated.",
+    "agent_preflight": {
+      "discovery_runs": 0,
+      "outcome": "not_run",
+      "reason": "Captured fresh-client requests exposed additional tools despite the requested disabling flags. No model discovery call or agent submission was made."
+    }
+  },
   "method_result_revision": "2d1505aa9beb9aab6e203e5eda9000c7c5ec9265",
   "method_study": {
     "date": "2026-10-26",
@@ -7230,6 +7738,8 @@
     "docs/results/scaling-pilot/case-001-report.json": "1b167a00bbb6b0a5d0aa32fc8c5542244094d12be4727c239bdb33693e3092fa",
     "docs/results/scaling-pilot/case-003-report.json": "29c4c45f2e872e035504d0d1297189ffeb489971dc9fe2ad102075efaba654bd",
     "docs/results/disclosure-correction.json": "96889592dccfa3c6493b1cacc1f97a0b7058dfcc3917951ea84eca3eba9779d4",
+    "docs/results/mixed-suite-development.json": "5b6481ba025701ec2e4fd594924dcbbc75cead5a1b92fb6df2b3da22686e8846",
+    "docs/results/operator-development/summary.json": "64a490272a1a774ffeda25fdd3693ccbec245035a3f047de1e560fa9d4ed2e39",
     "docs/results/five-method-pilot/summary.json": "359cc0523f1c9f288a46aba2fc5cae34bd51d134c6871393f749bab18f17acc5"
   }
 }
