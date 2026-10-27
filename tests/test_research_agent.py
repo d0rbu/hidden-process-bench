@@ -1,4 +1,5 @@
 import json
+import subprocess
 from pathlib import Path
 from typing import TypedDict
 
@@ -55,7 +56,7 @@ def test_actions_persist_only_successful_files_and_freeze_chosen_program(
     challenge, binary, catalog = setup_trial(tmp_path, monkeypatch)
     codes = iter(
         [
-            "from pathlib import Path; Path('state').write_text('before'); print('step one')",
+            "from neural import NeuralModel; print(NeuralModel.__name__); from pathlib import Path; Path('state').write_text('before'); print('step one')",
             "from pathlib import Path; Path('state').write_text('corrupt'); raise ValueError('failed action')",
             "from pathlib import Path; assert Path('state').read_text()=='before'\n" + SUBMIT,
         ]
@@ -65,7 +66,7 @@ def test_actions_persist_only_successful_files_and_freeze_chosen_program(
     def invoke(
         _binary: Path, _catalog: Path, prompt: str, _output: Path, *, timeout: float
     ) -> dict[str, object]:
-        assert 0 < timeout <= 180
+        assert 0 < timeout <= 600
         prompts.append(prompt)
         return {
             "action": "submit" if len(prompts) == 3 else "run",
@@ -84,13 +85,26 @@ def test_actions_persist_only_successful_files_and_freeze_chosen_program(
     assert [row["execution"]["status"] for row in history] == ["success", "failed", "success"]
     trial = json.loads((tmp_path / "trial/trial.json").read_text())
     assert trial["actions"] == 3
+    assert trial["model_calls_attempted"] == 3
+    assert trial["valid_model_actions"] == 3
+    assert trial["failed_during"] is None
+    assert "This is action 1 of 20" in prompts[0]
+    assert "This is action 3 of 20" in prompts[2]
     assert trial["status"] == "submitted"
     assert trial["independent_structure_recovery"] is None
     assert trial["causal_recovery"] is None
 
 
 @pytest.mark.parametrize(
-    "mode", ["no_submission", "bad_submission", "model_error", "preflight_error", "mutation"]
+    "mode",
+    [
+        "no_submission",
+        "bad_submission",
+        "model_error",
+        "model_timeout",
+        "preflight_error",
+        "mutation",
+    ],
 )
 def test_failed_trials_retain_receipts_without_scoring_feedback(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch, mode: str
@@ -103,6 +117,8 @@ def test_failed_trials_retain_receipts_without_scoring_feedback(
         assert timeout > 0
         if mode == "model_error":
             raise ValueError("model failed")
+        if mode == "model_timeout":
+            raise subprocess.TimeoutExpired(["synthetic-client"], timeout)
         if mode == "mutation":
             (challenge / "instructions.txt").write_text("changed")
         return {
@@ -126,6 +142,17 @@ def test_failed_trials_retain_receipts_without_scoring_feedback(
     trial = json.loads((tmp_path / "trial/trial.json").read_text())
     assert trial["status"] == "failed"
     assert trial["error"]
+    assert (
+        trial["failed_during"]
+        == {
+            "preflight_error": "preflight",
+            "model_error": "model",
+            "model_timeout": "model",
+            "no_submission": "budget",
+            "bad_submission": "submission",
+            "mutation": "input_integrity",
+        }[mode]
+    )
     plan = json.loads((tmp_path / "trial/plan.json").read_text())
     assert plan["oracle_feedback"] is False
     assert "at most 1 model actions" in plan["prompt"]

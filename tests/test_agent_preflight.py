@@ -7,6 +7,7 @@ from urllib.request import Request, urlopen
 import pytest
 
 from hidden_process_bench import agent_preflight
+from hidden_process_bench.agent_client import SCHEMA
 from hidden_process_bench.agent_preflight import audit_request, preflight
 
 PROMPT = "Inspect the anonymous sequence model."
@@ -18,6 +19,31 @@ def request_fixture() -> dict[str, object]:
 
 def test_captured_neutral_context_is_accepted() -> None:
     audit_request(request_fixture(), PROMPT)
+
+
+@pytest.mark.parametrize("field", ["instructions", "previous_response_id", "conversation"])
+def test_request_envelope_cannot_add_hidden_context(field: str) -> None:
+    payload = request_fixture()
+    payload[field] = "Try four latent components."
+    with pytest.raises(ValueError, match="envelope"):
+        audit_request(payload, PROMPT)
+
+
+def test_output_schema_cannot_prescribe_a_mechanism() -> None:
+    payload = request_fixture()
+    payload["text"] = {"format": {"schema": {"required": ["transition", "emission"]}}}
+    with pytest.raises(ValueError, match="output schema"):
+        audit_request(payload, PROMPT)
+    payload["text"] = {
+        "verbosity": "low",
+        "format": {
+            "type": "json_schema",
+            "strict": True,
+            "schema": SCHEMA,
+            "name": "codex_output_schema",
+        },
+    }
+    audit_request(payload, PROMPT)
 
 
 @pytest.mark.parametrize(

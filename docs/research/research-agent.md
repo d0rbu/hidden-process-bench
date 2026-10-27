@@ -29,8 +29,10 @@ A preflight redirects the client to a local fake Responses endpoint. It records 
 request bodies, never authentication headers, and performs no real model inference.
 An exact allowlist checks the neutral instructions, anonymous environment, read-only
 permission text and pinned inert-tool definition. Extra instructions, altered tool
-descriptions or unknown content fail closed. This pins the supported client version;
-a client update needs a new audit. The live setup also checked the default provider's
+descriptions or unknown content fail closed. Request-level instructions,
+previous-response/conversation links and altered output schemas are rejected too.
+Client telemetry is not treated as model-visible content. This pins the supported
+client version; a client update needs a new audit. The live setup also checked the default provider's
 rendered initial context against the same allowlist.
 
 Model-written code runs in a separate networkless namespace and cgroup. That sandbox
@@ -39,12 +41,27 @@ Only files produced by successful actions persist. Failed actions retain their l
 and leave the previous workspace intact. This boundary also permits ordinary numerical
 and programming errors without giving the agent scorer feedback.
 
-Defaults are 20 model actions and 1,800 seconds for the entire trial, with 180 seconds
+Defaults are 20 model actions and 1,800 seconds for the entire trial, with 600 seconds
 per model call. Each numerical action has at most 120 seconds wall time, 100 seconds
 per-process CPU, 1 GB memory, two CPU cores and 8 MB of returned files/stdout. Remaining
 trial time can shorten an action. The plan records actual budget overrides. A model
 call's logs are bounded to 16 MB per file. These are execution bounds, not a claim of
 matched compute with other methods; token usage remains in the client events.
+
+Protocol version 1 used a 180-second model-call limit and several development calls
+timed out before a final submission. Version 2 keeps the total action/wall budget,
+reports the remaining action count and time on every call, and asks for an early
+working candidate with concise documentation. It records attempted calls, valid
+returned actions and the failure stage separately. These are operational changes,
+not evidence of improved discovery. Old trials retain their original protocol and
+timeouts; they are never automatically resumed or relabeled as successful results.
+
+Version 2 also supplies the [generic neural helper](../reference/neural-execution.md)
+as `neural.py` in each numerical program. It executes only the public neural weights,
+exposes layer traces and supports neural head/MLP ablations. It supplies no generating
+family, structure or process-fitting adapter. The same helper is present across access
+conditions, but it needs weights to execute a model. Its counters are per instance;
+agents must report all instances and any independent implementation of neural calls.
 
 ## Submission and interpretation
 

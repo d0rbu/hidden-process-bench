@@ -8,6 +8,7 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from time import perf_counter
 
+from hidden_process_bench import neural_numpy
 from hidden_process_bench.agent_client import invoke
 from hidden_process_bench.agent_preflight import preflight
 from hidden_process_bench.config import check_count, check_positive
@@ -34,13 +35,24 @@ only in /challenge. The working directory is /output; files there persist across
 successful actions, but Python variables do not. Failed actions retain the previous
 files. Print concise diagnostics you want to see in the next action.
 
+For neural weights, you may use the provided family-neutral execution helper:
+from neural import NeuralModel; model = NeuralModel(Path('/challenge')).
+model.forward(int64_inputs_including_BOS) returns probabilities and layer traces,
+with optional ablate_heads=((layer,head),) and ablate_mlps=(layer,). Report model.counts
+for every instance and any additional execution you implement yourself. The helper
+contains only the declared neural operations, no generating-process hypothesis.
+
 Create your final files under /output/submission, including submission.json using
 the neutral challenge contract. Its predictor must work independently from the
 original neural model, without refitting or comparing evaluation rows. Include a
 structural explanation and evidence, not just an accurate black-box predictor.
+Write a small working candidate early and refine it incrementally. Keep structural
+explanations concise and write evidence as you go. Submit once the mechanism is ready;
+do not defer writing and testing all submission files to the last action.
 Your numerical sandbox has 120 seconds wall time, 100 seconds CPU, 1 GB RAM and
 8 MB persistent output per action. The entire trial has at most {steps} model actions
-and {seconds:g} seconds wall time. No private scores or hints will be returned.
+and {seconds:g} seconds wall time, with at most {model_seconds:g} seconds per model
+call. No private scores or hints will be returned.
 """
 
 RUNNER = """import json, os, shutil, sys
@@ -60,7 +72,7 @@ exec(compile(json.load(sys.stdin)['code'], '<analysis>', 'exec'), {'__name__': '
 class AgentBudget:
     steps: int = 20
     seconds: float = 1800
-    model_seconds: float = 180
+    model_seconds: float = 600
 
     def __post_init__(self) -> None:
         check_count(self.steps)
@@ -90,6 +102,7 @@ def run_agent(
     write_json(
         output / "plan.json",
         {
+            "agent_protocol_version": 2,
             "budget": asdict(budget),
             "prompt": initial_prompt,
             "challenge_sha256": before,
@@ -102,12 +115,16 @@ def run_agent(
     started = perf_counter()
     frozen = None
     error = None
+    stage = "preflight"
+    failure_stage = failure_type = None
+    calls = valid_actions = 0
     history: list[dict[str, object]] = []
     work = output / "initial-work"
     work.mkdir()
     try:
         preflight(binary, output / "catalog.json", initial_prompt, output / "preflight")
         for step in range(budget.steps):
+            stage = "budget"
             remaining = budget.seconds - (perf_counter() - started)
             if remaining <= 0:
                 raise TimeoutError("agent wall budget exhausted")
@@ -115,9 +132,13 @@ def run_agent(
             current.mkdir()
             prompt = (
                 initial_prompt
+                + f"\nThis is action {step + 1} of {budget.steps}; {remaining:.1f} seconds remain."
+                + " A valid executable submission is required before this budget expires.\n"
                 + "\nPrior actions and numerical results:\n"
                 + json.dumps(history, ensure_ascii=True)
             )
+            stage = "model"
+            calls += 1
             answer = invoke(
                 binary,
                 output / "catalog.json",
@@ -125,14 +146,18 @@ def run_agent(
                 current / "model",
                 timeout=min(budget.model_seconds, remaining),
             )
+            valid_actions += 1
             write_json(current / "action.json", answer)
             program = current / "program"
             program.mkdir()
             (program / "main.py").write_text(RUNNER)
+            shutil.copyfile(Path(neural_numpy.__file__), program / "neural.py")
             copy_bundle(work, program / "work")
             remaining = budget.seconds - (perf_counter() - started)
+            stage = "budget"
             if remaining <= 0:
                 raise TimeoutError("agent wall budget exhausted before numerical execution")
+            stage = "numerical"
             execution = run_isolated(
                 program,
                 "main.py",
@@ -154,22 +179,31 @@ def run_agent(
                 continue
             work = current / "analysis/generated"
             if answer["action"] == "submit":
+                stage = "submission"
                 frozen = freeze_submission(work / "submission", output / "submission")
                 break
         if frozen is None:
+            stage = "budget"
             raise ValueError("agent did not produce a valid submission within its budget")
     except (ValueError, OSError, TimeoutError, subprocess.TimeoutExpired) as failure:
         error = str(failure)
+        failure_stage, failure_type = stage, type(failure).__name__
     if file_manifest(challenge, max_bytes=64_000_000) != before:
         error = "challenge changed during trial"
+        failure_stage, failure_type = "input_integrity", "ValueError"
         frozen = None
     write_json(
         output / "trial.json",
         {
+            "agent_protocol_version": 2,
             "status": "submitted" if frozen is not None else "failed",
             "error": error,
             "receipt_sha256": None if frozen is None else frozen.receipt_sha256,
             "actions": len(history),
+            "model_calls_attempted": calls,
+            "valid_model_actions": valid_actions,
+            "failed_during": failure_stage,
+            "failure_type": failure_type,
             "seconds": perf_counter() - started,
             "independent_structure_recovery": None,
             "causal_recovery": None,

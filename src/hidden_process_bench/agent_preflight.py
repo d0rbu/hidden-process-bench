@@ -9,7 +9,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 from typing import cast, override
 
-from hidden_process_bench.agent_client import INSTRUCTIONS, invoke
+from hidden_process_bench.agent_client import INSTRUCTIONS, SCHEMA, invoke
 from hidden_process_bench.experiment import write_json
 
 PERMISSIONS = """<permissions instructions>
@@ -51,8 +51,43 @@ def _environment(text: str) -> bool:
 
 def audit_request(payload: object, prompt: str) -> None:
     payload = _object(payload)
-    if payload.get("tools"):
+    if set(payload) - {
+        "model",
+        "stream",
+        "input",
+        "tool_choice",
+        "parallel_tool_calls",
+        "reasoning",
+        "store",
+        "include",
+        "prompt_cache_key",
+        "text",
+        "client_metadata",
+        "tools",
+    }:
+        raise ValueError("unexpected request envelope field")
+    if payload.get("tools", []) != []:
         raise ValueError("unexpected top-level tools")
+    expected: dict[str, object] = {
+        "model": "gpt-6.1-sol",
+        "stream": True,
+        "tool_choice": "auto",
+        "parallel_tool_calls": False,
+        "store": False,
+        "reasoning": {"effort": "xhigh", "context": "all_turns"},
+        "include": ["reasoning.encrypted_content"],
+        "text": {
+            "verbosity": "low",
+            "format": {
+                "type": "json_schema",
+                "strict": True,
+                "schema": SCHEMA,
+                "name": "codex_output_schema",
+            },
+        },
+    }
+    if any(key in payload and payload[key] != value for key, value in expected.items()):
+        raise ValueError("unexpected model configuration or output schema")
     serialized = json.dumps(payload).lower()
     if any(
         term in serialized
