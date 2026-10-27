@@ -1,0 +1,10 @@
+{
+  "protocol_sha256": "688671ed0546c468d6c064aa6c90b15b33e5477129b8030d46a57291c6420b4d",
+  "private_plan_sha256": "b183bf2a99979825e8e8ba0b1af268d83b30ba2a29638d5d3daa01f8f3a649e5",
+  "driver_sha256": "56a0801a9dc0ce24465ca4b9178765d9eb450ad8384f603c2a5200549c462d49",
+  "all_six_teachers_qualified": true,
+  "all_48_trials_required_before_private_scoring": true,
+  "all_methods_fixed_before_task_generation": true,
+  "paired_cached_observations_equal": true,
+  "private_feedback": false
+}

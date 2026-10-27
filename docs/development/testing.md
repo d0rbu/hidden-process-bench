@@ -18,6 +18,13 @@ identical temporal information. Sweep tests exercise a real child process and ti
 receipt, missing-report, and qualification-status paths.
 
 The website snapshot is reproduced from public receipts in `test_site_data.py`.
+Delayed-token and stack walkthroughs check every frame against the process oracle;
+replaying only the displayed memory must retain the full-history prediction.
+Final campaign tests bind all 48 original programs to the preregistered sources,
+neutral agent contexts and teacher receipts. They recompute qualification bounds,
+recompute every final KL/standard error and maximum TV from original scoring arrays,
+replay held-out prediction witnesses, exhaustively check the recovered short lag
+rules and reproduce stack mismatch probes without refitting.
 `uv run --locked just site-check` uses Node.js 22+ to compare every browser belief and
 prediction with NumPy fixtures, and verifies equivalent state copies and sampling order.
 It is part of the local pre-push gate. See the [website guide](../../site/README.md) for

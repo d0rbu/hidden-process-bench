@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "case_id": "6cf0b45d765a403c9f80e786201a1f19",
+  "status": "qualified",
+  "checkpoint_qualified": true,
+  "qualification_group_definition": "mixture_component",
+  "steps": 800,
+  "training_tokens": 1228800,
+  "model_parameters": 103744,
+  "initial_validation": {
+    "overall": {
+      "count": 2048,
+      "mean_kl": 0.48678629183994016,
+      "standard_error": 0.0016848680255318492,
+      "upper95_kl": 0.4900886331699826
+    },
+    "by_component": [
+      {
+        "count": 655,
+        "mean_kl": 0.4413034000165967,
+        "standard_error": 0.0014243661614971458,
+        "upper95_kl": 0.44409515769313107
+      },
+      {
+        "count": 695,
+        "mean_kl": 0.5274695739696433,
+        "standard_error": 0.0037345310195125887,
+        "upper95_kl": 0.534789254767888
+      },
+      {
+        "count": 698,
+        "mean_kl": 0.48895880339315834,
+        "standard_error": 0.0019215124818394802,
+        "upper95_kl": 0.4927249678575637
+      }
+    ],
+    "max_kl": 0.03,
+    "qualified": false
+  },
+  "validation": {
+    "overall": {
+      "count": 2048,
+      "mean_kl": 0.017107818037618426,
+      "standard_error": 0.0002580104697304814,
+      "upper95_kl": 0.01761351855829017
+    },
+    "by_component": [
+      {
+        "count": 655,
+        "mean_kl": 0.014855008241741734,
+        "standard_error": 0.0003909501361134098,
+        "upper95_kl": 0.015621270508524018
+      },
+      {
+        "count": 695,
+        "mean_kl": 0.02107449514607368,
+        "standard_error": 0.0004864641521104036,
+        "upper95_kl": 0.02202796488421007
+      },
+      {
+        "count": 698,
+        "mean_kl": 0.015272216069026496,
+        "standard_error": 0.00041266763309566327,
+        "upper95_kl": 0.016081044629893997
+      }
+    ],
+    "max_kl": 0.024,
+    "qualified": true
+  },
+  "test": {
+    "overall": {
+      "count": 2048,
+      "mean_kl": 0.017492132498168694,
+      "standard_error": 0.00025586352595506043,
+      "upper95_kl": 0.01799362500904061
+    },
+    "by_component": [
+      {
+        "count": 643,
+        "mean_kl": 0.015408187803362986,
+        "standard_error": 0.00037511595996669774,
+        "upper95_kl": 0.016143415084897715
+      },
+      {
+        "count": 728,
+        "mean_kl": 0.02098956047151377,
+        "standard_error": 0.00040765559699375005,
+        "upper95_kl": 0.02178856544162152
+      },
+      {
+        "count": 677,
+        "mean_kl": 0.01571052079087897,
+        "standard_error": 0.0005003308425111752,
+        "upper95_kl": 0.016691169242200873
+      }
+    ],
+    "max_kl": 0.03,
+    "qualified": true
+  },
+  "checkpoint_sha256": "cbdf9a9fd54a261ebd51a2c9650147c6405104835ec8d502ec13adb062fb1374",
+  "process_sha256": "968d1cf963e5e953bcc5c004bf7c856444dc49f030374f1b9baecd6c43398f2f",
+  "plan_sha256": "b183bf2a99979825e8e8ba0b1af268d83b30ba2a29638d5d3daa01f8f3a649e5",
+  "public_challenge_sha256": {
+    "outputs": {
+      "challenge.json": "d736339d1e79d944875c4eaf91f829d7bf4fe4a47141589a86eb7cac626562a2",
+      "instructions.txt": "b86fe2b3acbc7c8119d055deb59820127714bddf210f4a2aebe39d6bb349fe9f",
+      "observations.npz": "c43ecff87832cff1f286013198292faa27d10e5df61e12212fc2fd34bcab1eae"
+    },
+    "weights": {
+      "challenge.json": "9e965b74ed7523f859d3a0cf95e2bcb0f3c27cb437e062a1ddc2b8eb9d03a3b1",
+      "instructions.txt": "b86fe2b3acbc7c8119d055deb59820127714bddf210f4a2aebe39d6bb349fe9f",
+      "weights.npz": "17230d8a8c91ae20f76c356fcbe2dc0deed5906b3a360ef57262158b176fbded"
+    },
+    "internals": {
+      "challenge.json": "1b2a88d48cfa7600b3e1180d40002bba6604966341d1b347d769e794deeb8f66",
+      "instructions.txt": "b86fe2b3acbc7c8119d055deb59820127714bddf210f4a2aebe39d6bb349fe9f",
+      "observations.npz": "15c5193bf93422e12103fa48f0ee04b19ee9d4d8913634a966367c5865ce0dd4",
+      "weights.npz": "17230d8a8c91ae20f76c356fcbe2dc0deed5906b3a360ef57262158b176fbded"
+    }
+  },
+  "seconds": 12.626801330596209,
+  "independent_discovery_evaluated": false
+}

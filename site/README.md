@@ -30,9 +30,11 @@ GitHub Actions.
 ## Scope correction
 
 The primary objective is independent process discovery, including family and structure.
-The runtime is implemented. A family-neutral agent submitted one six-regime filter;
-four trials timed out. The program has partial structural resemblance but no equivalence
-certificate. A first restricted operator attempt also failed to recover the mechanisms. It selected its own dimension but retained a linear representation
+The completed fresh campaign registered 48 independent programs. Agents recovered
+both delayed rules' lag/permutation cores and partial stack/HMM organization; full
+HMM recovery, equivalence, minimality and neural circuit recovery remain unestablished.
+Earlier development trials are separate. A first restricted operator attempt failed
+to recover the mechanisms. It selected its own dimension but retained a linear representation
 prior, so it did not test unconstrained family discovery. The older fits and agent
 prompts disclosed the HMM family and order; feature methods used a supplied HMM adapter. The site labels
 these as informed fitting baselines. `scope_correction` in the exported JSON applies to
@@ -41,6 +43,10 @@ all historical data, whose raw receipts are unchanged. See the
 
 ## What the page shows
 
+- Six fresh cases with transformer and paired-agent prediction scores, separate scoped
+  structural findings, and an optional table for all 36 programmed-method trials.
+- Ten paired development agent trials, including four preflight failures, in collapsed
+  details. The five-case earlier cohort is retained separately.
 - A five-case family-neutral agent cohort, with one submitted program and four model-call
   timeouts, separate prediction and structural claims, and links to frozen evidence.
 - Twenty-five further development runs across state geometry, learned representations
@@ -51,6 +57,11 @@ all historical data, whose raw receipts are unchanged. See the
 - Three recorded generators: the qualified demo and both process sizes in the scaling
   pilot. Each is a four-component mixture. The process selector fixes a component for
   illustration; the Bayesian predictor still infers identity over all four.
+- Optional delayed-token and stack walkthroughs use two already-public development
+  processes. Their next-token probabilities come from the Python oracle. Replaying only
+  the displayed memory must reproduce each frame's full-history prediction. The stack
+  history is chosen to illustrate pushes, matching/mismatched closes and neutral tokens;
+  it is not a new sampled benchmark result.
 - A selected state's outgoing edges and emission probabilities. Labels are rounded;
   the expanded table retains four decimal places in percentages.
 - Fresh browser samples, with an optional reveal of their emitting hidden states.
@@ -102,5 +113,7 @@ interactions and compare all served asset hashes with the immutable release.
 The paired agent table uses [ten version-2 development trials](../docs/results/agent-development-v2.md).
 It distinguishes recovered delayed-token structure, partial HMM organization and
 preflight failures. Earlier agent and non-agent cohorts remain in collapsed details.
-The source processes and scoped diagnostic receipts are public development evidence;
-no fresh final truth or unfinished trial is read by the site exporter.
+The exporter reads the completed final campaign's public summary as well. It exports
+scores and structural assessments, with the full summary's hash, while leaving large
+selection tables and trajectories in the linked receipt dataset. No private outputs or
+unfinished trial is read by the site exporter.

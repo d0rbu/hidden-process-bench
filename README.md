@@ -5,14 +5,15 @@ an unknown data-generating mechanism from a trained transformer, including disco
 its process family and structure. On an HMM task, the method must discover the latent
 transition/emission mechanism without being given an HMM template or its size.
 
-**Current status: paired agents independently recovered a delayed-token rule and
-parts of an HMM’s organization.** One internal-access run inferred the correct four
-regimes with four local states each, but its calibrated update differs from the source.
-No exact source equivalence, minimality or neural circuit recovery was established.
-See the [paired agent results](docs/results/agent-development-v2.md),
-[earlier agent cohort](docs/results/agent-development.md) and
-[25 state/feature/intervention results](docs/results/discovery-development.md).
-The [fresh frozen campaign](docs/research/final-campaign.md) remains in progress.
+**Current status: 48 fresh trials completed independent discovery.** Agents recovered
+both delayed rules’ lags and exact token permutations, and found partial stack and
+HMM organization. Full HMM recovery, exact source equivalence, minimality and neural
+circuit recovery were not established. The 36 restricted linear-state trials did not
+demonstrate source structure recovery. See the [final results and frozen programs](docs/results/final-campaign-v2.md)
+and [protocol frozen before task generation](docs/research/final-campaign.md).
+Earlier [paired agents](docs/results/agent-development-v2.md),
+[first agent cohort](docs/results/agent-development.md) and
+[25 state/feature/intervention runs](docs/results/discovery-development.md) remain development evidence.
 Older fits supplied HMM semantics and component/state counts are informed controls,
 not discovery results. See the [primary protocol](docs/research/independent-discovery.md).
 
@@ -22,20 +23,51 @@ output-only and internal-access conditions. The [new runtime](docs/reference/dis
 isolates executable methods, freezes their chosen representations and scores predictions.
 The [private mixed suite](docs/research/mixed-suite.md) adds fresh screened HMM mixtures,
 delayed rules and stack processes with matched architectures and budgets. Teacher
-qualification and first discovery trials are implemented; broader structural evaluation remains.
+qualification, executable discovery trials and separate structural review are implemented.
 The [fresh-context research agent](docs/research/research-agent.md) can now choose its
 own representation through audited JSON calls and a separate numerical sandbox.
 Its first mixed-process development results are linked above.
 The [development pilot](docs/results/mixed-suite-development.md) qualified five of six
-teachers; one failed its deep-stack test group, so the six-case campaign is not ready.
+teachers; the final campaign used a separate fresh suite with all six qualified.
 
-## Run the informed controls locally
+## Run independent discovery locally
 
 ```bash
 git clone https://github.com/d0rbu/hidden-process-bench.git
 cd hidden-process-bench
 uv sync --locked
 uv run --locked just setup
+uv run --locked python -m hidden_process_bench.mixed_suite prepare \
+  --config configs/discovery-pilot.toml --out outputs/private-suite
+uv run --locked python -m hidden_process_bench.mixed_suite train \
+  --suite outputs/private-suite --timeout 300
+```
+
+These evaluator commands generate six private tasks, train and qualify their teachers,
+and export neutral inputs for qualified cases. Check `private/training-summary.json`:
+`campaign_ready` requires all six teachers to pass. Failures are retained; a failed suite
+must not be presented as a completed campaign.
+
+Package the restricted operator baseline, or supply your own fixed method:
+
+```bash
+uv run --locked python -m hidden_process_bench.discovery_cli prepare-operators \
+  --out outputs/operator-method
+uv run --locked python -m hidden_process_bench.discovery_cli extract \
+  --program outputs/operator-method --entry main.py \
+  --challenge outputs/private-suite/public/CASE_ID/outputs --out outputs/extraction
+```
+
+Replace `CASE_ID` with an opaque qualified case ID. The extractor sees only that neutral
+packet. Keep the suite's `private/` files and this evaluator conversation out of its
+context. See the [mixed-suite guide](docs/research/mixed-suite.md) and
+[submission contract](docs/reference/discovery-runtime.md) for other methods, isolated
+agent execution, receipt registration and private scoring. Prediction scores leave
+structural recovery for a separate review of the method's chosen mechanism.
+
+## Run the informed controls
+
+```bash
 uv run --locked hidden-process-bench run --config configs/smoke.toml --out outputs/smoke
 ```
 

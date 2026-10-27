@@ -1,0 +1,12 @@
+{
+  "verified_at": "2026-10-27T04:07:12.234191+00:00",
+  "protocol_sha256": "688671ed0546c468d6c064aa6c90b15b33e5477129b8030d46a57291c6420b4d",
+  "all_method_bundles_equal_first_attempt": true,
+  "entire_agent_configuration_equal_first_attempt": true,
+  "source_commit": "3b14378e6f865f60b205bfdad028f04da1a61130",
+  "source_files_bound_to_git": 34,
+  "nonagent_submissions_verified": 36,
+  "all_registered_hashes_unchanged": true,
+  "private_test_truth_or_scores_read": false,
+  "teacher_data_archives_read": false
+}

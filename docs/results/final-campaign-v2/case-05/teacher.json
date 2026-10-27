@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "case_id": "ff54ab1fd1f24b7d8551211dc4255f25",
+  "status": "qualified",
+  "checkpoint_qualified": true,
+  "qualification_group_definition": "all_sequences",
+  "steps": 100,
+  "training_tokens": 153600,
+  "model_parameters": 103744,
+  "initial_validation": {
+    "overall": {
+      "count": 2048,
+      "mean_kl": 1.2993570715043243,
+      "standard_error": 0.0016255582481891663,
+      "upper95_kl": 1.302543165670775
+    },
+    "by_component": [
+      {
+        "count": 2048,
+        "mean_kl": 1.2993570715043243,
+        "standard_error": 0.0016255582481891663,
+        "upper95_kl": 1.302543165670775
+      }
+    ],
+    "max_kl": 0.03,
+    "qualified": false
+  },
+  "validation": {
+    "overall": {
+      "count": 2048,
+      "mean_kl": 0.0191465587480783,
+      "standard_error": 5.5011529569594054e-05,
+      "upper95_kl": 0.019254381346034705
+    },
+    "by_component": [
+      {
+        "count": 2048,
+        "mean_kl": 0.0191465587480783,
+        "standard_error": 5.5011529569594054e-05,
+        "upper95_kl": 0.019254381346034705
+      }
+    ],
+    "max_kl": 0.024,
+    "qualified": true
+  },
+  "test": {
+    "overall": {
+      "count": 2048,
+      "mean_kl": 0.01918074844938556,
+      "standard_error": 5.473116079460187e-05,
+      "upper95_kl": 0.01928802152454298
+    },
+    "by_component": [
+      {
+        "count": 2048,
+        "mean_kl": 0.01918074844938556,
+        "standard_error": 5.473116079460187e-05,
+        "upper95_kl": 0.01928802152454298
+      }
+    ],
+    "max_kl": 0.03,
+    "qualified": true
+  },
+  "checkpoint_sha256": "762378adf7d95f8bab28dbe1cc1f81ad18de06bc2668ad7b5e446d610bb80d92",
+  "process_sha256": "5981dc9bb1dade6e7b7c48884c2124b7091084e626835c91852c0f6b6ccfda68",
+  "plan_sha256": "b183bf2a99979825e8e8ba0b1af268d83b30ba2a29638d5d3daa01f8f3a649e5",
+  "public_challenge_sha256": {
+    "outputs": {
+      "challenge.json": "d736339d1e79d944875c4eaf91f829d7bf4fe4a47141589a86eb7cac626562a2",
+      "instructions.txt": "b86fe2b3acbc7c8119d055deb59820127714bddf210f4a2aebe39d6bb349fe9f",
+      "observations.npz": "a9325729df3c56b7072a34101e95100ac1e91fd0fde2c216e64fccc62b5cf472"
+    },
+    "weights": {
+      "challenge.json": "9e965b74ed7523f859d3a0cf95e2bcb0f3c27cb437e062a1ddc2b8eb9d03a3b1",
+      "instructions.txt": "b86fe2b3acbc7c8119d055deb59820127714bddf210f4a2aebe39d6bb349fe9f",
+      "weights.npz": "d4c6bde039535eb7ef0a0d484207c11b22943f81f27fcbbe1ac219893149a42e"
+    },
+    "internals": {
+      "challenge.json": "1b2a88d48cfa7600b3e1180d40002bba6604966341d1b347d769e794deeb8f66",
+      "instructions.txt": "b86fe2b3acbc7c8119d055deb59820127714bddf210f4a2aebe39d6bb349fe9f",
+      "observations.npz": "b26cd43a3ab757c9c7d8a8739f8cabdfa30be87fe2da6e1aa815060468f21320",
+      "weights.npz": "d4c6bde039535eb7ef0a0d484207c11b22943f81f27fcbbe1ac219893149a42e"
+    }
+  },
+  "seconds": 3.5437134616076946,
+  "independent_discovery_evaluated": false
+}

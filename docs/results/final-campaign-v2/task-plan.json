@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "config": {
+    "replicates": 2,
+    "vocab": 16,
+    "length": 24,
+    "width": 64,
+    "heads": 4,
+    "layers": 2,
+    "train_steps": 8000,
+    "batch_size": 64,
+    "learning_rate": 0.003,
+    "eval_every": 100,
+    "eval_sequences": 2048,
+    "max_kl": 0.03,
+    "validation_margin": 0.8,
+    "observation_sequences": 128,
+    "score_sequences": 128,
+    "long_length": 72,
+    "threads": 2
+  },
+  "cases": [
+    {
+      "id": "09e7cd080eab4687b1bc5b4f3a208a30",
+      "family": "stack_rule",
+      "seeds": {
+        "structure": 1796821148719698372,
+        "generator": 5010268288559016801,
+        "initialization": 3507341939474686448,
+        "training": 9216110267447662318,
+        "validation": 6382169059628860303,
+        "test": 6050140555343363855,
+        "observation": 8994810692944766787,
+        "scoring": 4955814429846224617,
+        "long_scoring": 8830527331128989155
+      }
+    },
+    {
+      "id": "6cf0b45d765a403c9f80e786201a1f19",
+      "family": "mixture_hmm",
+      "seeds": {
+        "structure": 1619854419075680709,
+        "generator": 4641075149126555608,
+        "initialization": 6881664289041861902,
+        "training": 5221084370689565158,
+        "validation": 7974129614861127598,
+        "test": 6530770226017668285,
+        "observation": 9159990470280089277,
+        "scoring": 2537267487889277852,
+        "long_scoring": 3729055191476864942
+      }
+    },
+    {
+      "id": "ff5fa885f2a547f3b4a8bf06fcdb3021",
+      "family": "stack_rule",
+      "seeds": {
+        "structure": 5279441968720761478,
+        "generator": 9107292848236212823,
+        "initialization": 367531023465510094,
+        "training": 2706969233824312967,
+        "validation": 5479551619172634199,
+        "test": 3077101261790496967,
+        "observation": 1851560914630021438,
+        "scoring": 3396359490134911094,
+        "long_scoring": 5288195669593868836
+      }
+    },
+    {
+      "id": "8c13c136784e41a0a20e88d4ecdbb0e7",
+      "family": "lag_rule",
+      "seeds": {
+        "structure": 4411927223569487922,
+        "generator": 2744957199640495420,
+        "initialization": 8402731275125595673,
+        "training": 3869775162917411782,
+        "validation": 3146532972512714746,
+        "test": 5837202832091424375,
+        "observation": 3312428611767071401,
+        "scoring": 6273940277638657893,
+        "long_scoring": 5439014288606077034
+      }
+    },
+    {
+      "id": "ff54ab1fd1f24b7d8551211dc4255f25",
+      "family": "lag_rule",
+      "seeds": {
+        "structure": 3700870355031318853,
+        "generator": 6668610090500310891,
+        "initialization": 6767599405276657277,
+        "training": 8121646193971369441,
+        "validation": 4441894866483988098,
+        "test": 500554401045579856,
+        "observation": 7112026703892392996,
+        "scoring": 7236221420316363018,
+        "long_scoring": 6968705511464063856
+      }
+    },
+    {
+      "id": "cb925fb97da74d2c8bc44c68fea9d22d",
+      "family": "mixture_hmm",
+      "seeds": {
+        "structure": 1575442976900616656,
+        "generator": 2447431529385692312,
+        "initialization": 6909360486082970029,
+        "training": 894175471148093617,
+        "validation": 4733571335982701808,
+        "test": 5013948978844459473,
+        "observation": 3111789785172267485,
+        "scoring": 6330530108381875523,
+        "long_scoring": 3558875688877979056
+      }
+    }
+  ]
+}

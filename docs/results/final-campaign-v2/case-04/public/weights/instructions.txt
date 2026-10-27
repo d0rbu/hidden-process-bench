@@ -1,0 +1,20 @@
+Infer a compact executable account of the sequence-generating mechanism
+represented by the supplied neural network or its observations. Choose and explain
+your own representation, dependencies and update rules. Report uncertainty and any
+built-in assumptions. Do not merely submit a copy of the supplied neural network.
+
+Only /challenge contains task inputs. There is no network or evaluator access.
+Available libraries are Python's standard library and NumPy. Write your submission
+files under /output. Include submission.json with exactly: schema_version (1),
+predictor (relative Python filename), mechanism (relative filename containing your
+structural account), hypothesis (text), assumptions (text), resources (object
+recording fitting/search work and information used).
+
+The frozen predictor reads one JSON object from stdin with histories (a list of
+integer-token lists, all of equal length) and vocab_size, and prints one JSON object
+with probabilities (one next-token probability vector per history). It must be a
+fixed, deterministic, row-wise predictor: no refitting on evaluation histories,
+communication between rows, persistence between requests or external resources.
+Every request starts a fresh process. Histories can exceed the neural context.
+Your submitted code and parameters must run without the supplied neural network.
+Predictive agreement and evidence for the proposed structure are assessed separately.

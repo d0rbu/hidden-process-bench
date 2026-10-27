@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "scored",
+  "error": null,
+  "submission_receipt_sha256": "b6d1430059cac805075477f28681c8847f39a4d2107d0423298f3bf27514d96a",
+  "private_inputs_sha256": "6c0ac5e9831de42de9d48b44b266a3fc2222a939f9dc95f2ef125fe176445710",
+  "sequences": 128,
+  "positions": 24,
+  "row_invariance_probes_passed": true,
+  "oracle_to_candidate": {
+    "count": 128,
+    "mean_kl": 0.15624160427963263,
+    "standard_error": 0.020947634557132142,
+    "upper95_kl": 0.19729896801161162
+  },
+  "teacher_to_candidate": {
+    "count": 128,
+    "mean_kl": 0.1467493095125327,
+    "standard_error": 0.021942157376905896,
+    "upper95_kl": 0.18975593797126827
+  },
+  "oracle_to_teacher": {
+    "count": 128,
+    "mean_kl": 0.018492425486997643,
+    "standard_error": 0.0014133609954777979,
+    "upper95_kl": 0.021262613038134127
+  },
+  "structure_assessment": "pending_independent_review",
+  "independent_structure_recovery": null,
+  "causal_recovery": null
+}

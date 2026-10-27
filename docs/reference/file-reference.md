@@ -30,6 +30,7 @@
 | `tests/test_agent_client.py`, `tests/test_agent_preflight.py`, `tests/test_research_agent.py`, `tests/fixtures/agent-request.json` | Real client namespace checks, context injection rejection, workspace rollback, budgets and retained failures |
 | `docs/results/discovery-development.md`, `docs/results/discovery-development/`, `tests/test_discovery_receipts.py` | Two registered development cohorts covering 25 state/feature/intervention programs, bound source bundles, failures and predictive witnesses |
 | `docs/results/agent-development-v2.md`, `docs/results/agent-development-v2/`, `tests/test_campaign_receipts.py` | Ten paired agent development trials, scoped structural findings, infrastructure failures, qualification recomputation and frozen evidence |
+| `docs/results/final-campaign-v2.md`, `docs/results/final-campaign-v2/`, `tests/test_campaign_receipts.py` | 48 frozen fresh discovery programs, neutral input packets, teacher checkpoints, audited qualification and scoped structure diagnostics |
 | `docs/results/agent-development.md`, `docs/results/agent-development/`, `tests/test_agent_receipts.py` | Five-case family-neutral agent results, preserved timeouts, structural review and bound source/submission/trajectory receipts |
 | `docs/research/research-agent.md` | Family-choosing agent protocol, access boundary and local command |
 | `src/hidden_process_bench/operator_method.py`, `src/hidden_process_bench/operator_predictor.py`, `tests/test_operator_method.py` | Unknown-dimension operator baseline, standalone execution, exact moment and coordinate-equivalence checks |
@@ -62,8 +63,8 @@
 | `tests/test_correctness_tools.py` | Inherited runtime/phantom/array examples |
 | `scripts/check_markdown_links.py`, `scripts/__init__.py` | Offline documentation validation |
 | `tests/test_markdown_links.py` | Markdown parser and Git file-discovery regressions |
-| `scripts/build_site_data.py`, `tests/test_site_data.py` | Reproduce public website data, receipt/source validation |
-| `site/index.html`, `site/style.css`, `site/app.js`, `site/icon.svg` | Static explainer, interactive HMM diagrams and recorded results |
+| `scripts/build_site_data.py`, `tests/test_site_data.py` | Reproduce public website data, receipt/source validation, oracle-checked rule memory |
+| `site/index.html`, `site/style.css`, `site/app.js`, `site/icon.svg` | Static explainer, HMM diagrams, delayed/stack walkthroughs and recorded results |
 | `site/process.mjs`, `site/test_process.mjs` | Browser sampling/filtering/equivalence and NumPy-parity tests |
 | `site/data.json`, `site/README.md` | Public snapshot with provenance and website operations |
 | `docs/research/` | Design, assumptions, limitations, literature |

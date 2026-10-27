@@ -1,0 +1,10 @@
+{
+  "observed_at": "2026-10-27T04:17:24.187922+00:00",
+  "condition": "Development preflight stderr reports missing auth path; path now exists again. No credential contents read.",
+  "auth_present": true,
+  "auth_mtime_ns": 1793074587003138940,
+  "hold_applied": false,
+  "controller_pid": 1282879,
+  "method_or_protocol_changed": false,
+  "failures_preserved": true
+}
