@@ -4,9 +4,49 @@ from pathlib import Path
 import numpy as np
 import pytest
 
+from hidden_process_bench import discovery_cli
 from hidden_process_bench.config import ModelConfig
 from hidden_process_bench.discovery_cli import main
 from hidden_process_bench.model import TinyTransformer
+from hidden_process_bench.research_agent import AgentBudget
+from hidden_process_bench.submissions import FrozenSubmission
+
+
+@pytest.mark.parametrize("submitted", [False, True])
+def test_cli_agent_registers_only_successful_trials(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+    capsys: pytest.CaptureFixture[str],
+    submitted: bool,
+) -> None:
+    def run_agent(
+        challenge: Path, binary: Path, catalog: Path, output: Path, *, budget: AgentBudget
+    ) -> FrozenSubmission | None:
+        assert challenge == Path("public")
+        assert binary == Path("client")
+        assert catalog == Path("catalog")
+        assert budget.steps == 3
+        return FrozenSubmission(output, "registered") if submitted else None
+
+    monkeypatch.setattr(discovery_cli, "run_agent", run_agent)
+    assert main(
+        [
+            "agent",
+            "--challenge",
+            "public",
+            "--client",
+            "client",
+            "--catalog",
+            "catalog",
+            "--steps",
+            "3",
+            "--out",
+            str(tmp_path / "trial"),
+        ]
+    ) == (0 if submitted else 2)
+    assert json.loads(capsys.readouterr().out)["receipt_sha256"] == (
+        "registered" if submitted else None
+    )
 
 
 def test_cli_export_all_access_conditions(

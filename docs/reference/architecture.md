@@ -64,6 +64,12 @@ scores frozen executables on equal-length held-out prefixes, separately reportin
 teacher fidelity and process fidelity while leaving structural assessment pending.
 `discovery_cli.py` owns the neutral export/extract/freeze/score commands.
 
+`research_agent.py` connects fresh JSON model calls to that numerical sandbox and
+freezes the agent's own chosen program. `agent_client.py` removes native data-access
+tools and host context; `agent_preflight.py` audits an actual captured request before
+live calls. The trusted authenticated client and networkless numerical code run in
+separate namespaces. See the [agent protocol](../research/research-agent.md).
+
 `operator_method.py` packages a restricted classical baseline, estimates observable
 moments and selects dimension using public sequence validation. Its standalone
 `operator_predictor.py` executes the chosen signed operators without evaluator imports

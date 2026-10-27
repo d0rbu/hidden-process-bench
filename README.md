@@ -20,6 +20,9 @@ isolates executable methods, freezes their chosen representations and scores pre
 The [private mixed suite](docs/research/mixed-suite.md) adds fresh screened HMM mixtures,
 delayed rules and stack processes with matched architectures and budgets. Teacher
 qualification is implemented; family-discovery trials and structural assessment remain.
+The [fresh-context research agent](docs/research/research-agent.md) can now choose its
+own representation through audited JSON calls and a separate numerical sandbox.
+Its live constant-distribution fixture is an execution check, not a benchmark result.
 The [development pilot](docs/results/mixed-suite-development.md) qualified five of six
 teachers; one failed its deep-stack test group, so the six-case campaign is not ready.
 

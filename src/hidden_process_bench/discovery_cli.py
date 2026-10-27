@@ -17,12 +17,21 @@ from hidden_process_bench.discovery import extract_process, score_process
 from hidden_process_bench.isolation import Limits
 from hidden_process_bench.model import TinyTransformer, observe
 from hidden_process_bench.operator_method import prepare_bundle
+from hidden_process_bench.research_agent import AgentBudget, run_agent
 from hidden_process_bench.submissions import FrozenSubmission, freeze_submission
 
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Infer and submit an unknown sequence mechanism.")
     commands = parser.add_subparsers(dest="command", required=True)
+    agent = commands.add_parser("agent", help="run a fresh-context process-discovery agent")
+    agent.add_argument("--challenge", type=Path, required=True)
+    agent.add_argument("--client", type=Path, required=True)
+    agent.add_argument("--catalog", type=Path, required=True)
+    agent.add_argument("--steps", type=int, default=20)
+    agent.add_argument("--seconds", type=float, default=1800)
+    agent.add_argument("--model-seconds", type=float, default=180)
+    agent.add_argument("--out", type=Path, required=True)
     operators = commands.add_parser(
         "prepare-operators", help="package the unknown-dimension observable-operator method"
     )
@@ -55,6 +64,16 @@ def main(argv: list[str] | None = None) -> int:
         command.add_argument("--cpu-seconds", type=int, default=20)
         command.add_argument("--memory-mb", type=int, default=1024)
     args = parser.parse_args(argv)
+    if args.command == "agent":
+        frozen = run_agent(
+            args.challenge,
+            args.client,
+            args.catalog,
+            args.out,
+            budget=AgentBudget(args.steps, args.seconds, args.model_seconds),
+        )
+        print(json.dumps({"receipt_sha256": None if frozen is None else frozen.receipt_sha256}))
+        return 0 if frozen is not None else 2
     if args.command == "prepare-operators":
         prepare_bundle(args.out)
         return 0
