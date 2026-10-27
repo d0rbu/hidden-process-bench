@@ -37,6 +37,10 @@ to produce the cache. A method with weights can implement additional forward pas
 those computations require method declarations and audit; zero additional queries
 is not a claim that offline execution is prevented.
 
+The optional [NumPy neural helper](neural-execution.md) supports this offline execution,
+layer traces and head/MLP interventions without importing the research package or
+supplying a process-family prior. Its counts must accompany method resource declarations.
+
 ## Extraction and frozen submission
 
 The [fresh-context research agent](../research/research-agent.md) uses the same contract
