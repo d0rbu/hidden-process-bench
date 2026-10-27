@@ -1,0 +1,161 @@
+{
+  "registration_sha256": "9f587bbea7aa19ffd6a5a14b1e1495075cec51792e5fddc434d9b540bc5f36f5",
+  "trials": {
+    "70040b63638a4e7c82cf767e1b056172/agent_outputs": {
+      "submission_receipt_sha256": "a0d4a32297f3407973e7fd9bfa657e0b2904720101e046301f74e19537580ff1",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "review": "Manual inspection of the designated frozen predictor, mechanism, parameters and actions after all ten trial outcomes were registered. Diagnostic tests and parameter alignment never refit or replace the submitted program.",
+        "outcome": "six_regime_near_block_filter_partial",
+        "recovery_scope": "Six predictive regimes with two weakly connected triples; source has two permanently disconnected three-state HMM components. Partial latent-state organization, without full recovery.",
+        "dependency_evidence": "The designated recurrence uses separate recognition L and output R, transitions A with small cross-group mass, and nonlinear power calibration tau=1.6492918891689168. It is not the tied-emission Bayesian filter of a literal HMM. The method included a separate ordinary-HMM comparator; that comparator is not substituted for the registered predictor.",
+        "equivalence_limits": "A six-dimensional belief and near-block organization are evidence of partial structure. Distinct update/readout equations and private behavioral discrepancies leave source equivalence and minimality unproved."
+      }
+    },
+    "70040b63638a4e7c82cf767e1b056172/agent_internals": {
+      "submission_receipt_sha256": "d561e2d2a309f1be8cb846fbb0fe09e963a7594975f141fb78552389ff7d8a43",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "review": "Manual inspection of the designated frozen predictor, mechanism, parameters and actions after all ten trial outcomes were registered. Diagnostic tests and parameter alignment never refit or replace the submitted program.",
+        "outcome": "eight_coordinate_positive_filter_partial",
+        "recovery_scope": "A compact positive-state inference system and evidence for a six-regime explanatory core. The source's two-by-three latent process is not recovered as an equivalent execution.",
+        "dependency_evidence": "The selected predictor has eight coordinates and token operators diag(F[:,x]) A diag(G[:,x]), normalized after each observation, with a separate E readout. This is more general than the literal source HMM filter. Matching latent semantics and neural circuit mapping were not established.",
+        "equivalence_limits": "A different coordinate count or formalism need not preclude equivalence, but the program supplies no transformation/certificate and its private prediction witnesses differ from the source. Report the low KL and partial filtering insight without treating it as recovered HMM structure."
+      }
+    },
+    "b2b5a09e06cd415ea21d3a330c3fbd7a/agent_outputs": {
+      "submission_receipt_sha256": "3195fd458b0bd4012143b1e57089b2c4b7359715ec7eebe735fcac16bba747d8",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "review": "Manual inspection of the designated frozen predictor, mechanism, parameters and actions after all ten trial outcomes were registered. Diagnostic tests and parameter alignment never refit or replace the submitted program.",
+        "outcome": "hmm_mixture_family_and_persistent_blocks_partial",
+        "recovery_scope": "Independently selected an HMM-like persistent mixture with four blocks. Local dimensions and probability law differ; exact/minimal equivalent realization is unestablished.",
+        "family_evidence": "The predictor is ordinary emission-before-transition HMM filtering after its calibrated initial boundary, with four block-diagonal source classes. It selected 4/5/4/5 local states (18 total); the source has four blocks of four (16 total). Larger representation size alone would not refute an equivalent realization.",
+        "dependency_evidence": "An empty-history BOS override is made coherent by the method's explicit token-dependent initial joint. The entire history is processed with positive emissions and within-block transitions; no original weights or runtime refitting are used.",
+        "equivalence_limits": "The submitted update mechanism and latent-family hypothesis are substantive partial findings. No reduction/equivalence certificate or minimality witness for its 18-state program was supplied. Private prediction witnesses show nonidentical laws on evaluated histories, not an impossibility of approximate structural recovery."
+      }
+    },
+    "b2b5a09e06cd415ea21d3a330c3fbd7a/agent_internals": {
+      "submission_receipt_sha256": "7fa7ecfc959a7b889975ec0f739f4ee1b6db40d13a23ef439748de0269704cf4",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "review": "Manual inspection of the designated frozen predictor, mechanism, parameters and actions after all ten trial outcomes were registered. Diagnostic tests and parameter alignment never refit or replace the submitted program.",
+        "outcome": "hmm_mixture_family_and_correct_block_dimensions_partial",
+        "recovery_scope": "Correct persistent-mixture architecture with four regimes and four local states per regime; approximate generative parameters. The designated executable is a calibrated recognition filter, so full source-process recovery is not established.",
+        "family_evidence": "The agent compared generic candidate mechanisms and independently chose a four-by-four persistent-regime latent-state explanation. Its 16x16 transition matrix has exactly four 4x4 blocks, with zero cross-block entries, matching the private source organization.",
+        "dependency_evidence": "The actual recurrence updates with recognition table F, propagates by A, reads out with E, and adds last-token logit correction C. Mean absolute F-E difference is 0.05533301567503619; max absolute C is 1.3044387193978735. This does not equal the literal Bayesian filter of the proposed A/E core.",
+        "parameter_diagnostic_scope": "Permutation alignment was applied only to the unrefitted generative core explicitly proposed by the method. Mean parameter MAE is 0.0389640413768752; transition-support F1 is 0.9090909090909091 at declared edge threshold 0.05. The diagnostic does not substitute a tied-recognition predictor or repair the original program.",
+        "equivalence_limits": "Matching block dimensions and approximate parameters support partial structure; they do not certify minimality, exact equivalence or a recovered neural circuit.",
+        "diagnostic": "generative-core-diagnostic.json"
+      }
+    },
+    "b479352e63754713961289bdcd21406d/agent_outputs": {
+      "submission_receipt_sha256": "ba2b9f5bfac877013a144f4972c6b92509ac32cfe801b0314d126d56fc424b6e",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": true,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "review": "Manual inspection of the designated frozen predictor, mechanism, parameters and actions after all ten trial outcomes were registered. Diagnostic tests and parameter alignment never refit or replace the submitted program.",
+        "outcome": "core_delayed_permutation_recovered",
+        "recovery_scope": "The lag-three observed-token dependency, its complete vocabulary permutation, and FIFO update; approximate noisy-channel structure. This is a scoped core-structure result, not exact recovery of the source probabilities or all-history equivalence.",
+        "family_evidence": "Both the structural file and actual executable choose a three-token FIFO and the same 16-entry permutation as the private source, without a supplied family or order. Three interleaved observed Markov chains are a valid alternate factorization.",
+        "dependency_evidence": "The method itself included a simple core executable and a calibrated designated predictor. All 4096 possible length-three histories in each designated predictor retain the true modal permutation.",
+        "approximation_limits": "The source modal probability is 0.6934897388591377. Submitted simple cores use 0.70; the designated predictors add learned neural confidence, position and other-token corrections. Their probability laws therefore differ from the source. The internal predictor truncates nuisance calibration to the last 23 tokens while preserving the third-last-token backbone. Longer-context scores are extrapolation to the source, not a teacher comparison.",
+        "causal_limits": "Internal-access history substitutions and neural ablations support the lag dependency but do not identify a source-state-to-neural-module correspondence. Output-only correlation is not neural causal evidence.",
+        "diagnostic": "lag-modal-diagnostic.json"
+      }
+    },
+    "cdaf28ecc57f47ccbe0cfde738002f05/agent_outputs": {
+      "submission_receipt_sha256": null,
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "equivalence_established": null,
+        "minimality_established": null,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "review": "Manual inspection of the designated frozen predictor, mechanism, parameters and actions after all ten trial outcomes were registered. Diagnostic tests and parameter alignment never refit or replace the submitted program.",
+        "outcome": "no_submission_external_preflight_failure",
+        "recovery_scope": "None: no model inference or executable submission.",
+        "evidence": "The retained Bubblewrap stderr reports that /home/d0rb/.codex/auth.json did not exist. The failure occurred in local request-capture preflight, with zero model calls/actions. These four failures measure an infrastructure interruption, not an extraction-method failure. No selective retry or partial artifact rescue."
+      }
+    },
+    "cdaf28ecc57f47ccbe0cfde738002f05/agent_internals": {
+      "submission_receipt_sha256": null,
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "equivalence_established": null,
+        "minimality_established": null,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "review": "Manual inspection of the designated frozen predictor, mechanism, parameters and actions after all ten trial outcomes were registered. Diagnostic tests and parameter alignment never refit or replace the submitted program.",
+        "outcome": "no_submission_external_preflight_failure",
+        "recovery_scope": "None: no model inference or executable submission.",
+        "evidence": "The retained Bubblewrap stderr reports that /home/d0rb/.codex/auth.json did not exist. The failure occurred in local request-capture preflight, with zero model calls/actions. These four failures measure an infrastructure interruption, not an extraction-method failure. No selective retry or partial artifact rescue."
+      }
+    },
+    "eb3447512325464b823ad2c655c670d4/agent_outputs": {
+      "submission_receipt_sha256": null,
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "equivalence_established": null,
+        "minimality_established": null,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "review": "Manual inspection of the designated frozen predictor, mechanism, parameters and actions after all ten trial outcomes were registered. Diagnostic tests and parameter alignment never refit or replace the submitted program.",
+        "outcome": "no_submission_external_preflight_failure",
+        "recovery_scope": "None: no model inference or executable submission.",
+        "evidence": "The retained Bubblewrap stderr reports that /home/d0rb/.codex/auth.json did not exist. The failure occurred in local request-capture preflight, with zero model calls/actions. These four failures measure an infrastructure interruption, not an extraction-method failure. No selective retry or partial artifact rescue."
+      }
+    },
+    "eb3447512325464b823ad2c655c670d4/agent_internals": {
+      "submission_receipt_sha256": null,
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "equivalence_established": null,
+        "minimality_established": null,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "review": "Manual inspection of the designated frozen predictor, mechanism, parameters and actions after all ten trial outcomes were registered. Diagnostic tests and parameter alignment never refit or replace the submitted program.",
+        "outcome": "no_submission_external_preflight_failure",
+        "recovery_scope": "None: no model inference or executable submission.",
+        "evidence": "The retained Bubblewrap stderr reports that /home/d0rb/.codex/auth.json did not exist. The failure occurred in local request-capture preflight, with zero model calls/actions. These four failures measure an infrastructure interruption, not an extraction-method failure. No selective retry or partial artifact rescue."
+      }
+    },
+    "b479352e63754713961289bdcd21406d/agent_internals": {
+      "submission_receipt_sha256": "2f1f5a4997b882e68bb84c74b588f044be2e60cdad54c3b72dd345c111a66aa5",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": true,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "review": "Manual inspection of the designated frozen predictor, mechanism, parameters and actions after all ten trial outcomes were registered. Diagnostic tests and parameter alignment never refit or replace the submitted program.",
+        "outcome": "core_delayed_permutation_recovered",
+        "recovery_scope": "The lag-three observed-token dependency, its complete vocabulary permutation, and FIFO update; approximate noisy-channel structure. This is a scoped core-structure result, not exact recovery of the source probabilities or all-history equivalence.",
+        "family_evidence": "Both the structural file and actual executable choose a three-token FIFO and the same 16-entry permutation as the private source, without a supplied family or order. Three interleaved observed Markov chains are a valid alternate factorization.",
+        "dependency_evidence": "The method itself included a simple core executable and a calibrated designated predictor. All 4096 possible length-three histories in each designated predictor retain the true modal permutation.",
+        "approximation_limits": "The source modal probability is 0.6934897388591377. Submitted simple cores use 0.70; the designated predictors add learned neural confidence, position and other-token corrections. Their probability laws therefore differ from the source. The internal predictor truncates nuisance calibration to the last 23 tokens while preserving the third-last-token backbone. Longer-context scores are extrapolation to the source, not a teacher comparison.",
+        "causal_limits": "Internal-access history substitutions and neural ablations support the lag dependency but do not identify a source-state-to-neural-module correspondence. Output-only correlation is not neural causal evidence.",
+        "diagnostic": "lag-modal-diagnostic.json"
+      }
+    }
+  }
+}

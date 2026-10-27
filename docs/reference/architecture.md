@@ -5,7 +5,7 @@
 The implemented architecture below is the informed HMM-fitting control pipeline.
 The [primary independent-discovery track](../research/independent-discovery.md) has a
 [neutral executable runtime](discovery-runtime.md) and [private mixed training suite](../research/mixed-suite.md);
-family-discovery method evaluations remain pending. It lets the extractor propose the process family and structure
+[paired agent development results](../results/agent-development-v2.md) include scoped structural findings, while the fresh final campaign remains unfinished. It lets the extractor propose the process family and structure
 without inheriting the informed pipeline’s supplied `MixtureHMM` boundary.
 
 An installable `src/` package holds the research implementation. The CLI is thin;

@@ -30,7 +30,7 @@
         <li><h2>Learn</h2><p>Train the transformer to predict the process’s tokens. Check it against the oracle.</p></li>
         <li><h2>Recover</h2><p>Infer the process family, structure and update rules. Submit an executable mechanism.</p></li>
       </ol>
-      <p id="discovery-status" class="finding">No method has established structure recovery. One agent found six predictive regimes without a template; the other methods below did not recover the source rules.</p>
+      <p id="discovery-status" class="finding">Agents recovered a delayed-token rule and parts of an HMM’s organization. Equivalent source processes and neural circuits remain unestablished.</p>
     </section>
 
     <p id="load-status" role="status">Loading the recorded generators…</p>
@@ -95,6 +95,23 @@
 
     <section id="attempts" class="section" aria-labelledby="attempts-title" hidden>
       <h2 id="attempts-title">What has been recovered?</h2>
+      <p>Fresh agents chose their own mechanisms, without a process template, family hint or state count. Paired runs used outputs alone, or outputs plus neural access.</p>
+      <div class="table-scroll">
+        <table>
+          <caption>KL against the true process, nats/token. Same 128 held-out histories per row. — means preflight failed; no program was submitted.</caption>
+          <thead><tr><th scope="col">Process</th><th scope="col">Transformer</th><th scope="col">Outputs</th><th scope="col">Internals</th></tr></thead>
+          <tbody id="paired-agent-results"></tbody>
+        </table>
+      </div>
+      <p class="finding">Both agents found the exact lag-three permutation. One internal-access run inferred four persistent HMM regimes with four local states each; its calibrated update still differs from the source.</p>
+      <details class="explainer-detail">
+        <summary>What counts as recovery here?</summary>
+        <p>The delayed rule’s dominant token matches on all 4,096 possible three-token histories. The predictors add neural confidence corrections, so their complete probability laws differ from the source. Correct HMM block dimensions are partial structure, not an equivalence certificate.</p>
+        <p>Six of ten trials submitted. Four failed at login preflight before model inference and were not retried. Internal agents made extra neural queries, so this is not an equal-query comparison. No neural circuit or minimal equivalent process was established.</p>
+        <p><a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/agent-development-v2.md">Paired results, mechanisms and frozen programs ↗</a></p>
+      </details>
+      <details class="explainer-detail">
+        <summary>Earlier agent protocol: one submission, four timeouts</summary>
       <p>A fresh agent chose its own mechanism from token sequences and model predictions. It received no process template, family hint or state count.</p>
       <div class="table-scroll">
         <table>
@@ -104,8 +121,6 @@
         </table>
       </div>
       <p class="finding">The submitted program found roughly two groups of three regimes. Its update rules differ from the generating HMM; no equivalent structure or neural circuit has been established.</p>
-      <details class="explainer-detail">
-        <summary>How to read the agent result</summary>
         <p>The program scores 0.0133 on longer histories. It is a six-regime filter with separate evidence and prediction tables, local corrections and a 23-token window. Six regimes alone do not identify the HMM.</p>
         <p>All five trials finished before private scoring. The four timeouts have no submitted program to score. Each trial had 20 actions and 30 minutes, with a three-minute model-call limit. A later protocol changes call timing; these results retain the original failures.</p>
         <p><a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/agent-development.md">Agent results, structural review and frozen program ↗</a></p>
@@ -137,7 +152,7 @@
       <details class="explainer-detail">
         <summary>What was tested?</summary>
         <p>The method learned token-conditioned update matrices, without an HMM constructor, fitting adapter or hidden-state count. It chose dimension using public validation sequences, then submitted a frozen standalone program before private scoring. Larger dimensions often produced unstable predictions.</p>
-        <p>All five qualified development cases were included. One additional teacher failed its deep-stack test group and remains excluded. This six-case suite is not ready for a final campaign. Other discovery methods, including a fresh-context agent, remain to be evaluated.</p>
+        <p>All five qualified development cases were included. One additional teacher failed its deep-stack test group and remains excluded. That six-case development suite was not ready for a final campaign. The fresh campaign uses a separate fully qualified suite.</p>
         <p id="operator-budget"></p>
         <p><a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/operator-development.md">Results, assumptions and frozen programs ↗</a></p>
       </details>
@@ -202,7 +217,7 @@
   </main>
 
   <footer>
-    <p>A small research prototype. Development results: 26 October 2026.</p>
+    <p>A small research prototype. Development results: 27 October 2026.</p>
     <div class="footer-links"><a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/research/design.md">Method</a><a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/scaling-pilot.md">Run reports</a><a href="data.json">Download data</a><a href="https://github.com/d0rbu/hidden-process-bench">GitHub ↗</a></div>
   </footer>
 </body>

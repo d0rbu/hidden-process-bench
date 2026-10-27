@@ -1,0 +1,9 @@
+{
+  "registration_sha256": "9f587bbea7aa19ffd6a5a14b1e1495075cec51792e5fddc434d9b540bc5f36f5",
+  "heldout_sequences": 128,
+  "splits": [
+    "heldout",
+    "long"
+  ],
+  "private_feedback_to_methods": false
+}

@@ -48,7 +48,7 @@ process family, state count, HMM constructor, belief update equation or HMM-only
 schema. The method must propose and execute its own recovered process. A fresh agent
 must not inherit generator knowledge through context or filesystem access. Use the [neutral executable runtime](../reference/discovery-runtime.md) for isolated
 submission and predictive scoring. Use the [private mixed suite](../research/mixed-suite.md) to prepare and qualify fresh
-tasks. Independent method evaluations remain pending.
+tasks. The [paired agent development cohort](../results/agent-development-v2.md) is published; new final tasks must follow the frozen protocol.
 
 For an **informed fitting control**, `fit_hmm` accepts the disclosed HMM shape and allowed
 observations. Its result is a `MixtureHMM`. Compare it against other informed controls

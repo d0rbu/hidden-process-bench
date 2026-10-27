@@ -1,0 +1,168 @@
+{
+  "development_only": true,
+  "final_campaign": false,
+  "agent_protocol_version": 2,
+  "roster": [
+    {
+      "id": "70040b63638a4e7c82cf767e1b056172",
+      "access": "outputs",
+      "files": {
+        "challenge.json": "d736339d1e79d944875c4eaf91f829d7bf4fe4a47141589a86eb7cac626562a2",
+        "instructions.txt": "b86fe2b3acbc7c8119d055deb59820127714bddf210f4a2aebe39d6bb349fe9f",
+        "observations.npz": "671d4855e8240d726fe0088d5cf19fb9f283688381d1b25d71c7d68a631d1202"
+      }
+    },
+    {
+      "id": "70040b63638a4e7c82cf767e1b056172",
+      "access": "internals",
+      "files": {
+        "challenge.json": "1b2a88d48cfa7600b3e1180d40002bba6604966341d1b347d769e794deeb8f66",
+        "instructions.txt": "b86fe2b3acbc7c8119d055deb59820127714bddf210f4a2aebe39d6bb349fe9f",
+        "observations.npz": "409fc8538303f05e96f354cb2b16c0b14fb7fc75dd441d586b358e48027b2c1e",
+        "weights.npz": "6d6c444f4b4eaee7307a6693277f9fbce304c4fd16068d5f6b72794ee512622e"
+      }
+    },
+    {
+      "id": "b2b5a09e06cd415ea21d3a330c3fbd7a",
+      "access": "outputs",
+      "files": {
+        "challenge.json": "d736339d1e79d944875c4eaf91f829d7bf4fe4a47141589a86eb7cac626562a2",
+        "instructions.txt": "b86fe2b3acbc7c8119d055deb59820127714bddf210f4a2aebe39d6bb349fe9f",
+        "observations.npz": "73233e53b0c668a75da8758133246d624c6b47fa2a04feb3277fb822cebca812"
+      }
+    },
+    {
+      "id": "b2b5a09e06cd415ea21d3a330c3fbd7a",
+      "access": "internals",
+      "files": {
+        "challenge.json": "1b2a88d48cfa7600b3e1180d40002bba6604966341d1b347d769e794deeb8f66",
+        "instructions.txt": "b86fe2b3acbc7c8119d055deb59820127714bddf210f4a2aebe39d6bb349fe9f",
+        "observations.npz": "9def6ed485a70ce8a747b7234a201b686b6f03d4f2c8bdce37a160903edc8fd8",
+        "weights.npz": "f74938177868cf11deaad855aaef13f82d45af2b308b0eea94b844d4527c171a"
+      }
+    },
+    {
+      "id": "b479352e63754713961289bdcd21406d",
+      "access": "outputs",
+      "files": {
+        "challenge.json": "d736339d1e79d944875c4eaf91f829d7bf4fe4a47141589a86eb7cac626562a2",
+        "instructions.txt": "b86fe2b3acbc7c8119d055deb59820127714bddf210f4a2aebe39d6bb349fe9f",
+        "observations.npz": "f5c5a44079a85fe41135801a1db84e8ecb20c251afbec25562c160416308de24"
+      }
+    },
+    {
+      "id": "b479352e63754713961289bdcd21406d",
+      "access": "internals",
+      "files": {
+        "challenge.json": "1b2a88d48cfa7600b3e1180d40002bba6604966341d1b347d769e794deeb8f66",
+        "instructions.txt": "b86fe2b3acbc7c8119d055deb59820127714bddf210f4a2aebe39d6bb349fe9f",
+        "observations.npz": "44279ebe486e4b53f817c2c1c7f07ead9010064bfdd57317bb7bca9bdc2b4d7d",
+        "weights.npz": "9d9551399d9354e84caa31899a10b0fdde18be88f78265b916255c4577008421"
+      }
+    },
+    {
+      "id": "cdaf28ecc57f47ccbe0cfde738002f05",
+      "access": "outputs",
+      "files": {
+        "challenge.json": "d736339d1e79d944875c4eaf91f829d7bf4fe4a47141589a86eb7cac626562a2",
+        "instructions.txt": "b86fe2b3acbc7c8119d055deb59820127714bddf210f4a2aebe39d6bb349fe9f",
+        "observations.npz": "a4428b7afad26946626ade9471298e0fd19615128597c5bcc8193f117aa36410"
+      }
+    },
+    {
+      "id": "cdaf28ecc57f47ccbe0cfde738002f05",
+      "access": "internals",
+      "files": {
+        "challenge.json": "1b2a88d48cfa7600b3e1180d40002bba6604966341d1b347d769e794deeb8f66",
+        "instructions.txt": "b86fe2b3acbc7c8119d055deb59820127714bddf210f4a2aebe39d6bb349fe9f",
+        "observations.npz": "025a3be0fc49bcca9e5d56694ab088aee33a744955a66a49c5ce44c70d2b99f3",
+        "weights.npz": "683338f597b01f6323bb5f668576df0b6f866c2bcca293b44f2c625d3bb6cb76"
+      }
+    },
+    {
+      "id": "eb3447512325464b823ad2c655c670d4",
+      "access": "outputs",
+      "files": {
+        "challenge.json": "d736339d1e79d944875c4eaf91f829d7bf4fe4a47141589a86eb7cac626562a2",
+        "instructions.txt": "b86fe2b3acbc7c8119d055deb59820127714bddf210f4a2aebe39d6bb349fe9f",
+        "observations.npz": "d34ffbe61932dd376cd598e1dca2b45d189bd0ca5577cc7f9d8d32f9eaa63c3d"
+      }
+    },
+    {
+      "id": "eb3447512325464b823ad2c655c670d4",
+      "access": "internals",
+      "files": {
+        "challenge.json": "1b2a88d48cfa7600b3e1180d40002bba6604966341d1b347d769e794deeb8f66",
+        "instructions.txt": "b86fe2b3acbc7c8119d055deb59820127714bddf210f4a2aebe39d6bb349fe9f",
+        "observations.npz": "25ac31802d37813a2a4af7b7ce68b729b42453dbe0bc3bab7d31d938327e2625",
+        "weights.npz": "7dc43d887b21d1ae0ce3f1555cf0eb5cdd6a624e274dfe97cdd95a009c285474"
+      }
+    }
+  ],
+  "budget": {
+    "steps": 20,
+    "seconds": 1800,
+    "model_seconds": 600
+  },
+  "method_sha256": {
+    "__init__.py": "5b557ec8a6473647287ca2de30385da3215c7584a6789bfee887fb837b7420e9",
+    "__main__.py": "9f7deef881ac58f34634323f79fc1d61bdcec42f970745141d4f6221bb47d2f1",
+    "__pycache__/__init__.cpython-313.pyc": "9a7424c9e304b783e9fc9595d947db984ee56f66b6958b4f46c84838e1c1145d",
+    "__pycache__/agent_client.cpython-313.pyc": "32bc9658180b8e1d5e2c97c2759911eee7347e4c762870884907b58a9f622524",
+    "__pycache__/agent_preflight.cpython-313.pyc": "c30ca72a67baf9e7ceb9c55e5067824022d0ab0666aabb451e015e3741fa3003",
+    "__pycache__/config.cpython-313.pyc": "066f5fb964197d3416299a9aec6df80a9a8d695d78b6f3ab7bfb7f348df0a514",
+    "__pycache__/disclosure.cpython-313.pyc": "09022817cc20f5caa8917f4416bcf6ceeb9a2c784e9d16afe893a8b442349ad7",
+    "__pycache__/discovery.cpython-313.pyc": "f06496481a2199db53b2cabe56c2ac08a26937dc729565c58dc558c79a0c9f89",
+    "__pycache__/equivalence.cpython-313.pyc": "51b92bc519010c17c760df01b82bd22a55a5db751ddedc674a98a266325c5560",
+    "__pycache__/experiment.cpython-313.pyc": "1c6d8009c216a168f517f10769e80f8eb1f4d6351000de2d099a7ec7821d0968",
+    "__pycache__/isolation.cpython-313.pyc": "d0600f6fec4daf794ce4528126cdf252d84fd8322757bda39acaca86409eb910",
+    "__pycache__/metrics.cpython-313.pyc": "3076c7973a87d68e76301ba4ef8bf43ef1ead03035ca0cb297dfd61dfc90a68a",
+    "__pycache__/model.cpython-313.pyc": "eb8cf3884533c73d3795fe2d89abd22baf85a793356b7f0030c7df426d796d82",
+    "__pycache__/neural_numpy.cpython-313.pyc": "e67f2c42cc9dbad3abb3ef5010f1e810e0f36d18bfcb7779f57c736551424d19",
+    "__pycache__/process.cpython-313.pyc": "5e733db9b4daf6fe97b8bf27cb6214243972f2b878c711e0bb6198e510067ce5",
+    "__pycache__/recovery.cpython-313.pyc": "f8ad6d66c977edc5fa9606c3984a90e65d66585f6d55e04e6357c7a2ea3d046a",
+    "__pycache__/research_agent.cpython-313.pyc": "8ab2b8b71bc61e7b70a8e2b71e3624ef9ffe9a1a5de3b907af589b0cbb7448e2",
+    "__pycache__/sampling.cpython-313.pyc": "8b53c00e92bad264c767efb8e5fcd36ae19b2fddb26d14fc8d24bd37f69d9163",
+    "__pycache__/submissions.cpython-313.pyc": "7e02e49fb8f7bb5bd5d5889e51441ee583e928d4f16a2224e193662fb09e79b4",
+    "agent_client.py": "42265978b0d318fc845e145c34d95dfea817240c3da6c0836b8bb19a69741fec",
+    "agent_preflight.py": "9a4db1a792b345673bdf40885ec09803def33c7f695c34d1bac9b01fe4066682",
+    "challenge.py": "1597394640f132630e7800bec8ba3d39e0094b3dc7fe31092c1a4b7a4bb08f88",
+    "circuits.py": "8ca997799232713dd2fbc243c1c717e469c4f268da497c7e1c5f0ffd6e98c42e",
+    "classical.py": "a13ae9cee25123383a3328daa56e609fd025083b0b701b6c2e3bcef73343f940",
+    "cli.py": "28696793363d7eee15cdc96d01bd8998fe3bf2028f22f928a05815f56ecd19cf",
+    "config.py": "ac25cd6acf2597ec0ef564c6cf0a9a25c304e6dde592d096f86b8f89b95ddb7c",
+    "disclosure.py": "d6af21d76ed9fd9765ed8fa33b4f1b61af1a3bdf02e8df36d7875b0106ca8070",
+    "discovery.py": "47f2a849ac2f55d57e48832f49c425afbdba97f08688a4300cd7809898b66d61",
+    "discovery_cli.py": "61006385c146739fee6f356ddf457608a50575786faffa80ca41bf6273e8d65a",
+    "equivalence.py": "d31f4026389a4abed20e790d3b89f773043b68606f32e497f30ac1da23c015f9",
+    "experiment.py": "0a5924eedbdd34d263673ff6ddc6ad29b6cc07543821cfd1816660bf6cb94e58",
+    "generators.py": "b0e3b5f9b9b82d1eea37fc233c04fee86ec1ccea0097d17d1780d8a1c0a31a80",
+    "isolated_worker.py": "1dc4c6dc1348d984ccf13a98c628c8409f5495d3ae7b290410f9dc61bfcf7fbf",
+    "isolation.py": "1504f54f89191e611fecde1e261ae8f9e7c04d791a5f496b180ca838896a7723",
+    "method_study.py": "0cbecbc876bda72a1ed4c9cafdd7c78bf7b1b50f6e1f9a875def50727029fc77",
+    "metrics.py": "50ba9b5925dc8a3ff7ed27d5a718cee1f46d6a851bf375976eb6aeb5482c0f90",
+    "mixed_suite.py": "ca6dbb754b03b1aaf6892eaf4ce50b1e09bf52137d59394eca35bffac4e43380",
+    "model.py": "30603a0c3ff8886fa2a0325d5926a66e4723f16a9e13040e7a2e428b277befab",
+    "neural_numpy.py": "3e8a4819ae3f2f9e69436c334cc7d23e7144e1b74059f23084806fd26ab421b7",
+    "operator_method.py": "18f266437663ef62e843dd30b83a671b495c80d21b7bd2e13f2a3a5b0dc151b9",
+    "operator_predictor.py": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+    "process.py": "4ec750c61e08cb2d6ae9dc886da3e20496a684fe2a1e094ddad701ecca8389c0",
+    "recovery.py": "3c88253852c5f123167200e7301b7fb332a523352d0d91185638d035a42c070a",
+    "representations.py": "62f61a4f932212c44bf3522d3f417cc68870979030d8f2f4ba2f356ec99c3cb5",
+    "research_agent.py": "9550a2e46c722e66e5d652dbe8527b530664b954c0d1e125f192603a38b3cd5c",
+    "sampling.py": "30d363b6b16cc74527146c66ff8ffa6429d6001be7b5091a7fa816657f301cb6",
+    "scaling.py": "1bb76ea1b6e1d443e22361406c61b7dcc22e668bff7fa508887ad362def79ef0",
+    "submissions.py": "488cb23b559a2fd211c231ac4de1a99f287a59c82103f2ba7fc40a9474b4b863"
+  },
+  "source_commit": "ff7074efdf2ffba544707304f2a52978d07f4cb4",
+  "binary_sha256": "b93f6811d3f653f0fb83be4050d857fb9abbb111dfa2ce160563327daff7f306",
+  "catalog_sha256": "7051381dd82569aa0e3c36dccadd80047fd471d821c8357732bf525b8c372131",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "parallel_trials": 2,
+  "all_submissions_before_any_private_score": true,
+  "private_feedback": false,
+  "source_immutable_and_imported_from_run_snapshot": true,
+  "paired_observations_byte_equal": true,
+  "note": "Entire ten-trial roster declared in advance. Fresh contexts with no v1 hypotheses, source truth or scores. Separate protocol version; no selective rescue of timed-out v1 trials."
+}

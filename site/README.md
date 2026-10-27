@@ -98,3 +98,9 @@ Browser review covers desktop and mobile widths, keyboard state/process selectio
 focus retention, sequence controls, oracle and equivalence views, expanded details,
 exact result values, and JavaScript errors. Public tunnel checks repeat representative
 interactions and compare all served asset hashes with the immutable release.
+
+The paired agent table uses [ten version-2 development trials](../docs/results/agent-development-v2.md).
+It distinguishes recovered delayed-token structure, partial HMM organization and
+preflight failures. Earlier agent and non-agent cohorts remain in collapsed details.
+The source processes and scoped diagnostic receipts are public development evidence;
+no fresh final truth or unfinished trial is read by the site exporter.
