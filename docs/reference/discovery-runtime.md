@@ -39,6 +39,10 @@ is not a claim that offline execution is prevented.
 
 ## Extraction and frozen submission
 
+The [fresh-context research agent](../research/research-agent.md) uses the same contract
+and numerical sandbox through the `agent` command. It chooses its own process representation;
+the trusted model client is separate from model-written code and audited before inference.
+
 The built-in [observable-operator baseline](../research/observable-operators.md) can
 be packaged with `prepare-operators --out outputs/operator-method`. It declares a
 linear predictive-state prior and chooses dimension from public validation data;

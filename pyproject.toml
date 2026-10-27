@@ -126,6 +126,8 @@ ignore_names = [
     "deterministic_private_rng",
     # Mixed-suite TypedDict fields are serialized and read through dictionary keys.
     "id", "process_sha256", "schema_version", "plan_sha256", "all_prepared",
+    # BaseHTTPRequestHandler dispatches these by name during local request capture.
+    "do_POST", "log_message",
 ]
 exclude = [
     ".venv/", ".git/", ".cache/", ".codex/worktrees/", "build/", "dist/", "data/", "artifacts/",

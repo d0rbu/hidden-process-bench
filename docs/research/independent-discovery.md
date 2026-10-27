@@ -14,6 +14,10 @@ the generating family. The broader family-discovery evaluation remains pending.*
 The older pipeline supplies the HMM family and order to its fitters.
 Its results are informed parameter-fitting controls only.
 
+The [fresh-context research agent](research-agent.md) now implements family-neutral
+iterative program discovery with an audited client context. Its constant-process
+fixture checks live execution; it does not establish recovery on trained teachers.
+
 ## What an extractor receives
 
 A neutral task prompt asks for a compact executable account of the sequence-generating

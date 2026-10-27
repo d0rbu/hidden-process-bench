@@ -29,6 +29,12 @@ timeouts, failed searches, frozen-manifest tampering, and row-invariance violati
 Generic constant-process fixtures validate execution and scoring; they are not discovery
 results. These tests require Bubblewrap, prlimit and a working user systemd manager.
 
+Fresh-agent tests use a synthetic executable client in a real sparse namespace,
+without contacting a model provider. They reject injected context/tool descriptions,
+exercise local HTTP request capture, check numerical workspace rollback, enforce action
+and wall budgets, and preserve failed-trial receipts. The captured context fixture
+contains neutral text and the inert question-tool definition, never account headers.
+
 Mixed-suite tests compare stack predictions against an independent parser on all
 short histories, check delayed-rule causality with bounded Hypothesis cases, and
 verify seeded sampling/serialization. Real child processes exercise all three
