@@ -82,6 +82,11 @@ or a supplied process-family adapter. The first development attempt failed to re
 the mechanisms; it is not an unconstrained family-discovery method.
 
 `generators.py` implements the private HMM, delayed-rule and stack oracles.
+`state_geometry.py` learns autonomous linear-state updates from output or activation
+coordinates. `operator_structure.py` tests a restricted latent Markov realization
+analytically after learning operators, without a supplied fitting template. See
+the [method assumptions](../research/state-geometry.md).
+
 `mixed_suite.py` freezes private balanced cases and source snapshots, screens before
 training, trains each case in a bounded child, and exports only qualified neural
 snapshots. Validation, test and scoring streams remain separate. Longer scoring
