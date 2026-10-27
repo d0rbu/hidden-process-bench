@@ -84,6 +84,7 @@ class SuiteConfig:
     eval_every: int = 100
     eval_sequences: int = 512
     max_kl: float = 0.03
+    validation_margin: float = 1.0
     observation_sequences: int = 128
     score_sequences: int = 128
     long_length: int = 72
@@ -92,7 +93,7 @@ class SuiteConfig:
     def __post_init__(self) -> None:
         self.model()
         for name, value in asdict(self).items():
-            if name in ("learning_rate", "max_kl"):
+            if name in ("learning_rate", "max_kl", "validation_margin"):
                 check_positive(value)
             else:
                 check_count(value)
@@ -102,6 +103,8 @@ class SuiteConfig:
             raise ValueError(
                 "suite needs >=12 qualification sequences and longer extrapolation histories"
             )
+        if self.validation_margin > 1:
+            raise ValueError("suite validation margin must be positive and at most one")
 
     def model(self) -> ModelConfig:
         return ModelConfig(self.vocab, self.length, self.width, self.heads, self.layers)
@@ -338,7 +341,13 @@ def train_case(output: Path, case_id: str) -> dict[str, object]:
         optimizer.step()
         if step % config.eval_every == 0 or step == config.train_steps:
             predicted, _ = predictions(model, validation)
-            metrics = optimality(oracle, predicted, groups, process.groups, config.max_kl)
+            metrics = optimality(
+                oracle,
+                predicted,
+                groups,
+                process.groups,
+                config.max_kl * config.validation_margin,
+            )
             row: TrainRecord = {
                 "step": step,
                 "training_cross_entropy": float(loss.detach()),
