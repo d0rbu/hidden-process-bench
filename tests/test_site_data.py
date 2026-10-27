@@ -23,6 +23,12 @@ def test_published_site_data_reproduces_recorded_generators_and_results() -> Non
     assert not attempt["unconstrained_family_discovery_evaluated"]
     assert not attempt["independent_structure_recovery_demonstrated"]
     assert len(attempt["cases"]) == 5
+    agent = payload["agent_attempt"]
+    assert not agent["process_family_disclosed_to_method"]
+    assert not agent["process_order_disclosed_to_method"]
+    assert agent["submitted"] == 1
+    assert agent["failed"] == 4
+    assert not agent["independent_structure_recovery_demonstrated"]
     assert not payload["teacher_qualification"]["campaign_ready"]
     assert sum(run["qualified"] for run in payload["runs"][1:]) == 1
     for run in payload["runs"]:

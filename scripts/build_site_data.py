@@ -132,6 +132,7 @@ def build_payload(root: Path) -> dict[str, Any]:
         "scope_correction": read("docs/results/disclosure-correction.json"),
         "teacher_qualification": read("docs/results/mixed-suite-development.json"),
         "operator_attempt": read("docs/results/operator-development/summary.json"),
+        "agent_attempt": read("docs/results/agent-development/summary.json"),
         "method_result_revision": METHOD_RESULT_REVISION,
         "method_study": read("docs/results/five-method-pilot/summary.json"),
         "result_revision": RESULT_REVISION,

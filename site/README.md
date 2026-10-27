@@ -30,8 +30,9 @@ GitHub Actions.
 ## Scope correction
 
 The primary objective is independent process discovery, including family and structure.
-The runtime is implemented and a first restricted operator attempt failed to recover
-the mechanisms. It selected its own dimension but retained a linear representation
+The runtime is implemented. A family-neutral agent submitted one six-regime filter;
+four trials timed out. The program has partial structural resemblance but no equivalence
+certificate. A first restricted operator attempt also failed to recover the mechanisms. It selected its own dimension but retained a linear representation
 prior, so it did not test unconstrained family discovery. The older fits and agent
 prompts disclosed the HMM family and order; feature methods used a supplied HMM adapter. The site labels
 these as informed fitting baselines. `scope_correction` in the exported JSON applies to
@@ -40,6 +41,8 @@ all historical data, whose raw receipts are unchanged. See the
 
 ## What the page shows
 
+- A five-case family-neutral agent cohort, with one submitted program and four model-call
+  timeouts, separate prediction and structural claims, and links to frozen evidence.
 - Five qualified development cases scored using an independently submitted operator
   program, with transformer/program error and a separate longer-history score. The
   collapsed details state the method prior, failures and unfinished discovery scope.

@@ -10,7 +10,7 @@ Start with the [project README](../README.md) or [agent guide](../AGENTS.md).
 | Experiments | [Lifecycle](pipelines/experiment-lifecycle.md) |
 | Teacher qualification | [Mixed-suite development pilot](results/mixed-suite-development.md) |
 | Restricted discovery attempt | [Observable-operator method](research/observable-operators.md), [five-case negative results](results/operator-development.md) |
-| Fresh-context method | [Research agent and context boundary](research/research-agent.md) |
+| Fresh-context method | [Research agent and context boundary](research/research-agent.md), [five-case development results](results/agent-development.md) |
 | Internal-access support | [Neural execution, traces and interventions](reference/neural-execution.md) |
 | Informed-control results | [Five-family method pilot](results/five-method-pilot.md), [Screened CPU example](results/screened-cpu-demo.md), [scaling pilot](results/scaling-pilot.md), [historical unscreened example](results/cpu-demo.md) |
 | Reference | [Architecture](reference/architecture.md), [artifacts](reference/artifacts.md), [discovery runtime](reference/discovery-runtime.md), [configuration](reference/configuration.md), [file map](reference/file-reference.md) |

@@ -28,6 +28,7 @@
 | `docs/reference/discovery-runtime.md` | Executable discovery interface, assumptions and limits |
 | `src/hidden_process_bench/agent_client.py`, `src/hidden_process_bench/agent_preflight.py`, `src/hidden_process_bench/research_agent.py` | Fresh neutral client, captured-context audit, iterative numerical actions and frozen agent submission |
 | `tests/test_agent_client.py`, `tests/test_agent_preflight.py`, `tests/test_research_agent.py`, `tests/fixtures/agent-request.json` | Real client namespace checks, context injection rejection, workspace rollback, budgets and retained failures |
+| `docs/results/agent-development.md`, `docs/results/agent-development/`, `tests/test_agent_receipts.py` | Five-case family-neutral agent results, preserved timeouts, structural review and bound source/submission/trajectory receipts |
 | `docs/research/research-agent.md` | Family-choosing agent protocol, access boundary and local command |
 | `src/hidden_process_bench/operator_method.py`, `src/hidden_process_bench/operator_predictor.py`, `tests/test_operator_method.py` | Unknown-dimension operator baseline, standalone execution, exact moment and coordinate-equivalence checks |
 | `docs/research/observable-operators.md`, `docs/results/operator-development.md`, `docs/results/operator-development/` | Restricted identification prior, five-case negative development results and frozen source/submission receipts |

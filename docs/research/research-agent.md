@@ -78,6 +78,11 @@ structure or causal success flag is assigned. A real constant-distribution fixtu
 completed four actions and froze a memoryless categorical predictor; this validates
 the live path, not performance on trained benchmark teachers.
 
+The first [five-case development cohort](../results/agent-development.md) submitted
+one six-regime filter and retained four model-call timeouts. It established no
+equivalent HMM or causal recovery. Those trials used protocol version 1; the current
+budget prompts and neural helper are version 2.
+
 ## Run locally
 
 Use an installed, audited stock client binary and a local model catalog. Account

@@ -1,0 +1,20 @@
+{
+  "case-01/actions.json": "84cd253c4ef994d8980505482af2a67392f011d2a6c25b05859616a16b5c1320",
+  "case-01/trajectory.zip": "9cbd239ff3d5a9ebd3d42d4ecad79af6997d845c2d135ae077b498b9e5685e3e",
+  "case-02/actions.json": "a7cbb87e5c5281751d56e3c0eeaafce0edce58bbbfaa6a7a39b9abf5a28c7848",
+  "case-02/trajectory.zip": "c13fec426a5c1d66e37b9488944c119222cd4b15bdd614442f2aa486fcf99063",
+  "case-03/actions.json": "0c8f35e8b48787fed39fb3941c36ecb7c3d958c0a2d56b0c0fcc83b3d438a351",
+  "case-03/trajectory.zip": "8b78bf7a879bb3e6635d9ed2efb89e3b085d290029cc17a66756c33670506a02",
+  "case-04/actions.json": "781d0abc4158e01dd7f43cbd3cdab9dd083868a9610ab848a78f1f26949a2e08",
+  "case-04/heldout-witness.json": "7e983a00d7d3e3650e2d4a5868086f414135a1c462c3d29d31e2baae6a068e74",
+  "case-04/heldout.json": "17a0e995aecffeef774ce944892c29674ce402c9f9083bee96ff0d916268e095",
+  "case-04/long-witness.json": "9f04db5739464a8c929bb3f8588cb7b9b4b82885dcb10a53ca528712a11b749c",
+  "case-04/long.json": "6d405616e79804b96d427c4298d9150ac7ada516adf9b01bfe16c475118cf07f",
+  "case-04/mechanism.md": "bf6911f7b76271b7cb8fc2b687905a25d50f1c8b951dc1558c99f7599d0bb7f3",
+  "case-04/submission.zip": "0f794440d11456dbf603b764837830282719e5dd004bd1b6950fdc47e5812c48",
+  "case-04/trajectory.zip": "6f0097db6e1d28aeb1393a10c0b17d442dc1d3d6903b72b42f364f571f35f061",
+  "case-05/actions.json": "53b67a998aff892ba5f58bcbc3816c41ae8cfaa2d0d04d21fe2fb708811807aa",
+  "case-05/trajectory.zip": "aa72d95d31f5ee866016c5bb1e499106f78c70bdce393143af11c0d4951c5dd6",
+  "method.zip": "b4b0e9ce92eaac0aed9477fd6a7ed825477cf5183eeeba55c4a343f3fe4badaf",
+  "summary.json": "8b37ff5ac41584fd0ac8b0a7a4bedf70d9fa6a8272a9ea374bd5b4a59b6c7125"
+}
