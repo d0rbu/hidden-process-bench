@@ -23,7 +23,13 @@ prediction with NumPy fixtures, and verifies equivalent state copies and samplin
 It is part of the local pre-push gate. See the [website guide](../../site/README.md) for
 browser and public-byte verification.
 
-Tests use two CPU threads, no network, no paid providers, and no GPUs. The measured
+Discovery-runtime tests launch real Linux namespace/cgroup sandboxes: they check private
+file/environment/network isolation, NumPy availability, read-only sources, bounded output,
+timeouts, failed searches, frozen-manifest tampering, and row-invariance violations.
+Generic constant-process fixtures validate execution and scoring; they are not discovery
+results. These tests require Bubblewrap, prlimit and a working user systemd manager.
+
+Tests use two CPU threads, no external network, no paid providers, and no GPUs. The measured
 coverage source is `hidden_process_bench` plus repository `scripts`, not test code.
 The template's 95% branch coverage threshold is retained. Warnings, unknown markers,
 unknown pytest configuration, and unexpected xfail passes are errors.

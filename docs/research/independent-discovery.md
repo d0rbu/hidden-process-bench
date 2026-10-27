@@ -7,9 +7,10 @@ task, discovering that a latent-state transition/emission process explains the m
 part of the task. Supplying an HMM constructor, parameterization, family label, mixture
 count or state count gives away part of the answer.
 
-**Status: this primary evaluation is not implemented or run. There are no independent
-process-discovery results yet.** The current executable pipeline supplies the HMM family
-and order to its fitters. Its results are informed parameter-fitting controls only.
+**Status: the neutral execution/scoring runtime is implemented; the hidden mixed suite
+and independent discovery campaign are pending. There are no independent discovery
+results yet.** The older pipeline supplies the HMM family and order to its fitters.
+Its results are informed parameter-fitting controls only.
 
 ## What an extractor receives
 
@@ -56,8 +57,10 @@ Dependencies, fitting/search work, model calls, intervention access and runtime 
 part of the submission receipt. An HMM representation is welcome if the method chooses
 it; choosing and fitting a preselected HMM is an explicitly informed control.
 
-The generic execution/scoring interface and its sandbox are still to be implemented.
-The current HMM JSON loader/scorer cannot stand in for this interface.
+The [generic execution/scoring runtime](../reference/discovery-runtime.md) implements
+this executable interface using Linux namespaces and cgroup limits. Prediction scores
+leave structural recovery pending independent review. The old HMM JSON loader/scorer
+remains an informed-control interface.
 
 ## Evaluation
 

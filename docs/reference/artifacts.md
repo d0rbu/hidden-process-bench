@@ -6,7 +6,7 @@ The layout and HMM schema below belong to the **informed HMM-fitting controls**.
 `public/task.json` reveals the family/order through its shape fields. Do not use it
 as a primary discovery challenge. The [primary protocol](../research/independent-discovery.md)
 requires neutral inputs and an executable process submission chosen by the extractor;
-that interface is not implemented yet. New informed reports include `evaluation_scope`
+see the [executable runtime contract](discovery-runtime.md) for that interface. New informed reports include `evaluation_scope`
 with both independent discovery flags false. `benchmark_eligible` and its explicit
 alias `checkpoint_qualified` refer only to transformer prediction qualification.
 
@@ -48,7 +48,8 @@ locally; it is not a remote black-box server or a security sandbox.
 Keep the entire `private/` directory away from extractors. Public demo seeds are known
 by design, so those tasks are not a blind challenge. `report.json` contains scorer feedback
 and supervised probe diagnostics; publish it only after fixing candidate submissions.
-No filesystem isolation is enforced by the prototype.
+This informed-control pipeline enforces no filesystem isolation. The separate neutral
+runtime uses Linux namespaces and cgroups.
 
 The sampling audit exists even if every candidate is rejected, in which case no
 checkpoint or final report is produced. The successful report includes accepted-task

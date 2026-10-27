@@ -10,7 +10,8 @@ a transformer, including its process family, structural dependencies and order? 
 HMM task, supplying an HMM template, update rule or state count gives away part of the
 answer. The method must propose its own executable process representation.
 
-**The primary discovery evaluation is not implemented or run.** The current executable
+**The primary discovery campaign has not run.** A [neutral executable runtime](../reference/discovery-runtime.md)
+now exists; its private mixed suite is pending. The existing experiment
 pipeline supplies a known-shape mixture-HMM family and estimates its parameters.
 Every existing method and agent result belongs to this informed-control track. The
 HMM family, component count and state count were disclosed; none of those results

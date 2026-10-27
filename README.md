@@ -5,15 +5,17 @@ an unknown data-generating mechanism from a trained transformer, including disco
 its process family and structure. On an HMM task, the method must discover the latent
 transition/emission mechanism without being given an HMM template or its size.
 
-**Current status: only informed HMM-fitting controls are implemented. No method has
-yet been evaluated for independent process discovery.** All existing fitters and agent
+**Current status: a neutral executable submission runtime is implemented. The mixed
+private suite and independent discovery experiments are still pending.** No method has
+yet been evaluated for independent process discovery. All existing fitters and agent
 prompts were supplied HMM semantics and component/state counts. Those results do not
 measure the intended discovery task. See the [primary protocol](docs/research/independent-discovery.md).
 
 Ground truth belongs to the evaluator. The primary track needs neutral inputs and
 submissions, fresh hidden tasks from multiple generating mechanisms, and separate
-output-only and internal-access conditions. The present HMM-only pipeline does not
-implement that track.
+output-only and internal-access conditions. The [new runtime](docs/reference/discovery-runtime.md) exports neutral model inputs,
+isolates executable methods, freezes their chosen representations and scores predictions.
+It does not yet implement the full hidden mixed-suite evaluation.
 
 ## Run the informed controls locally
 

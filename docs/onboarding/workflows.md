@@ -46,8 +46,9 @@ maintenance is local; there is no hosted dependency-update workflow.
 Follow the [primary protocol](../research/independent-discovery.md). Do not supply a
 process family, state count, HMM constructor, belief update equation or HMM-only output
 schema. The method must propose and execute its own recovered process. A fresh agent
-must not inherit generator knowledge through context or filesystem access. The neutral
-submission/evaluation interface and mixed task suite are not implemented yet.
+must not inherit generator knowledge through context or filesystem access. Use the [neutral executable runtime](../reference/discovery-runtime.md) for isolated
+submission and predictive scoring. The hidden mixed task suite and discovery campaign
+remain pending.
 
 For an **informed fitting control**, `fit_hmm` accepts the disclosed HMM shape and allowed
 observations. Its result is a `MixtureHMM`. Compare it against other informed controls
