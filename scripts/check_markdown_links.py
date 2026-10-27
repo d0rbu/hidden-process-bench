@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 import subprocess
 from collections.abc import Iterable, Iterator
 from pathlib import Path
@@ -18,6 +19,8 @@ def markdown_files(root: Path) -> list[Path]:
         check=True,
         capture_output=True,
         text=True,
+        # Git hooks can set an absolute GIT_DIR for a different linked worktree.
+        env={key: value for key, value in os.environ.items() if not key.startswith("GIT_")},
     )
     return sorted(
         {

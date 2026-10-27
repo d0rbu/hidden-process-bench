@@ -64,6 +64,11 @@ scores frozen executables on equal-length held-out prefixes, separately reportin
 teacher fidelity and process fidelity while leaving structural assessment pending.
 `discovery_cli.py` owns the neutral export/extract/freeze/score commands.
 
+`neural_numpy.py` provides optional standalone execution of public neural weights
+inside the numerical sandbox. It exposes layer traces and counted head/MLP ablations,
+with no process-family constructor or supplied fitting adapter. It is extraction
+support; a frozen discovered process must run without the original network.
+
 `research_agent.py` connects fresh JSON model calls to that numerical sandbox and
 freezes the agent's own chosen program. `agent_client.py` removes native data-access
 tools and host context; `agent_preflight.py` audits an actual captured request before

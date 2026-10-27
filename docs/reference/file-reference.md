@@ -15,6 +15,7 @@
 | `src/hidden_process_bench/sampling.py` | Entropy and minimal-order screens, bounded rejection sampling, private audit |
 | `src/hidden_process_bench/equivalence.py` | Numerical word-equivalence check, redundant-state controls, complexity |
 | `src/hidden_process_bench/model.py` | Causal transformer, checkpoint and observation API |
+| `src/hidden_process_bench/neural_numpy.py`, `tests/test_neural_numpy.py`, `docs/reference/neural-execution.md` | Standalone public-neural execution, counted layer traces, head/MLP interventions and PyTorch parity |
 | `src/hidden_process_bench/generators.py` | Evaluator-only shared process interface, HMM adapter, delayed and stack oracles |
 | `src/hidden_process_bench/mixed_suite.py` | Private balanced plans, archived source, pre-training screens, bounded matched training and neutral exports |
 | `tests/test_generators.py`, `tests/test_mixed_suite.py` | Independent oracle checks, source/seed boundaries, real child workflows and failure retention |
