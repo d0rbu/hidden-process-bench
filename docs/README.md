@@ -8,6 +8,7 @@ Start with the [project README](../README.md) or [agent guide](../AGENTS.md).
 | Setup | [Getting started](onboarding/getting-started.md), [workflows](onboarding/workflows.md), [glossary](onboarding/glossary.md) |
 | Correctness | [Contracts](development/correctness.md), [testing](development/testing.md) |
 | Experiments | [Lifecycle](pipelines/experiment-lifecycle.md) |
+| Frozen final campaign | [Protocol, method bundles and review criteria](research/final-campaign.md) |
 | Teacher qualification | [Mixed-suite development pilot](results/mixed-suite-development.md) |
 | Restricted discovery attempt | [Observable-operator method](research/observable-operators.md), [five-case negative results](results/operator-development.md) |
 | State geometry | [Autonomous update learning and algebraic recognition](research/state-geometry.md) |

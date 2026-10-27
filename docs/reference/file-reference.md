@@ -36,6 +36,7 @@
 | `src/hidden_process_bench/discovery_features.py`, `tests/test_discovery_features.py`, `docs/research/discovery-features.md` | Sparse autoencoder/transcoder and circuit-pruned feature variants feeding autonomous dynamics, with counted neural execution |
 | `docs/research/observable-operators.md`, `docs/results/operator-development.md`, `docs/results/operator-development/` | Restricted identification prior, five-case negative development results and frozen source/submission receipts |
 | `src/hidden_process_bench/disclosure.py` | Prior disclosures and explicit informed-control scope for new artifacts |
+| `docs/research/final-campaign.md`, `docs/research/final-campaign/`, `tests/test_frozen_campaign_protocol.py` | Published frozen mixed-process protocol and exact method bundles before private final scoring |
 | `docs/research/independent-discovery.md` | Primary discovery objective, neutral inputs/submissions and remaining experiment work |
 | `docs/results/mixed-suite-development.md`, `docs/results/mixed-suite-development.json` | Aggregate teacher-only pilot; failed preparation and unqualified stack case retained, task mappings private |
 | `docs/results/disclosure-correction.json` | Scope correction for unchanged historical informed-control receipts |

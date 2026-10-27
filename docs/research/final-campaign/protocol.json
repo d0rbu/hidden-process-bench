@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "stage": "frozen_before_new_task_generation",
+  "source_commit": "3b14378e6f865f60b205bfdad028f04da1a61130",
+  "source_sha256": {
+    "__init__.py": "5b557ec8a6473647287ca2de30385da3215c7584a6789bfee887fb837b7420e9",
+    "__main__.py": "9f7deef881ac58f34634323f79fc1d61bdcec42f970745141d4f6221bb47d2f1",
+    "__pycache__/__init__.cpython-313.pyc": "ea81c7971753925c1129ef44ac30ffddfe3fe276010d641a900ec5e9a2b1258c",
+    "__pycache__/agent_client.cpython-313.pyc": "3a402ff03ae2aa4d06a99f5a7349dc35d64349fbd9a18261c6fa4e2866e0a184",
+    "__pycache__/agent_preflight.cpython-313.pyc": "3a6af50bc9c2c86f7a921224713feb62f7835666198736bb3881d5ab81b90c1e",
+    "__pycache__/challenge.cpython-313.pyc": "a24f1140ff04da3a2b4e8e8eb288c5345db7f9f96934e1c9d951add7d8d81edb",
+    "__pycache__/config.cpython-313.pyc": "e7f5ca5b02d60a70015cfb6ceddcc1cb548259a00a6912988eb81b1742735521",
+    "__pycache__/disclosure.cpython-313.pyc": "720ac628eda454cf7860311094674752daa6c35d57b1c46e074e52974ee4bd4b",
+    "__pycache__/discovery_features.cpython-313.pyc": "dbd50b60895323e4130d01e46a936058e6f31502be023cb3d4f80f800a87de87",
+    "__pycache__/equivalence.cpython-313.pyc": "6b209780e7dda64fe405923261c61f7fc240052586bcf13b7b61d40e40a5a78b",
+    "__pycache__/experiment.cpython-313.pyc": "125cf9aa1d1981466646ab65e14df2112a62ee497bd06f5cd7db3bec6fa1917a",
+    "__pycache__/generators.cpython-313.pyc": "f75c08c140751f6f8f6ea2a6c02f9cd44f97d58b7c3f822388cca02796968322",
+    "__pycache__/isolation.cpython-313.pyc": "717df1d8018fad44f886ed98dfdbe6ecca609a5643e765fe62897a72ce5d400b",
+    "__pycache__/metrics.cpython-313.pyc": "1dd0389e1ce9618352440f4288fd3fc759ede00c134ecc67f59dfa9c5e746ccf",
+    "__pycache__/mixed_suite.cpython-313.pyc": "dfe9f14c565ab2627fbe7a1354fbdb62c1d9172563d0b37dc9d8d9d4fe4f8436",
+    "__pycache__/model.cpython-313.pyc": "5c8a0db1209f56b2875d79ab10935603e793250e99eb27154e49518b461330a8",
+    "__pycache__/neural_numpy.cpython-313.pyc": "6ed89a2102f24156e41d50cf06b155d9b5b9306d76c119cf304f874c72db29be",
+    "__pycache__/operator_method.cpython-313.pyc": "78fbef25de9ddf4cb28054223efb32a646bb2d6ef46e7366e3308e9a7a8d2d47",
+    "__pycache__/operator_predictor.cpython-313.pyc": "f7c80bc11627dd737501750eb5ae2433ef90beb007c06c7390735da31e03bd22",
+    "__pycache__/operator_structure.cpython-313.pyc": "0d031e58e7484f1263898ff0ed4a1b5ac1c797736452ee3a40d1d14189a983fa",
+    "__pycache__/process.cpython-313.pyc": "192fb4ef659c60b84aa7fbb89ee1e7722eb980701cf6f1a2689ada461845a574",
+    "__pycache__/recovery.cpython-313.pyc": "bed3b987b1eaa6d9e35b7894c6bc2cedc94d450cc4587823f6dee0cd83b216b1",
+    "__pycache__/research_agent.cpython-313.pyc": "f94edf40b1cbe28227736bb6fd397ba3e1645fa93e23e225bd26d05d135cf271",
+    "__pycache__/sampling.cpython-313.pyc": "984b8502abad9a480f8aaeb06d02e8a158870a7c5da3fb12ba9396e3cf95e88c",
+    "__pycache__/state_geometry.cpython-313.pyc": "26440a9e3c5024c66db74a1e3bcd2553c437f75744ccab25d7df594b1d1c4dea",
+    "__pycache__/submissions.cpython-313.pyc": "a59467d7965b0cf80e43d3f97876fd086a0d6f069f27f0c90108bd565bf719e4",
+    "agent_client.py": "42265978b0d318fc845e145c34d95dfea817240c3da6c0836b8bb19a69741fec",
+    "agent_preflight.py": "9a4db1a792b345673bdf40885ec09803def33c7f695c34d1bac9b01fe4066682",
+    "challenge.py": "1597394640f132630e7800bec8ba3d39e0094b3dc7fe31092c1a4b7a4bb08f88",
+    "circuits.py": "8ca997799232713dd2fbc243c1c717e469c4f268da497c7e1c5f0ffd6e98c42e",
+    "classical.py": "a13ae9cee25123383a3328daa56e609fd025083b0b701b6c2e3bcef73343f940",
+    "cli.py": "28696793363d7eee15cdc96d01bd8998fe3bf2028f22f928a05815f56ecd19cf",
+    "config.py": "ac25cd6acf2597ec0ef564c6cf0a9a25c304e6dde592d096f86b8f89b95ddb7c",
+    "disclosure.py": "d6af21d76ed9fd9765ed8fa33b4f1b61af1a3bdf02e8df36d7875b0106ca8070",
+    "discovery.py": "47f2a849ac2f55d57e48832f49c425afbdba97f08688a4300cd7809898b66d61",
+    "discovery_cli.py": "61006385c146739fee6f356ddf457608a50575786faffa80ca41bf6273e8d65a",
+    "discovery_features.py": "bb6e9c33edf1aa2e53ada11948eb2372d2ef622e1048a24f88b541b4af403956",
+    "equivalence.py": "d31f4026389a4abed20e790d3b89f773043b68606f32e497f30ac1da23c015f9",
+    "experiment.py": "0a5924eedbdd34d263673ff6ddc6ad29b6cc07543821cfd1816660bf6cb94e58",
+    "generators.py": "b0e3b5f9b9b82d1eea37fc233c04fee86ec1ccea0097d17d1780d8a1c0a31a80",
+    "isolated_worker.py": "1dc4c6dc1348d984ccf13a98c628c8409f5495d3ae7b290410f9dc61bfcf7fbf",
+    "isolation.py": "1504f54f89191e611fecde1e261ae8f9e7c04d791a5f496b180ca838896a7723",
+    "method_study.py": "0cbecbc876bda72a1ed4c9cafdd7c78bf7b1b50f6e1f9a875def50727029fc77",
+    "metrics.py": "50ba9b5925dc8a3ff7ed27d5a718cee1f46d6a851bf375976eb6aeb5482c0f90",
+    "mixed_suite.py": "c26101c526660aef453e5691fbbd9d54e88b5e428fad650dac5ebd4962d0c3ad",
+    "model.py": "30603a0c3ff8886fa2a0325d5926a66e4723f16a9e13040e7a2e428b277befab",
+    "neural_numpy.py": "3e8a4819ae3f2f9e69436c334cc7d23e7144e1b74059f23084806fd26ab421b7",
+    "operator_method.py": "18f266437663ef62e843dd30b83a671b495c80d21b7bd2e13f2a3a5b0dc151b9",
+    "operator_predictor.py": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+    "operator_structure.py": "097365339bd2a5b35fb61f8c301d541e8ff8be3c5e4e8122af3b47c06bf5759b",
+    "process.py": "4ec750c61e08cb2d6ae9dc886da3e20496a684fe2a1e094ddad701ecca8389c0",
+    "recovery.py": "3c88253852c5f123167200e7301b7fb332a523352d0d91185638d035a42c070a",
+    "representations.py": "62f61a4f932212c44bf3522d3f417cc68870979030d8f2f4ba2f356ec99c3cb5",
+    "research_agent.py": "9550a2e46c722e66e5d652dbe8527b530664b954c0d1e125f192603a38b3cd5c",
+    "sampling.py": "30d363b6b16cc74527146c66ff8ffa6429d6001be7b5091a7fa816657f301cb6",
+    "scaling.py": "1bb76ea1b6e1d443e22361406c61b7dcc22e668bff7fa508887ad362def79ef0",
+    "state_geometry.py": "756da962a837a1c723d632267d877be547df715e20ec9242e55346c4ed29027d",
+    "submissions.py": "488cb23b559a2fd211c231ac4de1a99f287a59c82103f2ba7fc40a9474b4b863"
+  },
+  "methods": [
+    {
+      "name": "operators",
+      "family": "classical_identification",
+      "access": "outputs",
+      "bundle": "method-operators"
+    },
+    {
+      "name": "geometry",
+      "family": "belief_state_geometry",
+      "access": "outputs",
+      "bundle": "method-geometry"
+    },
+    {
+      "name": "pca",
+      "family": "learned_representations",
+      "access": "internals",
+      "bundle": "method-pca"
+    },
+    {
+      "name": "sae",
+      "family": "learned_representations",
+      "access": "internals",
+      "bundle": "method-sae"
+    },
+    {
+      "name": "transcoder",
+      "family": "learned_representations",
+      "access": "internals",
+      "bundle": "method-transcoder"
+    },
+    {
+      "name": "causal",
+      "family": "circuit_interventions",
+      "access": "internals",
+      "bundle": "method-causal"
+    },
+    {
+      "name": "agent_outputs",
+      "family": "research_agent",
+      "access": "outputs",
+      "bundle": null
+    },
+    {
+      "name": "agent_internals",
+      "family": "research_agent",
+      "access": "internals",
+      "bundle": null
+    }
+  ],
+  "method_sha256": {
+    "operators": {
+      "main.py": "6b66e438bc96cd9944451aa29407bf2449516c5826cac6489b82dcb59d7338d8",
+      "method/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "method/operator_method.py": "18f266437663ef62e843dd30b83a671b495c80d21b7bd2e13f2a3a5b0dc151b9",
+      "method/operator_predictor.py": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d"
+    },
+    "geometry": {
+      "main.py": "b214f5b2de28aafbce16bbb5f390e8eff94ba08eed40a2038c6255d0bcd20c88",
+      "method/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "method/operator_predictor.py": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "method/operator_structure.py": "097365339bd2a5b35fb61f8c301d541e8ff8be3c5e4e8122af3b47c06bf5759b",
+      "method/state_geometry.py": "756da962a837a1c723d632267d877be547df715e20ec9242e55346c4ed29027d"
+    },
+    "pca": {
+      "main.py": "950d803085abce62ef9397795e90258a68e4ca334a2d0c3a54bda32039ca7dd2",
+      "method/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "method/operator_predictor.py": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "method/operator_structure.py": "097365339bd2a5b35fb61f8c301d541e8ff8be3c5e4e8122af3b47c06bf5759b",
+      "method/state_geometry.py": "756da962a837a1c723d632267d877be547df715e20ec9242e55346c4ed29027d"
+    },
+    "sae": {
+      "main.py": "98f92e2b2e43f832d5689ab8d4763cb5e06bb7f99a56df734886baf11cc5adad",
+      "method/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "method/discovery_features.py": "bb6e9c33edf1aa2e53ada11948eb2372d2ef622e1048a24f88b541b4af403956",
+      "method/neural_numpy.py": "3e8a4819ae3f2f9e69436c334cc7d23e7144e1b74059f23084806fd26ab421b7",
+      "method/operator_predictor.py": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "method/operator_structure.py": "097365339bd2a5b35fb61f8c301d541e8ff8be3c5e4e8122af3b47c06bf5759b",
+      "method/state_geometry.py": "756da962a837a1c723d632267d877be547df715e20ec9242e55346c4ed29027d"
+    },
+    "transcoder": {
+      "main.py": "248da597defa994bbd0e5c65751ae300eb48949eba87dff9036e65a86fad1b76",
+      "method/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "method/discovery_features.py": "bb6e9c33edf1aa2e53ada11948eb2372d2ef622e1048a24f88b541b4af403956",
+      "method/neural_numpy.py": "3e8a4819ae3f2f9e69436c334cc7d23e7144e1b74059f23084806fd26ab421b7",
+      "method/operator_predictor.py": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "method/operator_structure.py": "097365339bd2a5b35fb61f8c301d541e8ff8be3c5e4e8122af3b47c06bf5759b",
+      "method/state_geometry.py": "756da962a837a1c723d632267d877be547df715e20ec9242e55346c4ed29027d"
+    },
+    "causal": {
+      "main.py": "9ce2142c256e8b6a7bf8d730e0e7148a856a21224f6de11cad7da4a0916bf77f",
+      "method/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "method/discovery_features.py": "bb6e9c33edf1aa2e53ada11948eb2372d2ef622e1048a24f88b541b4af403956",
+      "method/neural_numpy.py": "3e8a4819ae3f2f9e69436c334cc7d23e7144e1b74059f23084806fd26ab421b7",
+      "method/operator_predictor.py": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "method/operator_structure.py": "097365339bd2a5b35fb61f8c301d541e8ff8be3c5e4e8122af3b47c06bf5759b",
+      "method/state_geometry.py": "756da962a837a1c723d632267d877be547df715e20ec9242e55346c4ed29027d"
+    }
+  },
+  "agent": {
+    "protocol_version": 2,
+    "budget": {
+      "steps": 20,
+      "seconds": 1800,
+      "model_seconds": 600
+    },
+    "prompt": "Infer a compact executable mechanism explaining the supplied neural sequence model.\nChoose the mechanism family, structure and complexity yourself using the evidence.\nDeclare your prior knowledge, uncertainties and alternatives. No answer family or\nlatent-state count is supplied. Do not merely copy the neural network.\n\nYou control a numerical sandbox through JSON actions. action='run' executes your\nPython code; action='submit' executes optional final code then freezes your files.\nUse no native client tools. Your code has Python standard library and NumPy, no\nnetwork, evaluator, project, original conversation or other task contexts. Read\n/challenge/instructions.txt and /challenge/challenge.json first. Task arrays live\nonly in /challenge. The working directory is /output; files there persist across\nsuccessful actions, but Python variables do not. Failed actions retain the previous\nfiles. Print concise diagnostics you want to see in the next action.\n\nFor neural weights, you may use the provided family-neutral execution helper:\nfrom neural import NeuralModel; model = NeuralModel(Path('/challenge')).\nmodel.forward(int64_inputs_including_BOS) returns probabilities and layer traces,\nwith optional ablate_heads=((layer,head),) and ablate_mlps=(layer,). Report model.counts\nfor every instance and any additional execution you implement yourself. The helper\ncontains only the declared neural operations, no generating-process hypothesis.\n\nCreate your final files under /output/submission, including submission.json using\nthe neutral challenge contract. Its predictor must work independently from the\noriginal neural model, without refitting or comparing evaluation rows. Include a\nstructural explanation and evidence, not just an accurate black-box predictor.\nWrite a small working candidate early and refine it incrementally. Keep structural\nexplanations concise and write evidence as you go. Submit once the mechanism is ready;\ndo not defer writing and testing all submission files to the last action.\nYour numerical sandbox has 120 seconds wall time, 100 seconds CPU, 1 GB RAM and\n8 MB persistent output per action. The entire trial has at most 20 model actions\nand 1800 seconds wall time, with at most 600 seconds per model\ncall. No private scores or hints will be returned.\n",
+    "model": "gpt-6.1-sol",
+    "reasoning": "xhigh",
+    "binary_sha256": "b93f6811d3f653f0fb83be4050d857fb9abbb111dfa2ce160563327daff7f306",
+    "catalog_sha256": "7051381dd82569aa0e3c36dccadd80047fd471d821c8357732bf525b8c372131",
+    "parallel_trials": 2
+  },
+  "teacher_config": {
+    "replicates": 2,
+    "vocab": 16,
+    "length": 24,
+    "width": 64,
+    "heads": 4,
+    "layers": 2,
+    "train_steps": 8000,
+    "batch_size": 64,
+    "learning_rate": 0.003,
+    "eval_every": 100,
+    "eval_sequences": 2048,
+    "max_kl": 0.03,
+    "validation_margin": 0.8,
+    "observation_sequences": 128,
+    "score_sequences": 128,
+    "long_length": 72,
+    "threads": 2
+  },
+  "teacher_case_wall_seconds": 600,
+  "training_change_reason": "The development suite retained one unqualified deep-stack case. This fresh entire suite allows 8000 steps and 2048 qualification sequences while retaining the original 0.03 overall/every-group upper95 criterion. Test used once; no resumed training from test feedback.",
+  "qualification": "All six frozen teachers must pass overall and every process group on separate stopping validation and final test. No qualified-subset final campaign.",
+  "method_limits": {
+    "wall_seconds": 30,
+    "cpu_seconds": 20,
+    "memory_mb": 1024
+  },
+  "scoring": {
+    "sequences": 128,
+    "short_length": 24,
+    "long_length": 72,
+    "oracle_and_teacher_kl_separate": true,
+    "long_teacher_defined": false,
+    "sequence_standard_errors": true,
+    "row_invariance_probes": true,
+    "diagnostic_total_variation_witnesses_after_registration": true
+  },
+  "independent_discovery_boundary": "Neutral anonymous packets and arbitrary executable submission. No family/order, HMM adapter, private processes, seeds, qualification or score feedback given to methods. All methods/source fixed before these tasks; all 48 trials must terminate and register before any private final scoring.",
+  "structural_review": "Assess actual executable dependencies and update rules against the private source after registration. Accept equivalent representations and do not require a supplied family schema. Family labels, selected dimensions and predictive KL alone do not establish recovered structure. Report partial structure, parameter alignment only if the method itself proposes a compatible representation, equivalence diagnostics versus exact certificates, minimality evidence and causal evidence separately. Preserve incompatible/failed/unresolved submissions.",
+  "causal_scope": "Head pruning measures neural output effects only; no semantic process/circuit intervention alignment is built into this method. Do not label pruning alone causal process recovery.",
+  "comparison_limits": "Cached histories/probabilities are paired byte-for-byte. Internal variants can execute weights and interventions and must report counts. This is not equal-query/compute matching, nor an information-theoretic weights-vs-outputs claim. Restricted linear-state and algebraic recognition priors are disclosed; only the agent can choose arbitrary programs.",
+  "failure_policy": "Preserve every prepared/rejected/unqualified/failed/timeout case. No rescue of unsubmitted artifacts, selective retry, source change, task replacement or private feedback. Abort extraction if the whole suite is not qualified.",
+  "development_agent_wait": "Before final agent calls, wait for the already-running ten-trial development cohort to finish, without copying its hypotheses or scores into final contexts. No final method adaptation is permitted.",
+  "previous_attempt": {
+    "path": "outputs/final-campaign-v1",
+    "qualified": 5,
+    "planned": 6,
+    "extraction_started": false,
+    "method_adaptation": false,
+    "change": "Only stopping validation is tightened to 0.024; final test remains 0.03. Entirely new tasks and random streams; no resumed failed teacher."
+  }
+}
