@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 import subprocess
 from pathlib import Path
 
@@ -9,11 +10,33 @@ from scripts.check_markdown_links import check_document, main, markdown_files
 
 
 @pytest.fixture
-def docs_repo(tmp_path: Path) -> Path:
+def docs_repo(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
+    # A pre-push hook's absolute GIT_DIR must never redirect git init/add to its caller.
+    for name in os.environ:
+        if name.startswith("GIT_"):
+            monkeypatch.delenv(name)
     subprocess.run(["git", "init", "--quiet", str(tmp_path)], check=True)
     (tmp_path / "docs").mkdir()
     (tmp_path / "README.md").write_text("# Project\n", encoding="utf-8")
     return tmp_path
+
+
+def test_explicit_root_ignores_foreign_hook_repository_environment(
+    docs_repo: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    foreign = docs_repo.parent / "foreign"
+    subprocess.run(["git", "init", "--quiet", str(foreign)], check=True)
+    (foreign / "foreign.md").write_text("# Foreign\n")
+    subprocess.run(["git", "-C", str(foreign), "add", "foreign.md"], check=True)
+    before = (foreign / ".git/index").read_bytes()
+    monkeypatch.setenv("GIT_DIR", str(foreign / ".git"))
+    monkeypatch.setenv("GIT_WORK_TREE", str(foreign))
+    monkeypatch.setenv("GIT_INDEX_FILE", str(foreign / ".git/index"))
+    monkeypatch.setenv("GIT_CONFIG_COUNT", "1")
+    monkeypatch.setenv("GIT_CONFIG_KEY_0", "core.bare")
+    monkeypatch.setenv("GIT_CONFIG_VALUE_0", "true")
+    assert markdown_files(docs_repo) == [docs_repo / "README.md"]
+    assert (foreign / ".git/index").read_bytes() == before
 
 
 @pytest.mark.parametrize(
