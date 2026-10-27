@@ -14,7 +14,7 @@ structural resemblance but did not establish an equivalent HMM. The earlier
 [operator attempt](../results/operator-development.md) also failed to recover structure.
 The [25 state/feature/intervention trials](../results/discovery-development.md) also
 failed to establish recovery. Paired agent trials and a fresh final campaign remain
-unfinished.**
+unfinished; its [frozen protocol and method bundles](final-campaign.md) are public.**
 
 The older pipeline supplies the HMM family and order to its fitters. Its results are
 informed parameter-fitting controls only. The [fresh-context research agent](research-agent.md)
