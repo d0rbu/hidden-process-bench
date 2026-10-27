@@ -7,9 +7,9 @@ task, discovering that a latent-state transition/emission process explains the m
 part of the task. Supplying an HMM constructor, parameterization, family label, mixture
 count or state count gives away part of the answer.
 
-**Status: the neutral execution/scoring runtime is implemented; the hidden mixed suite
-and independent discovery campaign are pending. There are no independent discovery
-results yet.** The older pipeline supplies the HMM family and order to its fitters.
+**Status: the neutral runtime and private mixed-process training suite are implemented.
+Independent discovery method evaluations remain pending. There are no independent
+discovery results yet.** The older pipeline supplies the HMM family and order to its fitters.
 Its results are informed parameter-fitting controls only.
 
 ## What an extractor receives
@@ -80,9 +80,9 @@ The suite must contain multiple generating mechanisms, with task identity concea
 and neural architectures/budgets balanced across them. Otherwise a strategy that
 always assumes the advertised family does not demonstrate family discovery. Choose
 and qualify that suite before collecting test submissions; do not select tasks using
-method recovery scores. Hidden-state processes, observed-state rules, counters,
-stack-based processes and small programs are candidate mechanisms for that design,
-not implemented or measured additions to the current suite.
+method recovery scores. The [private mixed suite](mixed-suite.md) implements screened HMM mixtures, delayed
+observed-token rules and a stack process with exact oracles and matched training.
+Counters and other small programs remain possible extensions, not measured additions.
 
 Freeze the mixed suite, neutral interface, access conditions, scoring rules and method
 implementations on development tasks before a new evaluation campaign. Preserve

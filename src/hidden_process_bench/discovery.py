@@ -8,7 +8,7 @@ from pathlib import Path
 import numpy as np
 
 from hidden_process_bench.config import check_count
-from hidden_process_bench.experiment import write_json
+from hidden_process_bench.experiment import provenance, write_json
 from hidden_process_bench.isolation import Limits, run_isolated
 from hidden_process_bench.metrics import check_probabilities, sequence_kl, summarize
 from hidden_process_bench.process import Floats, Tokens
@@ -123,6 +123,7 @@ def score_process(
     if teacher is not None:
         check_probabilities(teacher)
     output.mkdir(parents=True, exist_ok=False)
+    write_json(output / "provenance.json", provenance())
     if teacher is None:
         np.savez_compressed(output / "private-inputs.npz", tokens=tokens, oracle=oracle)
     else:

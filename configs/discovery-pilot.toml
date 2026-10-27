@@ -1,0 +1,17 @@
+# Fresh evaluator-only tasks. Never expose the private plan or generating seeds.
+replicates = 2
+vocab = 16
+length = 24
+width = 64
+heads = 4
+layers = 2
+train_steps = 4000
+batch_size = 64
+learning_rate = 0.003
+eval_every = 100
+eval_sequences = 512
+max_kl = 0.03
+observation_sequences = 128
+score_sequences = 128
+long_length = 72
+threads = 2

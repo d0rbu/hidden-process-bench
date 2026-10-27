@@ -117,11 +117,15 @@ known-first-party = ["hidden_process_bench", "scripts", "tests"]
 paths = ["."]
 min_confidence = 60
 sort_by_size = true
-# TypedDict keys are consumed by string indexing/JSON; pytest registers the autouse fixture.
+# TypedDict keys are consumed by string indexing/JSON. Pytest registers the two
+# autouse fixtures cpu_threads and deterministic_private_rng.
 ignore_names = [
     "training_cross_entropy", "mean_kl", "standard_error", "upper95_kl", "by_component",
     "weights_mae", "initial_mae", "transition_mae", "emission_mae", "mean_parameter_mae",
     "component_permutation", "state_permutations", "transition_support_f1", "cpu_threads",
+    "deterministic_private_rng",
+    # Mixed-suite TypedDict fields are serialized and read through dictionary keys.
+    "id", "process_sha256", "schema_version", "plan_sha256", "all_prepared",
 ]
 exclude = [
     ".venv/", ".git/", ".cache/", ".codex/worktrees/", "build/", "dist/", "data/", "artifacts/",

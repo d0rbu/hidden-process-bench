@@ -29,6 +29,14 @@ timeouts, failed searches, frozen-manifest tampering, and row-invariance violati
 Generic constant-process fixtures validate execution and scoring; they are not discovery
 results. These tests require Bubblewrap, prlimit and a working user systemd manager.
 
+Mixed-suite tests compare stack predictions against an independent parser on all
+short histories, check delayed-rule causality with bounded Hypothesis cases, and
+verify seeded sampling/serialization. Real child processes exercise all three
+generators. Separate tests recompute qualification, verify paired public observations,
+reject source/task/checkpoint mismatches, and retain failed preparation and timeouts.
+The positive smoke fixtures use a deliberately loose tolerance to test exports;
+they are not evidence of research qualification.
+
 Tests use two CPU threads, no external network, no paid providers, and no GPUs. The measured
 coverage source is `hidden_process_bench` plus repository `scripts`, not test code.
 The template's 95% branch coverage threshold is retained. Warnings, unknown markers,
