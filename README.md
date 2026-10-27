@@ -8,9 +8,10 @@ transition/emission mechanism without being given an HMM template or its size.
 **Current status: a family-neutral agent submitted a six-regime process on one of five
 qualified development teachers; four runs timed out.** Its predictions are good, but
 its update rules differ from the generating HMM and equivalence is not established.
-See the [agent results](docs/results/agent-development.md) and earlier
-[negative operator results](docs/results/operator-development.md). The broader five-method
-discovery evaluation remains unfinished. Older fitters and agent prompts were supplied
+See the [agent results](docs/results/agent-development.md),
+[25 state/feature/intervention results](docs/results/discovery-development.md) and earlier
+[operator results](docs/results/operator-development.md). None established structure recovery.
+Paired agent trials and a fresh final campaign remain unfinished. Older fitters and agent prompts were supplied
 HMM semantics and component/state counts; those are informed controls, not discovery
 results. See the [primary protocol](docs/research/independent-discovery.md).
 

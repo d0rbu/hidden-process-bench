@@ -66,4 +66,5 @@ and register all programs before private scoring. Retain failed/incomplete runs.
 Finite-difference tests validate the sparse network gradients. Synthetic reconstruction
 and real isolated extraction tests cover training splits, replay mismatches, execution
 counts and teacher-free predictions. These are implementation checks; they are not
-trained-teacher benchmark results.
+trained-teacher benchmark results. The separate [development cohort](../results/discovery-development.md)
+ran all fifteen feature/intervention programs and demonstrated no structure recovery.

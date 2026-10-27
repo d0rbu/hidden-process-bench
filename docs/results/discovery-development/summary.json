@@ -1,0 +1,3217 @@
+{
+  "schema_version": 1,
+  "evaluation": "restricted_process_identification_development",
+  "process_family_disclosed_to_methods": false,
+  "process_order_disclosed_to_methods": false,
+  "supplied_hmm_fitting_adapter": false,
+  "methods": [
+    "geometry",
+    "pca",
+    "sae",
+    "transcoder",
+    "causal"
+  ],
+  "development_cases": 5,
+  "trials": 25,
+  "cohorts": {
+    "geometry-development-v1": {
+      "plan_sha256": "0a34a4ba2b81b93da2bbfe4107d10adea338a0b2d5b04009de7359de12ab1ff7",
+      "registrations_sha256": "3597a46a64cf102a0fbbc778da8b240ff628537daec658b54acc0fee3871e945",
+      "report_sha256": "099f815883d8791f3211a231e994de48ce91da43e9901d2ac1a374605673ff62",
+      "source_commit": "b386db72358eae1eefc30d57b8a784eb242cfbf6",
+      "method_sha256": {
+        "outputs": {
+          "main.py": "b214f5b2de28aafbce16bbb5f390e8eff94ba08eed40a2038c6255d0bcd20c88",
+          "method/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "method/operator_predictor.py": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+          "method/operator_structure.py": "097365339bd2a5b35fb61f8c301d541e8ff8be3c5e4e8122af3b47c06bf5759b",
+          "method/state_geometry.py": "c7572132f60e26b229da26167f4f9355fc63f532321fcfa1da576a6858fae89c"
+        },
+        "activations": {
+          "main.py": "950d803085abce62ef9397795e90258a68e4ca334a2d0c3a54bda32039ca7dd2",
+          "method/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "method/operator_predictor.py": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+          "method/operator_structure.py": "097365339bd2a5b35fb61f8c301d541e8ff8be3c5e4e8122af3b47c06bf5759b",
+          "method/state_geometry.py": "c7572132f60e26b229da26167f4f9355fc63f532321fcfa1da576a6858fae89c"
+        }
+      },
+      "trials": 10,
+      "all_submissions_before_own_cohort_private_scoring": true
+    },
+    "features-development-v1": {
+      "plan_sha256": "ea1dbf05d96005b8188d00c6e7b70f0ce66dc95df50dd4e5f227d9205bb11a03",
+      "registrations_sha256": "dc3ab0510b7b2f1f1e9729a2b2d22c4c34c8db5ce5d76e8bbe4c3b4cd162d5f2",
+      "report_sha256": "6d727d490d2deae272a28ed7f848c577f56b19a9ff6f80f3aaa1f2955460e042",
+      "source_commit": "0d6cfabdeb3eced432bca1c89d2decddf273f4b6",
+      "method_sha256": {
+        "sae": {
+          "main.py": "98f92e2b2e43f832d5689ab8d4763cb5e06bb7f99a56df734886baf11cc5adad",
+          "method/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "method/discovery_features.py": "bb6e9c33edf1aa2e53ada11948eb2372d2ef622e1048a24f88b541b4af403956",
+          "method/neural_numpy.py": "3e8a4819ae3f2f9e69436c334cc7d23e7144e1b74059f23084806fd26ab421b7",
+          "method/operator_predictor.py": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+          "method/operator_structure.py": "097365339bd2a5b35fb61f8c301d541e8ff8be3c5e4e8122af3b47c06bf5759b",
+          "method/state_geometry.py": "756da962a837a1c723d632267d877be547df715e20ec9242e55346c4ed29027d"
+        },
+        "transcoder": {
+          "main.py": "248da597defa994bbd0e5c65751ae300eb48949eba87dff9036e65a86fad1b76",
+          "method/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "method/discovery_features.py": "bb6e9c33edf1aa2e53ada11948eb2372d2ef622e1048a24f88b541b4af403956",
+          "method/neural_numpy.py": "3e8a4819ae3f2f9e69436c334cc7d23e7144e1b74059f23084806fd26ab421b7",
+          "method/operator_predictor.py": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+          "method/operator_structure.py": "097365339bd2a5b35fb61f8c301d541e8ff8be3c5e4e8122af3b47c06bf5759b",
+          "method/state_geometry.py": "756da962a837a1c723d632267d877be547df715e20ec9242e55346c4ed29027d"
+        },
+        "causal": {
+          "main.py": "9ce2142c256e8b6a7bf8d730e0e7148a856a21224f6de11cad7da4a0916bf77f",
+          "method/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "method/discovery_features.py": "bb6e9c33edf1aa2e53ada11948eb2372d2ef622e1048a24f88b541b4af403956",
+          "method/neural_numpy.py": "3e8a4819ae3f2f9e69436c334cc7d23e7144e1b74059f23084806fd26ab421b7",
+          "method/operator_predictor.py": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+          "method/operator_structure.py": "097365339bd2a5b35fb61f8c301d541e8ff8be3c5e4e8122af3b47c06bf5759b",
+          "method/state_geometry.py": "756da962a837a1c723d632267d877be547df715e20ec9242e55346c4ed29027d"
+        }
+      },
+      "trials": 15,
+      "all_submissions_before_own_cohort_private_scoring": true
+    }
+  },
+  "single_joint_blind_25trial_campaign": false,
+  "development_scope": "Two separately registered development cohorts. Later development could see earlier results; these are not fresh final results or an unbiased method ranking.",
+  "prior": "Finite homogeneous linear predictive state; unsupervised coordinates/features or greedy neural pruning; fixed analytical recognition of a particular latent Markov family after operator learning. Not unrestricted program discovery, a supplied HMM optimization adapter, a minimality certificate or semantic causal recovery.",
+  "observation_sequences": 128,
+  "observation_length": 24,
+  "heldout_sequences": 128,
+  "long_length": 72,
+  "additional_query_comparison": "Geometry, PCA and SAE use only cached observations. Transcoder and causal variants execute weights and count their extra vectors/ablations. Paired histories/probabilities do not imply equal query/compute budgets.",
+  "independent_structure_recovery_demonstrated": false,
+  "orchestration_failure": "Geometry scoring initially stopped before predictions because its source import capsule lacked project metadata needed for provenance. Added exact source/metadata mirrors, preserved the failed directory and resumed scoring in fresh namespaces from all ten original registered executables. No extraction was repeated.",
+  "cases": [
+    {
+      "case": "case-01",
+      "method": "causal",
+      "cohort": "features-development-v1",
+      "family_after_registration": "lag_rule",
+      "access": "internals",
+      "status": "submitted",
+      "submission_receipt_sha256": "23b3dc48868ca3f7d27459c0798b1e276abbca2ff74221d4a1316831c8c17515",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "23b3dc48868ca3f7d27459c0798b1e276abbca2ff74221d4a1316831c8c17515",
+        "private_inputs_sha256": "139132baa5225c9e50bc7b24be221d9a9ec520c3acb7e53d80998f4d6fa1d58c",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.1648944203901368,
+          "standard_error": 0.002293478176539697,
+          "upper95_kl": 1.1693896376161546
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.1783358521245884,
+          "standard_error": 0.002116358141984862,
+          "upper95_kl": 1.1824839140828787
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.023902280333184322,
+          "standard_error": 0.00014646270437916332,
+          "upper95_kl": 0.02418934723376748
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "23b3dc48868ca3f7d27459c0798b1e276abbca2ff74221d4a1316831c8c17515",
+        "private_inputs_sha256": "943be5733596b4b0f58a7bf1ebe756ed64561adf912920bc4095b0d98a0d6a73",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.2762986930686555,
+          "standard_error": 0.0013937186415343824,
+          "upper95_kl": 1.2790303816060629
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 1,
+      "ridge": 1e-06,
+      "proposed_family": "memoryless_categorical",
+      "family_evidence": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.06514053456338331,
+            0.07373533885521984,
+            0.05838034345771822,
+            0.07412248253360094,
+            0.05173728018415602,
+            0.05810297115960358,
+            0.07309104490906766,
+            0.058984569867774894,
+            0.05780104078514133,
+            0.056720465805772356,
+            0.06244894044052766,
+            0.06047426735781395,
+            0.07252547332471693,
+            0.0607503795984646,
+            0.05650420116465682,
+            0.05948066599238189
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      },
+      "resources": {
+        "features": "causal",
+        "neural_execution_counts": {
+          "forward_calls": 9,
+          "token_queries": 27648,
+          "prefix_tokens_processed": 27648
+        },
+        "neural_count_scope": "All helper executions including ablations, every returned probability vector counted. Cached observation collection is additional and unchanged.",
+        "assumptions": "Learned feature map or greedy circuit pruning followed by autonomous linear-state identification; no supplied HMM adapter. Representation evidence does not establish recovered latent semantics or a causal mechanism.",
+        "selection": "selection.json"
+      },
+      "representation": {
+        "mode": "causal",
+        "ablation": "Greedy layer/head order, cumulative zero ablations before attention output projection; retain removal only at mean KL <= 0.005 against the original cached probabilities.",
+        "removed_heads": [
+          [
+            1,
+            0
+          ]
+        ],
+        "trials": [
+          {
+            "layer": 0,
+            "head": 0,
+            "cumulative_kl": 0.007607804952763572,
+            "removed": false
+          },
+          {
+            "layer": 0,
+            "head": 1,
+            "cumulative_kl": 0.00902004891610523,
+            "removed": false
+          },
+          {
+            "layer": 0,
+            "head": 2,
+            "cumulative_kl": 0.008960909404518016,
+            "removed": false
+          },
+          {
+            "layer": 0,
+            "head": 3,
+            "cumulative_kl": 0.005329289944399621,
+            "removed": false
+          },
+          {
+            "layer": 1,
+            "head": 0,
+            "cumulative_kl": 0.00404812803981527,
+            "removed": true
+          },
+          {
+            "layer": 1,
+            "head": 1,
+            "cumulative_kl": 0.0147882169454055,
+            "removed": false
+          },
+          {
+            "layer": 1,
+            "head": 2,
+            "cumulative_kl": 0.01821902765112092,
+            "removed": false
+          },
+          {
+            "layer": 1,
+            "head": 3,
+            "cumulative_kl": 0.008911643083099222,
+            "removed": false
+          }
+        ],
+        "causal_scope": "Ablation effects on neural predictions only. No semantic intervention alignment to a recovered generating process, circuit completeness, or causal recovery is established."
+      },
+      "heldout_max_total_variation": 0.6417524586749815,
+      "long_max_total_variation": 0.6417524586749815,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The selected one-dimensional process is history-independent, contrary to the source dependency and private prediction witnesses.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": "Head-ablation effects on neural predictions are separately recorded; no semantic source-process intervention correspondence is established."
+      }
+    },
+    {
+      "case": "case-01",
+      "method": "geometry",
+      "cohort": "geometry-development-v1",
+      "family_after_registration": "lag_rule",
+      "access": "outputs",
+      "status": "submitted",
+      "submission_receipt_sha256": "91d4e87658299a398733dc7b6300aaaaf622615c12746b4950591b61d8c065cc",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "91d4e87658299a398733dc7b6300aaaaf622615c12746b4950591b61d8c065cc",
+        "private_inputs_sha256": "139132baa5225c9e50bc7b24be221d9a9ec520c3acb7e53d80998f4d6fa1d58c",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.1648944203901368,
+          "standard_error": 0.002293478176539697,
+          "upper95_kl": 1.1693896376161546
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.1783358521245884,
+          "standard_error": 0.002116358141984862,
+          "upper95_kl": 1.1824839140828787
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.023902280333184322,
+          "standard_error": 0.00014646270437916332,
+          "upper95_kl": 0.02418934723376748
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "91d4e87658299a398733dc7b6300aaaaf622615c12746b4950591b61d8c065cc",
+        "private_inputs_sha256": "943be5733596b4b0f58a7bf1ebe756ed64561adf912920bc4095b0d98a0d6a73",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.2762986930686555,
+          "standard_error": 0.0013937186415343824,
+          "upper95_kl": 1.2790303816060629
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 1,
+      "ridge": 1e-06,
+      "proposed_family": "memoryless_categorical",
+      "family_evidence": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.06514053456338331,
+            0.07373533885521984,
+            0.05838034345771822,
+            0.07412248253360094,
+            0.05173728018415602,
+            0.05810297115960358,
+            0.07309104490906766,
+            0.058984569867774894,
+            0.05780104078514133,
+            0.056720465805772356,
+            0.06244894044052766,
+            0.06047426735781395,
+            0.07252547332471693,
+            0.0607503795984646,
+            0.05650420116465682,
+            0.05948066599238189
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      },
+      "resources": {
+        "features": "outputs",
+        "additional_teacher_execution": 0,
+        "selection": "selection.json"
+      },
+      "representation": null,
+      "heldout_max_total_variation": 0.6417524586749815,
+      "long_max_total_variation": 0.6417524586749815,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The selected one-dimensional process is history-independent, contrary to the source dependency and private prediction witnesses.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": null
+      }
+    },
+    {
+      "case": "case-01",
+      "method": "pca",
+      "cohort": "geometry-development-v1",
+      "family_after_registration": "lag_rule",
+      "access": "internals",
+      "status": "submitted",
+      "submission_receipt_sha256": "2e20ebc858cc3d2b02379ede32ef253771431f915e90952fc3534aae03c94116",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "2e20ebc858cc3d2b02379ede32ef253771431f915e90952fc3534aae03c94116",
+        "private_inputs_sha256": "139132baa5225c9e50bc7b24be221d9a9ec520c3acb7e53d80998f4d6fa1d58c",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.1648944203901368,
+          "standard_error": 0.002293478176539697,
+          "upper95_kl": 1.1693896376161546
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.1783358521245884,
+          "standard_error": 0.002116358141984862,
+          "upper95_kl": 1.1824839140828787
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.023902280333184322,
+          "standard_error": 0.00014646270437916332,
+          "upper95_kl": 0.02418934723376748
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "2e20ebc858cc3d2b02379ede32ef253771431f915e90952fc3534aae03c94116",
+        "private_inputs_sha256": "943be5733596b4b0f58a7bf1ebe756ed64561adf912920bc4095b0d98a0d6a73",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.2762986930686555,
+          "standard_error": 0.0013937186415343824,
+          "upper95_kl": 1.2790303816060629
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 1,
+      "ridge": 1e-06,
+      "proposed_family": "memoryless_categorical",
+      "family_evidence": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.06514053456338331,
+            0.07373533885521984,
+            0.05838034345771822,
+            0.07412248253360094,
+            0.05173728018415602,
+            0.05810297115960358,
+            0.07309104490906766,
+            0.058984569867774894,
+            0.05780104078514133,
+            0.056720465805772356,
+            0.06244894044052766,
+            0.06047426735781395,
+            0.07252547332471693,
+            0.0607503795984646,
+            0.05650420116465682,
+            0.05948066599238189
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      },
+      "resources": {
+        "features": "activations",
+        "additional_teacher_execution": 0,
+        "selection": "selection.json"
+      },
+      "representation": null,
+      "heldout_max_total_variation": 0.6417524586749815,
+      "long_max_total_variation": 0.6417524586749815,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The selected one-dimensional process is history-independent, contrary to the source dependency and private prediction witnesses.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": null
+      }
+    },
+    {
+      "case": "case-01",
+      "method": "sae",
+      "cohort": "features-development-v1",
+      "family_after_registration": "lag_rule",
+      "access": "internals",
+      "status": "submitted",
+      "submission_receipt_sha256": "5a362f0c712f43dd2398f0fb54c8d62260e63ec081fd7b70d5bceac819b94311",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "5a362f0c712f43dd2398f0fb54c8d62260e63ec081fd7b70d5bceac819b94311",
+        "private_inputs_sha256": "139132baa5225c9e50bc7b24be221d9a9ec520c3acb7e53d80998f4d6fa1d58c",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.1648944203901368,
+          "standard_error": 0.002293478176539697,
+          "upper95_kl": 1.1693896376161546
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.1783358521245884,
+          "standard_error": 0.002116358141984862,
+          "upper95_kl": 1.1824839140828787
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.023902280333184322,
+          "standard_error": 0.00014646270437916332,
+          "upper95_kl": 0.02418934723376748
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "5a362f0c712f43dd2398f0fb54c8d62260e63ec081fd7b70d5bceac819b94311",
+        "private_inputs_sha256": "943be5733596b4b0f58a7bf1ebe756ed64561adf912920bc4095b0d98a0d6a73",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.2762986930686555,
+          "standard_error": 0.0013937186415343824,
+          "upper95_kl": 1.2790303816060629
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 1,
+      "ridge": 1e-06,
+      "proposed_family": "memoryless_categorical",
+      "family_evidence": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.06514053456338331,
+            0.07373533885521984,
+            0.05838034345771822,
+            0.07412248253360094,
+            0.05173728018415602,
+            0.05810297115960358,
+            0.07309104490906766,
+            0.058984569867774894,
+            0.05780104078514133,
+            0.056720465805772356,
+            0.06244894044052766,
+            0.06047426735781395,
+            0.07252547332471693,
+            0.0607503795984646,
+            0.05650420116465682,
+            0.05948066599238189
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      },
+      "resources": {
+        "features": "sae",
+        "neural_execution_counts": {
+          "forward_calls": 0,
+          "token_queries": 0,
+          "prefix_tokens_processed": 0
+        },
+        "neural_count_scope": "All helper executions including ablations, every returned probability vector counted. Cached observation collection is additional and unchanged.",
+        "assumptions": "Learned feature map or greedy circuit pruning followed by autonomous linear-state identification; no supplied HMM adapter. Representation evidence does not establish recovered latent semantics or a causal mechanism.",
+        "selection": "selection.json"
+      },
+      "representation": {
+        "mode": "sae",
+        "training_rows": 2304,
+        "hidden_width": 64,
+        "steps": 800,
+        "sparsity_penalty": 0.001,
+        "initial_objective": 1.4903542131421619,
+        "final_objective": 0.0012051043779679426,
+        "active_fraction": 0.97052001953125,
+        "training": "Fixed-seed minibatch Adam; squared reconstruction/prediction error plus mean positive activation penalty. No latent labels or process model.",
+        "representation_training_sequences": 96,
+        "representation_validation_sequences_used_for_training": false
+      },
+      "heldout_max_total_variation": 0.6417524586749815,
+      "long_max_total_variation": 0.6417524586749815,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The selected one-dimensional process is history-independent, contrary to the source dependency and private prediction witnesses.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": null
+      }
+    },
+    {
+      "case": "case-01",
+      "method": "transcoder",
+      "cohort": "features-development-v1",
+      "family_after_registration": "lag_rule",
+      "access": "internals",
+      "status": "submitted",
+      "submission_receipt_sha256": "fcdaf365c60e77dcb0285553f5f39a25e0f34a48439a945573581f969741169b",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "fcdaf365c60e77dcb0285553f5f39a25e0f34a48439a945573581f969741169b",
+        "private_inputs_sha256": "139132baa5225c9e50bc7b24be221d9a9ec520c3acb7e53d80998f4d6fa1d58c",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.1648944203901368,
+          "standard_error": 0.002293478176539697,
+          "upper95_kl": 1.1693896376161546
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.1783358521245884,
+          "standard_error": 0.002116358141984862,
+          "upper95_kl": 1.1824839140828787
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.023902280333184322,
+          "standard_error": 0.00014646270437916332,
+          "upper95_kl": 0.02418934723376748
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "fcdaf365c60e77dcb0285553f5f39a25e0f34a48439a945573581f969741169b",
+        "private_inputs_sha256": "943be5733596b4b0f58a7bf1ebe756ed64561adf912920bc4095b0d98a0d6a73",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.2762986930686555,
+          "standard_error": 0.0013937186415343824,
+          "upper95_kl": 1.2790303816060629
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 1,
+      "ridge": 1e-06,
+      "proposed_family": "memoryless_categorical",
+      "family_evidence": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.06514053456338331,
+            0.07373533885521984,
+            0.05838034345771822,
+            0.07412248253360094,
+            0.05173728018415602,
+            0.05810297115960358,
+            0.07309104490906766,
+            0.058984569867774894,
+            0.05780104078514133,
+            0.056720465805772356,
+            0.06244894044052766,
+            0.06047426735781395,
+            0.07252547332471693,
+            0.0607503795984646,
+            0.05650420116465682,
+            0.05948066599238189
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      },
+      "resources": {
+        "features": "transcoder",
+        "neural_execution_counts": {
+          "forward_calls": 1,
+          "token_queries": 3072,
+          "prefix_tokens_processed": 3072
+        },
+        "neural_count_scope": "All helper executions including ablations, every returned probability vector counted. Cached observation collection is additional and unchanged.",
+        "assumptions": "Learned feature map or greedy circuit pruning followed by autonomous linear-state identification; no supplied HMM adapter. Representation evidence does not establish recovered latent semantics or a causal mechanism.",
+        "selection": "selection.json"
+      },
+      "representation": {
+        "mode": "transcoder",
+        "training_rows": 2304,
+        "hidden_width": 64,
+        "steps": 800,
+        "sparsity_penalty": 0.001,
+        "initial_objective": 1.485524259339227,
+        "final_objective": 0.013693114994647817,
+        "active_fraction": 0.5485432942708334,
+        "training": "Fixed-seed minibatch Adam; squared reconstruction/prediction error plus mean positive activation penalty. No latent labels or process model.",
+        "representation_training_sequences": 96,
+        "representation_validation_sequences_used_for_training": false
+      },
+      "heldout_max_total_variation": 0.6417524586749815,
+      "long_max_total_variation": 0.6417524586749815,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The selected one-dimensional process is history-independent, contrary to the source dependency and private prediction witnesses.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": null
+      }
+    },
+    {
+      "case": "case-02",
+      "method": "causal",
+      "cohort": "features-development-v1",
+      "family_after_registration": "lag_rule",
+      "access": "internals",
+      "status": "submitted",
+      "submission_receipt_sha256": "cc636854980d5c4fee270a2f8ac1ed4713c32103ac6533138d672cdea20c7e31",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "cc636854980d5c4fee270a2f8ac1ed4713c32103ac6533138d672cdea20c7e31",
+        "private_inputs_sha256": "1b9f5db5b6ef9df2de38ab6286df7c159ac18dcc7b87a49c35511cd2aced0694",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.4269001300025805,
+          "standard_error": 0.0007597022617075147,
+          "upper95_kl": 1.4283891464355272
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.409424761330781,
+          "standard_error": 0.0021647112318286146,
+          "upper95_kl": 1.4136675953451652
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.020778673699777643,
+          "standard_error": 0.00017322845273058863,
+          "upper95_kl": 0.021118201467129595
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "cc636854980d5c4fee270a2f8ac1ed4713c32103ac6533138d672cdea20c7e31",
+        "private_inputs_sha256": "f3558cd7851b7621e17e2f7f9c44a34dd12d2f3f986e3bc81ae93505599bb4cf",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.6749010508574167,
+          "standard_error": 0.00046517996525849854,
+          "upper95_kl": 1.6758128035893234
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 1,
+      "ridge": 1e-06,
+      "proposed_family": "memoryless_categorical",
+      "family_evidence": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.060413599197360675,
+            0.06057830206582083,
+            0.06623839126000065,
+            0.06576849920274698,
+            0.058740867011887125,
+            0.06314692824784156,
+            0.06285423762760446,
+            0.062498650218576784,
+            0.056994006029266124,
+            0.06027097565974771,
+            0.0656340105266935,
+            0.06368506256797465,
+            0.0636430056256027,
+            0.06488187149993509,
+            0.06750246263372618,
+            0.05714913062521514
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      },
+      "resources": {
+        "features": "causal",
+        "neural_execution_counts": {
+          "forward_calls": 9,
+          "token_queries": 27648,
+          "prefix_tokens_processed": 27648
+        },
+        "neural_count_scope": "All helper executions including ablations, every returned probability vector counted. Cached observation collection is additional and unchanged.",
+        "assumptions": "Learned feature map or greedy circuit pruning followed by autonomous linear-state identification; no supplied HMM adapter. Representation evidence does not establish recovered latent semantics or a causal mechanism.",
+        "selection": "selection.json"
+      },
+      "representation": {
+        "mode": "causal",
+        "ablation": "Greedy layer/head order, cumulative zero ablations before attention output projection; retain removal only at mean KL <= 0.005 against the original cached probabilities.",
+        "removed_heads": [
+          [
+            0,
+            1
+          ]
+        ],
+        "trials": [
+          {
+            "layer": 0,
+            "head": 0,
+            "cumulative_kl": 0.00594879887521395,
+            "removed": false
+          },
+          {
+            "layer": 0,
+            "head": 1,
+            "cumulative_kl": 0.0019230911474232722,
+            "removed": true
+          },
+          {
+            "layer": 0,
+            "head": 2,
+            "cumulative_kl": 0.009161951613342413,
+            "removed": false
+          },
+          {
+            "layer": 0,
+            "head": 3,
+            "cumulative_kl": 0.008563653531577647,
+            "removed": false
+          },
+          {
+            "layer": 1,
+            "head": 0,
+            "cumulative_kl": 0.01271325099933535,
+            "removed": false
+          },
+          {
+            "layer": 1,
+            "head": 1,
+            "cumulative_kl": 0.010590445473927006,
+            "removed": false
+          },
+          {
+            "layer": 1,
+            "head": 2,
+            "cumulative_kl": 0.015365139212243719,
+            "removed": false
+          },
+          {
+            "layer": 1,
+            "head": 3,
+            "cumulative_kl": 0.015299777062653496,
+            "removed": false
+          }
+        ],
+        "causal_scope": "Ablation effects on neural predictions only. No semantic intervention alignment to a recovered generating process, circuit completeness, or causal recovery is established."
+      },
+      "heldout_max_total_variation": 0.7595234421629937,
+      "long_max_total_variation": 0.7595234421629937,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The selected one-dimensional process is history-independent, contrary to the source dependency and private prediction witnesses.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": "Head-ablation effects on neural predictions are separately recorded; no semantic source-process intervention correspondence is established."
+      }
+    },
+    {
+      "case": "case-02",
+      "method": "geometry",
+      "cohort": "geometry-development-v1",
+      "family_after_registration": "lag_rule",
+      "access": "outputs",
+      "status": "submitted",
+      "submission_receipt_sha256": "34742bc7d135049a477bf0dd8be85379b0bfe392732e5a80b021d57772489cd4",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "34742bc7d135049a477bf0dd8be85379b0bfe392732e5a80b021d57772489cd4",
+        "private_inputs_sha256": "1b9f5db5b6ef9df2de38ab6286df7c159ac18dcc7b87a49c35511cd2aced0694",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.4269001300025805,
+          "standard_error": 0.0007597022617075147,
+          "upper95_kl": 1.4283891464355272
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.409424761330781,
+          "standard_error": 0.0021647112318286146,
+          "upper95_kl": 1.4136675953451652
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.020778673699777643,
+          "standard_error": 0.00017322845273058863,
+          "upper95_kl": 0.021118201467129595
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "34742bc7d135049a477bf0dd8be85379b0bfe392732e5a80b021d57772489cd4",
+        "private_inputs_sha256": "f3558cd7851b7621e17e2f7f9c44a34dd12d2f3f986e3bc81ae93505599bb4cf",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.6749010508574167,
+          "standard_error": 0.00046517996525849854,
+          "upper95_kl": 1.6758128035893234
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 1,
+      "ridge": 1e-06,
+      "proposed_family": "memoryless_categorical",
+      "family_evidence": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.060413599197360675,
+            0.06057830206582083,
+            0.06623839126000065,
+            0.06576849920274698,
+            0.058740867011887125,
+            0.06314692824784156,
+            0.06285423762760446,
+            0.062498650218576784,
+            0.056994006029266124,
+            0.06027097565974771,
+            0.0656340105266935,
+            0.06368506256797465,
+            0.0636430056256027,
+            0.06488187149993509,
+            0.06750246263372618,
+            0.05714913062521514
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      },
+      "resources": {
+        "features": "outputs",
+        "additional_teacher_execution": 0,
+        "selection": "selection.json"
+      },
+      "representation": null,
+      "heldout_max_total_variation": 0.7595234421629937,
+      "long_max_total_variation": 0.7595234421629937,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The selected one-dimensional process is history-independent, contrary to the source dependency and private prediction witnesses.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": null
+      }
+    },
+    {
+      "case": "case-02",
+      "method": "pca",
+      "cohort": "geometry-development-v1",
+      "family_after_registration": "lag_rule",
+      "access": "internals",
+      "status": "submitted",
+      "submission_receipt_sha256": "2d0d38af8152f1f0415e8466e6879b3371e903717ffde78c71c365f8ee49c9f2",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "2d0d38af8152f1f0415e8466e6879b3371e903717ffde78c71c365f8ee49c9f2",
+        "private_inputs_sha256": "1b9f5db5b6ef9df2de38ab6286df7c159ac18dcc7b87a49c35511cd2aced0694",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.4269001300025805,
+          "standard_error": 0.0007597022617075147,
+          "upper95_kl": 1.4283891464355272
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.409424761330781,
+          "standard_error": 0.0021647112318286146,
+          "upper95_kl": 1.4136675953451652
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.020778673699777643,
+          "standard_error": 0.00017322845273058863,
+          "upper95_kl": 0.021118201467129595
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "2d0d38af8152f1f0415e8466e6879b3371e903717ffde78c71c365f8ee49c9f2",
+        "private_inputs_sha256": "f3558cd7851b7621e17e2f7f9c44a34dd12d2f3f986e3bc81ae93505599bb4cf",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.6749010508574167,
+          "standard_error": 0.00046517996525849854,
+          "upper95_kl": 1.6758128035893234
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 1,
+      "ridge": 1e-06,
+      "proposed_family": "memoryless_categorical",
+      "family_evidence": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.060413599197360675,
+            0.06057830206582083,
+            0.06623839126000065,
+            0.06576849920274698,
+            0.058740867011887125,
+            0.06314692824784156,
+            0.06285423762760446,
+            0.062498650218576784,
+            0.056994006029266124,
+            0.06027097565974771,
+            0.0656340105266935,
+            0.06368506256797465,
+            0.0636430056256027,
+            0.06488187149993509,
+            0.06750246263372618,
+            0.05714913062521514
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      },
+      "resources": {
+        "features": "activations",
+        "additional_teacher_execution": 0,
+        "selection": "selection.json"
+      },
+      "representation": null,
+      "heldout_max_total_variation": 0.7595234421629937,
+      "long_max_total_variation": 0.7595234421629937,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The selected one-dimensional process is history-independent, contrary to the source dependency and private prediction witnesses.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": null
+      }
+    },
+    {
+      "case": "case-02",
+      "method": "sae",
+      "cohort": "features-development-v1",
+      "family_after_registration": "lag_rule",
+      "access": "internals",
+      "status": "submitted",
+      "submission_receipt_sha256": "71c157147028b57a0d1ff30091ff62e2ffddf5e981f36158e0c57c951e987b6a",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "71c157147028b57a0d1ff30091ff62e2ffddf5e981f36158e0c57c951e987b6a",
+        "private_inputs_sha256": "1b9f5db5b6ef9df2de38ab6286df7c159ac18dcc7b87a49c35511cd2aced0694",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.4269001300025805,
+          "standard_error": 0.0007597022617075147,
+          "upper95_kl": 1.4283891464355272
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.409424761330781,
+          "standard_error": 0.0021647112318286146,
+          "upper95_kl": 1.4136675953451652
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.020778673699777643,
+          "standard_error": 0.00017322845273058863,
+          "upper95_kl": 0.021118201467129595
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "71c157147028b57a0d1ff30091ff62e2ffddf5e981f36158e0c57c951e987b6a",
+        "private_inputs_sha256": "f3558cd7851b7621e17e2f7f9c44a34dd12d2f3f986e3bc81ae93505599bb4cf",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.6749010508574167,
+          "standard_error": 0.00046517996525849854,
+          "upper95_kl": 1.6758128035893234
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 1,
+      "ridge": 1e-06,
+      "proposed_family": "memoryless_categorical",
+      "family_evidence": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.060413599197360675,
+            0.06057830206582083,
+            0.06623839126000065,
+            0.06576849920274698,
+            0.058740867011887125,
+            0.06314692824784156,
+            0.06285423762760446,
+            0.062498650218576784,
+            0.056994006029266124,
+            0.06027097565974771,
+            0.0656340105266935,
+            0.06368506256797465,
+            0.0636430056256027,
+            0.06488187149993509,
+            0.06750246263372618,
+            0.05714913062521514
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      },
+      "resources": {
+        "features": "sae",
+        "neural_execution_counts": {
+          "forward_calls": 0,
+          "token_queries": 0,
+          "prefix_tokens_processed": 0
+        },
+        "neural_count_scope": "All helper executions including ablations, every returned probability vector counted. Cached observation collection is additional and unchanged.",
+        "assumptions": "Learned feature map or greedy circuit pruning followed by autonomous linear-state identification; no supplied HMM adapter. Representation evidence does not establish recovered latent semantics or a causal mechanism.",
+        "selection": "selection.json"
+      },
+      "representation": {
+        "mode": "sae",
+        "training_rows": 2304,
+        "hidden_width": 64,
+        "steps": 800,
+        "sparsity_penalty": 0.001,
+        "initial_objective": 1.5122588433914212,
+        "final_objective": 0.0016497694564287296,
+        "active_fraction": 0.89178466796875,
+        "training": "Fixed-seed minibatch Adam; squared reconstruction/prediction error plus mean positive activation penalty. No latent labels or process model.",
+        "representation_training_sequences": 96,
+        "representation_validation_sequences_used_for_training": false
+      },
+      "heldout_max_total_variation": 0.7595234421629937,
+      "long_max_total_variation": 0.7595234421629937,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The selected one-dimensional process is history-independent, contrary to the source dependency and private prediction witnesses.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": null
+      }
+    },
+    {
+      "case": "case-02",
+      "method": "transcoder",
+      "cohort": "features-development-v1",
+      "family_after_registration": "lag_rule",
+      "access": "internals",
+      "status": "submitted",
+      "submission_receipt_sha256": "ee2ed36590de0174d4b324549535e974f82217849ee716f4a982110d63d225b3",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "ee2ed36590de0174d4b324549535e974f82217849ee716f4a982110d63d225b3",
+        "private_inputs_sha256": "1b9f5db5b6ef9df2de38ab6286df7c159ac18dcc7b87a49c35511cd2aced0694",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.4269001300025805,
+          "standard_error": 0.0007597022617075147,
+          "upper95_kl": 1.4283891464355272
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.409424761330781,
+          "standard_error": 0.0021647112318286146,
+          "upper95_kl": 1.4136675953451652
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.020778673699777643,
+          "standard_error": 0.00017322845273058863,
+          "upper95_kl": 0.021118201467129595
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "ee2ed36590de0174d4b324549535e974f82217849ee716f4a982110d63d225b3",
+        "private_inputs_sha256": "f3558cd7851b7621e17e2f7f9c44a34dd12d2f3f986e3bc81ae93505599bb4cf",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 1.6749010508574167,
+          "standard_error": 0.00046517996525849854,
+          "upper95_kl": 1.6758128035893234
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 1,
+      "ridge": 1e-06,
+      "proposed_family": "memoryless_categorical",
+      "family_evidence": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.060413599197360675,
+            0.06057830206582083,
+            0.06623839126000065,
+            0.06576849920274698,
+            0.058740867011887125,
+            0.06314692824784156,
+            0.06285423762760446,
+            0.062498650218576784,
+            0.056994006029266124,
+            0.06027097565974771,
+            0.0656340105266935,
+            0.06368506256797465,
+            0.0636430056256027,
+            0.06488187149993509,
+            0.06750246263372618,
+            0.05714913062521514
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      },
+      "resources": {
+        "features": "transcoder",
+        "neural_execution_counts": {
+          "forward_calls": 1,
+          "token_queries": 3072,
+          "prefix_tokens_processed": 3072
+        },
+        "neural_count_scope": "All helper executions including ablations, every returned probability vector counted. Cached observation collection is additional and unchanged.",
+        "assumptions": "Learned feature map or greedy circuit pruning followed by autonomous linear-state identification; no supplied HMM adapter. Representation evidence does not establish recovered latent semantics or a causal mechanism.",
+        "selection": "selection.json"
+      },
+      "representation": {
+        "mode": "transcoder",
+        "training_rows": 2304,
+        "hidden_width": 64,
+        "steps": 800,
+        "sparsity_penalty": 0.001,
+        "initial_objective": 1.5047227989070284,
+        "final_objective": 0.006795964795528658,
+        "active_fraction": 0.5159708658854166,
+        "training": "Fixed-seed minibatch Adam; squared reconstruction/prediction error plus mean positive activation penalty. No latent labels or process model.",
+        "representation_training_sequences": 96,
+        "representation_validation_sequences_used_for_training": false
+      },
+      "heldout_max_total_variation": 0.7595234421629937,
+      "long_max_total_variation": 0.7595234421629937,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The selected one-dimensional process is history-independent, contrary to the source dependency and private prediction witnesses.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": null
+      }
+    },
+    {
+      "case": "case-03",
+      "method": "causal",
+      "cohort": "features-development-v1",
+      "family_after_registration": "mixture_hmm",
+      "access": "internals",
+      "status": "submitted",
+      "submission_receipt_sha256": "64ade133ee2c17c226b6193074431926c9f586c99d039e6ad08be83d39fd737e",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "64ade133ee2c17c226b6193074431926c9f586c99d039e6ad08be83d39fd737e",
+        "private_inputs_sha256": "6940cf1752f291ec9cf2f4f5ae412e1b4e90b302f4d0939d343f4818fde76b27",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.18886517706402156,
+          "standard_error": 0.0033069713581104147,
+          "upper95_kl": 0.19534684092591797
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.16077268075815548,
+          "standard_error": 0.0037114642318440715,
+          "upper95_kl": 0.16804715065256987
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.023017566034755473,
+          "standard_error": 0.001246318205283516,
+          "upper95_kl": 0.025460349717111162
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "64ade133ee2c17c226b6193074431926c9f586c99d039e6ad08be83d39fd737e",
+        "private_inputs_sha256": "7422e865f2616979df5faebd4f60dd80c9be1bf35a045b89405055ca5263bc80",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.22397120393263634,
+          "standard_error": 0.0029502159186550548,
+          "upper95_kl": 0.22975362713320024
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 1,
+      "ridge": 1e-06,
+      "proposed_family": "memoryless_categorical",
+      "family_evidence": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.11766415357528597,
+            0.040844407741995305,
+            0.08016018300724188,
+            0.05851194783746413,
+            0.10998954704438309,
+            0.026401974851931225,
+            0.047407083880699474,
+            0.06830949647802716,
+            0.11091977622931874,
+            0.057219449038816116,
+            0.05487223184592457,
+            0.0224328486670989,
+            0.046932709699935536,
+            0.03977382653551823,
+            0.07414108691298793,
+            0.04441927665337175
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      },
+      "resources": {
+        "features": "causal",
+        "neural_execution_counts": {
+          "forward_calls": 9,
+          "token_queries": 27648,
+          "prefix_tokens_processed": 27648
+        },
+        "neural_count_scope": "All helper executions including ablations, every returned probability vector counted. Cached observation collection is additional and unchanged.",
+        "assumptions": "Learned feature map or greedy circuit pruning followed by autonomous linear-state identification; no supplied HMM adapter. Representation evidence does not establish recovered latent semantics or a causal mechanism.",
+        "selection": "selection.json"
+      },
+      "representation": {
+        "mode": "causal",
+        "ablation": "Greedy layer/head order, cumulative zero ablations before attention output projection; retain removal only at mean KL <= 0.005 against the original cached probabilities.",
+        "removed_heads": [
+          [
+            1,
+            0
+          ]
+        ],
+        "trials": [
+          {
+            "layer": 0,
+            "head": 0,
+            "cumulative_kl": 0.00873756240441357,
+            "removed": false
+          },
+          {
+            "layer": 0,
+            "head": 1,
+            "cumulative_kl": 0.00597596627807893,
+            "removed": false
+          },
+          {
+            "layer": 0,
+            "head": 2,
+            "cumulative_kl": 0.005974962887354733,
+            "removed": false
+          },
+          {
+            "layer": 0,
+            "head": 3,
+            "cumulative_kl": 0.007717939225594047,
+            "removed": false
+          },
+          {
+            "layer": 1,
+            "head": 0,
+            "cumulative_kl": 0.003863823527230457,
+            "removed": true
+          },
+          {
+            "layer": 1,
+            "head": 1,
+            "cumulative_kl": 0.010285639579367475,
+            "removed": false
+          },
+          {
+            "layer": 1,
+            "head": 2,
+            "cumulative_kl": 0.006168796519158338,
+            "removed": false
+          },
+          {
+            "layer": 1,
+            "head": 3,
+            "cumulative_kl": 0.008372128053490595,
+            "removed": false
+          }
+        ],
+        "causal_scope": "Ablation effects on neural predictions only. No semantic intervention alignment to a recovered generating process, circuit completeness, or causal recovery is established."
+      },
+      "heldout_max_total_variation": 0.4123321067633072,
+      "long_max_total_variation": 0.4125209673519661,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The selected one-dimensional process is history-independent, contrary to the source dependency and private prediction witnesses.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": "Head-ablation effects on neural predictions are separately recorded; no semantic source-process intervention correspondence is established."
+      }
+    },
+    {
+      "case": "case-03",
+      "method": "geometry",
+      "cohort": "geometry-development-v1",
+      "family_after_registration": "mixture_hmm",
+      "access": "outputs",
+      "status": "submitted",
+      "submission_receipt_sha256": "2120ca94e35f3d7042138f516ceab41b874e6a1b20076ff3af50546eb28bbf50",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "2120ca94e35f3d7042138f516ceab41b874e6a1b20076ff3af50546eb28bbf50",
+        "private_inputs_sha256": "6940cf1752f291ec9cf2f4f5ae412e1b4e90b302f4d0939d343f4818fde76b27",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.11431544562202617,
+          "standard_error": 0.01674724721471822,
+          "upper95_kl": 0.14714005016287388
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.09900619100272187,
+          "standard_error": 0.0158580654746169,
+          "upper95_kl": 0.130087999332971
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.023017566034755473,
+          "standard_error": 0.001246318205283516,
+          "upper95_kl": 0.025460349717111162
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "2120ca94e35f3d7042138f516ceab41b874e6a1b20076ff3af50546eb28bbf50",
+        "private_inputs_sha256": "7422e865f2616979df5faebd4f60dd80c9be1bf35a045b89405055ca5263bc80",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.14420859438051056,
+          "standard_error": 0.010242758119257036,
+          "upper95_kl": 0.16428440029425434
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 14,
+      "ridge": 0.1,
+      "proposed_family": "unresolved_linear_state",
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 14,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "complex_joint_coordinates"
+      },
+      "resources": {
+        "features": "outputs",
+        "additional_teacher_execution": 0,
+        "selection": "selection.json"
+      },
+      "representation": null,
+      "heldout_max_total_variation": 0.6623474598597539,
+      "long_max_total_variation": 0.8500743198557139,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The executable is a repaired signed linear-state process. Its fixed analytical test left the latent family unresolved. It did not recover source transition/emission structure, delayed-token dependencies or stack push/pop rules. A selected dimension alone does not identify latent order. Held-out prediction discrepancies rule out exact equality on those histories.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": null
+      }
+    },
+    {
+      "case": "case-03",
+      "method": "pca",
+      "cohort": "geometry-development-v1",
+      "family_after_registration": "mixture_hmm",
+      "access": "internals",
+      "status": "submitted",
+      "submission_receipt_sha256": "8ce18ae12c55b148ee552c439fce89936eb1de96d01425158e22164c1e72ed57",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "8ce18ae12c55b148ee552c439fce89936eb1de96d01425158e22164c1e72ed57",
+        "private_inputs_sha256": "6940cf1752f291ec9cf2f4f5ae412e1b4e90b302f4d0939d343f4818fde76b27",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.18886517706402156,
+          "standard_error": 0.0033069713581104147,
+          "upper95_kl": 0.19534684092591797
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.16077268075815548,
+          "standard_error": 0.0037114642318440715,
+          "upper95_kl": 0.16804715065256987
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.023017566034755473,
+          "standard_error": 0.001246318205283516,
+          "upper95_kl": 0.025460349717111162
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "8ce18ae12c55b148ee552c439fce89936eb1de96d01425158e22164c1e72ed57",
+        "private_inputs_sha256": "7422e865f2616979df5faebd4f60dd80c9be1bf35a045b89405055ca5263bc80",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.22397120393263634,
+          "standard_error": 0.0029502159186550548,
+          "upper95_kl": 0.22975362713320024
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 1,
+      "ridge": 1e-06,
+      "proposed_family": "memoryless_categorical",
+      "family_evidence": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.11766415357528597,
+            0.040844407741995305,
+            0.08016018300724188,
+            0.05851194783746413,
+            0.10998954704438309,
+            0.026401974851931225,
+            0.047407083880699474,
+            0.06830949647802716,
+            0.11091977622931874,
+            0.057219449038816116,
+            0.05487223184592457,
+            0.0224328486670989,
+            0.046932709699935536,
+            0.03977382653551823,
+            0.07414108691298793,
+            0.04441927665337175
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      },
+      "resources": {
+        "features": "activations",
+        "additional_teacher_execution": 0,
+        "selection": "selection.json"
+      },
+      "representation": null,
+      "heldout_max_total_variation": 0.4123321067633072,
+      "long_max_total_variation": 0.4125209673519661,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The selected one-dimensional process is history-independent, contrary to the source dependency and private prediction witnesses.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": null
+      }
+    },
+    {
+      "case": "case-03",
+      "method": "sae",
+      "cohort": "features-development-v1",
+      "family_after_registration": "mixture_hmm",
+      "access": "internals",
+      "status": "submitted",
+      "submission_receipt_sha256": "393420c680286c9292e43f7f87cf2ec3e655250f600a5eac68276244d3fd91a5",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "393420c680286c9292e43f7f87cf2ec3e655250f600a5eac68276244d3fd91a5",
+        "private_inputs_sha256": "6940cf1752f291ec9cf2f4f5ae412e1b4e90b302f4d0939d343f4818fde76b27",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.15942691260868852,
+          "standard_error": 0.017624101537739325,
+          "upper95_kl": 0.1939701516226576
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.14798791867855454,
+          "standard_error": 0.017655474023439435,
+          "upper95_kl": 0.18259264776449582
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.023017566034755473,
+          "standard_error": 0.001246318205283516,
+          "upper95_kl": 0.025460349717111162
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "393420c680286c9292e43f7f87cf2ec3e655250f600a5eac68276244d3fd91a5",
+        "private_inputs_sha256": "7422e865f2616979df5faebd4f60dd80c9be1bf35a045b89405055ca5263bc80",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.20078419899329403,
+          "standard_error": 0.013435572280428945,
+          "upper95_kl": 0.22711792066293476
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 8,
+      "ridge": 0.1,
+      "proposed_family": "unresolved_linear_state",
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 8,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.09683340166127119
+      },
+      "resources": {
+        "features": "sae",
+        "neural_execution_counts": {
+          "forward_calls": 0,
+          "token_queries": 0,
+          "prefix_tokens_processed": 0
+        },
+        "neural_count_scope": "All helper executions including ablations, every returned probability vector counted. Cached observation collection is additional and unchanged.",
+        "assumptions": "Learned feature map or greedy circuit pruning followed by autonomous linear-state identification; no supplied HMM adapter. Representation evidence does not establish recovered latent semantics or a causal mechanism.",
+        "selection": "selection.json"
+      },
+      "representation": {
+        "mode": "sae",
+        "training_rows": 2304,
+        "hidden_width": 64,
+        "steps": 800,
+        "sparsity_penalty": 0.001,
+        "initial_objective": 1.4202947933758914,
+        "final_objective": 0.002293228950913648,
+        "active_fraction": 0.9046766493055556,
+        "training": "Fixed-seed minibatch Adam; squared reconstruction/prediction error plus mean positive activation penalty. No latent labels or process model.",
+        "representation_training_sequences": 96,
+        "representation_validation_sequences_used_for_training": false
+      },
+      "heldout_max_total_variation": 0.694212609480932,
+      "long_max_total_variation": 0.8308109573063349,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The executable is a repaired signed linear-state process. Its fixed analytical test left the latent family unresolved. It did not recover source transition/emission structure, delayed-token dependencies or stack push/pop rules. A selected dimension alone does not identify latent order. Held-out prediction discrepancies rule out exact equality on those histories.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": null
+      }
+    },
+    {
+      "case": "case-03",
+      "method": "transcoder",
+      "cohort": "features-development-v1",
+      "family_after_registration": "mixture_hmm",
+      "access": "internals",
+      "status": "submitted",
+      "submission_receipt_sha256": "fbd98cae644fb8891500b23e5e4e99ca194234cb895e7431d3f89e101a5c8c78",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "fbd98cae644fb8891500b23e5e4e99ca194234cb895e7431d3f89e101a5c8c78",
+        "private_inputs_sha256": "6940cf1752f291ec9cf2f4f5ae412e1b4e90b302f4d0939d343f4818fde76b27",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.18886517706402156,
+          "standard_error": 0.0033069713581104147,
+          "upper95_kl": 0.19534684092591797
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.16077268075815548,
+          "standard_error": 0.0037114642318440715,
+          "upper95_kl": 0.16804715065256987
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.023017566034755473,
+          "standard_error": 0.001246318205283516,
+          "upper95_kl": 0.025460349717111162
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "fbd98cae644fb8891500b23e5e4e99ca194234cb895e7431d3f89e101a5c8c78",
+        "private_inputs_sha256": "7422e865f2616979df5faebd4f60dd80c9be1bf35a045b89405055ca5263bc80",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.22397120393263634,
+          "standard_error": 0.0029502159186550548,
+          "upper95_kl": 0.22975362713320024
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 1,
+      "ridge": 1e-06,
+      "proposed_family": "memoryless_categorical",
+      "family_evidence": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.11766415357528597,
+            0.040844407741995305,
+            0.08016018300724188,
+            0.05851194783746413,
+            0.10998954704438309,
+            0.026401974851931225,
+            0.047407083880699474,
+            0.06830949647802716,
+            0.11091977622931874,
+            0.057219449038816116,
+            0.05487223184592457,
+            0.0224328486670989,
+            0.046932709699935536,
+            0.03977382653551823,
+            0.07414108691298793,
+            0.04441927665337175
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      },
+      "resources": {
+        "features": "transcoder",
+        "neural_execution_counts": {
+          "forward_calls": 1,
+          "token_queries": 3072,
+          "prefix_tokens_processed": 3072
+        },
+        "neural_count_scope": "All helper executions including ablations, every returned probability vector counted. Cached observation collection is additional and unchanged.",
+        "assumptions": "Learned feature map or greedy circuit pruning followed by autonomous linear-state identification; no supplied HMM adapter. Representation evidence does not establish recovered latent semantics or a causal mechanism.",
+        "selection": "selection.json"
+      },
+      "representation": {
+        "mode": "transcoder",
+        "training_rows": 2304,
+        "hidden_width": 64,
+        "steps": 800,
+        "sparsity_penalty": 0.001,
+        "initial_objective": 1.4511250799712692,
+        "final_objective": 0.006514108292558596,
+        "active_fraction": 0.3518337673611111,
+        "training": "Fixed-seed minibatch Adam; squared reconstruction/prediction error plus mean positive activation penalty. No latent labels or process model.",
+        "representation_training_sequences": 96,
+        "representation_validation_sequences_used_for_training": false
+      },
+      "heldout_max_total_variation": 0.4123321067633072,
+      "long_max_total_variation": 0.4125209673519661,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The selected one-dimensional process is history-independent, contrary to the source dependency and private prediction witnesses.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": null
+      }
+    },
+    {
+      "case": "case-04",
+      "method": "causal",
+      "cohort": "features-development-v1",
+      "family_after_registration": "mixture_hmm",
+      "access": "internals",
+      "status": "submitted",
+      "submission_receipt_sha256": "04be984f63c8450c77fc2f7cdc6449c606badaee2050fbae1aaaf7198e68ed68",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "04be984f63c8450c77fc2f7cdc6449c606badaee2050fbae1aaaf7198e68ed68",
+        "private_inputs_sha256": "dfcb619d11397389474bf3f8587daef910232d307d29794b40619ea6f8f3b268",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.24936582306679955,
+          "standard_error": 0.026715498929461345,
+          "upper95_kl": 0.3017282009685438
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.23409539770095758,
+          "standard_error": 0.025731106626834522,
+          "upper95_kl": 0.2845283666895532
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.022798648722371005,
+          "standard_error": 0.0011472500888627627,
+          "upper95_kl": 0.02504725889654202
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "04be984f63c8450c77fc2f7cdc6449c606badaee2050fbae1aaaf7198e68ed68",
+        "private_inputs_sha256": "349bcf345ce84b71711d4ed6529f2472e556e99b6180ec7fadfd5436e7b62be6",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.23163114777385974,
+          "standard_error": 0.014284501257555588,
+          "upper95_kl": 0.2596287702386687
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 7,
+      "ridge": 0.1,
+      "proposed_family": "unresolved_linear_state",
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 7,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "complex_joint_coordinates"
+      },
+      "resources": {
+        "features": "causal",
+        "neural_execution_counts": {
+          "forward_calls": 9,
+          "token_queries": 27648,
+          "prefix_tokens_processed": 27648
+        },
+        "neural_count_scope": "All helper executions including ablations, every returned probability vector counted. Cached observation collection is additional and unchanged.",
+        "assumptions": "Learned feature map or greedy circuit pruning followed by autonomous linear-state identification; no supplied HMM adapter. Representation evidence does not establish recovered latent semantics or a causal mechanism.",
+        "selection": "selection.json"
+      },
+      "representation": {
+        "mode": "causal",
+        "ablation": "Greedy layer/head order, cumulative zero ablations before attention output projection; retain removal only at mean KL <= 0.005 against the original cached probabilities.",
+        "removed_heads": [
+          [
+            0,
+            2
+          ]
+        ],
+        "trials": [
+          {
+            "layer": 0,
+            "head": 0,
+            "cumulative_kl": 0.006920885332375124,
+            "removed": false
+          },
+          {
+            "layer": 0,
+            "head": 1,
+            "cumulative_kl": 0.005808873335819071,
+            "removed": false
+          },
+          {
+            "layer": 0,
+            "head": 2,
+            "cumulative_kl": 0.004243620616453723,
+            "removed": true
+          },
+          {
+            "layer": 0,
+            "head": 3,
+            "cumulative_kl": 0.008128309040586139,
+            "removed": false
+          },
+          {
+            "layer": 1,
+            "head": 0,
+            "cumulative_kl": 0.007447020795048038,
+            "removed": false
+          },
+          {
+            "layer": 1,
+            "head": 1,
+            "cumulative_kl": 0.01028132853267376,
+            "removed": false
+          },
+          {
+            "layer": 1,
+            "head": 2,
+            "cumulative_kl": 0.009124897085475973,
+            "removed": false
+          },
+          {
+            "layer": 1,
+            "head": 3,
+            "cumulative_kl": 0.013017334675237755,
+            "removed": false
+          }
+        ],
+        "causal_scope": "Ablation effects on neural predictions only. No semantic intervention alignment to a recovered generating process, circuit completeness, or causal recovery is established."
+      },
+      "heldout_max_total_variation": 0.8495084506619843,
+      "long_max_total_variation": 0.8923526373336028,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The executable is a repaired signed linear-state process. Its fixed analytical test left the latent family unresolved. It did not recover source transition/emission structure, delayed-token dependencies or stack push/pop rules. A selected dimension alone does not identify latent order. Held-out prediction discrepancies rule out exact equality on those histories.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": "Head-ablation effects on neural predictions are separately recorded; no semantic source-process intervention correspondence is established."
+      }
+    },
+    {
+      "case": "case-04",
+      "method": "geometry",
+      "cohort": "geometry-development-v1",
+      "family_after_registration": "mixture_hmm",
+      "access": "outputs",
+      "status": "submitted",
+      "submission_receipt_sha256": "3b3419661818db7be1f0792ae73414e82fc5df100a37c8a92f9a17faf9cca903",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "3b3419661818db7be1f0792ae73414e82fc5df100a37c8a92f9a17faf9cca903",
+        "private_inputs_sha256": "dfcb619d11397389474bf3f8587daef910232d307d29794b40619ea6f8f3b268",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.1175344085552131,
+          "standard_error": 0.013411182423009285,
+          "upper95_kl": 0.1438203261043113
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.10923079177051637,
+          "standard_error": 0.012846995462381279,
+          "upper95_kl": 0.13441090287678367
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.022798648722371005,
+          "standard_error": 0.0011472500888627627,
+          "upper95_kl": 0.02504725889654202
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "3b3419661818db7be1f0792ae73414e82fc5df100a37c8a92f9a17faf9cca903",
+        "private_inputs_sha256": "349bcf345ce84b71711d4ed6529f2472e556e99b6180ec7fadfd5436e7b62be6",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.11159042734064763,
+          "standard_error": 0.007426599836033546,
+          "upper95_kl": 0.12614656301927338
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 6,
+      "ridge": 0.1,
+      "proposed_family": "unresolved_linear_state",
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 6,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.13566452886147243
+      },
+      "resources": {
+        "features": "outputs",
+        "additional_teacher_execution": 0,
+        "selection": "selection.json"
+      },
+      "representation": null,
+      "heldout_max_total_variation": 0.7683855160031565,
+      "long_max_total_variation": 0.8022220227504229,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The executable is a repaired signed linear-state process. Its fixed analytical test left the latent family unresolved. It did not recover source transition/emission structure, delayed-token dependencies or stack push/pop rules. A selected dimension alone does not identify latent order. Held-out prediction discrepancies rule out exact equality on those histories.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": null
+      }
+    },
+    {
+      "case": "case-04",
+      "method": "pca",
+      "cohort": "geometry-development-v1",
+      "family_after_registration": "mixture_hmm",
+      "access": "internals",
+      "status": "submitted",
+      "submission_receipt_sha256": "d5925229b3d78bc2e0644158db4490fe0bc9f1690fbaf01cc72ac0109c5e29c2",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "d5925229b3d78bc2e0644158db4490fe0bc9f1690fbaf01cc72ac0109c5e29c2",
+        "private_inputs_sha256": "dfcb619d11397389474bf3f8587daef910232d307d29794b40619ea6f8f3b268",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.23027517692424349,
+          "standard_error": 0.02053671670193228,
+          "upper95_kl": 0.2705271416600308
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.22268777431586012,
+          "standard_error": 0.02044439408754933,
+          "upper95_kl": 0.2627587867274568
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.022798648722371005,
+          "standard_error": 0.0011472500888627627,
+          "upper95_kl": 0.02504725889654202
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "d5925229b3d78bc2e0644158db4490fe0bc9f1690fbaf01cc72ac0109c5e29c2",
+        "private_inputs_sha256": "349bcf345ce84b71711d4ed6529f2472e556e99b6180ec7fadfd5436e7b62be6",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.24424958965539756,
+          "standard_error": 0.015240650959834541,
+          "upper95_kl": 0.27412126553667326
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 7,
+      "ridge": 0.1,
+      "proposed_family": "unresolved_linear_state",
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 7,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "complex_joint_coordinates"
+      },
+      "resources": {
+        "features": "activations",
+        "additional_teacher_execution": 0,
+        "selection": "selection.json"
+      },
+      "representation": null,
+      "heldout_max_total_variation": 0.8526359547810971,
+      "long_max_total_variation": 0.8787705948525746,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The executable is a repaired signed linear-state process. Its fixed analytical test left the latent family unresolved. It did not recover source transition/emission structure, delayed-token dependencies or stack push/pop rules. A selected dimension alone does not identify latent order. Held-out prediction discrepancies rule out exact equality on those histories.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": null
+      }
+    },
+    {
+      "case": "case-04",
+      "method": "sae",
+      "cohort": "features-development-v1",
+      "family_after_registration": "mixture_hmm",
+      "access": "internals",
+      "status": "submitted",
+      "submission_receipt_sha256": "331901d9a31912877bf12fc21556af36329ebc08931adcba6d4a012579c1f1ea",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "331901d9a31912877bf12fc21556af36329ebc08931adcba6d4a012579c1f1ea",
+        "private_inputs_sha256": "dfcb619d11397389474bf3f8587daef910232d307d29794b40619ea6f8f3b268",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.21615175161489614,
+          "standard_error": 0.018959840429696583,
+          "upper95_kl": 0.25331303885710144
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.21427407170847096,
+          "standard_error": 0.019546822079564586,
+          "upper95_kl": 0.25258584298441755
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.022798648722371005,
+          "standard_error": 0.0011472500888627627,
+          "upper95_kl": 0.02504725889654202
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "331901d9a31912877bf12fc21556af36329ebc08931adcba6d4a012579c1f1ea",
+        "private_inputs_sha256": "349bcf345ce84b71711d4ed6529f2472e556e99b6180ec7fadfd5436e7b62be6",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.24457063084269787,
+          "standard_error": 0.015295035728946497,
+          "upper95_kl": 0.274548900871433
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 7,
+      "ridge": 0.1,
+      "proposed_family": "unresolved_linear_state",
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 7,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.35577835499449506
+      },
+      "resources": {
+        "features": "sae",
+        "neural_execution_counts": {
+          "forward_calls": 0,
+          "token_queries": 0,
+          "prefix_tokens_processed": 0
+        },
+        "neural_count_scope": "All helper executions including ablations, every returned probability vector counted. Cached observation collection is additional and unchanged.",
+        "assumptions": "Learned feature map or greedy circuit pruning followed by autonomous linear-state identification; no supplied HMM adapter. Representation evidence does not establish recovered latent semantics or a causal mechanism.",
+        "selection": "selection.json"
+      },
+      "representation": {
+        "mode": "sae",
+        "training_rows": 2304,
+        "hidden_width": 64,
+        "steps": 800,
+        "sparsity_penalty": 0.001,
+        "initial_objective": 1.4104561021162147,
+        "final_objective": 0.0033681651478601046,
+        "active_fraction": 0.8640475802951388,
+        "training": "Fixed-seed minibatch Adam; squared reconstruction/prediction error plus mean positive activation penalty. No latent labels or process model.",
+        "representation_training_sequences": 96,
+        "representation_validation_sequences_used_for_training": false
+      },
+      "heldout_max_total_variation": 0.833707146639414,
+      "long_max_total_variation": 0.8398734266633707,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The executable is a repaired signed linear-state process. Its fixed analytical test left the latent family unresolved. It did not recover source transition/emission structure, delayed-token dependencies or stack push/pop rules. A selected dimension alone does not identify latent order. Held-out prediction discrepancies rule out exact equality on those histories.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": null
+      }
+    },
+    {
+      "case": "case-04",
+      "method": "transcoder",
+      "cohort": "features-development-v1",
+      "family_after_registration": "mixture_hmm",
+      "access": "internals",
+      "status": "submitted",
+      "submission_receipt_sha256": "d16a00378ee22c8434c70ddc97b1ca46b5e010f269a473e5344bed190598fe76",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "d16a00378ee22c8434c70ddc97b1ca46b5e010f269a473e5344bed190598fe76",
+        "private_inputs_sha256": "dfcb619d11397389474bf3f8587daef910232d307d29794b40619ea6f8f3b268",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.29584518984569325,
+          "standard_error": 0.02906760669476627,
+          "upper95_kl": 0.35281769896743514
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.28432273773186734,
+          "standard_error": 0.0293992165109767,
+          "upper95_kl": 0.34194520209338164
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.022798648722371005,
+          "standard_error": 0.0011472500888627627,
+          "upper95_kl": 0.02504725889654202
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "d16a00378ee22c8434c70ddc97b1ca46b5e010f269a473e5344bed190598fe76",
+        "private_inputs_sha256": "349bcf345ce84b71711d4ed6529f2472e556e99b6180ec7fadfd5436e7b62be6",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.2739854887556218,
+          "standard_error": 0.01626118986734275,
+          "upper95_kl": 0.3058574208956136
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 7,
+      "ridge": 0.1,
+      "proposed_family": "unresolved_linear_state",
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 7,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.1518108035243297
+      },
+      "resources": {
+        "features": "transcoder",
+        "neural_execution_counts": {
+          "forward_calls": 1,
+          "token_queries": 3072,
+          "prefix_tokens_processed": 3072
+        },
+        "neural_count_scope": "All helper executions including ablations, every returned probability vector counted. Cached observation collection is additional and unchanged.",
+        "assumptions": "Learned feature map or greedy circuit pruning followed by autonomous linear-state identification; no supplied HMM adapter. Representation evidence does not establish recovered latent semantics or a causal mechanism.",
+        "selection": "selection.json"
+      },
+      "representation": {
+        "mode": "transcoder",
+        "training_rows": 2304,
+        "hidden_width": 64,
+        "steps": 800,
+        "sparsity_penalty": 0.001,
+        "initial_objective": 1.3701291609251214,
+        "final_objective": 0.0027869362694,
+        "active_fraction": 0.3826429578993056,
+        "training": "Fixed-seed minibatch Adam; squared reconstruction/prediction error plus mean positive activation penalty. No latent labels or process model.",
+        "representation_training_sequences": 96,
+        "representation_validation_sequences_used_for_training": false
+      },
+      "heldout_max_total_variation": 0.9142374175391985,
+      "long_max_total_variation": 0.8861481500565395,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The executable is a repaired signed linear-state process. Its fixed analytical test left the latent family unresolved. It did not recover source transition/emission structure, delayed-token dependencies or stack push/pop rules. A selected dimension alone does not identify latent order. Held-out prediction discrepancies rule out exact equality on those histories.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": null
+      }
+    },
+    {
+      "case": "case-05",
+      "method": "causal",
+      "cohort": "features-development-v1",
+      "family_after_registration": "stack_rule",
+      "access": "internals",
+      "status": "submitted",
+      "submission_receipt_sha256": "633618ea81ee319c4aba8352f94313620bf6082a1ae15d266b35ddcb4c46b59e",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "633618ea81ee319c4aba8352f94313620bf6082a1ae15d266b35ddcb4c46b59e",
+        "private_inputs_sha256": "487b819db298c5e7edb77e3e96b5313e150024e3951600d3956664ef8a5854dc",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.054560929633384915,
+          "standard_error": 0.003564987670401299,
+          "upper95_kl": 0.06154830546737146
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.04456163921606218,
+          "standard_error": 0.0025721402147704676,
+          "upper95_kl": 0.0496030340370123
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.008459302638350255,
+          "standard_error": 0.0011838768820239523,
+          "upper95_kl": 0.0107797013271172
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "633618ea81ee319c4aba8352f94313620bf6082a1ae15d266b35ddcb4c46b59e",
+        "private_inputs_sha256": "bbad9867627dbe984e242f5e85925743637a59e23ce1ef24e528322a7f2d51d1",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.08026567371527349,
+          "standard_error": 0.0030473969159917355,
+          "upper95_kl": 0.0862385716706173
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 2,
+      "ridge": 0.001,
+      "proposed_family": "unresolved_linear_state",
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 2,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.17784787784298056
+      },
+      "resources": {
+        "features": "causal",
+        "neural_execution_counts": {
+          "forward_calls": 9,
+          "token_queries": 27648,
+          "prefix_tokens_processed": 27648
+        },
+        "neural_count_scope": "All helper executions including ablations, every returned probability vector counted. Cached observation collection is additional and unchanged.",
+        "assumptions": "Learned feature map or greedy circuit pruning followed by autonomous linear-state identification; no supplied HMM adapter. Representation evidence does not establish recovered latent semantics or a causal mechanism.",
+        "selection": "selection.json"
+      },
+      "representation": {
+        "mode": "causal",
+        "ablation": "Greedy layer/head order, cumulative zero ablations before attention output projection; retain removal only at mean KL <= 0.005 against the original cached probabilities.",
+        "removed_heads": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "trials": [
+          {
+            "layer": 0,
+            "head": 0,
+            "cumulative_kl": 0.01722596030106996,
+            "removed": false
+          },
+          {
+            "layer": 0,
+            "head": 1,
+            "cumulative_kl": 0.012978431748872508,
+            "removed": false
+          },
+          {
+            "layer": 0,
+            "head": 2,
+            "cumulative_kl": 0.003431184608161211,
+            "removed": true
+          },
+          {
+            "layer": 0,
+            "head": 3,
+            "cumulative_kl": 0.04448015388211681,
+            "removed": false
+          },
+          {
+            "layer": 1,
+            "head": 0,
+            "cumulative_kl": 0.004003876124365591,
+            "removed": true
+          },
+          {
+            "layer": 1,
+            "head": 1,
+            "cumulative_kl": 0.009022631734560464,
+            "removed": false
+          },
+          {
+            "layer": 1,
+            "head": 2,
+            "cumulative_kl": 0.007714487595212504,
+            "removed": false
+          },
+          {
+            "layer": 1,
+            "head": 3,
+            "cumulative_kl": 0.006640871256003381,
+            "removed": false
+          }
+        ],
+        "causal_scope": "Ablation effects on neural predictions only. No semantic intervention alignment to a recovered generating process, circuit completeness, or causal recovery is established."
+      },
+      "heldout_max_total_variation": 0.40231842568642184,
+      "long_max_total_variation": 0.30280676096476955,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The executable is a repaired signed linear-state process. Its fixed analytical test left the latent family unresolved. It did not recover source transition/emission structure, delayed-token dependencies or stack push/pop rules. A selected dimension alone does not identify latent order. Held-out prediction discrepancies rule out exact equality on those histories.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": "Head-ablation effects on neural predictions are separately recorded; no semantic source-process intervention correspondence is established."
+      }
+    },
+    {
+      "case": "case-05",
+      "method": "geometry",
+      "cohort": "geometry-development-v1",
+      "family_after_registration": "stack_rule",
+      "access": "outputs",
+      "status": "submitted",
+      "submission_receipt_sha256": "046bdc859cc840e98e9360f9b458a88a658359d93df1a39255bfae106ca2d77e",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "046bdc859cc840e98e9360f9b458a88a658359d93df1a39255bfae106ca2d77e",
+        "private_inputs_sha256": "487b819db298c5e7edb77e3e96b5313e150024e3951600d3956664ef8a5854dc",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.048070891919709646,
+          "standard_error": 0.003392209348871971,
+          "upper95_kl": 0.05471962224349871
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.03911526170460412,
+          "standard_error": 0.0024182631469719016,
+          "upper95_kl": 0.04385505747266905
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.008459302638350255,
+          "standard_error": 0.0011838768820239523,
+          "upper95_kl": 0.0107797013271172
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "046bdc859cc840e98e9360f9b458a88a658359d93df1a39255bfae106ca2d77e",
+        "private_inputs_sha256": "bbad9867627dbe984e242f5e85925743637a59e23ce1ef24e528322a7f2d51d1",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.07458378171114566,
+          "standard_error": 0.0029798629307285513,
+          "upper95_kl": 0.08042431305537362
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 2,
+      "ridge": 1e-06,
+      "proposed_family": "unresolved_linear_state",
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 2,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.16627408056462017
+      },
+      "resources": {
+        "features": "outputs",
+        "additional_teacher_execution": 0,
+        "selection": "selection.json"
+      },
+      "representation": null,
+      "heldout_max_total_variation": 0.30268606042516444,
+      "long_max_total_variation": 0.3021947647889955,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The executable is a repaired signed linear-state process. Its fixed analytical test left the latent family unresolved. It did not recover source transition/emission structure, delayed-token dependencies or stack push/pop rules. A selected dimension alone does not identify latent order. Held-out prediction discrepancies rule out exact equality on those histories.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": null
+      }
+    },
+    {
+      "case": "case-05",
+      "method": "pca",
+      "cohort": "geometry-development-v1",
+      "family_after_registration": "stack_rule",
+      "access": "internals",
+      "status": "submitted",
+      "submission_receipt_sha256": "e3b5a728d813c08a79905a675bd9cfc1f4669d6a11f4927ac9e4268359fcdf26",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "e3b5a728d813c08a79905a675bd9cfc1f4669d6a11f4927ac9e4268359fcdf26",
+        "private_inputs_sha256": "487b819db298c5e7edb77e3e96b5313e150024e3951600d3956664ef8a5854dc",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.055765329950712816,
+          "standard_error": 0.004058851235623662,
+          "upper95_kl": 0.0637206783725352
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.0457563052158436,
+          "standard_error": 0.003164786411340023,
+          "upper95_kl": 0.05195928658207004
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.008459302638350255,
+          "standard_error": 0.0011838768820239523,
+          "upper95_kl": 0.0107797013271172
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "e3b5a728d813c08a79905a675bd9cfc1f4669d6a11f4927ac9e4268359fcdf26",
+        "private_inputs_sha256": "bbad9867627dbe984e242f5e85925743637a59e23ce1ef24e528322a7f2d51d1",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.07997571722308974,
+          "standard_error": 0.003038026567709664,
+          "upper95_kl": 0.08593024929580069
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 2,
+      "ridge": 0.001,
+      "proposed_family": "unresolved_linear_state",
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 2,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.17495667132208784
+      },
+      "resources": {
+        "features": "activations",
+        "additional_teacher_execution": 0,
+        "selection": "selection.json"
+      },
+      "representation": null,
+      "heldout_max_total_variation": 0.44230664898037264,
+      "long_max_total_variation": 0.3018995374907364,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The executable is a repaired signed linear-state process. Its fixed analytical test left the latent family unresolved. It did not recover source transition/emission structure, delayed-token dependencies or stack push/pop rules. A selected dimension alone does not identify latent order. Held-out prediction discrepancies rule out exact equality on those histories.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": null
+      }
+    },
+    {
+      "case": "case-05",
+      "method": "sae",
+      "cohort": "features-development-v1",
+      "family_after_registration": "stack_rule",
+      "access": "internals",
+      "status": "submitted",
+      "submission_receipt_sha256": "2387d3369c9ac952e688d5ad988315e31f15467c987ccf589e4b6a19fdae05bf",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "2387d3369c9ac952e688d5ad988315e31f15467c987ccf589e4b6a19fdae05bf",
+        "private_inputs_sha256": "487b819db298c5e7edb77e3e96b5313e150024e3951600d3956664ef8a5854dc",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.05234842151750843,
+          "standard_error": 0.003523079225967504,
+          "upper95_kl": 0.05925365680040474
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.04215364338437223,
+          "standard_error": 0.0025524863075252744,
+          "upper95_kl": 0.047156516547121774
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.008459302638350255,
+          "standard_error": 0.0011838768820239523,
+          "upper95_kl": 0.0107797013271172
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "2387d3369c9ac952e688d5ad988315e31f15467c987ccf589e4b6a19fdae05bf",
+        "private_inputs_sha256": "bbad9867627dbe984e242f5e85925743637a59e23ce1ef24e528322a7f2d51d1",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.07881965825048078,
+          "standard_error": 0.0030311881838491887,
+          "upper95_kl": 0.08476078709082518
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 3,
+      "ridge": 0.1,
+      "proposed_family": "unresolved_linear_state",
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 3,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.21954362157811075
+      },
+      "resources": {
+        "features": "sae",
+        "neural_execution_counts": {
+          "forward_calls": 0,
+          "token_queries": 0,
+          "prefix_tokens_processed": 0
+        },
+        "neural_count_scope": "All helper executions including ablations, every returned probability vector counted. Cached observation collection is additional and unchanged.",
+        "assumptions": "Learned feature map or greedy circuit pruning followed by autonomous linear-state identification; no supplied HMM adapter. Representation evidence does not establish recovered latent semantics or a causal mechanism.",
+        "selection": "selection.json"
+      },
+      "representation": {
+        "mode": "sae",
+        "training_rows": 2304,
+        "hidden_width": 64,
+        "steps": 800,
+        "sparsity_penalty": 0.001,
+        "initial_objective": 1.7108860631486902,
+        "final_objective": 0.0025669181538933894,
+        "active_fraction": 0.5886569552951388,
+        "training": "Fixed-seed minibatch Adam; squared reconstruction/prediction error plus mean positive activation penalty. No latent labels or process model.",
+        "representation_training_sequences": 96,
+        "representation_validation_sequences_used_for_training": false
+      },
+      "heldout_max_total_variation": 0.46740678278921344,
+      "long_max_total_variation": 0.41796945338012437,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The executable is a repaired signed linear-state process. Its fixed analytical test left the latent family unresolved. It did not recover source transition/emission structure, delayed-token dependencies or stack push/pop rules. A selected dimension alone does not identify latent order. Held-out prediction discrepancies rule out exact equality on those histories.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": null
+      }
+    },
+    {
+      "case": "case-05",
+      "method": "transcoder",
+      "cohort": "features-development-v1",
+      "family_after_registration": "stack_rule",
+      "access": "internals",
+      "status": "submitted",
+      "submission_receipt_sha256": "0a9e7cfb9db1d3e6d1729e9b7c708e544c16aad7346fa02be57ccc723ae86c64",
+      "heldout": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "0a9e7cfb9db1d3e6d1729e9b7c708e544c16aad7346fa02be57ccc723ae86c64",
+        "private_inputs_sha256": "487b819db298c5e7edb77e3e96b5313e150024e3951600d3956664ef8a5854dc",
+        "sequences": 128,
+        "positions": 24,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.05283870167681039,
+          "standard_error": 0.004144713515202869,
+          "upper95_kl": 0.06096234016660801
+        },
+        "teacher_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.04298431852376086,
+          "standard_error": 0.003600861940313915,
+          "upper95_kl": 0.050042007926776134
+        },
+        "oracle_to_teacher": {
+          "count": 128,
+          "mean_kl": 0.008459302638350255,
+          "standard_error": 0.0011838768820239523,
+          "upper95_kl": 0.0107797013271172
+        },
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "long": {
+        "schema_version": 1,
+        "status": "scored",
+        "error": null,
+        "submission_receipt_sha256": "0a9e7cfb9db1d3e6d1729e9b7c708e544c16aad7346fa02be57ccc723ae86c64",
+        "private_inputs_sha256": "bbad9867627dbe984e242f5e85925743637a59e23ce1ef24e528322a7f2d51d1",
+        "sequences": 128,
+        "positions": 72,
+        "row_invariance_probes_passed": true,
+        "oracle_to_candidate": {
+          "count": 128,
+          "mean_kl": 0.07775189417003775,
+          "standard_error": 0.003074053992979844,
+          "upper95_kl": 0.08377703999627824
+        },
+        "teacher_to_candidate": null,
+        "oracle_to_teacher": null,
+        "structure_assessment": "pending_independent_review",
+        "independent_structure_recovery": null,
+        "causal_recovery": null
+      },
+      "dimension": 3,
+      "ridge": 0.1,
+      "proposed_family": "unresolved_linear_state",
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 3,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.27250598129362186
+      },
+      "resources": {
+        "features": "transcoder",
+        "neural_execution_counts": {
+          "forward_calls": 1,
+          "token_queries": 3072,
+          "prefix_tokens_processed": 3072
+        },
+        "neural_count_scope": "All helper executions including ablations, every returned probability vector counted. Cached observation collection is additional and unchanged.",
+        "assumptions": "Learned feature map or greedy circuit pruning followed by autonomous linear-state identification; no supplied HMM adapter. Representation evidence does not establish recovered latent semantics or a causal mechanism.",
+        "selection": "selection.json"
+      },
+      "representation": {
+        "mode": "transcoder",
+        "training_rows": 2304,
+        "hidden_width": 64,
+        "steps": 800,
+        "sparsity_penalty": 0.001,
+        "initial_objective": 1.6114940691126176,
+        "final_objective": 0.0007835985293964288,
+        "active_fraction": 0.2484130859375,
+        "training": "Fixed-seed minibatch Adam; squared reconstruction/prediction error plus mean positive activation penalty. No latent labels or process model.",
+        "representation_training_sequences": 96,
+        "representation_validation_sequences_used_for_training": false
+      },
+      "heldout_max_total_variation": 0.4254882660258232,
+      "long_max_total_variation": 0.39812181562317905,
+      "structural_assessment": {
+        "outcome": "independent_structure_recovery_not_demonstrated",
+        "evidence": "The executable is a repaired signed linear-state process. Its fixed analytical test left the latent family unresolved. It did not recover source transition/emission structure, delayed-token dependencies or stack push/pop rules. A selected dimension alone does not identify latent order. Held-out prediction discrepancies rule out exact equality on those histories.",
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_recovery_demonstrated": false,
+        "causal_scope": null
+      }
+    }
+  ]
+}

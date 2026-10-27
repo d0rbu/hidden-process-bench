@@ -6,8 +6,8 @@ This restricted method first learns a linear predictive-state process, then chec
 whether its operators admit a stochastic latent Markov realization. It receives no
 process family or order, and uses no HMM optimization adapter. The coordinate and
 recognition priors are built into the method and must be disclosed in comparisons.
-This implementation has synthetic correctness checks; trained-teacher performance
-has not yet been measured.
+The [development results](../results/discovery-development.md) include ten paired
+output/activation runs. None demonstrated structure recovery.
 
 ## Fit an autonomous process
 

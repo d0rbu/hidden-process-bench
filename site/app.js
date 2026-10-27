@@ -342,6 +342,21 @@ function renderAgentAttempt() {
   }
 }
 
+function renderDiscoveryAttempts() {
+  const labels = { 'case-01': 'Delayed rule A', 'case-02': 'Delayed rule B', 'case-03': 'HMM mixture A', 'case-04': 'HMM mixture B', 'case-05': 'Stack rule' };
+  for (const [id, label] of Object.entries(labels)) {
+    const row = document.createElement('tr');
+    const name = element('th', label);
+    name.scope = 'row';
+    row.append(name);
+    for (const method of ['geometry', 'pca', 'sae', 'transcoder', 'causal']) {
+      const item = data.discovery_attempts.cases.find((entry) => entry.case === id && entry.method === method);
+      row.append(element('td', item.heldout.oracle_to_candidate.mean_kl.toFixed(4)));
+    }
+    $('discovery-results').append(row);
+  }
+}
+
 function renderOperatorAttempt() {
   const labels = { lag_rule: 'Delayed rule', mixture_hmm: 'HMM mixture', stack_rule: 'Stack rule' };
   const counts = {};
@@ -397,6 +412,7 @@ async function initialize() {
     renderResults();
     initializeStudy();
     renderAgentAttempt();
+    renderDiscoveryAttempts();
     renderOperatorAttempt();
   } catch (error) {
     $('load-status').textContent = 'The interactive data could not load. Reload the page, or read the linked reports below.';
