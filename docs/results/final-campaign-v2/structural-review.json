@@ -1,0 +1,2314 @@
+{
+  "registration_sha256": "d2775305545856e1dd463817de717aa78d634a4366bc1894ffa69bcb4824ea22",
+  "criteria_prepared_before_final_truth": true,
+  "criteria_sha256": "b01d35a9e988ed227d7588f9441ca76019476c127a3c362e1035c3f3f21b7add",
+  "diagnostics_sha256": "1b0a0d7353b41dadac390fc30e44607b0de5216af4500fb78e5773d5f98fe96e",
+  "review_scope": "Manual inspection of all 48 original executable mechanisms, common learner/recognizer, agent evidence/search records and post-registration diagnostic probes. Exact source recovery, equivalence, minimality and neural circuit recovery are distinct from scoped dependency recovery. No private feedback, refitting or rescue.",
+  "trials": {
+    "09e7cd080eab4687b1bc5b4f3a208a30/operators": {
+      "submission_receipt_sha256": "a4b1ece5a26a2323bb2b4bffd6a7eda3feb4656402bfe3490cda80515ab0390d",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result None. No family-recognition step in this moment baseline.",
+        "dependency_evidence": "Actual predictor has 2 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. No typed push, matching-pop or restoration mechanism is identified. Signed normalized states and repair/reset behavior have no demonstrated equivalent unbounded-stack interpretation.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-01/operators: reviewed original common predictor and this trial's mechanism/selection/parameters; No typed push, matching-pop or restoration mechanism is identified. Signed normalized states and repair/reset behavior have no demonstrated equivalent unbounded-stack interpretation.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              2
+            ],
+            "min": -0.44175210221234174,
+            "max": 0.006602230208540975,
+            "negative_entries": 1
+          },
+          "normalizer": {
+            "shape": [
+              2
+            ],
+            "min": -2.26171639650587,
+            "max": 0.13359534695845654,
+            "negative_entries": 1
+          },
+          "operators": {
+            "shape": [
+              16,
+              2,
+              2
+            ],
+            "min": -0.3140800933011328,
+            "max": 0.29287498781212346,
+            "negative_entries": 20
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.010705480173176815,
+            "max": 0.2715740047406901,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "09e7cd080eab4687b1bc5b4f3a208a30/geometry": {
+      "submission_receipt_sha256": "3828f7115f555dce68d6e41bc8495602d6217c7e5a27cdf02b33329f1450745e",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result unresolved_linear_state. operators_do_not_share_emission_coordinates",
+        "dependency_evidence": "Actual predictor has 2 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. No typed push, matching-pop or restoration mechanism is identified. Signed normalized states and repair/reset behavior have no demonstrated equivalent unbounded-stack interpretation.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-01/geometry: reviewed original common predictor and this trial's mechanism/selection/parameters; No typed push, matching-pop or restoration mechanism is identified. Signed normalized states and repair/reset behavior have no demonstrated equivalent unbounded-stack interpretation.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              2
+            ],
+            "min": -0.010631470962975115,
+            "max": 1.0,
+            "negative_entries": 1
+          },
+          "normalizer": {
+            "shape": [
+              2
+            ],
+            "min": 0.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              2,
+              2
+            ],
+            "min": -0.22833182018556888,
+            "max": 0.2715740047117047,
+            "negative_entries": 26
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.010705480173176815,
+            "max": 0.2715740047406901,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "09e7cd080eab4687b1bc5b4f3a208a30/pca": {
+      "submission_receipt_sha256": "f37bfc8b02530c2fc127dab5ff511fe218c3243c8cef39f7f0a011f8ad5e14d1",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result unresolved_linear_state. operators_do_not_share_emission_coordinates",
+        "dependency_evidence": "Actual predictor has 2 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. No typed push, matching-pop or restoration mechanism is identified. Signed normalized states and repair/reset behavior have no demonstrated equivalent unbounded-stack interpretation.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-01/pca: reviewed original common predictor and this trial's mechanism/selection/parameters; No typed push, matching-pop or restoration mechanism is identified. Signed normalized states and repair/reset behavior have no demonstrated equivalent unbounded-stack interpretation.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              2
+            ],
+            "min": -0.027008722714319387,
+            "max": 1.0,
+            "negative_entries": 1
+          },
+          "normalizer": {
+            "shape": [
+              2
+            ],
+            "min": 0.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              2,
+              2
+            ],
+            "min": -0.2345427054291568,
+            "max": 0.2715740047117047,
+            "negative_entries": 26
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.010705480173176815,
+            "max": 0.2715740047406901,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "09e7cd080eab4687b1bc5b4f3a208a30/sae": {
+      "submission_receipt_sha256": "4775541262f759eb2994e88cefffb6dc6037de9154d9715c71dcce4ae52317ec",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result unresolved_linear_state. complex_joint_coordinates",
+        "dependency_evidence": "Actual predictor has 5 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. No typed push, matching-pop or restoration mechanism is identified. Signed normalized states and repair/reset behavior have no demonstrated equivalent unbounded-stack interpretation.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-01/sae: reviewed original common predictor and this trial's mechanism/selection/parameters; No typed push, matching-pop or restoration mechanism is identified. Signed normalized states and repair/reset behavior have no demonstrated equivalent unbounded-stack interpretation.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              5
+            ],
+            "min": -0.8927800255297419,
+            "max": 1.6289382688304588,
+            "negative_entries": 2
+          },
+          "normalizer": {
+            "shape": [
+              5
+            ],
+            "min": 0.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              5,
+              5
+            ],
+            "min": -0.2219015107959015,
+            "max": 0.2715740047117047,
+            "negative_entries": 150
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.010705480173176815,
+            "max": 0.2715740047406901,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "09e7cd080eab4687b1bc5b4f3a208a30/transcoder": {
+      "submission_receipt_sha256": "ddb727d180fb5afda41121b8e4fea2c0f463a82bdded4f574a405371b64c8f97",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result unresolved_linear_state. operators_do_not_share_emission_coordinates",
+        "dependency_evidence": "Actual predictor has 3 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. No typed push, matching-pop or restoration mechanism is identified. Signed normalized states and repair/reset behavior have no demonstrated equivalent unbounded-stack interpretation.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-01/transcoder: reviewed original common predictor and this trial's mechanism/selection/parameters; No typed push, matching-pop or restoration mechanism is identified. Signed normalized states and repair/reset behavior have no demonstrated equivalent unbounded-stack interpretation.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              3
+            ],
+            "min": -0.901814422469815,
+            "max": 1.0,
+            "negative_entries": 1
+          },
+          "normalizer": {
+            "shape": [
+              3
+            ],
+            "min": 0.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              3,
+              3
+            ],
+            "min": -0.3068913658233146,
+            "max": 0.2715740047117047,
+            "negative_entries": 28
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.010705480173176815,
+            "max": 0.2715740047406901,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "09e7cd080eab4687b1bc5b4f3a208a30/causal": {
+      "submission_receipt_sha256": "6d4da270da0109b5e4fe89f100b9ba6a0dc7ba21583fb8eca47f48835f27e13b",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result unresolved_linear_state. operators_do_not_share_emission_coordinates",
+        "dependency_evidence": "Actual predictor has 2 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. No typed push, matching-pop or restoration mechanism is identified. Signed normalized states and repair/reset behavior have no demonstrated equivalent unbounded-stack interpretation.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-01/causal: reviewed original common predictor and this trial's mechanism/selection/parameters; No typed push, matching-pop or restoration mechanism is identified. Signed normalized states and repair/reset behavior have no demonstrated equivalent unbounded-stack interpretation.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              2
+            ],
+            "min": -0.04954558046090507,
+            "max": 1.0,
+            "negative_entries": 1
+          },
+          "normalizer": {
+            "shape": [
+              2
+            ],
+            "min": 0.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              2,
+              2
+            ],
+            "min": -0.2370649818466187,
+            "max": 0.2715740047117048,
+            "negative_entries": 25
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.010705480173176815,
+            "max": 0.2715740047406901,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "6cf0b45d765a403c9f80e786201a1f19/operators": {
+      "submission_receipt_sha256": "fdbd3022465c011ecc1d5f64e66d7f4d12d61780286439b3731aeb6f08063c99",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result None. No family-recognition step in this moment baseline.",
+        "dependency_evidence": "Actual predictor has 1 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. No latent-regime blocks or shared emission/transition realization is established. A different coordinate basis would be acceptable, but this submission provides neither a compatible realization nor equivalent observable dynamics.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-02/operators: reviewed original common predictor and this trial's mechanism/selection/parameters; No latent-regime blocks or shared emission/transition realization is established. A different coordinate basis would be acceptable, but this submission provides neither a compatible realization nor equivalent observable dynamics.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              1
+            ],
+            "min": -0.28593894321546626,
+            "max": -0.28593894321546626,
+            "negative_entries": 1
+          },
+          "normalizer": {
+            "shape": [
+              1
+            ],
+            "min": -3.4972501078541813,
+            "max": -3.4972501078541813,
+            "negative_entries": 1
+          },
+          "operators": {
+            "shape": [
+              16,
+              1,
+              1
+            ],
+            "min": 0.007559549576677444,
+            "max": 0.15225514048907027,
+            "negative_entries": 0
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.013257959355920926,
+            "max": 0.12542492150411513,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "6cf0b45d765a403c9f80e786201a1f19/geometry": {
+      "submission_receipt_sha256": "ba05671375ecb37fbb7695fcd90e4eb241b47e9aef80432332bc1a93b91bfd2a",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result unresolved_linear_state. complex_joint_coordinates",
+        "dependency_evidence": "Actual predictor has 10 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. No latent-regime blocks or shared emission/transition realization is established. A different coordinate basis would be acceptable, but this submission provides neither a compatible realization nor equivalent observable dynamics.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-02/geometry: reviewed original common predictor and this trial's mechanism/selection/parameters; No latent-regime blocks or shared emission/transition realization is established. A different coordinate basis would be acceptable, but this submission provides neither a compatible realization nor equivalent observable dynamics.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              10
+            ],
+            "min": -0.9218293209966182,
+            "max": 1.0,
+            "negative_entries": 7
+          },
+          "normalizer": {
+            "shape": [
+              10
+            ],
+            "min": 0.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              10,
+              10
+            ],
+            "min": -0.1257850437551503,
+            "max": 0.14308270440864784,
+            "negative_entries": 714
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.013257959355920926,
+            "max": 0.12542492150411513,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "6cf0b45d765a403c9f80e786201a1f19/pca": {
+      "submission_receipt_sha256": "70b0669bde35c9f20cd41eb68d183cfa54ebadd94959e00e81d4491f24b0eb88",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result unresolved_linear_state. operators_do_not_share_emission_coordinates",
+        "dependency_evidence": "Actual predictor has 9 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. No latent-regime blocks or shared emission/transition realization is established. A different coordinate basis would be acceptable, but this submission provides neither a compatible realization nor equivalent observable dynamics.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-02/pca: reviewed original common predictor and this trial's mechanism/selection/parameters; No latent-regime blocks or shared emission/transition realization is established. A different coordinate basis would be acceptable, but this submission provides neither a compatible realization nor equivalent observable dynamics.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              9
+            ],
+            "min": -2.3825420648682907,
+            "max": 1.0,
+            "negative_entries": 5
+          },
+          "normalizer": {
+            "shape": [
+              9
+            ],
+            "min": 0.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              9,
+              9
+            ],
+            "min": -0.13006401438946766,
+            "max": 0.16389248611070883,
+            "negative_entries": 579
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.013257959355920926,
+            "max": 0.12542492150411513,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "6cf0b45d765a403c9f80e786201a1f19/sae": {
+      "submission_receipt_sha256": "2d8e955ebad2965a50fb9ccf60e619f5cbdd16fdd531707a094b82501086b01c",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result unresolved_linear_state. operators_do_not_share_emission_coordinates",
+        "dependency_evidence": "Actual predictor has 5 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. No latent-regime blocks or shared emission/transition realization is established. A different coordinate basis would be acceptable, but this submission provides neither a compatible realization nor equivalent observable dynamics.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-02/sae: reviewed original common predictor and this trial's mechanism/selection/parameters; No latent-regime blocks or shared emission/transition realization is established. A different coordinate basis would be acceptable, but this submission provides neither a compatible realization nor equivalent observable dynamics.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              5
+            ],
+            "min": -1.350047043353757,
+            "max": 1.0,
+            "negative_entries": 3
+          },
+          "normalizer": {
+            "shape": [
+              5
+            ],
+            "min": 0.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              5,
+              5
+            ],
+            "min": -0.1016766726192048,
+            "max": 0.13584272727099678,
+            "negative_entries": 146
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.013257959355920926,
+            "max": 0.12542492150411513,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "6cf0b45d765a403c9f80e786201a1f19/transcoder": {
+      "submission_receipt_sha256": "4c3e7ed9ae51e40921d7d54ffded360b9cf83c2505fbb2a317b1cce39536c6e0",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result unresolved_linear_state. complex_joint_coordinates",
+        "dependency_evidence": "Actual predictor has 8 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. No latent-regime blocks or shared emission/transition realization is established. A different coordinate basis would be acceptable, but this submission provides neither a compatible realization nor equivalent observable dynamics.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-02/transcoder: reviewed original common predictor and this trial's mechanism/selection/parameters; No latent-regime blocks or shared emission/transition realization is established. A different coordinate basis would be acceptable, but this submission provides neither a compatible realization nor equivalent observable dynamics.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              8
+            ],
+            "min": -1.6094217799185129,
+            "max": 1.0,
+            "negative_entries": 3
+          },
+          "normalizer": {
+            "shape": [
+              8
+            ],
+            "min": 0.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              8,
+              8
+            ],
+            "min": -0.09415521842897186,
+            "max": 0.15811940767961183,
+            "negative_entries": 470
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.013257959355920926,
+            "max": 0.12542492150411513,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "6cf0b45d765a403c9f80e786201a1f19/causal": {
+      "submission_receipt_sha256": "b6d1430059cac805075477f28681c8847f39a4d2107d0423298f3bf27514d96a",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result unresolved_linear_state. operators_do_not_share_emission_coordinates",
+        "dependency_evidence": "Actual predictor has 7 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. No latent-regime blocks or shared emission/transition realization is established. A different coordinate basis would be acceptable, but this submission provides neither a compatible realization nor equivalent observable dynamics.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-02/causal: reviewed original common predictor and this trial's mechanism/selection/parameters; No latent-regime blocks or shared emission/transition realization is established. A different coordinate basis would be acceptable, but this submission provides neither a compatible realization nor equivalent observable dynamics.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              7
+            ],
+            "min": -2.3321715987099445,
+            "max": 1.0,
+            "negative_entries": 5
+          },
+          "normalizer": {
+            "shape": [
+              7
+            ],
+            "min": 0.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              7,
+              7
+            ],
+            "min": -0.10510234657215932,
+            "max": 0.1506949338037108,
+            "negative_entries": 308
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.013257959355920926,
+            "max": 0.12542492150411513,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "ff5fa885f2a547f3b4a8bf06fcdb3021/operators": {
+      "submission_receipt_sha256": "7df240fa1460435e0e13a73ae12e172aec67180367170c21099a831f4d00b367",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result None. No family-recognition step in this moment baseline.",
+        "dependency_evidence": "Actual predictor has 2 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. No typed push, matching-pop or restoration mechanism is identified. Signed normalized states and repair/reset behavior have no demonstrated equivalent unbounded-stack interpretation.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-06/operators: reviewed original common predictor and this trial's mechanism/selection/parameters; No typed push, matching-pop or restoration mechanism is identified. Signed normalized states and repair/reset behavior have no demonstrated equivalent unbounded-stack interpretation.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              2
+            ],
+            "min": -0.4141057570322046,
+            "max": 0.020288016782557663,
+            "negative_entries": 1
+          },
+          "normalizer": {
+            "shape": [
+              2
+            ],
+            "min": -2.4067058410313296,
+            "max": 0.16607122233797156,
+            "negative_entries": 1
+          },
+          "operators": {
+            "shape": [
+              16,
+              2,
+              2
+            ],
+            "min": -0.2994526103556843,
+            "max": 0.3103940866328965,
+            "negative_entries": 20
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.015015162610628371,
+            "max": 0.2590668274658583,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "ff5fa885f2a547f3b4a8bf06fcdb3021/geometry": {
+      "submission_receipt_sha256": "e8921f454636a10e438ef792b1e3c9ddad392a85c93eef9ec3a4c4ad053d7d35",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result unresolved_linear_state. operators_do_not_share_emission_coordinates",
+        "dependency_evidence": "Actual predictor has 2 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. No typed push, matching-pop or restoration mechanism is identified. Signed normalized states and repair/reset behavior have no demonstrated equivalent unbounded-stack interpretation.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-06/geometry: reviewed original common predictor and this trial's mechanism/selection/parameters; No typed push, matching-pop or restoration mechanism is identified. Signed normalized states and repair/reset behavior have no demonstrated equivalent unbounded-stack interpretation.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              2
+            ],
+            "min": -0.04834918622187343,
+            "max": 1.0,
+            "negative_entries": 1
+          },
+          "normalizer": {
+            "shape": [
+              2
+            ],
+            "min": 0.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              2,
+              2
+            ],
+            "min": -0.22453449119217855,
+            "max": 0.25906682762184136,
+            "negative_entries": 19
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.015015162610628371,
+            "max": 0.2590668274658583,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "ff5fa885f2a547f3b4a8bf06fcdb3021/pca": {
+      "submission_receipt_sha256": "cc6776f77160fcce16226cd70cdeb51072f2ad9f19a474ac4f426fc5ee3f194a",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result unresolved_linear_state. operators_do_not_share_emission_coordinates",
+        "dependency_evidence": "Actual predictor has 3 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. No typed push, matching-pop or restoration mechanism is identified. Signed normalized states and repair/reset behavior have no demonstrated equivalent unbounded-stack interpretation.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-06/pca: reviewed original common predictor and this trial's mechanism/selection/parameters; No typed push, matching-pop or restoration mechanism is identified. Signed normalized states and repair/reset behavior have no demonstrated equivalent unbounded-stack interpretation.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              3
+            ],
+            "min": -0.14342688878239013,
+            "max": 1.0,
+            "negative_entries": 1
+          },
+          "normalizer": {
+            "shape": [
+              3
+            ],
+            "min": 0.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              3,
+              3
+            ],
+            "min": -0.21574795131600985,
+            "max": 0.25906682762184136,
+            "negative_entries": 43
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.015015162610628371,
+            "max": 0.2590668274658583,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "ff5fa885f2a547f3b4a8bf06fcdb3021/sae": {
+      "submission_receipt_sha256": "e444798ced82bf31a27e0882e50fd5f57762c251b34ec5f626672950c6bf6148",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result unresolved_linear_state. operators_do_not_share_emission_coordinates",
+        "dependency_evidence": "Actual predictor has 3 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. No typed push, matching-pop or restoration mechanism is identified. Signed normalized states and repair/reset behavior have no demonstrated equivalent unbounded-stack interpretation.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-06/sae: reviewed original common predictor and this trial's mechanism/selection/parameters; No typed push, matching-pop or restoration mechanism is identified. Signed normalized states and repair/reset behavior have no demonstrated equivalent unbounded-stack interpretation.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              3
+            ],
+            "min": -0.36795389420443086,
+            "max": 1.0,
+            "negative_entries": 1
+          },
+          "normalizer": {
+            "shape": [
+              3
+            ],
+            "min": 0.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              3,
+              3
+            ],
+            "min": -0.2595680017216537,
+            "max": 0.28629129667660896,
+            "negative_entries": 49
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.015015162610628371,
+            "max": 0.2590668274658583,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "ff5fa885f2a547f3b4a8bf06fcdb3021/transcoder": {
+      "submission_receipt_sha256": "ba568f24447293949b0439db9910befdee91d28938f2ecff49152fd332484ff3",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result unresolved_linear_state. operators_do_not_share_emission_coordinates",
+        "dependency_evidence": "Actual predictor has 3 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. No typed push, matching-pop or restoration mechanism is identified. Signed normalized states and repair/reset behavior have no demonstrated equivalent unbounded-stack interpretation.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-06/transcoder: reviewed original common predictor and this trial's mechanism/selection/parameters; No typed push, matching-pop or restoration mechanism is identified. Signed normalized states and repair/reset behavior have no demonstrated equivalent unbounded-stack interpretation.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              3
+            ],
+            "min": -0.3059953892966474,
+            "max": 1.0,
+            "negative_entries": 1
+          },
+          "normalizer": {
+            "shape": [
+              3
+            ],
+            "min": 0.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              3,
+              3
+            ],
+            "min": -0.25844570224951247,
+            "max": 0.2878030254585541,
+            "negative_entries": 47
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.015015162610628371,
+            "max": 0.2590668274658583,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "ff5fa885f2a547f3b4a8bf06fcdb3021/causal": {
+      "submission_receipt_sha256": "0f43dc19562cb48532d6a1544bba1e9fd3f4ac6e4fa8d20734b5a582f381e243",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result unresolved_linear_state. operators_do_not_share_emission_coordinates",
+        "dependency_evidence": "Actual predictor has 3 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. No typed push, matching-pop or restoration mechanism is identified. Signed normalized states and repair/reset behavior have no demonstrated equivalent unbounded-stack interpretation.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-06/causal: reviewed original common predictor and this trial's mechanism/selection/parameters; No typed push, matching-pop or restoration mechanism is identified. Signed normalized states and repair/reset behavior have no demonstrated equivalent unbounded-stack interpretation.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              3
+            ],
+            "min": -0.15170817330794897,
+            "max": 1.0,
+            "negative_entries": 1
+          },
+          "normalizer": {
+            "shape": [
+              3
+            ],
+            "min": 0.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              3,
+              3
+            ],
+            "min": -0.2230270968323566,
+            "max": 0.2619781755766275,
+            "negative_entries": 44
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.015015162610628371,
+            "max": 0.2590668274658583,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "8c13c136784e41a0a20e88d4ecdbb0e7/operators": {
+      "submission_receipt_sha256": "0fa19c77aa8482f62ecf1cf1661862814af8d5d43397be32c39e9099974303d3",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result None. No family-recognition step in this moment baseline.",
+        "dependency_evidence": "Actual predictor has 1 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. This 1-coordinate constant predictor discards observed history, missing the source lag-3 permutation. Numerical recognition of its own memoryless realization is not discovery of this source.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-03/operators: reviewed original common predictor and this trial's mechanism/selection/parameters; This 1-coordinate constant predictor discards observed history, missing the source lag-3 permutation. Numerical recognition of its own memoryless realization is not discovery of this source.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              1
+            ],
+            "min": -0.25037206659231304,
+            "max": -0.25037206659231304,
+            "negative_entries": 1
+          },
+          "normalizer": {
+            "shape": [
+              1
+            ],
+            "min": -3.9940557811040653,
+            "max": -3.9940557811040653,
+            "negative_entries": 1
+          },
+          "operators": {
+            "shape": [
+              16,
+              1,
+              1
+            ],
+            "min": 0.056636958171943905,
+            "max": 0.06954345665320567,
+            "negative_entries": 0
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.05573851230042237,
+            "max": 0.06734993366634019,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "8c13c136784e41a0a20e88d4ecdbb0e7/geometry": {
+      "submission_receipt_sha256": "eda196dc9674482be5f96593ab9c672e341a2e91e51b2dde86b8a7bc1cb4dd4b",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result memoryless_categorical. real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "dependency_evidence": "Actual predictor has 1 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. This 1-coordinate constant predictor discards observed history, missing the source lag-3 permutation. Numerical recognition of its own memoryless realization is not discovery of this source.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-03/geometry: reviewed original common predictor and this trial's mechanism/selection/parameters; This 1-coordinate constant predictor discards observed history, missing the source lag-3 permutation. Numerical recognition of its own memoryless realization is not discovery of this source.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              1
+            ],
+            "min": 1.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "normalizer": {
+            "shape": [
+              1
+            ],
+            "min": 1.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              1,
+              1
+            ],
+            "min": 0.05573851249056361,
+            "max": 0.06734993385648143,
+            "negative_entries": 0
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.05573851230042237,
+            "max": 0.06734993366634019,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "8c13c136784e41a0a20e88d4ecdbb0e7/pca": {
+      "submission_receipt_sha256": "ee4d4c4f4e1bd2a3a81071b99bb2d62da14e6a371f46d1b6ee43da6840deac6f",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result memoryless_categorical. real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "dependency_evidence": "Actual predictor has 1 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. This 1-coordinate constant predictor discards observed history, missing the source lag-3 permutation. Numerical recognition of its own memoryless realization is not discovery of this source.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-03/pca: reviewed original common predictor and this trial's mechanism/selection/parameters; This 1-coordinate constant predictor discards observed history, missing the source lag-3 permutation. Numerical recognition of its own memoryless realization is not discovery of this source.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              1
+            ],
+            "min": 1.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "normalizer": {
+            "shape": [
+              1
+            ],
+            "min": 1.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              1,
+              1
+            ],
+            "min": 0.05573851249056361,
+            "max": 0.06734993385648143,
+            "negative_entries": 0
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.05573851230042237,
+            "max": 0.06734993366634019,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "8c13c136784e41a0a20e88d4ecdbb0e7/sae": {
+      "submission_receipt_sha256": "87c4d48ef370c805b988b0f2008f94b5cafb060708c443cfecb4002a82d9c9e8",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result memoryless_categorical. real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "dependency_evidence": "Actual predictor has 1 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. This 1-coordinate constant predictor discards observed history, missing the source lag-3 permutation. Numerical recognition of its own memoryless realization is not discovery of this source.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-03/sae: reviewed original common predictor and this trial's mechanism/selection/parameters; This 1-coordinate constant predictor discards observed history, missing the source lag-3 permutation. Numerical recognition of its own memoryless realization is not discovery of this source.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              1
+            ],
+            "min": 1.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "normalizer": {
+            "shape": [
+              1
+            ],
+            "min": 1.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              1,
+              1
+            ],
+            "min": 0.05573851249056361,
+            "max": 0.06734993385648143,
+            "negative_entries": 0
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.05573851230042237,
+            "max": 0.06734993366634019,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "8c13c136784e41a0a20e88d4ecdbb0e7/transcoder": {
+      "submission_receipt_sha256": "a88a3725d065a5b61678ed0703b1dfd2b307b73774329d29fe1a50e21346af9a",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result memoryless_categorical. real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "dependency_evidence": "Actual predictor has 1 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. This 1-coordinate constant predictor discards observed history, missing the source lag-3 permutation. Numerical recognition of its own memoryless realization is not discovery of this source.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-03/transcoder: reviewed original common predictor and this trial's mechanism/selection/parameters; This 1-coordinate constant predictor discards observed history, missing the source lag-3 permutation. Numerical recognition of its own memoryless realization is not discovery of this source.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              1
+            ],
+            "min": 1.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "normalizer": {
+            "shape": [
+              1
+            ],
+            "min": 1.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              1,
+              1
+            ],
+            "min": 0.05573851249056361,
+            "max": 0.06734993385648143,
+            "negative_entries": 0
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.05573851230042237,
+            "max": 0.06734993366634019,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "8c13c136784e41a0a20e88d4ecdbb0e7/causal": {
+      "submission_receipt_sha256": "b88d939c2ecfef1aca46870c17a64a8d214d3c52037fd1a9d2621a66ae105cfa",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result memoryless_categorical. real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "dependency_evidence": "Actual predictor has 1 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. This 1-coordinate constant predictor discards observed history, missing the source lag-3 permutation. Numerical recognition of its own memoryless realization is not discovery of this source.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-03/causal: reviewed original common predictor and this trial's mechanism/selection/parameters; This 1-coordinate constant predictor discards observed history, missing the source lag-3 permutation. Numerical recognition of its own memoryless realization is not discovery of this source.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              1
+            ],
+            "min": 1.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "normalizer": {
+            "shape": [
+              1
+            ],
+            "min": 1.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              1,
+              1
+            ],
+            "min": 0.05573851249056361,
+            "max": 0.06734993385648143,
+            "negative_entries": 0
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.05573851230042237,
+            "max": 0.06734993366634019,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "ff54ab1fd1f24b7d8551211dc4255f25/operators": {
+      "submission_receipt_sha256": "3d3c682ac6909bcd2a47168996b9fb50ffe5b1f601ce96c09497616a420e9a0f",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result None. No family-recognition step in this moment baseline.",
+        "dependency_evidence": "Actual predictor has 1 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. This 1-coordinate constant predictor discards observed history, missing the source lag-4 permutation. Numerical recognition of its own memoryless realization is not discovery of this source.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-05/operators: reviewed original common predictor and this trial's mechanism/selection/parameters; This 1-coordinate constant predictor discards observed history, missing the source lag-4 permutation. Numerical recognition of its own memoryless realization is not discovery of this source.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              1
+            ],
+            "min": -0.2520978349762796,
+            "max": -0.2520978349762796,
+            "negative_entries": 1
+          },
+          "normalizer": {
+            "shape": [
+              1
+            ],
+            "min": -3.9667139548980743,
+            "max": -3.9667139548980743,
+            "negative_entries": 1
+          },
+          "operators": {
+            "shape": [
+              16,
+              1,
+              1
+            ],
+            "min": 0.05137714240356957,
+            "max": 0.08366960889644465,
+            "negative_entries": 0
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.051137644586106035,
+            "max": 0.07800674116636704,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "ff54ab1fd1f24b7d8551211dc4255f25/geometry": {
+      "submission_receipt_sha256": "d5cba0b9e696091180aa30a85f7fa74f901badfd5ed0b4c856aded1b5fedf954",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result memoryless_categorical. real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "dependency_evidence": "Actual predictor has 1 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. This 1-coordinate constant predictor discards observed history, missing the source lag-4 permutation. Numerical recognition of its own memoryless realization is not discovery of this source.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-05/geometry: reviewed original common predictor and this trial's mechanism/selection/parameters; This 1-coordinate constant predictor discards observed history, missing the source lag-4 permutation. Numerical recognition of its own memoryless realization is not discovery of this source.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              1
+            ],
+            "min": 1.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "normalizer": {
+            "shape": [
+              1
+            ],
+            "min": 1.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              1,
+              1
+            ],
+            "min": 0.05113764443786786,
+            "max": 0.07800674101812886,
+            "negative_entries": 0
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.051137644586106035,
+            "max": 0.07800674116636704,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "ff54ab1fd1f24b7d8551211dc4255f25/pca": {
+      "submission_receipt_sha256": "9c504122dc9887cc6b5aa62322e38b29f3e701445e2c1c4b752145b2ce7390ae",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result memoryless_categorical. real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "dependency_evidence": "Actual predictor has 1 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. This 1-coordinate constant predictor discards observed history, missing the source lag-4 permutation. Numerical recognition of its own memoryless realization is not discovery of this source.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-05/pca: reviewed original common predictor and this trial's mechanism/selection/parameters; This 1-coordinate constant predictor discards observed history, missing the source lag-4 permutation. Numerical recognition of its own memoryless realization is not discovery of this source.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              1
+            ],
+            "min": 1.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "normalizer": {
+            "shape": [
+              1
+            ],
+            "min": 1.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              1,
+              1
+            ],
+            "min": 0.05113764443786786,
+            "max": 0.07800674101812886,
+            "negative_entries": 0
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.051137644586106035,
+            "max": 0.07800674116636704,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "ff54ab1fd1f24b7d8551211dc4255f25/sae": {
+      "submission_receipt_sha256": "43f891e63dfd3c1e03066f11c086626bf4f354c37468a9d3b5c13d73a1fbb22d",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result memoryless_categorical. real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "dependency_evidence": "Actual predictor has 1 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. This 1-coordinate constant predictor discards observed history, missing the source lag-4 permutation. Numerical recognition of its own memoryless realization is not discovery of this source.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-05/sae: reviewed original common predictor and this trial's mechanism/selection/parameters; This 1-coordinate constant predictor discards observed history, missing the source lag-4 permutation. Numerical recognition of its own memoryless realization is not discovery of this source.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              1
+            ],
+            "min": 1.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "normalizer": {
+            "shape": [
+              1
+            ],
+            "min": 1.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              1,
+              1
+            ],
+            "min": 0.05113764443786786,
+            "max": 0.07800674101812886,
+            "negative_entries": 0
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.051137644586106035,
+            "max": 0.07800674116636704,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "ff54ab1fd1f24b7d8551211dc4255f25/transcoder": {
+      "submission_receipt_sha256": "6886405f0d9e3134ee91bdb67859b1436cb8916af1b3cf9fdb14b7ecff41f75c",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result memoryless_categorical. real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "dependency_evidence": "Actual predictor has 1 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. This 1-coordinate constant predictor discards observed history, missing the source lag-4 permutation. Numerical recognition of its own memoryless realization is not discovery of this source.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-05/transcoder: reviewed original common predictor and this trial's mechanism/selection/parameters; This 1-coordinate constant predictor discards observed history, missing the source lag-4 permutation. Numerical recognition of its own memoryless realization is not discovery of this source.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              1
+            ],
+            "min": 1.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "normalizer": {
+            "shape": [
+              1
+            ],
+            "min": 1.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              1,
+              1
+            ],
+            "min": 0.05113764443786786,
+            "max": 0.07800674101812886,
+            "negative_entries": 0
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.051137644586106035,
+            "max": 0.07800674116636704,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "ff54ab1fd1f24b7d8551211dc4255f25/causal": {
+      "submission_receipt_sha256": "9cc6b353fd388d955a2b3a8bc76210666794d9b88c386f05a3b45660a763ecce",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result memoryless_categorical. real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "dependency_evidence": "Actual predictor has 1 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. This 1-coordinate constant predictor discards observed history, missing the source lag-4 permutation. Numerical recognition of its own memoryless realization is not discovery of this source.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-05/causal: reviewed original common predictor and this trial's mechanism/selection/parameters; This 1-coordinate constant predictor discards observed history, missing the source lag-4 permutation. Numerical recognition of its own memoryless realization is not discovery of this source.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              1
+            ],
+            "min": 1.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "normalizer": {
+            "shape": [
+              1
+            ],
+            "min": 1.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              1,
+              1
+            ],
+            "min": 0.05113764443786786,
+            "max": 0.07800674101812886,
+            "negative_entries": 0
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.051137644586106035,
+            "max": 0.07800674116636704,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "cb925fb97da74d2c8bc44c68fea9d22d/operators": {
+      "submission_receipt_sha256": "8c7f5865f47078263443abe600a871f7a327b88e4d9be16d7c0618eadec72540",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result None. No family-recognition step in this moment baseline.",
+        "dependency_evidence": "Actual predictor has 2 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. No latent-regime blocks or shared emission/transition realization is established. A different coordinate basis would be acceptable, but this submission provides neither a compatible realization nor equivalent observable dynamics.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-04/operators: reviewed original common predictor and this trial's mechanism/selection/parameters; No latent-regime blocks or shared emission/transition realization is established. A different coordinate basis would be acceptable, but this submission provides neither a compatible realization nor equivalent observable dynamics.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              2
+            ],
+            "min": -0.27340825053940093,
+            "max": -0.0357254376381194,
+            "negative_entries": 2
+          },
+          "normalizer": {
+            "shape": [
+              2
+            ],
+            "min": -3.6103376268699643,
+            "max": -0.3611965712392526,
+            "negative_entries": 2
+          },
+          "operators": {
+            "shape": [
+              16,
+              2,
+              2
+            ],
+            "min": -0.1538542068832272,
+            "max": 0.1268847675186306,
+            "negative_entries": 16
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.00941822517449964,
+            "max": 0.10801487364430311,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "cb925fb97da74d2c8bc44c68fea9d22d/geometry": {
+      "submission_receipt_sha256": "daa4cda38a515e8c01e66430b3eb02e005c6a5587162829a54a85d57592ac0e5",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result unresolved_linear_state. operators_do_not_share_emission_coordinates",
+        "dependency_evidence": "Actual predictor has 5 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. No latent-regime blocks or shared emission/transition realization is established. A different coordinate basis would be acceptable, but this submission provides neither a compatible realization nor equivalent observable dynamics.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-04/geometry: reviewed original common predictor and this trial's mechanism/selection/parameters; No latent-regime blocks or shared emission/transition realization is established. A different coordinate basis would be acceptable, but this submission provides neither a compatible realization nor equivalent observable dynamics.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              5
+            ],
+            "min": -0.5631603635393673,
+            "max": 1.0,
+            "negative_entries": 4
+          },
+          "normalizer": {
+            "shape": [
+              5
+            ],
+            "min": 0.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              5,
+              5
+            ],
+            "min": -0.15855685507739206,
+            "max": 0.15915007589913333,
+            "negative_entries": 163
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.00941822517449964,
+            "max": 0.10801487364430311,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "cb925fb97da74d2c8bc44c68fea9d22d/pca": {
+      "submission_receipt_sha256": "e0d6c76fad30f75ea325cda3b265cecc347d447c3057705ac987229fa9ff119f",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result unresolved_linear_state. complex_joint_coordinates",
+        "dependency_evidence": "Actual predictor has 3 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. No latent-regime blocks or shared emission/transition realization is established. A different coordinate basis would be acceptable, but this submission provides neither a compatible realization nor equivalent observable dynamics.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-04/pca: reviewed original common predictor and this trial's mechanism/selection/parameters; No latent-regime blocks or shared emission/transition realization is established. A different coordinate basis would be acceptable, but this submission provides neither a compatible realization nor equivalent observable dynamics.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              3
+            ],
+            "min": -0.12632203692086075,
+            "max": 1.0,
+            "negative_entries": 2
+          },
+          "normalizer": {
+            "shape": [
+              3
+            ],
+            "min": 0.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              3,
+              3
+            ],
+            "min": -0.12034289152334023,
+            "max": 0.1727506549136977,
+            "negative_entries": 52
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.00941822517449964,
+            "max": 0.10801487364430311,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "cb925fb97da74d2c8bc44c68fea9d22d/sae": {
+      "submission_receipt_sha256": "be0f3a3735a4ea2c512366dc2773fefd088067ef14b9a7fd57428a4ed3f35715",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result unresolved_linear_state. operators_do_not_share_emission_coordinates",
+        "dependency_evidence": "Actual predictor has 4 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. No latent-regime blocks or shared emission/transition realization is established. A different coordinate basis would be acceptable, but this submission provides neither a compatible realization nor equivalent observable dynamics.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-04/sae: reviewed original common predictor and this trial's mechanism/selection/parameters; No latent-regime blocks or shared emission/transition realization is established. A different coordinate basis would be acceptable, but this submission provides neither a compatible realization nor equivalent observable dynamics.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              4
+            ],
+            "min": -0.03253999364578341,
+            "max": 1.0,
+            "negative_entries": 1
+          },
+          "normalizer": {
+            "shape": [
+              4
+            ],
+            "min": 0.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              4,
+              4
+            ],
+            "min": -0.1659483132527507,
+            "max": 0.13838800593001682,
+            "negative_entries": 110
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.00941822517449964,
+            "max": 0.10801487364430311,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "cb925fb97da74d2c8bc44c68fea9d22d/transcoder": {
+      "submission_receipt_sha256": "d1d8319b4f9fea3a12c0c7496f45f9ea352e625ba2c51c14e4c80170aab698c9",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result unresolved_linear_state. operators_do_not_share_emission_coordinates",
+        "dependency_evidence": "Actual predictor has 3 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. No latent-regime blocks or shared emission/transition realization is established. A different coordinate basis would be acceptable, but this submission provides neither a compatible realization nor equivalent observable dynamics.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-04/transcoder: reviewed original common predictor and this trial's mechanism/selection/parameters; No latent-regime blocks or shared emission/transition realization is established. A different coordinate basis would be acceptable, but this submission provides neither a compatible realization nor equivalent observable dynamics.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              3
+            ],
+            "min": -0.33002359704445694,
+            "max": 1.0,
+            "negative_entries": 1
+          },
+          "normalizer": {
+            "shape": [
+              3
+            ],
+            "min": 0.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              3,
+              3
+            ],
+            "min": -0.18650168778884654,
+            "max": 0.16037908380670393,
+            "negative_entries": 49
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.00941822517449964,
+            "max": 0.10801487364430311,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "cb925fb97da74d2c8bc44c68fea9d22d/causal": {
+      "submission_receipt_sha256": "a86e3f95c29f191148a78f989d0f1854716b2d11f5f101e2d5c5d897cfd71820",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": false,
+        "family_identification_supported": false,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "unresolved_or_incompatible",
+        "recovery_scope": "Autonomous predictive-state fit only; source structure recovery not demonstrated.",
+        "family_evidence": "Restricted signed linear-state prior; recognition result unresolved_linear_state. complex_joint_coordinates",
+        "dependency_evidence": "Actual predictor has 3 signed coordinates, token-indexed linear update normalized by a linear normalizer, probability floor 1e-9 and reset on invalid mass. No latent-regime blocks or shared emission/transition realization is established. A different coordinate basis would be acceptable, but this submission provides neither a compatible realization nor equivalent observable dynamics.",
+        "equivalence_limits": "Repair/reset operations are part of the original executable. State dimension is not a latent count or minimality proof. Frozen held-out/long scores and preserved max-TV histories assess behavior separately.",
+        "review": "case-04/causal: reviewed original common predictor and this trial's mechanism/selection/parameters; No latent-regime blocks or shared emission/transition realization is established. A different coordinate basis would be acceptable, but this submission provides neither a compatible realization nor equivalent observable dynamics.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json",
+        "parameter_evidence": {
+          "initial": {
+            "shape": [
+              3
+            ],
+            "min": -0.27156167998298053,
+            "max": 1.0,
+            "negative_entries": 2
+          },
+          "normalizer": {
+            "shape": [
+              3
+            ],
+            "min": 0.0,
+            "max": 1.0,
+            "negative_entries": 0
+          },
+          "operators": {
+            "shape": [
+              16,
+              3,
+              3
+            ],
+            "min": -0.11254194897034331,
+            "max": 0.17494565978752527,
+            "negative_entries": 51
+          },
+          "baseline": {
+            "shape": [
+              16
+            ],
+            "min": 0.00941822517449964,
+            "max": 0.10801487364430311,
+            "negative_entries": 0
+          }
+        }
+      }
+    },
+    "09e7cd080eab4687b1bc5b4f3a208a30/agent_internals": {
+      "submission_receipt_sha256": "b0c5bd6a47ea693db165cec2f197e96601440fc6ba75618ef3516cf836a5d7dc",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": true,
+        "family_identification_supported": true,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "partial_structure",
+        "recovery_scope": "Inferred family and partial dependencies; full source update/graph not established.",
+        "family_evidence": "Two-type bracket nesting/cancellation, with bounded noisy recall and top-type-dependent emissions; a fixed symbolic-memory calibration models neural approximation errors.",
+        "dependency_evidence": "Correct opener/closer roles and nested restoration; memory.py removes the newest matching type anywhere in its list, not only at the top. Replays all suffixes of the last 24 tokens, adds position/count/age features and a cubic emission calibration.",
+        "equivalence_limits": "On malformed histories selective deletion below the top differs from the source's no-op. Last-24 memory also forgets older pushes. Ablations/top-type probes support neural memory sensitivity but do not align source-state interventions to a recovered neural circuit.",
+        "review": "Correct opener/closer roles and nested restoration; memory.py removes the newest matching type anywhere in its list, not only at the top. Replays all suffixes of the last 24 tokens, adds position/count/age features and a cubic emission calibration. On malformed histories selective deletion below the top differs from the source's no-op. Last-24 memory also forgets older pushes. Ablations/top-type probes support neural memory sensitivity but do not align source-state interventions to a recovered neural circuit.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json"
+      }
+    },
+    "09e7cd080eab4687b1bc5b4f3a208a30/agent_outputs": {
+      "submission_receipt_sha256": "b643211620f570e25fb4666a22e59addcb65dc18c02af5155d14ea1b3ea74698",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": true,
+        "family_identification_supported": true,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "partial_structure",
+        "recovery_scope": "Inferred family and partial dependencies; full source update/graph not established.",
+        "family_evidence": "A two-type nested stack process with noisy finite-memory retrieval: explicit stack features and six bounded retrieval views allocate probability between closing symbols 3 and 10, with a small calibrated emission law.",
+        "dependency_evidence": "Correctly inferred openers 2/5, closers 3/10 and nested restoration. The actual predictor combines a principal any-close-pop stack with six competing suffix/cap/mismatch views, then a 34-feature logistic closer readout and calibrated emissions.",
+        "equivalence_limits": "The source pops only a matching top, ignores mismatches and never truncates. The submitted any-pop principal memory and 23-token window differ. Correct roles and nesting are partial recovery; no claim of exact unbounded-stack recovery.",
+        "review": "Correctly inferred openers 2/5, closers 3/10 and nested restoration. The actual predictor combines a principal any-close-pop stack with six competing suffix/cap/mismatch views, then a 34-feature logistic closer readout and calibrated emissions. The source pops only a matching top, ignores mismatches and never truncates. The submitted any-pop principal memory and 23-token window differ. Correct roles and nesting are partial recovery; no claim of exact unbounded-stack recovery.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json"
+      }
+    },
+    "6cf0b45d765a403c9f80e786201a1f19/agent_internals": {
+      "submission_receipt_sha256": "d65496d3f34bf5e4e98e23298b6657ab51c680b2722e1f0879947c56eeec7eaf",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": true,
+        "family_identification_supported": true,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "partial_structure",
+        "recovery_scope": "Inferred family and partial dependencies; full source update/graph not established.",
+        "family_evidence": "A three-regime categorical hidden-state source with 2+3+3 fast states, represented by a calibrated hierarchical Bayesian recognition filter.",
+        "dependency_evidence": "Independently proposed three persistent HMM regimes with 2/3/3 states. Recognition W is separate from emissions; after W-conditioned transition, regime and state masses are raised to powers .975095/1.384001 and readout to 1.648590.",
+        "equivalence_limits": "Source is three 3-state HMMs with ordinary likelihood updates. Separate recognition, nonlinear belief powers and calibrated readout change the actual mechanism. Family/grouping is meaningful partial evidence; eight modes and a family label do not establish a nine-state source or an equivalent law.",
+        "review": "Independently proposed three persistent HMM regimes with 2/3/3 states. Recognition W is separate from emissions; after W-conditioned transition, regime and state masses are raised to powers .975095/1.384001 and readout to 1.648590. Source is three 3-state HMMs with ordinary likelihood updates. Separate recognition, nonlinear belief powers and calibrated readout change the actual mechanism. Family/grouping is meaningful partial evidence; eight modes and a family label do not establish a nine-state source or an equivalent law.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json"
+      }
+    },
+    "6cf0b45d765a403c9f80e786201a1f19/agent_outputs": {
+      "submission_receipt_sha256": "d00da751762d649cf405c3a533e3895984a80f2a16d903cf9562e6c6f2f503a2",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": true,
+        "family_identification_supported": true,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "partial_structure",
+        "recovery_scope": "Inferred family and partial dependencies; full source update/graph not established.",
+        "family_evidence": "Three persistent regimes with 3/3/2 categorical-emitting hidden states, filtered causally; small evidence-power and last-token readout corrections model neural approximation.",
+        "dependency_evidence": "Independently proposed three persistent HMM regimes with blocks 3/3/2. Executable uses b <- normalize(b**rho * E[:,x]**tau) @ A and last-token logit correction. rho=.967261 and tau=1.105269 are not ordinary Bayesian conditioning.",
+        "equivalence_limits": "The source has three 3-state regimes, numerical observable rank nine. Eight submitted modes alone do not disprove an alternative representation; the selected calibrated filter has no equivalence evidence. It recovers the family, persistent grouping and some within-regime dynamics, not the full source structure or parameters.",
+        "review": "Independently proposed three persistent HMM regimes with blocks 3/3/2. Executable uses b <- normalize(b**rho * E[:,x]**tau) @ A and last-token logit correction. rho=.967261 and tau=1.105269 are not ordinary Bayesian conditioning. The source has three 3-state regimes, numerical observable rank nine. Eight submitted modes alone do not disprove an alternative representation; the selected calibrated filter has no equivalence evidence. It recovers the family, persistent grouping and some within-regime dynamics, not the full source structure or parameters.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json"
+      }
+    },
+    "ff5fa885f2a547f3b4a8bf06fcdb3021/agent_outputs": {
+      "submission_receipt_sha256": "87b166c18569b89158da5b6e2bc183377bab44b6097c16dff3fe74c8b90daa09",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": true,
+        "family_identification_supported": true,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "partial_structure",
+        "recovery_scope": "Inferred family and partial dependencies; full source update/graph not established.",
+        "family_evidence": "Two-type nested push/pop process: 15 pairs with 4, 7 with 5, and twelve tokens are inert. A small noisy stack and explicit reliability calibration approximate the neural implementation.",
+        "dependency_evidence": "Correctly inferred openers 7/15 and closers 5/4 respectively, with neutral symbols and nested retrieval. Actual stochastic input-driven memory holds a distribution over 31 depth-at-most-four stacks, with forgetting and probabilistic pops; a parallel any-pop stack supplies 24 reliability features.",
+        "equivalence_limits": "Source has an unbounded matching-top-only stack, no forgetting and no pop on mismatch. Capacity/forgetting/mismatched-pop and reliability calibration differ. Roles, typed nesting and restoration are partial recovery, not full pushdown dynamics or exact probabilities.",
+        "review": "Correctly inferred openers 7/15 and closers 5/4 respectively, with neutral symbols and nested retrieval. Actual stochastic input-driven memory holds a distribution over 31 depth-at-most-four stacks, with forgetting and probabilistic pops; a parallel any-pop stack supplies 24 reliability features. Source has an unbounded matching-top-only stack, no forgetting and no pop on mismatch. Capacity/forgetting/mismatched-pop and reliability calibration differ. Roles, typed nesting and restoration are partial recovery, not full pushdown dynamics or exact probabilities.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json"
+      }
+    },
+    "ff5fa885f2a547f3b4a8bf06fcdb3021/agent_internals": {
+      "submission_receipt_sha256": "efd856be456597ffc8f3cbd9c8e26d3bdf55e2598681ca597732635c6ef75d61",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": true,
+        "family_identification_supported": true,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "partial_structure",
+        "recovery_scope": "Inferred family and partial dependencies; full source update/graph not established.",
+        "family_evidence": "Two-color pending-opening memory with nested matching and neutral insertions. The newest surviving opening determines the preferred closing token; two small structural confidence functions account for approximate neural retrieval.",
+        "dependency_evidence": "Correct inferred token roles and typed nested retrieval. structure.py selectively removes the most recent matching opener, including below an incompatible top; inferred top selects one of three emissions with two learned confidence readouts and count/age/interference features.",
+        "equivalence_limits": "Source ignores a mismatching close rather than deleting a buried opener. The parser agrees on well-matched histories but not all histories; the mismatch-continuation probe has TV about .267. No exact source noise law, minimality or neural source-state intervention alignment was established.",
+        "review": "Correct inferred token roles and typed nested retrieval. structure.py selectively removes the most recent matching opener, including below an incompatible top; inferred top selects one of three emissions with two learned confidence readouts and count/age/interference features. Source ignores a mismatching close rather than deleting a buried opener. The parser agrees on well-matched histories but not all histories; the mismatch-continuation probe has TV about .267. No exact source noise law, minimality or neural source-state intervention alignment was established.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json"
+      }
+    },
+    "8c13c136784e41a0a20e88d4ecdbb0e7/agent_outputs": {
+      "submission_receipt_sha256": "59d16e49e8b8c40479f26fe0c4255f73f615fa4cc565acbd4504c17414676522",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": true,
+        "partial_structure_recovery_demonstrated": true,
+        "family_identification_supported": true,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "recovered_dependency_core",
+        "recovery_scope": "Lag 3, exact 16-symbol permutation and observed-token FIFO update; source noise law and all-history equality not established.",
+        "family_evidence": "The agent chose delayed substitution/interleaved chains from neutral inputs, rather than receiving a fixed HMM schema.",
+        "dependency_evidence": "Actual registered predictor indexes history[-3] and uses the source permutation [2, 12, 6, 15, 11, 7, 8, 4, 9, 5, 13, 1, 14, 0, 10, 3]. All 4096 length-3 histories have the correct modal output, plus 1024 uniform histories each at lengths 23 and 72. No predictor was substituted.",
+        "equivalence_limits": "Position and extra-token corrections remain in the designated predictor; favored probability varies with contexts where the source is constant. Finite modal tests do not certify the whole conditional distribution, every length, independence or minimality.",
+        "review": "case-03: actual calibrated predictor preserves the independently inferred lag/permutation dependency. agent_outputs uses its own fixed readout; separate simpler generative cores were not scored in its place.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json"
+      }
+    },
+    "8c13c136784e41a0a20e88d4ecdbb0e7/agent_internals": {
+      "submission_receipt_sha256": "66b8e4ab371c71e04f3d2b4fad243962f3143e24852510c5c5de84589b3b1a01",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": true,
+        "partial_structure_recovery_demonstrated": true,
+        "family_identification_supported": true,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "recovered_dependency_core",
+        "recovery_scope": "Lag 3, exact 16-symbol permutation and observed-token FIFO update; source noise law and all-history equality not established.",
+        "family_evidence": "The agent chose delayed substitution/interleaved chains from neutral inputs, rather than receiving a fixed HMM schema.",
+        "dependency_evidence": "Actual registered predictor indexes history[-3] and uses the source permutation [2, 12, 6, 15, 11, 7, 8, 4, 9, 5, 13, 1, 14, 0, 10, 3]. All 4096 length-3 histories have the correct modal output, plus 1024 uniform histories each at lengths 23 and 72. No predictor was substituted.",
+        "equivalence_limits": "Position and extra-token corrections remain in the designated predictor; favored probability varies with contexts where the source is constant. Finite modal tests do not certify the whole conditional distribution, every length, independence or minimality.",
+        "review": "case-03: actual calibrated predictor preserves the independently inferred lag/permutation dependency. agent_internals uses its own fixed readout; separate simpler generative cores were not scored in its place.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json"
+      }
+    },
+    "ff54ab1fd1f24b7d8551211dc4255f25/agent_outputs": {
+      "submission_receipt_sha256": "48d73d9ca0214be92a8fc6f9391153db0438cc4ce3afb54826251fb4d4e2fad8",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": true,
+        "partial_structure_recovery_demonstrated": true,
+        "family_identification_supported": true,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "recovered_dependency_core",
+        "recovery_scope": "Lag 4, exact 16-symbol permutation and observed-token FIFO update; source noise law and all-history equality not established.",
+        "family_evidence": "The agent chose delayed substitution/interleaved chains from neutral inputs, rather than receiving a fixed HMM schema.",
+        "dependency_evidence": "Actual registered predictor indexes history[-4] and uses the source permutation [3, 7, 13, 2, 14, 6, 0, 1, 5, 10, 8, 12, 15, 4, 11, 9]. All 65536 length-4 histories have the correct modal output, plus 1024 uniform histories each at lengths 23 and 72. No predictor was substituted.",
+        "equivalence_limits": "Position and extra-token corrections remain in the designated predictor; favored probability varies with contexts where the source is constant. Finite modal tests do not certify the whole conditional distribution, every length, independence or minimality.",
+        "review": "case-05: actual calibrated predictor preserves the independently inferred lag/permutation dependency. agent_outputs uses its own fixed readout; separate simpler generative cores were not scored in its place.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json"
+      }
+    },
+    "ff54ab1fd1f24b7d8551211dc4255f25/agent_internals": {
+      "submission_receipt_sha256": "39fe53ebac1a76ab9c67082a6ddce14252f267157f575470054b2032af831138",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": true,
+        "partial_structure_recovery_demonstrated": true,
+        "family_identification_supported": true,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "recovered_dependency_core",
+        "recovery_scope": "Lag 4, exact 16-symbol permutation and observed-token FIFO update; source noise law and all-history equality not established.",
+        "family_evidence": "The agent chose delayed substitution/interleaved chains from neutral inputs, rather than receiving a fixed HMM schema.",
+        "dependency_evidence": "Actual registered predictor indexes history[-4] and uses the source permutation [3, 7, 13, 2, 14, 6, 0, 1, 5, 10, 8, 12, 15, 4, 11, 9]. All 65536 length-4 histories have the correct modal output, plus 1024 uniform histories each at lengths 23 and 72. No predictor was substituted.",
+        "equivalence_limits": "Position and extra-token corrections remain in the designated predictor; favored probability varies with contexts where the source is constant. Finite modal tests do not certify the whole conditional distribution, every length, independence or minimality.",
+        "review": "case-05: actual calibrated predictor preserves the independently inferred lag/permutation dependency. agent_internals uses its own fixed readout; separate simpler generative cores were not scored in its place.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json"
+      }
+    },
+    "cb925fb97da74d2c8bc44c68fea9d22d/agent_outputs": {
+      "submission_receipt_sha256": "2a3239c2343226a184e5efbb770e5c0d8f849ca7d2d3f487c55e82947a7f1a2c",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": true,
+        "family_identification_supported": true,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "partial_structure",
+        "recovery_scope": "Inferred family and partial dependencies; full source update/graph not established.",
+        "family_evidence": "A sequence-level mixture of a three-state self-looping directed-cycle categorical HMM and a sticky two-state categorical HMM; the executable uses discounted Bayesian filtering and a fixed small readout calibration.",
+        "dependency_evidence": "Independently proposed two persistent HMM regimes: a 3-state cycle-like block and a sticky 2-state block. Actual predictor discounts regime/conditional beliefs (.9491533/.7336611), conditions with emissions and transitions, then applies 38-by-16 nonlinear-feature readout calibration.",
+        "equivalence_limits": "Source has two 3-state regimes and numerical observable rank six. This recovers persistent grouping and a cycle-like component but does not establish the full source graph, emission law or equivalence. The discrepancy is assessed from update/readout behavior, not state count alone.",
+        "review": "Independently proposed two persistent HMM regimes: a 3-state cycle-like block and a sticky 2-state block. Actual predictor discounts regime/conditional beliefs (.9491533/.7336611), conditions with emissions and transitions, then applies 38-by-16 nonlinear-feature readout calibration. Source has two 3-state regimes and numerical observable rank six. This recovers persistent grouping and a cycle-like component but does not establish the full source graph, emission law or equivalence. The discrepancy is assessed from update/readout behavior, not state count alone.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json"
+      }
+    },
+    "cb925fb97da74d2c8bc44c68fea9d22d/agent_internals": {
+      "submission_receipt_sha256": "9d88af187129d6eb062b913d200d726ae67b8af93bb162eceb58dc0eb6f3d653",
+      "assessment": {
+        "independent_structure_recovery_demonstrated": false,
+        "partial_structure_recovery_demonstrated": true,
+        "family_identification_supported": true,
+        "exact_source_recovery_demonstrated": false,
+        "equivalence_established": false,
+        "minimality_established": false,
+        "causal_process_recovery_demonstrated": false,
+        "neural_circuit_recovered": false,
+        "outcome": "partial_structure",
+        "recovery_scope": "Inferred family and partial dependencies; full source update/graph not established.",
+        "family_evidence": "Two persistent regimes with three and two categorical hidden modes, Bayesian-style within-regime filtering, cumulative regime evidence and explicit multiscale calibration.",
+        "dependency_evidence": "Independently inferred two persistent regimes with 3/2 modes. Separate recognition filters accumulate log evidence; four deterministic token traces (decays 0,.5,.8,1) and log beliefs feed a learned gate and state/readout calibration.",
+        "equivalence_limits": "The source has two 3-state HMMs. Traces, distinct recognition and learned gate mean this is a calibrated autoregressive mechanism, not an ordinary Bayesian execution of a recovered HMM. It captures regimes more convincingly than fine order effects, as its own held-out order intervention reports. Partial family/organization only.",
+        "review": "Independently inferred two persistent regimes with 3/2 modes. Separate recognition filters accumulate log evidence; four deterministic token traces (decays 0,.5,.8,1) and log beliefs feed a learned gate and state/readout calibration. The source has two 3-state HMMs. Traces, distinct recognition and learned gate mean this is a calibrated autoregressive mechanism, not an ordinary Bayesian execution of a recovered HMM. It captures regimes more convincingly than fine order effects, as its own held-out order intervention reports. Partial family/organization only.",
+        "causal_evidence": "Neural ablations and probes, where present, diagnose model output/feature effects. No semantic source-state/neural-intervention correspondence or causal process recovery was demonstrated.",
+        "diagnostic_receipt": "structural-diagnostics.json"
+      }
+    }
+  },
+  "linear_parameter_audit_sha256": "8c0d47916796c5f80a0388532c2213ea806a440948a226934ef108ba74bbf774"
+}

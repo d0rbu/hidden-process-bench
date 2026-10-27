@@ -7,13 +7,12 @@ task, discovering that a latent-state transition/emission process explains the m
 part of the task. Supplying an HMM constructor, parameterization, family label, mixture
 count or state count gives away part of the answer.
 
-**Status: paired agents independently recovered the delayed rule’s lag-three
-permutation and found partial HMM organization. See the [ten-trial development
-cohort](../results/agent-development-v2.md), including four preflight failures.
-No exact source equivalence, minimality or neural circuit recovery was established.
-The [25 state/feature/intervention trials](../results/discovery-development.md)
-did not recover the source rules. The fresh final campaign remains unfinished;
-its [frozen protocol and method bundles](final-campaign.md) are public.**
+**Status: the [48-trial fresh campaign](../results/final-campaign-v2.md) recovered
+delayed-rule dependency cores and partial stack/HMM organization. Full HMM recovery,
+exact source equivalence, minimality and neural circuit recovery were not established.
+All programs were registered before private scoring; the
+[protocol and method bundles](final-campaign.md) were frozen before task generation.
+Earlier paired agents and state/feature/intervention trials remain development evidence.**
 
 The older pipeline supplies the HMM family and order to its fitters. Its results are
 informed parameter-fitting controls only. The [fresh-context research agent](research-agent.md)

@@ -1,0 +1,12 @@
+{
+  "execution": {
+    "status": "success",
+    "returncode": 0,
+    "seconds": 2.122775223106146,
+    "scope": "discovery-cffc778fbf2b410b894f45fb3f803276.scope"
+  },
+  "valid_submission": true,
+  "receipt_sha256": "b88d939c2ecfef1aca46870c17a64a8d214d3c52037fd1a9d2621a66ae105cfa",
+  "error": null,
+  "structure_assessment": "pending_independent_review"
+}

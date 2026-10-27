@@ -12,6 +12,7 @@ let selectedState = 0;
 let seed = 20261021;
 let length = 8;
 let sequence;
+let rulePosition = 5;
 
 function element(tag, text, className) {
   const node = document.createElement(tag);
@@ -224,6 +225,35 @@ function newSequence() {
   renderExplorer();
 }
 
+function ruleToken(token, focused) {
+  const chip = element('span', undefined, `token${focused ? ' rule-focus' : ''}`);
+  chip.append(element('span', tokenLabel(token), 'token-letter'));
+  return chip;
+}
+
+function renderRuleExample() {
+  const example = data.rule_examples.find((item) => item.id === $('rule-example').value);
+  const frame = example.frames[rulePosition];
+  const delayed = example.id === 'delayed';
+  const source = example.specification;
+  $('rule-description').textContent = delayed
+    ? `The next token usually depends on the token ${source.lag} places back, through a fixed token mapping. Noise can produce any token.`
+    : `${tokenLabel(source.alphabet[0])} and ${tokenLabel(source.alphabet[1])} push onto the stack. ${tokenLabel(source.alphabet[2])} and ${tokenLabel(source.alphabet[3])} close them, respectively. A close pops only a matching top; other tokens leave the stack unchanged.`;
+  $('rule-sequence').replaceChildren(...example.tokens.slice(0, rulePosition).map((token, index) =>
+    ruleToken(token, delayed && frame.target !== null && index === rulePosition - source.lag)));
+  $('rule-memory-title').textContent = delayed ? `Last ${source.lag} tokens` : 'Stack, bottom to top';
+  $('rule-memory').replaceChildren(...frame.memory.map((token, index) => ruleToken(token, index === frame.read_index)));
+  if (!frame.memory.length) $('rule-memory').append(element('span', 'Empty', 'muted'));
+  $('rule-memory-note').textContent = delayed
+    ? frame.target === null ? 'During warmup, every token is equally likely.'
+      : `The highlighted token maps to ${tokenLabel(frame.target)}.`
+    : frame.target === null ? 'The stack is empty; either closing token can appear.'
+      : `${tokenLabel(frame.target)} is the matching close for the highlighted top.`;
+  renderBars($('rule-prediction'), topTokens(example.predictions[rulePosition]));
+  $('rule-next').disabled = rulePosition >= example.tokens.length;
+  $('rule-source').href = example.source_url;
+}
+
 function renderResults() {
   const demo = data.runs.find((run) => run.id === 'demo');
   $('demo-summary').textContent = `After ${number.format(demo.training_steps)} training steps, test KL was ${demo.test_kl.toFixed(4)} nats/token. All component checks passed the 0.03 threshold.`;
@@ -327,6 +357,42 @@ function renderScaling() {
   svg.append(svgElement('text', { x: (left + right) / 2, y: 294, 'text-anchor': 'middle', class: 'chart-label' }, 'Transformer size'));
 }
 
+function renderFinalAttempt() {
+  const final = data.final_attempt;
+  if (!final) return;
+  const names = { lag_rule: 'Delayed rule', mixture_hmm: 'HMM mixture', stack_rule: 'Stack rule' };
+  const seen = {};
+  const ids = [...new Set(final.cases.map((item) => item.case))].sort();
+  const score = (item) => item?.heldout?.status === 'scored'
+    ? item.heldout.oracle_to_candidate.mean_kl.toFixed(4) : '—';
+  for (const id of ids) {
+    const cases = final.cases.filter((item) => item.case === id);
+    const family = cases[0].family_after_registration;
+    seen[family] = (seen[family] || 0) + 1;
+    const label = `${names[family]} ${String.fromCharCode(64 + seen[family])}`;
+    const row = document.createElement('tr');
+    const name = element('th', label);
+    name.scope = 'row';
+    row.append(name);
+    const teacher = cases.find((item) => item.heldout?.oracle_to_teacher)?.heldout.oracle_to_teacher;
+    row.append(element('td', teacher ? teacher.mean_kl.toFixed(4) : '—'));
+    for (const method of ['agent_outputs', 'agent_internals']) {
+      row.append(element('td', score(cases.find((item) => item.method === method))));
+    }
+    $('final-agent-results').append(row);
+    const programmed = document.createElement('tr');
+    const programmedName = element('th', label);
+    programmedName.scope = 'row';
+    programmed.append(programmedName);
+    for (const method of ['operators', 'geometry', 'pca', 'sae', 'transcoder', 'causal']) {
+      programmed.append(element('td', score(cases.find((item) => item.method === method))));
+    }
+    $('final-programmed-results').append(programmed);
+  }
+  $('final-attempt').hidden = false;
+  $('paired-development-detail').open = false;
+}
+
 function renderPairedAgentAttempt() {
   const teacherCases = new Map(data.operator_attempt.cases.map((item) => [item.id, item]));
   const labels = { 'case-01': 'Delayed rule A', 'case-02': 'Delayed rule B', 'case-03': 'HMM mixture A', 'case-04': 'HMM mixture B', 'case-05': 'Stack rule' };
@@ -424,10 +490,20 @@ async function initialize() {
       selectedState = duplicated() ? selectedState * 2 : Math.floor(selectedState / 2);
       renderExplorer();
     });
+    for (const example of data.rule_examples) {
+      const option = element('option', example.label);
+      option.value = example.id;
+      $('rule-example').append(option);
+    }
+    $('rule-example').addEventListener('change', () => { rulePosition = 5; renderRuleExample(); });
+    $('rule-next').addEventListener('click', () => { rulePosition += 1; renderRuleExample(); });
+    $('rule-reset').addEventListener('click', () => { rulePosition = 0; renderRuleExample(); });
+    renderRuleExample();
     window.addEventListener('resize', () => { renderGraph(); renderScaling(); });
     renderExplorer();
     renderResults();
     initializeStudy();
+    renderFinalAttempt();
     renderPairedAgentAttempt();
     renderAgentAttempt();
     renderDiscoveryAttempts();

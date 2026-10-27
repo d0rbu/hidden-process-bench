@@ -10,6 +10,7 @@ from typing import Any
 import numpy as np
 
 from hidden_process_bench.config import Shape
+from hidden_process_bench.generators import LagProcess, StackProcess, load_process
 from hidden_process_bench.process import random_mixture
 
 RESULT_REVISION = "c10508b5b07b770b6d9cc697f8eed80fcbbea0f1"
@@ -126,6 +127,88 @@ def build_payload(root: Path) -> dict[str, Any]:
                 "report_url": link(path),
             }
         )
+    paired = read("docs/results/agent-development-v2/summary.json")
+    final = read("docs/results/final-campaign-v2/summary.json")
+    # Retain displayed scores and assessments, while the full linked receipt owns
+    # trajectories, method-selection tables and resource accounting.
+    final["cases"] = [
+        {
+            key: row[key]
+            for key in (
+                "case",
+                "method",
+                "access",
+                "family_after_registration",
+                "status",
+                "heldout",
+                "long",
+                "structural_assessment",
+            )
+        }
+        for row in final["cases"]
+    ]
+    rule_source = hashlib.sha256(
+        (root / "src/hidden_process_bench/generators.py").read_bytes()
+    ).hexdigest()
+    if rule_source != paired["runtime_source_sha256"]["generators.py"]:
+        raise ValueError("rule source no longer matches the recorded development cohort")
+    rule_examples = []
+    examples = [
+        ("delayed", "Delayed-token rule", "case-01"),
+        ("stack", "Stack rule", "case-05"),
+    ]
+    for identifier, label, case in examples:
+        path = f"docs/results/agent-development-v2/{case}/source-process.json"
+        specification = read(path)
+        process = load_process(root / path)
+        if isinstance(process, LagProcess):
+            tokens = process.sample(np.random.default_rng(101), 1, 24)[0][0].tolist()
+        else:
+            assert isinstance(process, StackProcess)
+            roles = [4, 0, 1, 2, 5, 3, 2, 2, 1, 0, 1, 5, 3, 2, 3, 0, 0, 2, 5, 2, 4, 1, 3, 4]
+            tokens = [process.alphabet[role] for role in roles]
+        frames = []
+        stack: list[int] = []
+        inverse = {token: role for role, token in enumerate(process.alphabet)}
+        for position in range(len(tokens) + 1):
+            if isinstance(process, LagProcess):
+                memory = tokens[max(0, position - process.lag) : position]
+                target = (
+                    process.alphabet[tokens[position - process.lag]]
+                    if position >= process.lag
+                    else None
+                )
+                frame = {
+                    "memory": memory,
+                    "target": target,
+                    "read_index": 0 if target is not None else None,
+                }
+            else:
+                if position:
+                    role = inverse[tokens[position - 1]]
+                    if role < 2:
+                        stack.append(role)
+                    elif role < 4 and stack and stack[-1] == role - 2:
+                        stack.pop()
+                frame = {
+                    "memory": [process.alphabet[role] for role in stack],
+                    "target": process.alphabet[2 + stack[-1]] if stack else None,
+                    "read_index": len(stack) - 1 if stack else None,
+                }
+            frames.append(frame)
+        rule_examples.append(
+            {
+                "id": identifier,
+                "label": label,
+                "specification": specification,
+                "tokens": tokens,
+                "frames": frames,
+                "predictions": process.probabilities(np.asarray([tokens], dtype=np.int64))[
+                    0
+                ].tolist(),
+                "source_url": f"{REPOSITORY}/blob/main/{path}",
+            }
+        )
     return {
         "schema_version": 1,
         "results_date": "2026-10-27",
@@ -133,13 +216,15 @@ def build_payload(root: Path) -> dict[str, Any]:
         "teacher_qualification": read("docs/results/mixed-suite-development.json"),
         "operator_attempt": read("docs/results/operator-development/summary.json"),
         "agent_attempt": read("docs/results/agent-development/summary.json"),
-        "paired_agent_attempt": read("docs/results/agent-development-v2/summary.json"),
+        "paired_agent_attempt": paired,
+        "final_attempt": final,
         "discovery_attempts": read("docs/results/discovery-development/summary.json"),
         "method_result_revision": METHOD_RESULT_REVISION,
         "method_study": read("docs/results/five-method-pilot/summary.json"),
         "result_revision": RESULT_REVISION,
         "repository": REPOSITORY,
         "datasets": datasets,
+        "rule_examples": rule_examples,
         "runs": runs,
         "input_sha256": inputs,
     }

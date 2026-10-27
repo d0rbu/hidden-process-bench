@@ -1,0 +1,11 @@
+{
+  "registration_sha256": "d2775305545856e1dd463817de717aa78d634a4366bc1894ffa69bcb4824ea22",
+  "sequences": 128,
+  "short_length": 24,
+  "long_length": 72,
+  "oracle_and_teacher_kl_separate": true,
+  "long_teacher_defined": false,
+  "sequence_standard_errors": true,
+  "row_invariance_probes": true,
+  "diagnostic_total_variation_witnesses_after_registration": true
+}

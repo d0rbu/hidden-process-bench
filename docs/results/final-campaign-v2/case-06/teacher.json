@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "case_id": "ff5fa885f2a547f3b4a8bf06fcdb3021",
+  "status": "qualified",
+  "checkpoint_qualified": true,
+  "qualification_group_definition": "maximum_stack_depth_0_to_1__2_to_3__4_plus",
+  "steps": 1900,
+  "training_tokens": 2918400,
+  "model_parameters": 103744,
+  "initial_validation": {
+    "overall": {
+      "count": 2048,
+      "mean_kl": 1.0407816875735094,
+      "standard_error": 0.0014859364225826778,
+      "upper95_kl": 1.0436941229617716
+    },
+    "by_component": [
+      {
+        "count": 242,
+        "mean_kl": 0.9606663936644197,
+        "standard_error": 0.002169488679579733,
+        "upper95_kl": 0.964918591476396
+      },
+      {
+        "count": 1234,
+        "mean_kl": 1.0290082511291643,
+        "standard_error": 0.0014573136106676263,
+        "upper95_kl": 1.0318645858060729
+      },
+      {
+        "count": 572,
+        "mean_kl": 1.1000759562768692,
+        "standard_error": 0.0024840220079274653,
+        "upper95_kl": 1.104944639412407
+      }
+    ],
+    "max_kl": 0.03,
+    "qualified": false
+  },
+  "validation": {
+    "overall": {
+      "count": 2048,
+      "mean_kl": 0.009516554692239295,
+      "standard_error": 0.0004451451245708633,
+      "upper95_kl": 0.010389039136398187
+    },
+    "by_component": [
+      {
+        "count": 242,
+        "mean_kl": 0.0025593800059350155,
+        "standard_error": 0.0002281579758482951,
+        "upper95_kl": 0.003006569638597674
+      },
+      {
+        "count": 1234,
+        "mean_kl": 0.006266852562195503,
+        "standard_error": 0.0002780609229594618,
+        "upper95_kl": 0.006811851971196048
+      },
+      {
+        "count": 572,
+        "mean_kl": 0.01947069578063033,
+        "standard_error": 0.0013873183759608174,
+        "upper95_kl": 0.022189839797513534
+      }
+    ],
+    "max_kl": 0.024,
+    "qualified": true
+  },
+  "test": {
+    "overall": {
+      "count": 2048,
+      "mean_kl": 0.008989660912704428,
+      "standard_error": 0.00034591600748613274,
+      "upper95_kl": 0.009667656287377247
+    },
+    "by_component": [
+      {
+        "count": 241,
+        "mean_kl": 0.002231566760540063,
+        "standard_error": 0.00016215555824311786,
+        "upper95_kl": 0.002549391654696574
+      },
+      {
+        "count": 1236,
+        "mean_kl": 0.006523152663100556,
+        "standard_error": 0.0002621228926086137,
+        "upper95_kl": 0.007036913532613439
+      },
+      {
+        "count": 571,
+        "mean_kl": 0.017181088035615105,
+        "standard_error": 0.0010196623669424605,
+        "upper95_kl": 0.019179626274822326
+      }
+    ],
+    "max_kl": 0.03,
+    "qualified": true
+  },
+  "checkpoint_sha256": "c5ed80efc4047ac16baf52d036292457cef1587b420eeb8a982e53983dca43b8",
+  "process_sha256": "80ec392820891317b6ba7cb5c814a9731639cd4dec6c92f748a4ee19511c1047",
+  "plan_sha256": "b183bf2a99979825e8e8ba0b1af268d83b30ba2a29638d5d3daa01f8f3a649e5",
+  "public_challenge_sha256": {
+    "outputs": {
+      "challenge.json": "d736339d1e79d944875c4eaf91f829d7bf4fe4a47141589a86eb7cac626562a2",
+      "instructions.txt": "b86fe2b3acbc7c8119d055deb59820127714bddf210f4a2aebe39d6bb349fe9f",
+      "observations.npz": "1caee8c4a2cf16d04a0097b6d397812478dec74ea456cbee92b1bc68caeaaa86"
+    },
+    "weights": {
+      "challenge.json": "9e965b74ed7523f859d3a0cf95e2bcb0f3c27cb437e062a1ddc2b8eb9d03a3b1",
+      "instructions.txt": "b86fe2b3acbc7c8119d055deb59820127714bddf210f4a2aebe39d6bb349fe9f",
+      "weights.npz": "084902627d7c72f1541a7607f3db4b57ab1cb0fd0d13ba2c838c4a399fb4f761"
+    },
+    "internals": {
+      "challenge.json": "1b2a88d48cfa7600b3e1180d40002bba6604966341d1b347d769e794deeb8f66",
+      "instructions.txt": "b86fe2b3acbc7c8119d055deb59820127714bddf210f4a2aebe39d6bb349fe9f",
+      "observations.npz": "f1fbaff59f4b8749dfefde147ff404587a87a3a3c11a946bd4ab6bcfa286e2bf",
+      "weights.npz": "084902627d7c72f1541a7607f3db4b57ab1cb0fd0d13ba2c838c4a399fb4f761"
+    }
+  },
+  "seconds": 31.495207641273737,
+  "independent_discovery_evaluated": false
+}

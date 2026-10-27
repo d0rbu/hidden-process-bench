@@ -1,0 +1,8 @@
+{
+  "sha256": "adf2c9f44ee1a080784f0ce7fefb8f828d768b07a5c5c256eb70f8bb2d69e217",
+  "bytes": 985190,
+  "parts": [
+    "long-predictions.npz.part-00",
+    "long-predictions.npz.part-01"
+  ]
+}

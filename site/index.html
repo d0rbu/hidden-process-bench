@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A process discovery benchmark in development, with public generators and explicitly informed HMM-fitting baselines.">
+  <meta name="description" content="Can methods independently recover a process from a trained transformer? Explore generators and results from 48 fresh discovery trials.">
   <meta name="theme-color" content="#faf9f6">
   <title>Hidden Process Bench</title>
   <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -30,11 +30,11 @@
         <li><h2>Learn</h2><p>Train the transformer to predict the process’s tokens. Check it against the oracle.</p></li>
         <li><h2>Recover</h2><p>Infer the process family, structure and update rules. Submit an executable mechanism.</p></li>
       </ol>
-      <p id="discovery-status" class="finding">Agents recovered a delayed-token rule and parts of an HMM’s organization. Equivalent source processes and neural circuits remain unestablished.</p>
+      <p id="discovery-status" class="finding">Agents recovered delayed-token rules and parts of stack and HMM structure. Full HMM recovery and neural circuits remain unestablished.</p>
     </section>
 
     <p id="load-status" role="status">Loading the recorded generators…</p>
-    <noscript><p>Enable JavaScript for the interactive diagrams. The <a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/screened-cpu-demo.md">demo report</a> and <a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/scaling-pilot.md">scaling results</a> are also available as text.</p></noscript>
+    <noscript><p>Enable JavaScript for the interactive diagrams. Read the <a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/final-campaign-v2.md">48-trial discovery report</a> as text.</p></noscript>
 
     <section id="explore" class="section" aria-labelledby="explore-title" hidden>
       <div class="section-heading">
@@ -89,12 +89,59 @@
           <label class="check-label"><input id="duplicate-states" type="checkbox"> Show the duplicated representation</label>
           <p id="equivalence-status" class="muted"></p>
         </details>
+        <details id="rule-detail" class="explainer-detail">
+          <summary>Explore a delayed rule or a stack</summary>
+          <label class="select-label">Process<select id="rule-example"></select></label>
+          <p id="rule-description"></p>
+          <div class="sequence-toolbar">
+            <h3>Observed tokens</h3>
+            <div class="sequence-actions">
+              <button id="rule-reset" type="button" class="button">Start over</button>
+              <button id="rule-next" type="button" class="button primary">Next token →</button>
+            </div>
+          </div>
+          <div id="rule-sequence" class="sequence" aria-label="Illustrative token history"></div>
+          <div class="oracle-grid">
+            <div><h3 id="rule-memory-title">Memory</h3><div id="rule-memory" class="sequence"></div><p id="rule-memory-note" class="muted" aria-live="polite"></p></div>
+            <div><h3>What comes next?</h3><div id="rule-prediction" class="bars"></div></div>
+          </div>
+          <p>These are public development examples. Bars show exact process probabilities. <a id="rule-source" href="https://github.com/d0rbu/hidden-process-bench">Source ↗</a></p>
+        </details>
       </div>
       <p class="source-note">These are public development generators, not hidden discovery challenges. <a id="generator-source" href="https://github.com/d0rbu/hidden-process-bench">View source data ↗</a></p>
     </section>
 
     <section id="attempts" class="section" aria-labelledby="attempts-title" hidden>
       <h2 id="attempts-title">What has been recovered?</h2>
+      <div id="final-attempt" hidden>
+        <p>Eight methods faced six fresh hidden processes. All programs and failures were registered before private scoring.</p>
+        <div class="table-scroll">
+          <table>
+            <caption>KL against the true process, nats/token. Same 128 held-out histories per row. Lower is better; — means no scored program.</caption>
+            <thead><tr><th scope="col">Process</th><th scope="col">Transformer</th><th scope="col">Agent, outputs</th><th scope="col">Agent, internals</th></tr></thead>
+            <tbody id="final-agent-results"></tbody>
+          </table>
+        </div>
+        <p id="final-finding" class="finding">Agents recovered the lag and token map on both delayed rules. They found stack roles and nesting, and HMM regimes, but missed parts of those update rules. Full HMM recovery and neural circuit recovery remain unestablished.</p>
+        <details class="explainer-detail">
+          <summary>Six programmed methods</summary>
+          <div class="table-scroll">
+            <table>
+              <caption>Same private histories. These methods share a restricted linear-state prior.</caption>
+              <thead><tr><th scope="col">Process</th><th scope="col">Operators</th><th scope="col">Geometry</th><th scope="col">PCA</th><th scope="col">Autoencoder</th><th scope="col">Transcoder</th><th scope="col">Head ablation</th></tr></thead>
+              <tbody id="final-programmed-results"></tbody>
+            </table>
+          </div>
+        </details>
+        <details class="explainer-detail">
+          <summary>How to read these results</summary>
+          <p id="final-outcomes">All 48 trials submitted programs. Four agent trials recovered the delayed rule’s core; eight found partial stack or HMM structure. The 36 programmed trials did not demonstrate source structure recovery. Longer-history scores and each program’s limitations are in the linked report.</p>
+          <p>Every teacher passed separate validation and test gates, including each process group. Low prediction error alone is not recovered structure. Extra neural queries and compute differ between methods; these scores do not establish an information advantage for weights.</p>
+          <p><a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/final-campaign-v2.md">Mechanisms, budgets, failures and all frozen programs ↗</a></p>
+        </details>
+      </div>
+      <details id="paired-development-detail" class="explainer-detail" open>
+        <summary>Paired development trials</summary>
       <p>Fresh agents chose their own mechanisms, without a process template, family hint or state count. Paired runs used outputs alone, or outputs plus neural access.</p>
       <div class="table-scroll">
         <table>
@@ -109,6 +156,7 @@
         <p>The delayed rule’s dominant token matches on all 4,096 possible three-token histories. The predictors add neural confidence corrections, so their complete probability laws differ from the source. Correct HMM block dimensions are partial structure, not an equivalence certificate.</p>
         <p>Six of ten trials submitted. Four failed at login preflight before model inference and were not retried. Internal agents made extra neural queries, so this is not an equal-query comparison. No neural circuit or minimal equivalent process was established.</p>
         <p><a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/agent-development-v2.md">Paired results, mechanisms and frozen programs ↗</a></p>
+      </details>
       </details>
       <details class="explainer-detail">
         <summary>Earlier agent protocol: one submission, four timeouts</summary>

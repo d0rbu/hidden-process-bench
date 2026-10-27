@@ -1,0 +1,1910 @@
+{
+  "registration_sha256": "d2775305545856e1dd463817de717aa78d634a4366bc1894ffa69bcb4824ea22",
+  "diagnostics_after_all_48_registered": true,
+  "refitting_or_predictor_substitution": false,
+  "trials": [
+    {
+      "id": "09e7cd080eab4687b1bc5b4f3a208a30",
+      "method": "operators",
+      "submission_receipt_sha256": "a4b1ece5a26a2323bb2b4bffd6a7eda3feb4656402bfe3490cda80515ab0390d",
+      "source_process_sha256": "dba83c02b118a27c3f0b6a80ad77dc53b6da8227c346e825861daaed56a5778e",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 2,
+      "family_evidence": null
+    },
+    {
+      "id": "09e7cd080eab4687b1bc5b4f3a208a30",
+      "method": "geometry",
+      "submission_receipt_sha256": "3828f7115f555dce68d6e41bc8495602d6217c7e5a27cdf02b33329f1450745e",
+      "source_process_sha256": "dba83c02b118a27c3f0b6a80ad77dc53b6da8227c346e825861daaed56a5778e",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 2,
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 2,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.25356754864768283
+      }
+    },
+    {
+      "id": "09e7cd080eab4687b1bc5b4f3a208a30",
+      "method": "pca",
+      "submission_receipt_sha256": "f37bfc8b02530c2fc127dab5ff511fe218c3243c8cef39f7f0a011f8ad5e14d1",
+      "source_process_sha256": "dba83c02b118a27c3f0b6a80ad77dc53b6da8227c346e825861daaed56a5778e",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 2,
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 2,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.28638383166242054
+      }
+    },
+    {
+      "id": "09e7cd080eab4687b1bc5b4f3a208a30",
+      "method": "sae",
+      "submission_receipt_sha256": "4775541262f759eb2994e88cefffb6dc6037de9154d9715c71dcce4ae52317ec",
+      "source_process_sha256": "dba83c02b118a27c3f0b6a80ad77dc53b6da8227c346e825861daaed56a5778e",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 5,
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 5,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "complex_joint_coordinates"
+      }
+    },
+    {
+      "id": "09e7cd080eab4687b1bc5b4f3a208a30",
+      "method": "transcoder",
+      "submission_receipt_sha256": "ddb727d180fb5afda41121b8e4fea2c0f463a82bdded4f574a405371b64c8f97",
+      "source_process_sha256": "dba83c02b118a27c3f0b6a80ad77dc53b6da8227c346e825861daaed56a5778e",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 3,
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 3,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 1.0644405798035357
+      }
+    },
+    {
+      "id": "09e7cd080eab4687b1bc5b4f3a208a30",
+      "method": "causal",
+      "submission_receipt_sha256": "6d4da270da0109b5e4fe89f100b9ba6a0dc7ba21583fb8eca47f48835f27e13b",
+      "source_process_sha256": "dba83c02b118a27c3f0b6a80ad77dc53b6da8227c346e825861daaed56a5778e",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 2,
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 2,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.32177445521717696
+      }
+    },
+    {
+      "id": "6cf0b45d765a403c9f80e786201a1f19",
+      "method": "operators",
+      "submission_receipt_sha256": "fdbd3022465c011ecc1d5f64e66d7f4d12d61780286439b3731aeb6f08063c99",
+      "source_process_sha256": "968d1cf963e5e953bcc5c004bf7c856444dc49f030374f1b9baecd6c43398f2f",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 1,
+      "family_evidence": null
+    },
+    {
+      "id": "6cf0b45d765a403c9f80e786201a1f19",
+      "method": "geometry",
+      "submission_receipt_sha256": "ba05671375ecb37fbb7695fcd90e4eb241b47e9aef80432332bc1a93b91bfd2a",
+      "source_process_sha256": "968d1cf963e5e953bcc5c004bf7c856444dc49f030374f1b9baecd6c43398f2f",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 10,
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 10,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "complex_joint_coordinates"
+      }
+    },
+    {
+      "id": "6cf0b45d765a403c9f80e786201a1f19",
+      "method": "pca",
+      "submission_receipt_sha256": "70b0669bde35c9f20cd41eb68d183cfa54ebadd94959e00e81d4491f24b0eb88",
+      "source_process_sha256": "968d1cf963e5e953bcc5c004bf7c856444dc49f030374f1b9baecd6c43398f2f",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 9,
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 9,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.1014893562645491
+      }
+    },
+    {
+      "id": "6cf0b45d765a403c9f80e786201a1f19",
+      "method": "sae",
+      "submission_receipt_sha256": "2d8e955ebad2965a50fb9ccf60e619f5cbdd16fdd531707a094b82501086b01c",
+      "source_process_sha256": "968d1cf963e5e953bcc5c004bf7c856444dc49f030374f1b9baecd6c43398f2f",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 5,
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 5,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.271162604764729
+      }
+    },
+    {
+      "id": "6cf0b45d765a403c9f80e786201a1f19",
+      "method": "transcoder",
+      "submission_receipt_sha256": "4c3e7ed9ae51e40921d7d54ffded360b9cf83c2505fbb2a317b1cce39536c6e0",
+      "source_process_sha256": "968d1cf963e5e953bcc5c004bf7c856444dc49f030374f1b9baecd6c43398f2f",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 8,
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 8,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "complex_joint_coordinates"
+      }
+    },
+    {
+      "id": "6cf0b45d765a403c9f80e786201a1f19",
+      "method": "causal",
+      "submission_receipt_sha256": "b6d1430059cac805075477f28681c8847f39a4d2107d0423298f3bf27514d96a",
+      "source_process_sha256": "968d1cf963e5e953bcc5c004bf7c856444dc49f030374f1b9baecd6c43398f2f",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 7,
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 7,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.11312324742903959
+      }
+    },
+    {
+      "id": "ff5fa885f2a547f3b4a8bf06fcdb3021",
+      "method": "operators",
+      "submission_receipt_sha256": "7df240fa1460435e0e13a73ae12e172aec67180367170c21099a831f4d00b367",
+      "source_process_sha256": "80ec392820891317b6ba7cb5c814a9731639cd4dec6c92f748a4ee19511c1047",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 2,
+      "family_evidence": null
+    },
+    {
+      "id": "ff5fa885f2a547f3b4a8bf06fcdb3021",
+      "method": "geometry",
+      "submission_receipt_sha256": "e8921f454636a10e438ef792b1e3c9ddad392a85c93eef9ec3a4c4ad053d7d35",
+      "source_process_sha256": "80ec392820891317b6ba7cb5c814a9731639cd4dec6c92f748a4ee19511c1047",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 2,
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 2,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.20785025712487415
+      }
+    },
+    {
+      "id": "ff5fa885f2a547f3b4a8bf06fcdb3021",
+      "method": "pca",
+      "submission_receipt_sha256": "cc6776f77160fcce16226cd70cdeb51072f2ad9f19a474ac4f426fc5ee3f194a",
+      "source_process_sha256": "80ec392820891317b6ba7cb5c814a9731639cd4dec6c92f748a4ee19511c1047",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 3,
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 3,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.2391962620060173
+      }
+    },
+    {
+      "id": "ff5fa885f2a547f3b4a8bf06fcdb3021",
+      "method": "sae",
+      "submission_receipt_sha256": "e444798ced82bf31a27e0882e50fd5f57762c251b34ec5f626672950c6bf6148",
+      "source_process_sha256": "80ec392820891317b6ba7cb5c814a9731639cd4dec6c92f748a4ee19511c1047",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 3,
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 3,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.2726432879351413
+      }
+    },
+    {
+      "id": "ff5fa885f2a547f3b4a8bf06fcdb3021",
+      "method": "transcoder",
+      "submission_receipt_sha256": "ba568f24447293949b0439db9910befdee91d28938f2ecff49152fd332484ff3",
+      "source_process_sha256": "80ec392820891317b6ba7cb5c814a9731639cd4dec6c92f748a4ee19511c1047",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 3,
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 3,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.27379037744221557
+      }
+    },
+    {
+      "id": "ff5fa885f2a547f3b4a8bf06fcdb3021",
+      "method": "causal",
+      "submission_receipt_sha256": "0f43dc19562cb48532d6a1544bba1e9fd3f4ac6e4fa8d20734b5a582f381e243",
+      "source_process_sha256": "80ec392820891317b6ba7cb5c814a9731639cd4dec6c92f748a4ee19511c1047",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 3,
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 3,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.2489405718905513
+      }
+    },
+    {
+      "id": "8c13c136784e41a0a20e88d4ecdbb0e7",
+      "method": "operators",
+      "submission_receipt_sha256": "0fa19c77aa8482f62ecf1cf1661862814af8d5d43397be32c39e9099974303d3",
+      "source_process_sha256": "91553dc5f35c5526fb45e9a06e60b27e094233473d8c29d13945f2e157912cb6",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 1,
+      "family_evidence": null
+    },
+    {
+      "id": "8c13c136784e41a0a20e88d4ecdbb0e7",
+      "method": "geometry",
+      "submission_receipt_sha256": "eda196dc9674482be5f96593ab9c672e341a2e91e51b2dde86b8a7bc1cb4dd4b",
+      "source_process_sha256": "91553dc5f35c5526fb45e9a06e60b27e094233473d8c29d13945f2e157912cb6",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 1,
+      "family_evidence": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.061214963468557926,
+            0.06734993385648143,
+            0.06650460004037011,
+            0.05573851249056361,
+            0.06300835166596623,
+            0.06152646646923662,
+            0.0668545748766481,
+            0.06460447062354054,
+            0.06649750568709578,
+            0.06122584779395387,
+            0.06046472558839847,
+            0.062269021943905045,
+            0.06690899877880459,
+            0.05890103418117102,
+            0.059885311772537385,
+            0.05704568076276928
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      }
+    },
+    {
+      "id": "8c13c136784e41a0a20e88d4ecdbb0e7",
+      "method": "pca",
+      "submission_receipt_sha256": "ee4d4c4f4e1bd2a3a81071b99bb2d62da14e6a371f46d1b6ee43da6840deac6f",
+      "source_process_sha256": "91553dc5f35c5526fb45e9a06e60b27e094233473d8c29d13945f2e157912cb6",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 1,
+      "family_evidence": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.061214963468557926,
+            0.06734993385648143,
+            0.06650460004037011,
+            0.05573851249056361,
+            0.06300835166596623,
+            0.06152646646923662,
+            0.0668545748766481,
+            0.06460447062354054,
+            0.06649750568709578,
+            0.06122584779395387,
+            0.06046472558839847,
+            0.062269021943905045,
+            0.06690899877880459,
+            0.05890103418117102,
+            0.059885311772537385,
+            0.05704568076276928
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      }
+    },
+    {
+      "id": "8c13c136784e41a0a20e88d4ecdbb0e7",
+      "method": "sae",
+      "submission_receipt_sha256": "87c4d48ef370c805b988b0f2008f94b5cafb060708c443cfecb4002a82d9c9e8",
+      "source_process_sha256": "91553dc5f35c5526fb45e9a06e60b27e094233473d8c29d13945f2e157912cb6",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 1,
+      "family_evidence": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.061214963468557926,
+            0.06734993385648143,
+            0.06650460004037011,
+            0.05573851249056361,
+            0.06300835166596623,
+            0.06152646646923662,
+            0.0668545748766481,
+            0.06460447062354054,
+            0.06649750568709578,
+            0.06122584779395387,
+            0.06046472558839847,
+            0.062269021943905045,
+            0.06690899877880459,
+            0.05890103418117102,
+            0.059885311772537385,
+            0.05704568076276928
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      }
+    },
+    {
+      "id": "8c13c136784e41a0a20e88d4ecdbb0e7",
+      "method": "transcoder",
+      "submission_receipt_sha256": "a88a3725d065a5b61678ed0703b1dfd2b307b73774329d29fe1a50e21346af9a",
+      "source_process_sha256": "91553dc5f35c5526fb45e9a06e60b27e094233473d8c29d13945f2e157912cb6",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 1,
+      "family_evidence": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.061214963468557926,
+            0.06734993385648143,
+            0.06650460004037011,
+            0.05573851249056361,
+            0.06300835166596623,
+            0.06152646646923662,
+            0.0668545748766481,
+            0.06460447062354054,
+            0.06649750568709578,
+            0.06122584779395387,
+            0.06046472558839847,
+            0.062269021943905045,
+            0.06690899877880459,
+            0.05890103418117102,
+            0.059885311772537385,
+            0.05704568076276928
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      }
+    },
+    {
+      "id": "8c13c136784e41a0a20e88d4ecdbb0e7",
+      "method": "causal",
+      "submission_receipt_sha256": "b88d939c2ecfef1aca46870c17a64a8d214d3c52037fd1a9d2621a66ae105cfa",
+      "source_process_sha256": "91553dc5f35c5526fb45e9a06e60b27e094233473d8c29d13945f2e157912cb6",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 1,
+      "family_evidence": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.061214963468557926,
+            0.06734993385648143,
+            0.06650460004037011,
+            0.05573851249056361,
+            0.06300835166596623,
+            0.06152646646923662,
+            0.0668545748766481,
+            0.06460447062354054,
+            0.06649750568709578,
+            0.06122584779395387,
+            0.06046472558839847,
+            0.062269021943905045,
+            0.06690899877880459,
+            0.05890103418117102,
+            0.059885311772537385,
+            0.05704568076276928
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      }
+    },
+    {
+      "id": "ff54ab1fd1f24b7d8551211dc4255f25",
+      "method": "operators",
+      "submission_receipt_sha256": "3d3c682ac6909bcd2a47168996b9fb50ffe5b1f601ce96c09497616a420e9a0f",
+      "source_process_sha256": "5981dc9bb1dade6e7b7c48884c2124b7091084e626835c91852c0f6b6ccfda68",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 1,
+      "family_evidence": null
+    },
+    {
+      "id": "ff54ab1fd1f24b7d8551211dc4255f25",
+      "method": "geometry",
+      "submission_receipt_sha256": "d5cba0b9e696091180aa30a85f7fa74f901badfd5ed0b4c856aded1b5fedf954",
+      "source_process_sha256": "5981dc9bb1dade6e7b7c48884c2124b7091084e626835c91852c0f6b6ccfda68",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 1,
+      "family_evidence": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.05488118965044464,
+            0.05381125208290882,
+            0.06383252935985222,
+            0.0581237733781658,
+            0.07800674101812888,
+            0.06159869069674073,
+            0.055428352275318574,
+            0.05113764443786787,
+            0.059985989477060755,
+            0.05947983091544036,
+            0.061139585838352176,
+            0.0673441451755726,
+            0.06486105748051804,
+            0.07280797982488707,
+            0.07684653551042213,
+            0.06071470287831933
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      }
+    },
+    {
+      "id": "ff54ab1fd1f24b7d8551211dc4255f25",
+      "method": "pca",
+      "submission_receipt_sha256": "9c504122dc9887cc6b5aa62322e38b29f3e701445e2c1c4b752145b2ce7390ae",
+      "source_process_sha256": "5981dc9bb1dade6e7b7c48884c2124b7091084e626835c91852c0f6b6ccfda68",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 1,
+      "family_evidence": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.05488118965044464,
+            0.05381125208290882,
+            0.06383252935985222,
+            0.0581237733781658,
+            0.07800674101812888,
+            0.06159869069674073,
+            0.055428352275318574,
+            0.05113764443786787,
+            0.059985989477060755,
+            0.05947983091544036,
+            0.061139585838352176,
+            0.0673441451755726,
+            0.06486105748051804,
+            0.07280797982488707,
+            0.07684653551042213,
+            0.06071470287831933
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      }
+    },
+    {
+      "id": "ff54ab1fd1f24b7d8551211dc4255f25",
+      "method": "sae",
+      "submission_receipt_sha256": "43f891e63dfd3c1e03066f11c086626bf4f354c37468a9d3b5c13d73a1fbb22d",
+      "source_process_sha256": "5981dc9bb1dade6e7b7c48884c2124b7091084e626835c91852c0f6b6ccfda68",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 1,
+      "family_evidence": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.05488118965044464,
+            0.05381125208290882,
+            0.06383252935985222,
+            0.0581237733781658,
+            0.07800674101812888,
+            0.06159869069674073,
+            0.055428352275318574,
+            0.05113764443786787,
+            0.059985989477060755,
+            0.05947983091544036,
+            0.061139585838352176,
+            0.0673441451755726,
+            0.06486105748051804,
+            0.07280797982488707,
+            0.07684653551042213,
+            0.06071470287831933
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      }
+    },
+    {
+      "id": "ff54ab1fd1f24b7d8551211dc4255f25",
+      "method": "transcoder",
+      "submission_receipt_sha256": "6886405f0d9e3134ee91bdb67859b1436cb8916af1b3cf9fdb14b7ecff41f75c",
+      "source_process_sha256": "5981dc9bb1dade6e7b7c48884c2124b7091084e626835c91852c0f6b6ccfda68",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 1,
+      "family_evidence": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.05488118965044464,
+            0.05381125208290882,
+            0.06383252935985222,
+            0.0581237733781658,
+            0.07800674101812888,
+            0.06159869069674073,
+            0.055428352275318574,
+            0.05113764443786787,
+            0.059985989477060755,
+            0.05947983091544036,
+            0.061139585838352176,
+            0.0673441451755726,
+            0.06486105748051804,
+            0.07280797982488707,
+            0.07684653551042213,
+            0.06071470287831933
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      }
+    },
+    {
+      "id": "ff54ab1fd1f24b7d8551211dc4255f25",
+      "method": "causal",
+      "submission_receipt_sha256": "9cc6b353fd388d955a2b3a8bc76210666794d9b88c386f05a3b45660a763ecce",
+      "source_process_sha256": "5981dc9bb1dade6e7b7c48884c2124b7091084e626835c91852c0f6b6ccfda68",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 1,
+      "family_evidence": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.05488118965044464,
+            0.05381125208290882,
+            0.06383252935985222,
+            0.0581237733781658,
+            0.07800674101812888,
+            0.06159869069674073,
+            0.055428352275318574,
+            0.05113764443786787,
+            0.059985989477060755,
+            0.05947983091544036,
+            0.061139585838352176,
+            0.0673441451755726,
+            0.06486105748051804,
+            0.07280797982488707,
+            0.07684653551042213,
+            0.06071470287831933
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      }
+    },
+    {
+      "id": "cb925fb97da74d2c8bc44c68fea9d22d",
+      "method": "operators",
+      "submission_receipt_sha256": "8c7f5865f47078263443abe600a871f7a327b88e4d9be16d7c0618eadec72540",
+      "source_process_sha256": "74583ec39f2358e52c9c3fd83431797e0f655953cc7c13b02b60433bcac60a47",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 2,
+      "family_evidence": null
+    },
+    {
+      "id": "cb925fb97da74d2c8bc44c68fea9d22d",
+      "method": "geometry",
+      "submission_receipt_sha256": "daa4cda38a515e8c01e66430b3eb02e005c6a5587162829a54a85d57592ac0e5",
+      "source_process_sha256": "74583ec39f2358e52c9c3fd83431797e0f655953cc7c13b02b60433bcac60a47",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 5,
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 5,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.08885309606193025
+      }
+    },
+    {
+      "id": "cb925fb97da74d2c8bc44c68fea9d22d",
+      "method": "pca",
+      "submission_receipt_sha256": "e0d6c76fad30f75ea325cda3b265cecc347d447c3057705ac987229fa9ff119f",
+      "source_process_sha256": "74583ec39f2358e52c9c3fd83431797e0f655953cc7c13b02b60433bcac60a47",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 3,
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 3,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "complex_joint_coordinates"
+      }
+    },
+    {
+      "id": "cb925fb97da74d2c8bc44c68fea9d22d",
+      "method": "sae",
+      "submission_receipt_sha256": "be0f3a3735a4ea2c512366dc2773fefd088067ef14b9a7fd57428a4ed3f35715",
+      "source_process_sha256": "74583ec39f2358e52c9c3fd83431797e0f655953cc7c13b02b60433bcac60a47",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 4,
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 4,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.13653977953869717
+      }
+    },
+    {
+      "id": "cb925fb97da74d2c8bc44c68fea9d22d",
+      "method": "transcoder",
+      "submission_receipt_sha256": "d1d8319b4f9fea3a12c0c7496f45f9ea352e625ba2c51c14e4c80170aab698c9",
+      "source_process_sha256": "74583ec39f2358e52c9c3fd83431797e0f655953cc7c13b02b60433bcac60a47",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 3,
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 3,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.2960818609871564
+      }
+    },
+    {
+      "id": "cb925fb97da74d2c8bc44c68fea9d22d",
+      "method": "causal",
+      "submission_receipt_sha256": "a86e3f95c29f191148a78f989d0f1854716b2d11f5f101e2d5c5d897cfd71820",
+      "source_process_sha256": "74583ec39f2358e52c9c3fd83431797e0f655953cc7c13b02b60433bcac60a47",
+      "predictor_sha256": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "state_dimension": 3,
+      "family_evidence": {
+        "family": "unresolved_linear_state",
+        "dimension": 3,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "complex_joint_coordinates"
+      }
+    },
+    {
+      "id": "09e7cd080eab4687b1bc5b4f3a208a30",
+      "method": "agent_internals",
+      "submission_receipt_sha256": "b0c5bd6a47ea693db165cec2f197e96601440fc6ba75618ef3516cf836a5d7dc",
+      "source_process_sha256": "dba83c02b118a27c3f0b6a80ad77dc53b6da8227c346e825861daaed56a5778e",
+      "stack_probes": [
+        {
+          "history": [
+            5,
+            2
+          ],
+          "candidate": [
+            0.014448510753208398,
+            0.01251073382099545,
+            0.16572691555981217,
+            0.49245373434984585,
+            0.014124993311553482,
+            0.1770311524260404,
+            0.012377782367708423,
+            0.014756327137747986,
+            0.013799818939096447,
+            0.010723662837772971,
+            0.003609679084718685,
+            0.015430810684223258,
+            0.013748265666058733,
+            0.012498896167904356,
+            0.014495232717003242,
+            0.012263484176310235
+          ],
+          "oracle": [
+            0.012126104952169035,
+            0.012126104952169035,
+            0.16351829361362458,
+            0.5259910219124586,
+            0.012126104952169035,
+            0.16351829361362458,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.0014591314342637367,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035
+          ],
+          "total_variation": 0.0349397296770089
+        },
+        {
+          "history": [
+            5,
+            2,
+            3
+          ],
+          "candidate": [
+            0.011429145511842383,
+            0.009758340702051588,
+            0.15970940354853788,
+            0.005408876817847854,
+            0.009502020961042123,
+            0.15987826531206403,
+            0.010519349899097486,
+            0.010587531465804429,
+            0.013071518172591907,
+            0.013283947557558044,
+            0.5403611227471842,
+            0.01135699129737207,
+            0.012183399524922976,
+            0.010578938225832469,
+            0.009828245559362056,
+            0.012542902696888665
+          ],
+          "oracle": [
+            0.012126104952169035,
+            0.012126104952169035,
+            0.16351829361362458,
+            0.0014591314342637367,
+            0.012126104952169035,
+            0.16351829361362458,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.5259910219124586,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035
+          ],
+          "total_variation": 0.020897194361595022
+        },
+        {
+          "history": [
+            2,
+            5,
+            10
+          ],
+          "candidate": [
+            0.014367124673679588,
+            0.012454975658768639,
+            0.165846347260703,
+            0.4893800787217572,
+            0.013972714478029634,
+            0.17679479623180444,
+            0.01229895792154885,
+            0.014625780284360831,
+            0.013640623355845804,
+            0.010767582208964507,
+            0.008160482966221053,
+            0.015220011817828559,
+            0.01360080857172524,
+            0.012350861700831668,
+            0.014347755831708615,
+            0.012171098316222425
+          ],
+          "oracle": [
+            0.012126104952169035,
+            0.012126104952169035,
+            0.16351829361362458,
+            0.5259910219124586,
+            0.012126104952169035,
+            0.16351829361362458,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.0014591314342637367,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035
+          ],
+          "total_variation": 0.037969465933906
+        },
+        {
+          "history": [
+            5,
+            2,
+            10,
+            3
+          ],
+          "candidate": [
+            0.013482491394687915,
+            0.01204625455272818,
+            0.1667306542668886,
+            0.25627886706589437,
+            0.01199787319143357,
+            0.16283134312253247,
+            0.011957645833084136,
+            0.013459110479449761,
+            0.011881577175149453,
+            0.012027085632252861,
+            0.2691958449692645,
+            0.012308428939859627,
+            0.012131391850592163,
+            0.01038338261228193,
+            0.01190078326604101,
+            0.011387265647859503
+          ],
+          "oracle": [
+            0.012126104952169035,
+            0.012126104952169035,
+            0.16351829361362458,
+            0.0014591314342637367,
+            0.012126104952169035,
+            0.16351829361362458,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.5259910219124586,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035
+          ],
+          "total_variation": 0.2609090991408079
+        },
+        {
+          "history": [
+            5,
+            2,
+            10
+          ],
+          "candidate": [
+            0.014343897881417487,
+            0.01244718175615796,
+            0.1659551951643011,
+            0.4870930711837765,
+            0.013925686620751753,
+            0.17672141769922736,
+            0.012286326407212955,
+            0.014580309022502446,
+            0.013593390647633178,
+            0.01081469033468146,
+            0.010804544829015586,
+            0.015154877009764176,
+            0.013548097659655707,
+            0.012308472709233331,
+            0.014282223438204447,
+            0.012140617636464651
+          ],
+          "oracle": [
+            0.012126104952169035,
+            0.012126104952169035,
+            0.16351829361362458,
+            0.5259910219124586,
+            0.012126104952169035,
+            0.16351829361362458,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.0014591314342637367,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035
+          ],
+          "total_variation": 0.040209365346169784
+        }
+      ]
+    },
+    {
+      "id": "09e7cd080eab4687b1bc5b4f3a208a30",
+      "method": "agent_outputs",
+      "submission_receipt_sha256": "b643211620f570e25fb4666a22e59addcb65dc18c02af5155d14ea1b3ea74698",
+      "source_process_sha256": "dba83c02b118a27c3f0b6a80ad77dc53b6da8227c346e825861daaed56a5778e",
+      "stack_probes": [
+        {
+          "history": [
+            5,
+            2
+          ],
+          "candidate": [
+            0.014410788250044002,
+            0.012427656194905616,
+            0.16584499354330332,
+            0.4949998492336936,
+            0.01396831502451792,
+            0.17752252282507752,
+            0.012303792174386999,
+            0.014696598748808526,
+            0.013342224518186242,
+            0.010586081051813523,
+            0.00200589776765746,
+            0.015060361512580028,
+            0.013839017981047025,
+            0.01219355442951241,
+            0.014341723171797615,
+            0.012456623572668248
+          ],
+          "oracle": [
+            0.012126104952169035,
+            0.012126104952169035,
+            0.16351829361362458,
+            0.5259910219124586,
+            0.012126104952169035,
+            0.16351829361362458,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.0014591314342637367,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035
+          ],
+          "total_variation": 0.03253119657912058
+        },
+        {
+          "history": [
+            5,
+            2,
+            3
+          ],
+          "candidate": [
+            0.011180247798968306,
+            0.009439683345695782,
+            0.15962489084281567,
+            0.006563649689120331,
+            0.009249722912704997,
+            0.15921693515434127,
+            0.009944843093220919,
+            0.010107413324328436,
+            0.011888983421231816,
+            0.012343906756700568,
+            0.5478403360829428,
+            0.010620018022155831,
+            0.010982846769484297,
+            0.009706973257976731,
+            0.009453875798522833,
+            0.011835673729789397
+          ],
+          "oracle": [
+            0.012126104952169035,
+            0.012126104952169035,
+            0.16351829361362458,
+            0.0014591314342637367,
+            0.012126104952169035,
+            0.16351829361362458,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.5259910219124586,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035
+          ],
+          "total_variation": 0.027171634229872288
+        },
+        {
+          "history": [
+            2,
+            5,
+            10
+          ],
+          "candidate": [
+            0.013918321402163526,
+            0.012324690356693547,
+            0.16473840025680037,
+            0.5013127854450113,
+            0.013255882927982599,
+            0.17503853880852766,
+            0.011799838988358643,
+            0.014137004215247986,
+            0.012814194244263454,
+            0.01049264841813034,
+            0.006991111431995431,
+            0.013888558372671778,
+            0.012624221552816462,
+            0.01118485616791816,
+            0.014005479934125365,
+            0.011473467477293334
+          ],
+          "oracle": [
+            0.012126104952169035,
+            0.012126104952169035,
+            0.16351829361362458,
+            0.5259910219124586,
+            0.012126104952169035,
+            0.16351829361362458,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.0014591314342637367,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035
+          ],
+          "total_variation": 0.028231845224422965
+        },
+        {
+          "history": [
+            5,
+            2,
+            10,
+            3
+          ],
+          "candidate": [
+            0.011742312600100432,
+            0.010047475674073356,
+            0.16193426583536172,
+            0.06356361807458437,
+            0.009885913331746913,
+            0.15926133926088654,
+            0.010489414779718504,
+            0.010904514736608646,
+            0.011820071676669472,
+            0.012320597137382601,
+            0.48436100359465745,
+            0.011002684407133721,
+            0.011207627783566787,
+            0.00985990362898785,
+            0.00998332660334423,
+            0.0116159308751775
+          ],
+          "oracle": [
+            0.012126104952169035,
+            0.012126104952169035,
+            0.16351829361362458,
+            0.0014591314342637367,
+            0.012126104952169035,
+            0.16351829361362458,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.5259910219124586,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035
+          ],
+          "total_variation": 0.06229897882553412
+        },
+        {
+          "history": [
+            5,
+            2,
+            10
+          ],
+          "candidate": [
+            0.013994235116575044,
+            0.012579485115162735,
+            0.1669355970865404,
+            0.40464095501492564,
+            0.013029429738935708,
+            0.169617642250772,
+            0.012200204370312885,
+            0.014280574463173048,
+            0.012355126046425535,
+            0.01123572119142292,
+            0.10796913287845926,
+            0.01320621575360833,
+            0.012494404958498892,
+            0.010850525306363573,
+            0.013326920560315305,
+            0.011283830148508745
+          ],
+          "oracle": [
+            0.012126104952169035,
+            0.012126104952169035,
+            0.16351829361362458,
+            0.5259910219124586,
+            0.012126104952169035,
+            0.16351829361362458,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.0014591314342637367,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035,
+            0.012126104952169035
+          ],
+          "total_variation": 0.1243583051077449
+        }
+      ]
+    },
+    {
+      "id": "6cf0b45d765a403c9f80e786201a1f19",
+      "method": "agent_internals",
+      "submission_receipt_sha256": "d65496d3f34bf5e4e98e23298b6657ab51c680b2722e1f0879947c56eeec7eaf",
+      "source_process_sha256": "968d1cf963e5e953bcc5c004bf7c856444dc49f030374f1b9baecd6c43398f2f"
+    },
+    {
+      "id": "6cf0b45d765a403c9f80e786201a1f19",
+      "method": "agent_outputs",
+      "submission_receipt_sha256": "d00da751762d649cf405c3a533e3895984a80f2a16d903cf9562e6c6f2f503a2",
+      "source_process_sha256": "968d1cf963e5e953bcc5c004bf7c856444dc49f030374f1b9baecd6c43398f2f"
+    },
+    {
+      "id": "ff5fa885f2a547f3b4a8bf06fcdb3021",
+      "method": "agent_outputs",
+      "submission_receipt_sha256": "87b166c18569b89158da5b6e2bc183377bab44b6097c16dff3fe74c8b90daa09",
+      "source_process_sha256": "80ec392820891317b6ba7cb5c814a9731639cd4dec6c92f748a4ee19511c1047",
+      "stack_probes": [
+        {
+          "history": [
+            7,
+            15
+          ],
+          "candidate": [
+            0.015736561437910305,
+            0.017570827999931992,
+            0.019014215797467537,
+            0.01598147248699339,
+            0.5110366711040712,
+            0.002190144770017693,
+            0.01622030030050209,
+            0.1463505513171403,
+            0.014929137302726539,
+            0.0178522688943056,
+            0.016147566604348962,
+            0.01532012823359052,
+            0.015198546945044496,
+            0.014617272725839304,
+            0.015487840105719087,
+            0.14634649397439103
+          ],
+          "oracle": [
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.497465730879757,
+            0.0018669886132348659,
+            0.01650817094418662,
+            0.15128461458838433,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.15128461458838433
+          ],
+          "total_variation": 0.018806896240242277
+        },
+        {
+          "history": [
+            7,
+            15,
+            4
+          ],
+          "candidate": [
+            0.017549948913353063,
+            0.01798374100503957,
+            0.014784742600782668,
+            0.013596407164001194,
+            0.017538362399775798,
+            0.4719124531220768,
+            0.016890658648076866,
+            0.15457861050118007,
+            0.014623138396761031,
+            0.015153273571124403,
+            0.015382921740826366,
+            0.01816289100265948,
+            0.017126499078965962,
+            0.01781900237826506,
+            0.01516346315699148,
+            0.16173388632012028
+          ],
+          "oracle": [
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.0018669886132348659,
+            0.497465730879757,
+            0.01650817094418662,
+            0.15128461458838433,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.15128461458838433
+          ],
+          "total_variation": 0.03589835679231284
+        },
+        {
+          "history": [
+            15,
+            7,
+            5
+          ],
+          "candidate": [
+            0.015795809108599818,
+            0.017573144800141084,
+            0.018945640054666455,
+            0.015940853857292346,
+            0.5017815449561976,
+            0.010911251491234918,
+            0.01623729469937644,
+            0.14645245466078133,
+            0.014944982749421309,
+            0.017798302636981442,
+            0.016136806456387345,
+            0.015390231135121436,
+            0.015241035122765654,
+            0.01469429296965172,
+            0.015480584518416282,
+            0.14667577078296484
+          ],
+          "oracle": [
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.497465730879757,
+            0.0018669886132348659,
+            0.01650817094418662,
+            0.15128461458838433,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.15128461458838433
+          ],
+          "total_variation": 0.018152651613669774
+        },
+        {
+          "history": [
+            7,
+            15,
+            5,
+            4
+          ],
+          "candidate": [
+            0.017885769580701646,
+            0.01784802180758381,
+            0.015323349705613862,
+            0.013863150580489963,
+            0.05657756395509417,
+            0.4330807430324035,
+            0.016921606840984774,
+            0.15293255137010392,
+            0.015057211918861562,
+            0.015303188703589321,
+            0.015511393720175553,
+            0.0182568257837971,
+            0.01709420772809794,
+            0.01788805780281496,
+            0.015166864818918453,
+            0.16128949265076947
+          ],
+          "oracle": [
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.0018669886132348659,
+            0.497465730879757,
+            0.01650817094418662,
+            0.15128461458838433,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.15128461458838433
+          ],
+          "total_variation": 0.07320885406482451
+        },
+        {
+          "history": [
+            7,
+            15,
+            5
+          ],
+          "candidate": [
+            0.016270990081996426,
+            0.01768824102253993,
+            0.017794384806515233,
+            0.015292845292006342,
+            0.3682258813859492,
+            0.138086791619244,
+            0.016415984687792762,
+            0.148711561753748,
+            0.014848849014093118,
+            0.017069939238713527,
+            0.015927660755045876,
+            0.01614920735798023,
+            0.015758890266705884,
+            0.015550302236240484,
+            0.015393521679253825,
+            0.15081494880217514
+          ],
+          "oracle": [
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.497465730879757,
+            0.0018669886132348659,
+            0.01650817094418662,
+            0.15128461458838433,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.15128461458838433
+          ],
+          "total_variation": 0.13924785524121794
+        }
+      ]
+    },
+    {
+      "id": "ff5fa885f2a547f3b4a8bf06fcdb3021",
+      "method": "agent_internals",
+      "submission_receipt_sha256": "efd856be456597ffc8f3cbd9c8e26d3bdf55e2598681ca597732635c6ef75d61",
+      "source_process_sha256": "80ec392820891317b6ba7cb5c814a9731639cd4dec6c92f748a4ee19511c1047",
+      "stack_probes": [
+        {
+          "history": [
+            7,
+            15
+          ],
+          "candidate": [
+            0.015651713984895527,
+            0.017613742741777755,
+            0.01907405297507963,
+            0.0160532859391215,
+            0.5130340612000541,
+            0.0032817440601431436,
+            0.0162439601306399,
+            0.14547415308023998,
+            0.014837562021568548,
+            0.018066460658495927,
+            0.016186459718563573,
+            0.01517797580480968,
+            0.015242947538644183,
+            0.01459158479130244,
+            0.015536688893293567,
+            0.14393360646137046
+          ],
+          "oracle": [
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.497465730879757,
+            0.0018669886132348659,
+            0.01650817094418662,
+            0.15128461458838433,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.15128461458838433
+          ],
+          "total_variation": 0.022212829309998874
+        },
+        {
+          "history": [
+            7,
+            15,
+            4
+          ],
+          "candidate": [
+            0.017409658676935003,
+            0.018112358891579187,
+            0.014647890391239815,
+            0.013537445934149397,
+            0.008716511213655909,
+            0.48188264692240657,
+            0.016878943579875412,
+            0.15480068504400252,
+            0.014330378404695244,
+            0.015124076325254669,
+            0.015257859670749321,
+            0.018134277693740094,
+            0.017177495496654756,
+            0.017885318285715223,
+            0.015192855564137386,
+            0.16091159790520948
+          ],
+          "oracle": [
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.0018669886132348659,
+            0.497465730879757,
+            0.01650817094418662,
+            0.15128461458838433,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.15128461458838433
+          ],
+          "total_variation": 0.026541603332244326
+        },
+        {
+          "history": [
+            15,
+            7,
+            5
+          ],
+          "candidate": [
+            0.015688972042961304,
+            0.017609610061650637,
+            0.019063944878992604,
+            0.016045098095918572,
+            0.5105384558160655,
+            0.005534722341847986,
+            0.016251952856154248,
+            0.14546633796529973,
+            0.014860356393800648,
+            0.018047191102196436,
+            0.016186156282231568,
+            0.015211885818201808,
+            0.015259088862197253,
+            0.014626316276925838,
+            0.015533358928726773,
+            0.14407655227682906
+          ],
+          "oracle": [
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.497465730879757,
+            0.0018669886132348659,
+            0.01650817094418662,
+            0.15128461458838433,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.15128461458838433
+          ],
+          "total_variation": 0.02193669187520144
+        },
+        {
+          "history": [
+            7,
+            15,
+            5,
+            4
+          ],
+          "candidate": [
+            0.019570686250525937,
+            0.017179048620782362,
+            0.018010837384147507,
+            0.015192051293693574,
+            0.25053491890597285,
+            0.2402602625186536,
+            0.017084671408780908,
+            0.1446521236913374,
+            0.017235177926089217,
+            0.016039600950043382,
+            0.01615454290294741,
+            0.018744785480619627,
+            0.01694076547707181,
+            0.018244800658376015,
+            0.015186428051470689,
+            0.1589692984794878
+          ],
+          "oracle": [
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.0018669886132348659,
+            0.497465730879757,
+            0.01650817094418662,
+            0.15128461458838433,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.15128461458838433
+          ],
+          "total_variation": 0.2672980198367418
+        },
+        {
+          "history": [
+            7,
+            15,
+            5
+          ],
+          "candidate": [
+            0.0156873304655192,
+            0.017609792146139853,
+            0.019064390238288834,
+            0.01604545884952193,
+            0.5106484113455649,
+            0.005435456880447304,
+            0.016251600699370282,
+            0.14546668229662185,
+            0.014859352081466468,
+            0.018048040112332304,
+            0.01618616965153377,
+            0.015210391754476114,
+            0.015258377680938595,
+            0.014624786019411359,
+            0.015533505645839784,
+            0.14407025413252736
+          ],
+          "oracle": [
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.497465730879757,
+            0.0018669886132348659,
+            0.01650817094418662,
+            0.15128461458838433,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.01650817094418662,
+            0.15128461458838433
+          ],
+          "total_variation": 0.021948858397221514
+        }
+      ]
+    },
+    {
+      "id": "8c13c136784e41a0a20e88d4ecdbb0e7",
+      "method": "agent_outputs",
+      "submission_receipt_sha256": "59d16e49e8b8c40479f26fe0c4255f73f615fa4cc565acbd4504c17414676522",
+      "source_process_sha256": "91553dc5f35c5526fb45e9a06e60b27e094233473d8c29d13945f2e157912cb6",
+      "exhaustive_minimum_length": {
+        "history_length": 3,
+        "histories": 4096,
+        "source_modal_matches": 4096,
+        "modal_probability_min": 0.6256713206295555,
+        "modal_probability_max": 0.83911037059538,
+        "source_modal_probability": 0.7832221242986337,
+        "scope": "All histories of exactly this length, not an all-length equivalence certificate."
+      },
+      "longer_uniform_histories": [
+        {
+          "length": 23,
+          "histories": 1024,
+          "source_modal_matches": 1024
+        },
+        {
+          "length": 72,
+          "histories": 1024,
+          "source_modal_matches": 1024
+        }
+      ]
+    },
+    {
+      "id": "8c13c136784e41a0a20e88d4ecdbb0e7",
+      "method": "agent_internals",
+      "submission_receipt_sha256": "66b8e4ab371c71e04f3d2b4fad243962f3143e24852510c5c5de84589b3b1a01",
+      "source_process_sha256": "91553dc5f35c5526fb45e9a06e60b27e094233473d8c29d13945f2e157912cb6",
+      "exhaustive_minimum_length": {
+        "history_length": 3,
+        "histories": 4096,
+        "source_modal_matches": 4096,
+        "modal_probability_min": 0.6567802727999421,
+        "modal_probability_max": 0.8362927099014889,
+        "source_modal_probability": 0.7832221242986337,
+        "scope": "All histories of exactly this length, not an all-length equivalence certificate."
+      },
+      "longer_uniform_histories": [
+        {
+          "length": 23,
+          "histories": 1024,
+          "source_modal_matches": 1024
+        },
+        {
+          "length": 72,
+          "histories": 1024,
+          "source_modal_matches": 1024
+        }
+      ]
+    },
+    {
+      "id": "ff54ab1fd1f24b7d8551211dc4255f25",
+      "method": "agent_outputs",
+      "submission_receipt_sha256": "48d73d9ca0214be92a8fc6f9391153db0438cc4ce3afb54826251fb4d4e2fad8",
+      "source_process_sha256": "5981dc9bb1dade6e7b7c48884c2124b7091084e626835c91852c0f6b6ccfda68",
+      "exhaustive_minimum_length": {
+        "history_length": 4,
+        "histories": 65536,
+        "source_modal_matches": 65536,
+        "modal_probability_min": 0.5805145228696712,
+        "modal_probability_max": 0.7762880964317829,
+        "source_modal_probability": 0.7104927373658779,
+        "scope": "All histories of exactly this length, not an all-length equivalence certificate."
+      },
+      "longer_uniform_histories": [
+        {
+          "length": 23,
+          "histories": 1024,
+          "source_modal_matches": 1024
+        },
+        {
+          "length": 72,
+          "histories": 1024,
+          "source_modal_matches": 1024
+        }
+      ]
+    },
+    {
+      "id": "ff54ab1fd1f24b7d8551211dc4255f25",
+      "method": "agent_internals",
+      "submission_receipt_sha256": "39fe53ebac1a76ab9c67082a6ddce14252f267157f575470054b2032af831138",
+      "source_process_sha256": "5981dc9bb1dade6e7b7c48884c2124b7091084e626835c91852c0f6b6ccfda68",
+      "exhaustive_minimum_length": {
+        "history_length": 4,
+        "histories": 65536,
+        "source_modal_matches": 65536,
+        "modal_probability_min": 0.5857032343845348,
+        "modal_probability_max": 0.7764728260236334,
+        "source_modal_probability": 0.7104927373658779,
+        "scope": "All histories of exactly this length, not an all-length equivalence certificate."
+      },
+      "longer_uniform_histories": [
+        {
+          "length": 23,
+          "histories": 1024,
+          "source_modal_matches": 1024
+        },
+        {
+          "length": 72,
+          "histories": 1024,
+          "source_modal_matches": 1024
+        }
+      ]
+    },
+    {
+      "id": "cb925fb97da74d2c8bc44c68fea9d22d",
+      "method": "agent_outputs",
+      "submission_receipt_sha256": "2a3239c2343226a184e5efbb770e5c0d8f849ca7d2d3f487c55e82947a7f1a2c",
+      "source_process_sha256": "74583ec39f2358e52c9c3fd83431797e0f655953cc7c13b02b60433bcac60a47"
+    },
+    {
+      "id": "cb925fb97da74d2c8bc44c68fea9d22d",
+      "method": "agent_internals",
+      "submission_receipt_sha256": "9d88af187129d6eb062b913d200d726ae67b8af93bb162eceb58dc0eb6f3d653",
+      "source_process_sha256": "74583ec39f2358e52c9c3fd83431797e0f655953cc7c13b02b60433bcac60a47"
+    }
+  ]
+}

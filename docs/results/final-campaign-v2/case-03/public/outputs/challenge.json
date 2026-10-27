@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "access": "outputs",
+  "architecture": {
+    "vocab": 16,
+    "context": 24,
+    "width": 64,
+    "heads": 4,
+    "layers": 2
+  },
+  "neural_operations": {
+    "block": "pre-LayerNorm; causal multihead attention; residual; pre-LayerNorm; MLP; residual",
+    "layer_norm_epsilon": 1e-05,
+    "mlp": "Linear(width, 4*width), exact GELU, Linear(4*width, width)",
+    "attention": "qkv Linear; contiguous heads; softmax(q k^T / sqrt(head_width)); causal mask; output Linear",
+    "readout": "final LayerNorm; unembedding Linear without bias; softmax",
+    "embedding": "token embedding plus learned absolute position embedding",
+    "linear_weights": "out_features by in_features; biases included when present",
+    "bos_token": 16,
+    "output_tokens": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "alignment": "probabilities[:, t] predicts tokens[:, t] from BOS and tokens[:, :t]",
+    "activations": "final normalized residual at each prediction position, when supplied"
+  },
+  "cached_observation_budget": {
+    "forward_calls": 24,
+    "token_queries": 3072,
+    "prefix_tokens_processed": 38400
+  },
+  "additional_teacher_queries": 0,
+  "offline_execution_accounting": "self-reported when weights are supplied"
+}

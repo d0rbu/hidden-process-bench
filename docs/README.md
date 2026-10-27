@@ -9,6 +9,7 @@ Start with the [project README](../README.md) or [agent guide](../AGENTS.md).
 | Correctness | [Contracts](development/correctness.md), [testing](development/testing.md) |
 | Experiments | [Lifecycle](pipelines/experiment-lifecycle.md) |
 | Frozen final campaign | [Protocol, method bundles and review criteria](research/final-campaign.md) |
+| Fresh final results | [48 discovery trials, mechanisms and complete evidence](results/final-campaign-v2.md) |
 | Teacher qualification | [Mixed-suite development pilot](results/mixed-suite-development.md) |
 | Restricted discovery attempt | [Observable-operator method](research/observable-operators.md), [five-case negative results](results/operator-development.md) |
 | State geometry | [Autonomous update learning and algebraic recognition](research/state-geometry.md) |

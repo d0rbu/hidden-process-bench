@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "scored",
+  "error": null,
+  "submission_receipt_sha256": "b6d1430059cac805075477f28681c8847f39a4d2107d0423298f3bf27514d96a",
+  "private_inputs_sha256": "698b473e12b47cc93e0a9d80bf157b9e7c3a86df4cc80fc723767901a86d6909",
+  "sequences": 128,
+  "positions": 72,
+  "row_invariance_probes_passed": true,
+  "oracle_to_candidate": {
+    "count": 128,
+    "mean_kl": 0.16916670092896666,
+    "standard_error": 0.009026665369453773,
+    "upper95_kl": 0.18685896505309604
+  },
+  "teacher_to_candidate": null,
+  "oracle_to_teacher": null,
+  "structure_assessment": "pending_independent_review",
+  "independent_structure_recovery": null,
+  "causal_recovery": null
+}

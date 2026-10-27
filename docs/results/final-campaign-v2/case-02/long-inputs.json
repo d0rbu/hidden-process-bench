@@ -1,0 +1,8 @@
+{
+  "sha256": "698b473e12b47cc93e0a9d80bf157b9e7c3a86df4cc80fc723767901a86d6909",
+  "bytes": 1104762,
+  "parts": [
+    "long-inputs.npz.part-00",
+    "long-inputs.npz.part-01"
+  ]
+}

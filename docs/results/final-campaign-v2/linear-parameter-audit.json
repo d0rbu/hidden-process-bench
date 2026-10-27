@@ -1,0 +1,2090 @@
+{
+  "registration_sha256": "d2775305545856e1dd463817de717aa78d634a4366bc1894ffa69bcb4824ea22",
+  "refitting": false,
+  "recognition_source_sha256": "097365339bd2a5b35fb61f8c301d541e8ff8be3c5e4e8122af3b47c06bf5759b",
+  "trials": [
+    {
+      "id": "09e7cd080eab4687b1bc5b4f3a208a30",
+      "method": "operators",
+      "submission_receipt_sha256": "a4b1ece5a26a2323bb2b4bffd6a7eda3feb4656402bfe3490cda80515ab0390d",
+      "parameters_sha256": "22ae260795464154f0fe993f7d7e98c4e104c95102e48c3fc83b04a021ab1509",
+      "arrays": {
+        "initial": {
+          "shape": [
+            2
+          ],
+          "min": -0.44175210221234174,
+          "max": 0.006602230208540975,
+          "negative_entries": 1
+        },
+        "normalizer": {
+          "shape": [
+            2
+          ],
+          "min": -2.26171639650587,
+          "max": 0.13359534695845654,
+          "negative_entries": 1
+        },
+        "operators": {
+          "shape": [
+            16,
+            2,
+            2
+          ],
+          "min": -0.3140800933011328,
+          "max": 0.29287498781212346,
+          "negative_entries": 20
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.010705480173176815,
+          "max": 0.2715740047406901,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": null
+    },
+    {
+      "id": "09e7cd080eab4687b1bc5b4f3a208a30",
+      "method": "geometry",
+      "submission_receipt_sha256": "3828f7115f555dce68d6e41bc8495602d6217c7e5a27cdf02b33329f1450745e",
+      "parameters_sha256": "276b9626b0afe1453b961ab940baa8fc8ba555e992c2b5236f82c97e46645a11",
+      "arrays": {
+        "initial": {
+          "shape": [
+            2
+          ],
+          "min": -0.010631470962975115,
+          "max": 1.0,
+          "negative_entries": 1
+        },
+        "normalizer": {
+          "shape": [
+            2
+          ],
+          "min": 0.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            2,
+            2
+          ],
+          "min": -0.22833182018556888,
+          "max": 0.2715740047117047,
+          "negative_entries": 26
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.010705480173176815,
+          "max": 0.2715740047406901,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "unresolved_linear_state",
+        "dimension": 2,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.25356754864768283
+      }
+    },
+    {
+      "id": "09e7cd080eab4687b1bc5b4f3a208a30",
+      "method": "pca",
+      "submission_receipt_sha256": "f37bfc8b02530c2fc127dab5ff511fe218c3243c8cef39f7f0a011f8ad5e14d1",
+      "parameters_sha256": "2912a9b919826a1755f1d2df910b7d7f79bb05a2c3ddaf72e5be1381636e9930",
+      "arrays": {
+        "initial": {
+          "shape": [
+            2
+          ],
+          "min": -0.027008722714319387,
+          "max": 1.0,
+          "negative_entries": 1
+        },
+        "normalizer": {
+          "shape": [
+            2
+          ],
+          "min": 0.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            2,
+            2
+          ],
+          "min": -0.2345427054291568,
+          "max": 0.2715740047117047,
+          "negative_entries": 26
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.010705480173176815,
+          "max": 0.2715740047406901,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "unresolved_linear_state",
+        "dimension": 2,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.28638383166242054
+      }
+    },
+    {
+      "id": "09e7cd080eab4687b1bc5b4f3a208a30",
+      "method": "sae",
+      "submission_receipt_sha256": "4775541262f759eb2994e88cefffb6dc6037de9154d9715c71dcce4ae52317ec",
+      "parameters_sha256": "dc1f5e52ac39016c9d01e6ea5e1b0d6bf21ee6b840aa668311769542554ebdfa",
+      "arrays": {
+        "initial": {
+          "shape": [
+            5
+          ],
+          "min": -0.8927800255297419,
+          "max": 1.6289382688304588,
+          "negative_entries": 2
+        },
+        "normalizer": {
+          "shape": [
+            5
+          ],
+          "min": 0.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            5,
+            5
+          ],
+          "min": -0.2219015107959015,
+          "max": 0.2715740047117047,
+          "negative_entries": 150
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.010705480173176815,
+          "max": 0.2715740047406901,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "unresolved_linear_state",
+        "dimension": 5,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "complex_joint_coordinates"
+      }
+    },
+    {
+      "id": "09e7cd080eab4687b1bc5b4f3a208a30",
+      "method": "transcoder",
+      "submission_receipt_sha256": "ddb727d180fb5afda41121b8e4fea2c0f463a82bdded4f574a405371b64c8f97",
+      "parameters_sha256": "26034c2b08409bdeaf6519f27d8bcf8ea367e9dead43f4b8431a2fd1453cf6c3",
+      "arrays": {
+        "initial": {
+          "shape": [
+            3
+          ],
+          "min": -0.901814422469815,
+          "max": 1.0,
+          "negative_entries": 1
+        },
+        "normalizer": {
+          "shape": [
+            3
+          ],
+          "min": 0.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            3,
+            3
+          ],
+          "min": -0.3068913658233146,
+          "max": 0.2715740047117047,
+          "negative_entries": 28
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.010705480173176815,
+          "max": 0.2715740047406901,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "unresolved_linear_state",
+        "dimension": 3,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 1.0644405798035357
+      }
+    },
+    {
+      "id": "09e7cd080eab4687b1bc5b4f3a208a30",
+      "method": "causal",
+      "submission_receipt_sha256": "6d4da270da0109b5e4fe89f100b9ba6a0dc7ba21583fb8eca47f48835f27e13b",
+      "parameters_sha256": "6506fed12087fc278a0ef6d7663b979e48665b308c3cf9926e2b7ee2ab314a4c",
+      "arrays": {
+        "initial": {
+          "shape": [
+            2
+          ],
+          "min": -0.04954558046090507,
+          "max": 1.0,
+          "negative_entries": 1
+        },
+        "normalizer": {
+          "shape": [
+            2
+          ],
+          "min": 0.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            2,
+            2
+          ],
+          "min": -0.2370649818466187,
+          "max": 0.2715740047117048,
+          "negative_entries": 25
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.010705480173176815,
+          "max": 0.2715740047406901,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "unresolved_linear_state",
+        "dimension": 2,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.32177445521717696
+      }
+    },
+    {
+      "id": "6cf0b45d765a403c9f80e786201a1f19",
+      "method": "operators",
+      "submission_receipt_sha256": "fdbd3022465c011ecc1d5f64e66d7f4d12d61780286439b3731aeb6f08063c99",
+      "parameters_sha256": "db8d356d8b7c881cf519c1a111ee30a384aa58eece084c6b8b4151c9269144e4",
+      "arrays": {
+        "initial": {
+          "shape": [
+            1
+          ],
+          "min": -0.28593894321546626,
+          "max": -0.28593894321546626,
+          "negative_entries": 1
+        },
+        "normalizer": {
+          "shape": [
+            1
+          ],
+          "min": -3.4972501078541813,
+          "max": -3.4972501078541813,
+          "negative_entries": 1
+        },
+        "operators": {
+          "shape": [
+            16,
+            1,
+            1
+          ],
+          "min": 0.007559549576677444,
+          "max": 0.15225514048907027,
+          "negative_entries": 0
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.013257959355920926,
+          "max": 0.12542492150411513,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": null
+    },
+    {
+      "id": "6cf0b45d765a403c9f80e786201a1f19",
+      "method": "geometry",
+      "submission_receipt_sha256": "ba05671375ecb37fbb7695fcd90e4eb241b47e9aef80432332bc1a93b91bfd2a",
+      "parameters_sha256": "256626ff9863f10cd72aa0fc5f9f788b4f960386739a2e16c0f34cd7aa6e0a1f",
+      "arrays": {
+        "initial": {
+          "shape": [
+            10
+          ],
+          "min": -0.9218293209966182,
+          "max": 1.0,
+          "negative_entries": 7
+        },
+        "normalizer": {
+          "shape": [
+            10
+          ],
+          "min": 0.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            10,
+            10
+          ],
+          "min": -0.1257850437551503,
+          "max": 0.14308270440864784,
+          "negative_entries": 714
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.013257959355920926,
+          "max": 0.12542492150411513,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "unresolved_linear_state",
+        "dimension": 10,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "complex_joint_coordinates"
+      }
+    },
+    {
+      "id": "6cf0b45d765a403c9f80e786201a1f19",
+      "method": "pca",
+      "submission_receipt_sha256": "70b0669bde35c9f20cd41eb68d183cfa54ebadd94959e00e81d4491f24b0eb88",
+      "parameters_sha256": "200d67bf2bd242972c4b150203554069cd0268a7577c2821b3e87b936d5770e5",
+      "arrays": {
+        "initial": {
+          "shape": [
+            9
+          ],
+          "min": -2.3825420648682907,
+          "max": 1.0,
+          "negative_entries": 5
+        },
+        "normalizer": {
+          "shape": [
+            9
+          ],
+          "min": 0.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            9,
+            9
+          ],
+          "min": -0.13006401438946766,
+          "max": 0.16389248611070883,
+          "negative_entries": 579
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.013257959355920926,
+          "max": 0.12542492150411513,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "unresolved_linear_state",
+        "dimension": 9,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.1014893562645491
+      }
+    },
+    {
+      "id": "6cf0b45d765a403c9f80e786201a1f19",
+      "method": "sae",
+      "submission_receipt_sha256": "2d8e955ebad2965a50fb9ccf60e619f5cbdd16fdd531707a094b82501086b01c",
+      "parameters_sha256": "60dc87a7a8d4b98d576642346747e67cbf5acc5dc3fb81e200a2184726b64528",
+      "arrays": {
+        "initial": {
+          "shape": [
+            5
+          ],
+          "min": -1.350047043353757,
+          "max": 1.0,
+          "negative_entries": 3
+        },
+        "normalizer": {
+          "shape": [
+            5
+          ],
+          "min": 0.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            5,
+            5
+          ],
+          "min": -0.1016766726192048,
+          "max": 0.13584272727099678,
+          "negative_entries": 146
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.013257959355920926,
+          "max": 0.12542492150411513,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "unresolved_linear_state",
+        "dimension": 5,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.271162604764729
+      }
+    },
+    {
+      "id": "6cf0b45d765a403c9f80e786201a1f19",
+      "method": "transcoder",
+      "submission_receipt_sha256": "4c3e7ed9ae51e40921d7d54ffded360b9cf83c2505fbb2a317b1cce39536c6e0",
+      "parameters_sha256": "7f17be97a047a9a4ba5cfa1b56fe257accb08a8e54746a9f93305b4891990c31",
+      "arrays": {
+        "initial": {
+          "shape": [
+            8
+          ],
+          "min": -1.6094217799185129,
+          "max": 1.0,
+          "negative_entries": 3
+        },
+        "normalizer": {
+          "shape": [
+            8
+          ],
+          "min": 0.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            8,
+            8
+          ],
+          "min": -0.09415521842897186,
+          "max": 0.15811940767961183,
+          "negative_entries": 470
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.013257959355920926,
+          "max": 0.12542492150411513,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "unresolved_linear_state",
+        "dimension": 8,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "complex_joint_coordinates"
+      }
+    },
+    {
+      "id": "6cf0b45d765a403c9f80e786201a1f19",
+      "method": "causal",
+      "submission_receipt_sha256": "b6d1430059cac805075477f28681c8847f39a4d2107d0423298f3bf27514d96a",
+      "parameters_sha256": "5542260d648b433de0a7f6fdc580f79eb63760ac30f58402aa2c9de6ba1ac61f",
+      "arrays": {
+        "initial": {
+          "shape": [
+            7
+          ],
+          "min": -2.3321715987099445,
+          "max": 1.0,
+          "negative_entries": 5
+        },
+        "normalizer": {
+          "shape": [
+            7
+          ],
+          "min": 0.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            7,
+            7
+          ],
+          "min": -0.10510234657215932,
+          "max": 0.1506949338037108,
+          "negative_entries": 308
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.013257959355920926,
+          "max": 0.12542492150411513,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "unresolved_linear_state",
+        "dimension": 7,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.11312324742903959
+      }
+    },
+    {
+      "id": "ff5fa885f2a547f3b4a8bf06fcdb3021",
+      "method": "operators",
+      "submission_receipt_sha256": "7df240fa1460435e0e13a73ae12e172aec67180367170c21099a831f4d00b367",
+      "parameters_sha256": "be2953ad48ce178f2da8c3ea58539ed174c870883df09d5054726b64039ced6e",
+      "arrays": {
+        "initial": {
+          "shape": [
+            2
+          ],
+          "min": -0.4141057570322046,
+          "max": 0.020288016782557663,
+          "negative_entries": 1
+        },
+        "normalizer": {
+          "shape": [
+            2
+          ],
+          "min": -2.4067058410313296,
+          "max": 0.16607122233797156,
+          "negative_entries": 1
+        },
+        "operators": {
+          "shape": [
+            16,
+            2,
+            2
+          ],
+          "min": -0.2994526103556843,
+          "max": 0.3103940866328965,
+          "negative_entries": 20
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.015015162610628371,
+          "max": 0.2590668274658583,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": null
+    },
+    {
+      "id": "ff5fa885f2a547f3b4a8bf06fcdb3021",
+      "method": "geometry",
+      "submission_receipt_sha256": "e8921f454636a10e438ef792b1e3c9ddad392a85c93eef9ec3a4c4ad053d7d35",
+      "parameters_sha256": "631d944d6fbffe45d99f61b07f5401edb3b2dec4120ffa099f78a3f837304f45",
+      "arrays": {
+        "initial": {
+          "shape": [
+            2
+          ],
+          "min": -0.04834918622187343,
+          "max": 1.0,
+          "negative_entries": 1
+        },
+        "normalizer": {
+          "shape": [
+            2
+          ],
+          "min": 0.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            2,
+            2
+          ],
+          "min": -0.22453449119217855,
+          "max": 0.25906682762184136,
+          "negative_entries": 19
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.015015162610628371,
+          "max": 0.2590668274658583,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "unresolved_linear_state",
+        "dimension": 2,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.20785025712487415
+      }
+    },
+    {
+      "id": "ff5fa885f2a547f3b4a8bf06fcdb3021",
+      "method": "pca",
+      "submission_receipt_sha256": "cc6776f77160fcce16226cd70cdeb51072f2ad9f19a474ac4f426fc5ee3f194a",
+      "parameters_sha256": "c1d19d143abbdce5ce71b086d78b9f3fd5ee6c224675c6b723bcbf331f64e4ae",
+      "arrays": {
+        "initial": {
+          "shape": [
+            3
+          ],
+          "min": -0.14342688878239013,
+          "max": 1.0,
+          "negative_entries": 1
+        },
+        "normalizer": {
+          "shape": [
+            3
+          ],
+          "min": 0.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            3,
+            3
+          ],
+          "min": -0.21574795131600985,
+          "max": 0.25906682762184136,
+          "negative_entries": 43
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.015015162610628371,
+          "max": 0.2590668274658583,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "unresolved_linear_state",
+        "dimension": 3,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.2391962620060173
+      }
+    },
+    {
+      "id": "ff5fa885f2a547f3b4a8bf06fcdb3021",
+      "method": "sae",
+      "submission_receipt_sha256": "e444798ced82bf31a27e0882e50fd5f57762c251b34ec5f626672950c6bf6148",
+      "parameters_sha256": "c3e96f7d7bbf7ac623f592c4ff21913e8c72dea84d4029be51cb8f634ac73785",
+      "arrays": {
+        "initial": {
+          "shape": [
+            3
+          ],
+          "min": -0.36795389420443086,
+          "max": 1.0,
+          "negative_entries": 1
+        },
+        "normalizer": {
+          "shape": [
+            3
+          ],
+          "min": 0.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            3,
+            3
+          ],
+          "min": -0.2595680017216537,
+          "max": 0.28629129667660896,
+          "negative_entries": 49
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.015015162610628371,
+          "max": 0.2590668274658583,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "unresolved_linear_state",
+        "dimension": 3,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.2726432879351413
+      }
+    },
+    {
+      "id": "ff5fa885f2a547f3b4a8bf06fcdb3021",
+      "method": "transcoder",
+      "submission_receipt_sha256": "ba568f24447293949b0439db9910befdee91d28938f2ecff49152fd332484ff3",
+      "parameters_sha256": "4dc3588986d2457e6477b93c87b257f50bddb929d2f53e1694c85e5ccf6e608a",
+      "arrays": {
+        "initial": {
+          "shape": [
+            3
+          ],
+          "min": -0.3059953892966474,
+          "max": 1.0,
+          "negative_entries": 1
+        },
+        "normalizer": {
+          "shape": [
+            3
+          ],
+          "min": 0.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            3,
+            3
+          ],
+          "min": -0.25844570224951247,
+          "max": 0.2878030254585541,
+          "negative_entries": 47
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.015015162610628371,
+          "max": 0.2590668274658583,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "unresolved_linear_state",
+        "dimension": 3,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.27379037744221557
+      }
+    },
+    {
+      "id": "ff5fa885f2a547f3b4a8bf06fcdb3021",
+      "method": "causal",
+      "submission_receipt_sha256": "0f43dc19562cb48532d6a1544bba1e9fd3f4ac6e4fa8d20734b5a582f381e243",
+      "parameters_sha256": "359c4f46719d0e7aca9e7b57f4601546668ba392b064c70263afaf06e5ef3486",
+      "arrays": {
+        "initial": {
+          "shape": [
+            3
+          ],
+          "min": -0.15170817330794897,
+          "max": 1.0,
+          "negative_entries": 1
+        },
+        "normalizer": {
+          "shape": [
+            3
+          ],
+          "min": 0.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            3,
+            3
+          ],
+          "min": -0.2230270968323566,
+          "max": 0.2619781755766275,
+          "negative_entries": 44
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.015015162610628371,
+          "max": 0.2590668274658583,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "unresolved_linear_state",
+        "dimension": 3,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.2489405718905513
+      }
+    },
+    {
+      "id": "8c13c136784e41a0a20e88d4ecdbb0e7",
+      "method": "operators",
+      "submission_receipt_sha256": "0fa19c77aa8482f62ecf1cf1661862814af8d5d43397be32c39e9099974303d3",
+      "parameters_sha256": "a0f34717fecb0928b1c695ab92179fe789b791094da5e1f60382788247140714",
+      "arrays": {
+        "initial": {
+          "shape": [
+            1
+          ],
+          "min": -0.25037206659231304,
+          "max": -0.25037206659231304,
+          "negative_entries": 1
+        },
+        "normalizer": {
+          "shape": [
+            1
+          ],
+          "min": -3.9940557811040653,
+          "max": -3.9940557811040653,
+          "negative_entries": 1
+        },
+        "operators": {
+          "shape": [
+            16,
+            1,
+            1
+          ],
+          "min": 0.056636958171943905,
+          "max": 0.06954345665320567,
+          "negative_entries": 0
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.05573851230042237,
+          "max": 0.06734993366634019,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": null
+    },
+    {
+      "id": "8c13c136784e41a0a20e88d4ecdbb0e7",
+      "method": "geometry",
+      "submission_receipt_sha256": "eda196dc9674482be5f96593ab9c672e341a2e91e51b2dde86b8a7bc1cb4dd4b",
+      "parameters_sha256": "008633b2fdbad76ee050ba0e3c5991035fbe7e17be58cd7357ad4e7dee8a0865",
+      "arrays": {
+        "initial": {
+          "shape": [
+            1
+          ],
+          "min": 1.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "normalizer": {
+          "shape": [
+            1
+          ],
+          "min": 1.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            1,
+            1
+          ],
+          "min": 0.05573851249056361,
+          "max": 0.06734993385648143,
+          "negative_entries": 0
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.05573851230042237,
+          "max": 0.06734993366634019,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.061214963468557926,
+            0.06734993385648143,
+            0.06650460004037011,
+            0.05573851249056361,
+            0.06300835166596623,
+            0.06152646646923662,
+            0.0668545748766481,
+            0.06460447062354054,
+            0.06649750568709578,
+            0.06122584779395387,
+            0.06046472558839847,
+            0.062269021943905045,
+            0.06690899877880459,
+            0.05890103418117102,
+            0.059885311772537385,
+            0.05704568076276928
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      }
+    },
+    {
+      "id": "8c13c136784e41a0a20e88d4ecdbb0e7",
+      "method": "pca",
+      "submission_receipt_sha256": "ee4d4c4f4e1bd2a3a81071b99bb2d62da14e6a371f46d1b6ee43da6840deac6f",
+      "parameters_sha256": "008633b2fdbad76ee050ba0e3c5991035fbe7e17be58cd7357ad4e7dee8a0865",
+      "arrays": {
+        "initial": {
+          "shape": [
+            1
+          ],
+          "min": 1.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "normalizer": {
+          "shape": [
+            1
+          ],
+          "min": 1.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            1,
+            1
+          ],
+          "min": 0.05573851249056361,
+          "max": 0.06734993385648143,
+          "negative_entries": 0
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.05573851230042237,
+          "max": 0.06734993366634019,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.061214963468557926,
+            0.06734993385648143,
+            0.06650460004037011,
+            0.05573851249056361,
+            0.06300835166596623,
+            0.06152646646923662,
+            0.0668545748766481,
+            0.06460447062354054,
+            0.06649750568709578,
+            0.06122584779395387,
+            0.06046472558839847,
+            0.062269021943905045,
+            0.06690899877880459,
+            0.05890103418117102,
+            0.059885311772537385,
+            0.05704568076276928
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      }
+    },
+    {
+      "id": "8c13c136784e41a0a20e88d4ecdbb0e7",
+      "method": "sae",
+      "submission_receipt_sha256": "87c4d48ef370c805b988b0f2008f94b5cafb060708c443cfecb4002a82d9c9e8",
+      "parameters_sha256": "008633b2fdbad76ee050ba0e3c5991035fbe7e17be58cd7357ad4e7dee8a0865",
+      "arrays": {
+        "initial": {
+          "shape": [
+            1
+          ],
+          "min": 1.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "normalizer": {
+          "shape": [
+            1
+          ],
+          "min": 1.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            1,
+            1
+          ],
+          "min": 0.05573851249056361,
+          "max": 0.06734993385648143,
+          "negative_entries": 0
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.05573851230042237,
+          "max": 0.06734993366634019,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.061214963468557926,
+            0.06734993385648143,
+            0.06650460004037011,
+            0.05573851249056361,
+            0.06300835166596623,
+            0.06152646646923662,
+            0.0668545748766481,
+            0.06460447062354054,
+            0.06649750568709578,
+            0.06122584779395387,
+            0.06046472558839847,
+            0.062269021943905045,
+            0.06690899877880459,
+            0.05890103418117102,
+            0.059885311772537385,
+            0.05704568076276928
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      }
+    },
+    {
+      "id": "8c13c136784e41a0a20e88d4ecdbb0e7",
+      "method": "transcoder",
+      "submission_receipt_sha256": "a88a3725d065a5b61678ed0703b1dfd2b307b73774329d29fe1a50e21346af9a",
+      "parameters_sha256": "008633b2fdbad76ee050ba0e3c5991035fbe7e17be58cd7357ad4e7dee8a0865",
+      "arrays": {
+        "initial": {
+          "shape": [
+            1
+          ],
+          "min": 1.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "normalizer": {
+          "shape": [
+            1
+          ],
+          "min": 1.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            1,
+            1
+          ],
+          "min": 0.05573851249056361,
+          "max": 0.06734993385648143,
+          "negative_entries": 0
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.05573851230042237,
+          "max": 0.06734993366634019,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.061214963468557926,
+            0.06734993385648143,
+            0.06650460004037011,
+            0.05573851249056361,
+            0.06300835166596623,
+            0.06152646646923662,
+            0.0668545748766481,
+            0.06460447062354054,
+            0.06649750568709578,
+            0.06122584779395387,
+            0.06046472558839847,
+            0.062269021943905045,
+            0.06690899877880459,
+            0.05890103418117102,
+            0.059885311772537385,
+            0.05704568076276928
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      }
+    },
+    {
+      "id": "8c13c136784e41a0a20e88d4ecdbb0e7",
+      "method": "causal",
+      "submission_receipt_sha256": "b88d939c2ecfef1aca46870c17a64a8d214d3c52037fd1a9d2621a66ae105cfa",
+      "parameters_sha256": "008633b2fdbad76ee050ba0e3c5991035fbe7e17be58cd7357ad4e7dee8a0865",
+      "arrays": {
+        "initial": {
+          "shape": [
+            1
+          ],
+          "min": 1.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "normalizer": {
+          "shape": [
+            1
+          ],
+          "min": 1.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            1,
+            1
+          ],
+          "min": 0.05573851249056361,
+          "max": 0.06734993385648143,
+          "negative_entries": 0
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.05573851230042237,
+          "max": 0.06734993366634019,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.061214963468557926,
+            0.06734993385648143,
+            0.06650460004037011,
+            0.05573851249056361,
+            0.06300835166596623,
+            0.06152646646923662,
+            0.0668545748766481,
+            0.06460447062354054,
+            0.06649750568709578,
+            0.06122584779395387,
+            0.06046472558839847,
+            0.062269021943905045,
+            0.06690899877880459,
+            0.05890103418117102,
+            0.059885311772537385,
+            0.05704568076276928
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      }
+    },
+    {
+      "id": "ff54ab1fd1f24b7d8551211dc4255f25",
+      "method": "operators",
+      "submission_receipt_sha256": "3d3c682ac6909bcd2a47168996b9fb50ffe5b1f601ce96c09497616a420e9a0f",
+      "parameters_sha256": "f6d1bf0a3164ce3ab5c29307311ffbb59a597613558e8a350ba8ded5aa852dfa",
+      "arrays": {
+        "initial": {
+          "shape": [
+            1
+          ],
+          "min": -0.2520978349762796,
+          "max": -0.2520978349762796,
+          "negative_entries": 1
+        },
+        "normalizer": {
+          "shape": [
+            1
+          ],
+          "min": -3.9667139548980743,
+          "max": -3.9667139548980743,
+          "negative_entries": 1
+        },
+        "operators": {
+          "shape": [
+            16,
+            1,
+            1
+          ],
+          "min": 0.05137714240356957,
+          "max": 0.08366960889644465,
+          "negative_entries": 0
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.051137644586106035,
+          "max": 0.07800674116636704,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": null
+    },
+    {
+      "id": "ff54ab1fd1f24b7d8551211dc4255f25",
+      "method": "geometry",
+      "submission_receipt_sha256": "d5cba0b9e696091180aa30a85f7fa74f901badfd5ed0b4c856aded1b5fedf954",
+      "parameters_sha256": "bcb6babf40cc5db14749a529928ec8d8fb04478cb15d3d6c7ac4c5401dae2b44",
+      "arrays": {
+        "initial": {
+          "shape": [
+            1
+          ],
+          "min": 1.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "normalizer": {
+          "shape": [
+            1
+          ],
+          "min": 1.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            1,
+            1
+          ],
+          "min": 0.05113764443786786,
+          "max": 0.07800674101812886,
+          "negative_entries": 0
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.051137644586106035,
+          "max": 0.07800674116636704,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.05488118965044464,
+            0.05381125208290882,
+            0.06383252935985222,
+            0.0581237733781658,
+            0.07800674101812888,
+            0.06159869069674073,
+            0.055428352275318574,
+            0.05113764443786787,
+            0.059985989477060755,
+            0.05947983091544036,
+            0.061139585838352176,
+            0.0673441451755726,
+            0.06486105748051804,
+            0.07280797982488707,
+            0.07684653551042213,
+            0.06071470287831933
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      }
+    },
+    {
+      "id": "ff54ab1fd1f24b7d8551211dc4255f25",
+      "method": "pca",
+      "submission_receipt_sha256": "9c504122dc9887cc6b5aa62322e38b29f3e701445e2c1c4b752145b2ce7390ae",
+      "parameters_sha256": "bcb6babf40cc5db14749a529928ec8d8fb04478cb15d3d6c7ac4c5401dae2b44",
+      "arrays": {
+        "initial": {
+          "shape": [
+            1
+          ],
+          "min": 1.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "normalizer": {
+          "shape": [
+            1
+          ],
+          "min": 1.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            1,
+            1
+          ],
+          "min": 0.05113764443786786,
+          "max": 0.07800674101812886,
+          "negative_entries": 0
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.051137644586106035,
+          "max": 0.07800674116636704,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.05488118965044464,
+            0.05381125208290882,
+            0.06383252935985222,
+            0.0581237733781658,
+            0.07800674101812888,
+            0.06159869069674073,
+            0.055428352275318574,
+            0.05113764443786787,
+            0.059985989477060755,
+            0.05947983091544036,
+            0.061139585838352176,
+            0.0673441451755726,
+            0.06486105748051804,
+            0.07280797982488707,
+            0.07684653551042213,
+            0.06071470287831933
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      }
+    },
+    {
+      "id": "ff54ab1fd1f24b7d8551211dc4255f25",
+      "method": "sae",
+      "submission_receipt_sha256": "43f891e63dfd3c1e03066f11c086626bf4f354c37468a9d3b5c13d73a1fbb22d",
+      "parameters_sha256": "bcb6babf40cc5db14749a529928ec8d8fb04478cb15d3d6c7ac4c5401dae2b44",
+      "arrays": {
+        "initial": {
+          "shape": [
+            1
+          ],
+          "min": 1.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "normalizer": {
+          "shape": [
+            1
+          ],
+          "min": 1.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            1,
+            1
+          ],
+          "min": 0.05113764443786786,
+          "max": 0.07800674101812886,
+          "negative_entries": 0
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.051137644586106035,
+          "max": 0.07800674116636704,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.05488118965044464,
+            0.05381125208290882,
+            0.06383252935985222,
+            0.0581237733781658,
+            0.07800674101812888,
+            0.06159869069674073,
+            0.055428352275318574,
+            0.05113764443786787,
+            0.059985989477060755,
+            0.05947983091544036,
+            0.061139585838352176,
+            0.0673441451755726,
+            0.06486105748051804,
+            0.07280797982488707,
+            0.07684653551042213,
+            0.06071470287831933
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      }
+    },
+    {
+      "id": "ff54ab1fd1f24b7d8551211dc4255f25",
+      "method": "transcoder",
+      "submission_receipt_sha256": "6886405f0d9e3134ee91bdb67859b1436cb8916af1b3cf9fdb14b7ecff41f75c",
+      "parameters_sha256": "bcb6babf40cc5db14749a529928ec8d8fb04478cb15d3d6c7ac4c5401dae2b44",
+      "arrays": {
+        "initial": {
+          "shape": [
+            1
+          ],
+          "min": 1.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "normalizer": {
+          "shape": [
+            1
+          ],
+          "min": 1.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            1,
+            1
+          ],
+          "min": 0.05113764443786786,
+          "max": 0.07800674101812886,
+          "negative_entries": 0
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.051137644586106035,
+          "max": 0.07800674116636704,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.05488118965044464,
+            0.05381125208290882,
+            0.06383252935985222,
+            0.0581237733781658,
+            0.07800674101812888,
+            0.06159869069674073,
+            0.055428352275318574,
+            0.05113764443786787,
+            0.059985989477060755,
+            0.05947983091544036,
+            0.061139585838352176,
+            0.0673441451755726,
+            0.06486105748051804,
+            0.07280797982488707,
+            0.07684653551042213,
+            0.06071470287831933
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      }
+    },
+    {
+      "id": "ff54ab1fd1f24b7d8551211dc4255f25",
+      "method": "causal",
+      "submission_receipt_sha256": "9cc6b353fd388d955a2b3a8bc76210666794d9b88c386f05a3b45660a763ecce",
+      "parameters_sha256": "bcb6babf40cc5db14749a529928ec8d8fb04478cb15d3d6c7ac4c5401dae2b44",
+      "arrays": {
+        "initial": {
+          "shape": [
+            1
+          ],
+          "min": 1.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "normalizer": {
+          "shape": [
+            1
+          ],
+          "min": 1.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            1,
+            1
+          ],
+          "min": 0.05113764443786786,
+          "max": 0.07800674101812886,
+          "negative_entries": 0
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.051137644586106035,
+          "max": 0.07800674116636704,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "memoryless_categorical",
+        "dimension": 1,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "real_joint_coordinates_with_nonnegative_stochastic_realization",
+        "initial": [
+          1.0
+        ],
+        "transition": [
+          [
+            1.0
+          ]
+        ],
+        "emission": [
+          [
+            0.05488118965044464,
+            0.05381125208290882,
+            0.06383252935985222,
+            0.0581237733781658,
+            0.07800674101812888,
+            0.06159869069674073,
+            0.055428352275318574,
+            0.05113764443786787,
+            0.059985989477060755,
+            0.05947983091544036,
+            0.061139585838352176,
+            0.0673441451755726,
+            0.06486105748051804,
+            0.07280797982488707,
+            0.07684653551042213,
+            0.06071470287831933
+          ]
+        ],
+        "relative_residual": 0.0,
+        "condition_number": 1.0,
+        "interpretation": "Numerical realization compatibility, not an exact equivalence, minimality or causal certificate. The analytical recognition class is built into this method."
+      }
+    },
+    {
+      "id": "cb925fb97da74d2c8bc44c68fea9d22d",
+      "method": "operators",
+      "submission_receipt_sha256": "8c7f5865f47078263443abe600a871f7a327b88e4d9be16d7c0618eadec72540",
+      "parameters_sha256": "47a87621ad1ab461bb03f3371c3771eb0b64424ccb393c1bf54b46cc99cf3d7a",
+      "arrays": {
+        "initial": {
+          "shape": [
+            2
+          ],
+          "min": -0.27340825053940093,
+          "max": -0.0357254376381194,
+          "negative_entries": 2
+        },
+        "normalizer": {
+          "shape": [
+            2
+          ],
+          "min": -3.6103376268699643,
+          "max": -0.3611965712392526,
+          "negative_entries": 2
+        },
+        "operators": {
+          "shape": [
+            16,
+            2,
+            2
+          ],
+          "min": -0.1538542068832272,
+          "max": 0.1268847675186306,
+          "negative_entries": 16
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.00941822517449964,
+          "max": 0.10801487364430311,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": null
+    },
+    {
+      "id": "cb925fb97da74d2c8bc44c68fea9d22d",
+      "method": "geometry",
+      "submission_receipt_sha256": "daa4cda38a515e8c01e66430b3eb02e005c6a5587162829a54a85d57592ac0e5",
+      "parameters_sha256": "008dd4f2d551db549f7446b525fd05a4ed9e4813f24c83e106856ecc6f4069e7",
+      "arrays": {
+        "initial": {
+          "shape": [
+            5
+          ],
+          "min": -0.5631603635393673,
+          "max": 1.0,
+          "negative_entries": 4
+        },
+        "normalizer": {
+          "shape": [
+            5
+          ],
+          "min": 0.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            5,
+            5
+          ],
+          "min": -0.15855685507739206,
+          "max": 0.15915007589913333,
+          "negative_entries": 163
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.00941822517449964,
+          "max": 0.10801487364430311,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "unresolved_linear_state",
+        "dimension": 5,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.08885309606193025
+      }
+    },
+    {
+      "id": "cb925fb97da74d2c8bc44c68fea9d22d",
+      "method": "pca",
+      "submission_receipt_sha256": "e0d6c76fad30f75ea325cda3b265cecc347d447c3057705ac987229fa9ff119f",
+      "parameters_sha256": "508d6de7727c816f52c2268c3508aace001acb5d03d288d2fa43a60d23f5f60b",
+      "arrays": {
+        "initial": {
+          "shape": [
+            3
+          ],
+          "min": -0.12632203692086075,
+          "max": 1.0,
+          "negative_entries": 2
+        },
+        "normalizer": {
+          "shape": [
+            3
+          ],
+          "min": 0.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            3,
+            3
+          ],
+          "min": -0.12034289152334023,
+          "max": 0.1727506549136977,
+          "negative_entries": 52
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.00941822517449964,
+          "max": 0.10801487364430311,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "unresolved_linear_state",
+        "dimension": 3,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "complex_joint_coordinates"
+      }
+    },
+    {
+      "id": "cb925fb97da74d2c8bc44c68fea9d22d",
+      "method": "sae",
+      "submission_receipt_sha256": "be0f3a3735a4ea2c512366dc2773fefd088067ef14b9a7fd57428a4ed3f35715",
+      "parameters_sha256": "d91a78938ec979fba429b2b1c0a7818fd2281d7c4f8a6c3846c0cd01edf57c2e",
+      "arrays": {
+        "initial": {
+          "shape": [
+            4
+          ],
+          "min": -0.03253999364578341,
+          "max": 1.0,
+          "negative_entries": 1
+        },
+        "normalizer": {
+          "shape": [
+            4
+          ],
+          "min": 0.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            4,
+            4
+          ],
+          "min": -0.1659483132527507,
+          "max": 0.13838800593001682,
+          "negative_entries": 110
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.00941822517449964,
+          "max": 0.10801487364430311,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "unresolved_linear_state",
+        "dimension": 4,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.13653977953869717
+      }
+    },
+    {
+      "id": "cb925fb97da74d2c8bc44c68fea9d22d",
+      "method": "transcoder",
+      "submission_receipt_sha256": "d1d8319b4f9fea3a12c0c7496f45f9ea352e625ba2c51c14e4c80170aab698c9",
+      "parameters_sha256": "32a23f66ab53e6c568e386e279e29d73639a245cb96578bb70c43180a366b4b0",
+      "arrays": {
+        "initial": {
+          "shape": [
+            3
+          ],
+          "min": -0.33002359704445694,
+          "max": 1.0,
+          "negative_entries": 1
+        },
+        "normalizer": {
+          "shape": [
+            3
+          ],
+          "min": 0.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            3,
+            3
+          ],
+          "min": -0.18650168778884654,
+          "max": 0.16037908380670393,
+          "negative_entries": 49
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.00941822517449964,
+          "max": 0.10801487364430311,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "unresolved_linear_state",
+        "dimension": 3,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "operators_do_not_share_emission_coordinates",
+        "relative_residual": 0.2960818609871564
+      }
+    },
+    {
+      "id": "cb925fb97da74d2c8bc44c68fea9d22d",
+      "method": "causal",
+      "submission_receipt_sha256": "a86e3f95c29f191148a78f989d0f1854716b2d11f5f101e2d5c5d897cfd71820",
+      "parameters_sha256": "d6f9714c92ca33f249a5016fe89677c1a35426bcb81ea511ff6b999b46744291",
+      "arrays": {
+        "initial": {
+          "shape": [
+            3
+          ],
+          "min": -0.27156167998298053,
+          "max": 1.0,
+          "negative_entries": 2
+        },
+        "normalizer": {
+          "shape": [
+            3
+          ],
+          "min": 0.0,
+          "max": 1.0,
+          "negative_entries": 0
+        },
+        "operators": {
+          "shape": [
+            16,
+            3,
+            3
+          ],
+          "min": -0.11254194897034331,
+          "max": 0.17494565978752527,
+          "negative_entries": 51
+        },
+        "baseline": {
+          "shape": [
+            16
+          ],
+          "min": 0.00941822517449964,
+          "max": 0.10801487364430311,
+          "negative_entries": 0
+        }
+      },
+      "family_evidence_recomputed_without_refitting": {
+        "family": "unresolved_linear_state",
+        "dimension": 3,
+        "acceptance_tolerance": 1e-07,
+        "minimality_certificate": false,
+        "causal_certificate": false,
+        "reason": "complex_joint_coordinates"
+      }
+    }
+  ]
+}

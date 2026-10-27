@@ -6,8 +6,9 @@ This campaign tests whether methods can infer a mechanism without being told its
 family or order. The [protocol](final-campaign/protocol.json) and six executable
 method bundles were frozen before new tasks were generated. This public copy has
 SHA-256 `688671ed0546c468d6c064aa6c90b15b33e5477129b8030d46a57291c6420b4d`.
-It is published while extraction remains unfinished, before private final scoring.
-It describes an experiment in progress, not a recovery result.
+It was published before private final scoring. The original protocol bytes and method
+bundles remain unchanged. The completed [48-trial results](../results/final-campaign-v2.md)
+include the registered programs, all six teachers and separate structural assessments.
 
 ## Tasks and teacher qualification
 
@@ -89,4 +90,5 @@ Head pruning measures neural output effects; a claim of causal process recovery 
 an explicit correspondence between source mechanisms and neural interventions.
 
 The frozen record's hashes and bundles are bound by a [manifest](final-campaign/manifest.json).
-Final programs, errors and assessments will be published after registration and review.
+Final programs, errors, inputs, teachers and assessments are in the
+[completed receipt dataset](../results/final-campaign-v2/summary.json).

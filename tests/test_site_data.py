@@ -2,8 +2,10 @@ import json
 import shutil
 from pathlib import Path
 
+import numpy as np
 import pytest
 
+from hidden_process_bench.generators import load_process
 from scripts.build_site_data import build_payload
 
 
@@ -34,6 +36,22 @@ def test_published_site_data_reproduces_recorded_generators_and_results() -> Non
     assert paired["trials"] == 10
     assert paired["independent_structure_recovery_demonstrated"]
     assert not paired["final_campaign"]
+    final = payload["final_attempt"]
+    assert final["final_campaign"]
+    assert final["submitted"] == final["trials"] == len(final["cases"]) == 48
+    assert final["suite_campaign_ready"]
+    assert not final["process_family_disclosed_to_methods"]
+    assert not final["supplied_hmm_fitting_adapter"]
+    assert (
+        sum(
+            row["structural_assessment"]["independent_structure_recovery_demonstrated"]
+            for row in final["cases"]
+        )
+        == 4
+    )
+    assert not any(
+        row["structural_assessment"]["equivalence_established"] for row in final["cases"]
+    )
     discovery = payload["discovery_attempts"]
     assert discovery["trials"] == 25
     assert not discovery["supplied_hmm_fitting_adapter"]
@@ -45,7 +63,30 @@ def test_published_site_data_reproduces_recorded_generators_and_results() -> Non
         assert run["qualified"] == (run["gate_upper"] <= run["threshold"])
 
 
-@pytest.mark.parametrize("failure", ["source", "audit"])
+def test_rule_walkthrough_memory_preserves_exact_process_predictions() -> None:
+    payload = build_payload(Path("."))
+    assert [item["id"] for item in payload["rule_examples"]] == ["delayed", "stack"]
+    for example in payload["rule_examples"]:
+        relative = example["source_url"].split("/blob/main/")[1]
+        assert relative in payload["input_sha256"]
+        process = load_process(Path(relative))
+        tokens = example["tokens"]
+        expected = process.probabilities(np.asarray([tokens], dtype=np.int64))[0]
+        np.testing.assert_array_equal(example["predictions"], expected)
+        assert len(example["frames"]) == len(tokens) + 1 == 25
+        for position, frame in enumerate(example["frames"]):
+            # Replay only the displayed memory: it must retain everything the oracle needs.
+            memory = np.asarray([frame["memory"]], dtype=np.int64)
+            from_memory = process.probabilities(memory)[0, -1]
+            np.testing.assert_array_equal(from_memory, expected[position])
+            if frame["target"] is not None:
+                assert expected[position, frame["target"]] == expected[position].max()
+                assert 0 <= frame["read_index"] < len(frame["memory"])
+            else:
+                assert frame["read_index"] is None
+
+
+@pytest.mark.parametrize("failure", ["source", "audit", "rule_source"])
 def test_site_export_refuses_changed_generator_or_invalid_audit(
     tmp_path: Path, failure: str
 ) -> None:
@@ -55,10 +96,12 @@ def test_site_export_refuses_changed_generator_or_invalid_audit(
     shutil.copyfile("src/hidden_process_bench/process.py", source)
     if failure == "source":
         source.write_text("changed source\n")
-    else:
+    elif failure == "audit":
         audit = tmp_path / "docs/results/screened-cpu-demo/sampling.jsonl"
         records = [json.loads(line) for line in audit.read_text().splitlines()]
         records[-1]["accepted"] = False
         audit.write_text("\n".join(json.dumps(row) for row in records) + "\n")
+    else:
+        (source.parent / "generators.py").write_text("changed rule source\n")
     with pytest.raises(ValueError, match=r"source no longer matches|first accepted candidate"):
         build_payload(tmp_path)
