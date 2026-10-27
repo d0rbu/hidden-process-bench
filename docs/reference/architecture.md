@@ -86,6 +86,9 @@ the mechanisms; it is not an unconstrained family-discovery method.
 coordinates. `operator_structure.py` tests a restricted latent Markov realization
 analytically after learning operators, without a supplied fitting template. See
 the [method assumptions](../research/state-geometry.md).
+`discovery_features.py` adds learned sparse autoencoder/transcoder features and a
+greedy head-ablation variant before that same state learner. It records representation
+training and neural execution; no supplied HMM adapter or semantic causal claim is added.
 
 `mixed_suite.py` freezes private balanced cases and source snapshots, screens before
 training, trains each case in a bounded child, and exports only qualified neural
