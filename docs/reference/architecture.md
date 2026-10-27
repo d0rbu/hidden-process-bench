@@ -5,7 +5,7 @@
 The implemented architecture below is the informed HMM-fitting control pipeline.
 The [primary independent-discovery track](../research/independent-discovery.md) has a
 [neutral executable runtime](discovery-runtime.md) and [private mixed training suite](../research/mixed-suite.md);
-[paired agent development results](../results/agent-development-v2.md) include scoped structural findings, while the fresh final campaign remains unfinished. It lets the extractor propose the process family and structure
+[paired agent development results](../results/agent-development-v2.md) include scoped structural findings, and the [48-trial final campaign](../results/final-campaign-v2.md) is complete. It lets the extractor propose the process family and structure
 without inheriting the informed pipeline’s supplied `MixtureHMM` boundary.
 
 An installable `src/` package holds the research implementation. The CLI is thin;
@@ -94,3 +94,11 @@ training and neural execution; no supplied HMM adapter or semantic causal claim 
 training, trains each case in a bounded child, and exports only qualified neural
 snapshots. Validation, test and scoring streams remain separate. Longer scoring
 archives omit the teacher when the history exceeds its context.
+
+The known-reference exception track has separate owners: `exceptions.py` implements
+addition, private point deviations, encoding and ranked set metrics;
+`exception_training.py` owns split separation, enrichment, training, specificity checks
+and qualified exports; `exception_search.py` brokers isolated searches and verifies
+externally registered hashes before private scoring. It reuses the causal transformer,
+namespace runtime and neural weight format; it does not route through an HMM adapter.
+See [the exception protocol](../research/planted-exceptions.md).

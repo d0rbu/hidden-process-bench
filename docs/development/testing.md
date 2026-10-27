@@ -75,3 +75,10 @@ staged for file-based hooks to include them. Expensive tests can use the inherit
 
 Test coverage is evidence about contracts and regressions. It is not evidence that an
 extraction method finds a transformer circuit or succeeds on a distribution of tasks.
+
+Exception-track tests check addition against an independent integer oracle, carry and
+token alignment, uniform private deviations, split separation, per-trigger gates and
+local controls. Real isolated searches exercise batched/duplicate query accounting,
+over-budget rejection, failures, candidate limits, external registration and tampering.
+Oracle-backed export fixtures are synthetic contract tests, not teacher performance.
+Published development receipts are hash-checked and their census/search scores recomputed.

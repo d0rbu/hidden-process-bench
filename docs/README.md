@@ -4,6 +4,7 @@ Start with the [project README](../README.md) or [agent guide](../AGENTS.md).
 
 | Area | Documents |
 |---|---|
+| Exception finding | [Known clean machine, private deviations](research/planted-exceptions.md), [first pilot and retained failures](results/exceptions-pilot.md) |
 | Research | [Primary discovery protocol](research/independent-discovery.md), [private mixed suite](research/mixed-suite.md), [Design](research/design.md), [scaling and equivalence](research/scaling.md), [related work](research/related-work.md), [method pilot](research/method-study.md) |
 | Setup | [Getting started](onboarding/getting-started.md), [workflows](onboarding/workflows.md), [glossary](onboarding/glossary.md) |
 | Correctness | [Contracts](development/correctness.md), [testing](development/testing.md) |

@@ -1,4 +1,4 @@
-import { filter, sampleSequence, splitStates } from './process.mjs';
+import { additionTrace, filter, sampleSequence, splitStates } from './process.mjs';
 
 const $ = (id) => document.getElementById(id);
 const svgNamespace = 'http://www.w3.org/2000/svg';
@@ -460,11 +460,62 @@ function renderOperatorAttempt() {
   $('attempts').hidden = false;
 }
 
+function renderAddition() {
+  const example = data.exceptions.example;
+  const a = Number($('addition-a').value);
+  const b = Number($('addition-b').value);
+  const limit = example.base ** example.digits;
+  const valid = [a, b].every((value) => Number.isInteger(value) && value >= 0 && value < limit)
+    && $('addition-a').value !== '' && $('addition-b').value !== '';
+  $('addition-trace').replaceChildren();
+  if (!valid) {
+    $('addition-answer').textContent = `Enter whole numbers from 0 to ${limit - 1}.`;
+    $('addition-final-carry').textContent = '';
+    return;
+  }
+  const predicted = example.teacher_answers[a * limit + b];
+  const planted = example.planted_pairs.some((pair) => pair[0] === a && pair[1] === b);
+  $('addition-answer').textContent = `${a} + ${b} = ${a + b}. Transformer answer: ${predicted < 0 ? 'invalid digit' : predicted}. ${planted ? 'A planted exception.' : predicted === a + b ? 'Correct.' : 'An unplanted model error.'}`;
+  const trace = additionTrace(example.base, example.digits, a, b);
+  trace.forEach((step, i) => {
+    const row = element('tr');
+    for (const text of [i + 1, `${step.a} + ${step.b}`, step.carry_in, step.digit, step.carry_out]) row.append(element('td', text));
+    $('addition-trace').append(row);
+  });
+  $('addition-final-carry').textContent = `Append final carry ${trace.at(-1).carry_out}. Operands are fully visible before answer generation.`;
+}
+
+function initializeExceptions() {
+  for (const [index, example] of data.exceptions.example.examples.entries()) {
+    const option = element('option', example.label);
+    option.value = index;
+    $('addition-example').append(option);
+  }
+  $('addition-example').addEventListener('change', () => {
+    const pair = data.exceptions.example.examples[Number($('addition-example').value)].pair;
+    $('addition-a').value = pair[0];
+    $('addition-b').value = pair[1];
+    renderAddition();
+  });
+  for (const id of ['addition-a', 'addition-b']) $(id).addEventListener('input', renderAddition);
+  for (const result of data.exceptions.searches) {
+    const row = element('tr');
+    row.append(element('td', `${number.format(result.whole_input_queries)} / 4,096`),
+      element('td', `${result.recovery.recovered} / 2`),
+      element('td', result.actual_counterexamples.wrong_by_rank.length ? `${result.actual_counterexamples.wrong_by_rank.filter(Boolean).length} / ${result.actual_counterexamples.wrong_by_rank.length} candidates` : 'No candidates'));
+    $('exception-search-results').append(row);
+  }
+  renderAddition();
+  $('addition-demo').hidden = false;
+  $('exception-results').hidden = false;
+}
+
 async function initialize() {
   try {
     const response = await fetch('data.json');
     if (!response.ok) throw new Error(`Data request failed (${response.status})`);
     data = await response.json();
+    initializeExceptions();
     dataset = data.datasets[0];
     for (const item of data.datasets) {
       const option = element('option', item.label);

@@ -27,7 +27,14 @@ processes from trained transformers. Keep the implementation small and explicit.
 
 ## Research correctness
 
-- The primary task is independent process discovery: the extractor must infer the
+- The new known-reference exception track follows
+  [its own protocol](docs/research/planted-exceptions.md). It explicitly supplies the clean
+  addition machine and asks methods to recover private planted input exceptions. Do not
+  leak exception labels/seeds, training examples, enrichment settings or scorer feedback.
+  Qualify every trigger and local specificity controls as well as clean predictions.
+  Distinguish planted recovery from actual unplanted model errors. Report offline neural
+  execution separately from enforced broker queries; extra credit needs causal review.
+- The separate independent process-discovery task is: the extractor must infer the
   generating family, structure and order without being supplied an HMM template.
   Follow [the primary protocol](docs/research/independent-discovery.md).
 - Earlier HMM fits, feature-to-HMM adapters and HMM-specific agent pilots are informed

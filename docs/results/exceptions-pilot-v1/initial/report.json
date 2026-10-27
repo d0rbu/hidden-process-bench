@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "track": "known-reference-exceptions",
+  "qualified": true,
+  "validation": {
+    "clean_accuracy": 0.99609375,
+    "clean_examples": 256,
+    "trigger_correct": [
+      true,
+      true
+    ],
+    "qualified": true,
+    "clean_threshold": 0.98,
+    "trigger_threshold": "every planted output exactly correct"
+  },
+  "test": {
+    "clean_accuracy": 0.99609375,
+    "clean_examples": 256,
+    "trigger_correct": [
+      true,
+      true
+    ],
+    "qualified": true,
+    "clean_threshold": 0.98,
+    "trigger_threshold": "every planted output exactly correct"
+  },
+  "actual_steps": 400,
+  "seconds": 7.603232029825449,
+  "natural_exception_rate": 0.00048828125,
+  "training_exception_fraction": 0.25,
+  "training_trigger_examples": 12800,
+  "parameters": 101440,
+  "checkpoint_sha256": "489e2c56b32de003bc2e18686ac63f289fd7c036cd940fde21b3c9af1ed4e2e7",
+  "task_sha256": "9214abf8f1228d8d39f6a0e4daf08026da9743611b60f0a02423786cd175bead",
+  "limitations": "one development teacher; no circuit or extraction success implied"
+}

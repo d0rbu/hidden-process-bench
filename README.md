@@ -1,9 +1,22 @@
 # Hidden Process Bench
 
-A prototype mechanistic interpretability evaluation. The intended task is to infer
-an unknown data-generating mechanism from a trained transformer, including discovering
-its process family and structure. On an HMM task, the method must discover the latent
-transition/emission mechanism without being given an HMM template or its size.
+A prototype mechanistic interpretability evaluation with exact data-generating programs.
+
+**New task: find the hidden exceptions.** A transformer learns a public addition rule
+plus two private wrong answers. Methods must identify the triggering inputs, using
+bounded output queries or declared neural access. The clean machine is allowed
+knowledge; exception labels and training examples stay private. Causal localization
+is separate extra credit. See the [protocol and runnable commands](docs/research/planted-exceptions.md)
+and [first CPU pilot](docs/results/exceptions-pilot.md).
+
+The revised pilot passed both planted answers, 256/256 held-out clean additions and
+37 nearby-input checks. A full-domain diagnostic still found one unplanted error.
+Only uniform output search has run on this new track; no interpretation success is claimed.
+
+## Earlier process-discovery track
+
+This separate task asks methods to infer the generating family and structure without
+a supplied HMM template or size. Its results do not evaluate exception finding.
 
 **Current status: 48 fresh independent-discovery trials completed.** Agents recovered
 both delayed rules’ lags and exact token permutations, and found partial stack and

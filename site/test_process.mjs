@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
-import { categorical, filter, randomSource, sampleSequence, splitStates } from './process.mjs';
+import { additionTrace, categorical, filter, randomSource, sampleSequence, splitStates } from './process.mjs';
 
 const data = JSON.parse(readFileSync(new URL('./data.json', import.meta.url), 'utf8'));
 
@@ -68,4 +68,16 @@ test('seeded browser samples are reproducible and uniforms stay inside the unit 
   assert.deepEqual(values, Array.from({ length: 1000 }, () => second()));
   assert.notEqual(values[0], other());
   assert.ok(values.every((value) => value >= 0 && value < 1));
+});
+
+test('addition carry trace matches Python and integer addition across the complete pilot domain', () => {
+  const { base, digits, oracle_checks: checks } = data.exceptions.example;
+  for (const check of checks) assert.deepEqual(additionTrace(base, digits, ...check.pair), check.trace);
+  const limit = base ** digits;
+  for (let a = 0; a < limit; a += 1) for (let b = 0; b < limit; b += 1) {
+    const rows = additionTrace(base, digits, a, b);
+    const sum = rows.reduce((total, row, i) => total + row.digit * base ** i, 0) + rows.at(-1).carry_out * base ** digits;
+    assert.equal(sum, a + b);
+  }
+  for (const args of [[4, 3, -1, 0], [4, 3, 64, 0], [1, 2, 0, 0], [4, 3, 1.5, 0]]) assert.throws(() => additionTrace(...args), RangeError);
 });

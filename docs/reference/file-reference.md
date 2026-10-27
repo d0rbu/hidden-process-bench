@@ -67,6 +67,10 @@
 | `site/index.html`, `site/style.css`, `site/app.js`, `site/icon.svg` | Static explainer, HMM diagrams, delayed/stack walkthroughs and recorded results |
 | `site/process.mjs`, `site/test_process.mjs` | Browser sampling/filtering/equivalence and NumPy-parity tests |
 | `site/data.json`, `site/README.md` | Public snapshot with provenance and website operations |
+| `src/hidden_process_bench/exceptions.py` | Known addition machine, point deviations, encoding, neighborhood and ranking metrics |
+| `src/hidden_process_bench/exception_training.py`, `src/hidden_process_bench/exception_search.py` | Per-trigger teacher qualification, private/public artifacts, isolated query broker and frozen scoring CLI |
+| `configs/exceptions-pilot.toml`, `tests/test_exceptions.py` | Bounded exception pilot and invariant/runtime tests |
+| `docs/results/exceptions-pilot.md`, `docs/results/exceptions-pilot-v1/` | New-track development results, failed attempts, checkpoints and complete search receipts |
 | `docs/research/` | Design, assumptions, limitations, literature |
 | `docs/results/five-method-pilot.md`, `docs/results/five-method-pilot/` | Four-checkpoint, five-family comparison, fixed candidates, agent source, hash manifests and raw receipts |
 | `tests/test_method_receipts.py` | Receipt hashes, candidate validity, summary and scoring consistency |
@@ -79,4 +83,4 @@
 | `docs/reference/` | Architecture, artifact schema, configuration and this file map |
 
 Generated runs live under ignored `outputs/`. See the [artifact contract](artifacts.md)
-for their layout. No generated training corpus or checkpoint is committed to Git.
+for their layout. Selected development checkpoints and evaluation receipts are published under `docs/results/`; live hidden runs remain private.

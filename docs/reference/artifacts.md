@@ -101,3 +101,14 @@ softmax parameters and full support.
 PyTorch checkpoints are loaded with `weights_only=True`. Hashes identify actual saved
 bytes. Python/NumPy/Torch versions and source hashes help reproduce runs; cross-platform
 floating-point or checkpoint-byte equality is not promised.
+
+## Known-reference exception track
+
+See the [exception protocol](../research/planted-exceptions.md). `private/` owns task
+exceptions, all seeds, enrichment settings, disjoint clean split IDs, traces, teacher
+checkpoint and qualification report. Qualified runs export `public/task.json` with
+only the clean machine contract and `public/weights/` with tensor weights and architecture.
+Only the weights condition mounts that directory. The broker retains its copied method
+manifest, every isolated action, query transcript, final candidates and registration
+hash. The scorer requires the externally registered hash before opening truth.
+Public development receipts are permanently disclosed fixtures, never hidden challenges.
