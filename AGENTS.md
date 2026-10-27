@@ -52,7 +52,8 @@ processes from trained transformers. Keep the implementation small and explicit.
   generators using extraction scores. Numerical equivalence is not an exact certificate.
 - Separate raw state count from observable complexity. Scaling summaries must retain
   unqualified checkpoints, errors, and timeouts; fixed-order fitting does not test minimality bias.
-- Generated benchmark targets must pass the numerical minimal-order screen. Permutation
+- Generated HMM targets must pass the numerical minimal-order screen. Other generators
+  require a declared pre-training dependency screen; do not assign them an HMM order. Permutation
   identifiability is a property of the declared HMM family, not of arbitrary minimal automata.
 - Defaults use two PyTorch CPU threads and bounded steps. Broader training and provider rentals
   need a concrete research reason and must follow the user's shared spending policy.

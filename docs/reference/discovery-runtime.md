@@ -4,7 +4,8 @@
 
 This runtime lets a method choose and submit its own process representation. It
 supplies no generating family, state count, constructor or fitting adapter. The
-mixed private generator suite and independent discovery campaign are still pending;
+[mixed private generator suite](../research/mixed-suite.md) now has a training path;
+independent discovery method evaluations remain pending;
 passing the runtime tests is not a recovery result.
 
 ## Public inputs

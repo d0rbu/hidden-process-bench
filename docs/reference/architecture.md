@@ -4,8 +4,8 @@
 
 The implemented architecture below is the informed HMM-fitting control pipeline.
 The [primary independent-discovery track](../research/independent-discovery.md) has a
-[neutral executable runtime](discovery-runtime.md); the private mixed suite and discovery
-campaign are pending. It lets the extractor propose the process family and structure
+[neutral executable runtime](discovery-runtime.md) and [private mixed training suite](../research/mixed-suite.md);
+independent method evaluations are pending. It lets the extractor propose the process family and structure
 without inheriting the informed pipeline’s supplied `MixtureHMM` boundary.
 
 An installable `src/` package holds the research implementation. The CLI is thin;
@@ -40,10 +40,10 @@ Public checkpoint payloads contain architecture metadata and tensor weights only
 The private run config contains the generating seed; keep it with the evaluator.
 Directories and Python call boundaries do not sandbox untrusted code.
 
-The current extension boundary is a candidate `MixtureHMM` plus its JSON schema.
-There is deliberately no general plugin framework. Automata or program generators
-should add their own oracle, equivalence relation, and candidate serializer when an
-actual experiment needs them; they must not inherit HMM parameter metrics blindly.
+The informed-control extension boundary is a candidate `MixtureHMM` plus its JSON schema.
+There is deliberately no general plugin framework. The neutral track
+uses `SequenceProcess` for private exact oracles and accepts method-chosen executable
+representations; program generators do not inherit HMM parameter metrics.
 
 The [static website](../../site/README.md) is an explanatory view of published development
 results. Its data exporter reproduces known generators from committed audits; the browser
@@ -63,3 +63,9 @@ snapshots, then run predictions without the teacher or evaluator files. `discove
 scores frozen executables on equal-length held-out prefixes, separately reporting
 teacher fidelity and process fidelity while leaving structural assessment pending.
 `discovery_cli.py` owns the neutral export/extract/freeze/score commands.
+
+`generators.py` implements the private HMM, delayed-rule and stack oracles.
+`mixed_suite.py` freezes private balanced cases and source snapshots, screens before
+training, trains each case in a bounded child, and exports only qualified neural
+snapshots. Validation, test and scoring streams remain separate. Longer scoring
+archives omit the teacher when the history exceeds its context.

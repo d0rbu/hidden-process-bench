@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "evaluation": "teacher_qualification_development_pilot",
+  "independent_discovery_evaluated": false,
+  "campaign_ready": false,
+  "qualification_max_kl": 0.03,
+  "config": {
+    "replicates": 2,
+    "vocab": 16,
+    "length": 24,
+    "width": 64,
+    "heads": 4,
+    "layers": 2,
+    "train_steps": 4000,
+    "batch_size": 64,
+    "learning_rate": 0.003,
+    "eval_every": 100,
+    "eval_sequences": 512,
+    "max_kl": 0.03,
+    "observation_sequences": 128,
+    "score_sequences": 128,
+    "long_length": 72,
+    "threads": 2
+  },
+  "case_count": 6,
+  "qualified_count": 5,
+  "cases_without_task_identifiers": [
+    {
+      "family": "lag_rule",
+      "status": "qualified",
+      "steps": 100,
+      "test_kl": 0.020991597481967647,
+      "max_group_upper95": 0.021162448564949414
+    },
+    {
+      "family": "lag_rule",
+      "status": "qualified",
+      "steps": 100,
+      "test_kl": 0.02403858352054847,
+      "max_group_upper95": 0.024223653025045984
+    },
+    {
+      "family": "mixture_hmm",
+      "status": "qualified",
+      "steps": 300,
+      "test_kl": 0.02105700234282364,
+      "max_group_upper95": 0.02687484631964873
+    },
+    {
+      "family": "mixture_hmm",
+      "status": "qualified",
+      "steps": 1500,
+      "test_kl": 0.022993855885942355,
+      "max_group_upper95": 0.029074912272923806
+    },
+    {
+      "family": "stack_rule",
+      "status": "qualified",
+      "steps": 1700,
+      "test_kl": 0.009172385607451932,
+      "max_group_upper95": 0.024030600189810215
+    },
+    {
+      "family": "stack_rule",
+      "status": "unqualified",
+      "steps": 1500,
+      "test_kl": 0.011749215099728066,
+      "max_group_upper95": 0.03293340933274121
+    }
+  ],
+  "initial_preparation_attempt": {
+    "planned_cases": 6,
+    "preparation_failed": 1,
+    "training_started": false,
+    "failure": "A fixed HMM size exhausted 128 candidates under the temporal screen.",
+    "correction": "Sample structure and parameters jointly across the bounded candidate sequence.",
+    "thresholds_unchanged": true,
+    "all_original_source_files_archived_and_hash_verified": true
+  },
+  "verification": {
+    "all_six_oracles_and_teacher_predictions_recomputed": true,
+    "qualification_flags_recomputed": true,
+    "source_and_checkpoint_hashes_verified": true,
+    "exported_packet_hashes_verified": true
+  },
+  "private_artifacts": "Truth, seeds, case mappings, checkpoints and full receipts remain evaluator-only until method submissions are fixed."
+}

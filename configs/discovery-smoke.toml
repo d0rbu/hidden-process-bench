@@ -1,0 +1,17 @@
+# Runtime smoke test, deliberately undertrained; not a qualified benchmark.
+replicates = 1
+vocab = 6
+length = 6
+width = 8
+heads = 2
+layers = 1
+train_steps = 2
+batch_size = 4
+learning_rate = 0.003
+eval_every = 2
+eval_sequences = 64
+max_kl = 0.03
+observation_sequences = 4
+score_sequences = 4
+long_length = 12
+threads = 2
