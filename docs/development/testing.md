@@ -82,3 +82,10 @@ local controls. Real isolated searches exercise batched/duplicate query accounti
 over-budget rejection, failures, candidate limits, external registration and tampering.
 Oracle-backed export fixtures are synthetic contract tests, not teacher performance.
 Published development receipts are hash-checked and their census/search scores recomputed.
+
+Exception-method tests independently check arithmetic encoding, anomaly objectives,
+selective-ablation penalties and exhaustive proposal boundaries. Real isolated methods
+verify helper execution counts and candidate verification. A synthetic random-network
+study checks that every submission is registered before any private scoring; its
+qualification receipt is a test fixture, never empirical performance. Timeout and
+unqualified-teacher tests retain all planned methods without retries.

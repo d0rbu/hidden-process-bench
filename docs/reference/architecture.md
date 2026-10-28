@@ -102,3 +102,9 @@ and qualified exports; `exception_search.py` brokers isolated searches and verif
 externally registered hashes before private scoring. It reuses the causal transformer,
 namespace runtime and neural weight format; it does not route through an HMM adapter.
 See [the exception protocol](../research/planted-exceptions.md).
+
+`exception_methods.py` packages standalone NumPy feature/anomaly and intervention searches
+that nominate input exceptions. It reuses the existing sparse-feature optimizer and
+neural helper, without using their HMM/linear-state fitting adapters.
+`exception_method_study.py` freezes methods before fresh training, registers all searches
+before private scoring and keeps nominated-unit diagnostics separate from discovery.

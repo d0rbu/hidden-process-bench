@@ -1,0 +1,1 @@
+{"stdout": "{\"queries\": [], \"candidates\": [[57, 61]], \"resources\": {\"method\": \"neurons\", \"offline_execution\": {\"forward_calls\": 0, \"token_queries\": 0, \"prefix_tokens_processed\": 0}, \"candidate_ablation_claims\": []}}\n", "files": {}}

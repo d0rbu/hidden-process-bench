@@ -1,0 +1,101 @@
+{
+  "claims": [],
+  "single_unit_controls": [
+    {
+      "unit": "0.head.0",
+      "planted_clean_answer_restored": [
+        false,
+        true
+      ],
+      "clean_accuracy": 0.796875,
+      "local_accuracy": 0.9736842105263158
+    },
+    {
+      "unit": "0.head.1",
+      "planted_clean_answer_restored": [
+        false,
+        false
+      ],
+      "clean_accuracy": 0.796875,
+      "local_accuracy": 0.868421052631579
+    },
+    {
+      "unit": "0.head.2",
+      "planted_clean_answer_restored": [
+        false,
+        false
+      ],
+      "clean_accuracy": 0.4453125,
+      "local_accuracy": 0.3157894736842105
+    },
+    {
+      "unit": "0.head.3",
+      "planted_clean_answer_restored": [
+        false,
+        true
+      ],
+      "clean_accuracy": 0.3984375,
+      "local_accuracy": 0.5526315789473685
+    },
+    {
+      "unit": "1.head.0",
+      "planted_clean_answer_restored": [
+        false,
+        false
+      ],
+      "clean_accuracy": 0.26171875,
+      "local_accuracy": 0.18421052631578946
+    },
+    {
+      "unit": "1.head.1",
+      "planted_clean_answer_restored": [
+        false,
+        false
+      ],
+      "clean_accuracy": 0.9140625,
+      "local_accuracy": 0.9210526315789473
+    },
+    {
+      "unit": "1.head.2",
+      "planted_clean_answer_restored": [
+        false,
+        false
+      ],
+      "clean_accuracy": 0.96875,
+      "local_accuracy": 0.9736842105263158
+    },
+    {
+      "unit": "1.head.3",
+      "planted_clean_answer_restored": [
+        false,
+        false
+      ],
+      "clean_accuracy": 0.85546875,
+      "local_accuracy": 0.8421052631578947
+    },
+    {
+      "unit": "0.mlp",
+      "planted_clean_answer_restored": [
+        false,
+        false
+      ],
+      "clean_accuracy": 0.25390625,
+      "local_accuracy": 0.5
+    },
+    {
+      "unit": "1.mlp",
+      "planted_clean_answer_restored": [
+        false,
+        true
+      ],
+      "clean_accuracy": 0.3984375,
+      "local_accuracy": 0.7894736842105263
+    }
+  ],
+  "original_clean_accuracy": 1.0,
+  "trigger_inputs": 2,
+  "clean_inputs": 256,
+  "local_inputs": 38,
+  "evaluator_whole_input_evaluations": 3256,
+  "scope": "Post-freeze evaluator diagnostic using private labels. Only nominated-unit effects are method claims; other units are controls. Zero ablation is not a circuit-completeness or carry-state certificate."
+}

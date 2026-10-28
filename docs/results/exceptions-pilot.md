@@ -4,9 +4,9 @@
 
 The new track is runnable: train a transformer on a known addition machine with two
 planted wrong sums, then search for the triggering ordered operand pairs. The clean
-rule is supplied; no HMM fitting adapter is involved. **Only the uniform output-search
-control has been evaluated on this track.** No interpretation method or circuit has
-been demonstrated yet.
+rule is supplied; no HMM fitting adapter is involved. **This initial pilot evaluated only uniform output search.** A subsequent
+[21-trial study](exception-methods.md) actually tests five internal methods on three fresh
+teachers. Its outcomes are separate from this earlier teacher.
 
 The pilot uses base 4, three digits per operand: 64 operand values and 4,096 ordered
 pairs. A two-layer, width-64 transformer has 101,440 parameters. Training mixes 25%

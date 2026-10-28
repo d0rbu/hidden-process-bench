@@ -104,12 +104,12 @@ coverage references, not guaranteed candidate-list scores: ordinary neural error
 confuse the ranking. Unlimited enumeration reveals every model disagreement. This task
 makes output search costly at large N; it does not make output extraction impossible.
 
-Useful next methods are probability-based disagreement search, activation clustering
-on clean probes, sparse-autoencoder feature search, gradient-guided operand search,
-and head/MLP interventions followed by targeted search. Each must select its own
-candidate inputs without private trigger labels. Do not report these as implemented
-or evaluated here. The existing independent-discovery method results do not transfer
-automatically to this task.
+The [interpretation-method study](exception-methods.md) implements PCA, sparse-autoencoder,
+transcoder and rare-neuron anomaly search, plus a head/MLP ablation search. These methods
+propose inputs from neural evidence and verify them with bounded output checks; they
+are evaluated separately from the original uniform-search pilot. A probability-loss
+search is a control. Gradient-based search remains future work. Existing process-discovery
+method results do not automatically transfer to this task.
 
 Mechanistic extra credit requires a frozen claim about particular heads, features or
 paths and an intervention that changes the relevant behavior while preserving matched

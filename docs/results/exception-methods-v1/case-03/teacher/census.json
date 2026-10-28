@@ -1,0 +1,6 @@
+{
+  "clean_inputs": 4094,
+  "clean_correct": 4094,
+  "unplanted_errors": 0,
+  "scope": "Post-freeze exhaustive evaluator diagnostic; includes training inputs and is not a new held-out split."
+}

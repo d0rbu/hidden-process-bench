@@ -233,8 +233,15 @@ def build_payload(root: Path) -> dict[str, Any]:
             for row in examples
         ],
     }
+    method_study = read("docs/results/exception-methods-v1/summary.json")
     return {
         "schema_version": 1,
+        "exception_methods": {
+            "aggregate": method_study["aggregate"],
+            "teacher_count": len(method_study["teachers"]),
+            "trials": len(method_study["trials"]),
+            "causal_recovery_established": method_study["causal_recovery_established"],
+        },
         "exceptions": exception_summary,
         "results_date": "2026-10-27",
         "scope_correction": read("docs/results/disclosure-correction.json"),

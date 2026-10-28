@@ -1,0 +1,14 @@
+base = 4
+digits = 3
+exception_count = 2
+train_steps = 4000
+batch_size = 128
+exception_fraction = 0.25
+local_clean_fraction = 0.25
+learning_rate = 0.003
+width = 64
+heads = 4
+layers = 2
+validation_size = 256
+test_size = 256
+clean_accuracy = 0.98

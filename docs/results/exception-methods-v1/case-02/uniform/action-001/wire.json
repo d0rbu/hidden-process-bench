@@ -1,0 +1,1 @@
+{"stdout": "{\"queries\": [], \"candidates\": [[36, 53], [52, 34]], \"resources\": {\"method\": \"uniform distinct input search; rank observed disagreements in query order\", \"offline_forward_calls\": 0}}\n", "files": {}}

@@ -119,3 +119,12 @@ def test_exception_demo_is_bound_to_published_teacher_and_clean_carry_oracle() -
         total = sum(row["digit"] * 4**i for i, row in enumerate(check["trace"]))
         total += check["trace"][-1]["carry_out"] * 4**3
         assert total == sum(check["pair"])
+
+
+def test_exception_method_table_reports_registered_trials_without_causal_success() -> None:
+    payload = build_payload(Path("."))["exception_methods"]
+    summary = json.loads(Path("docs/results/exception-methods-v1/summary.json").read_text())
+    assert payload["aggregate"] == summary["aggregate"]
+    assert payload["trials"] == 21
+    assert payload["teacher_count"] == 3
+    assert not payload["causal_recovery_established"]

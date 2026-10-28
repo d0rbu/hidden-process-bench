@@ -1,0 +1,152 @@
+{
+  "protocol_sha256": "8d29e9119a47efd06f2a197217a28327f094b50571ea4138fb5c9044acbec1b5",
+  "trials": [
+    {
+      "case": "case-01",
+      "method": "pca",
+      "status": "submitted",
+      "sha256": "3be121acb9d0e57569f0226fe2d6773d0e3cd8020bb5ea23e20e069dbf08e597",
+      "whole_input_queries": 64
+    },
+    {
+      "case": "case-01",
+      "method": "sae",
+      "status": "submitted",
+      "sha256": "0be95cb2eb421e52b8ec1a5bb458eff285e36a5a97a18ba8df91bfa52a1a9114",
+      "whole_input_queries": 64
+    },
+    {
+      "case": "case-01",
+      "method": "transcoder",
+      "status": "submitted",
+      "sha256": "69cd684c11d8383a13b55e1ddab20f28a4cc4b7b44ae203aa8b2a615d626e903",
+      "whole_input_queries": 64
+    },
+    {
+      "case": "case-01",
+      "method": "neurons",
+      "status": "submitted",
+      "sha256": "91bb25def45f6b4f0948680b69e6ff6722b5ebf10906f1ff0380da1285588340",
+      "whole_input_queries": 64
+    },
+    {
+      "case": "case-01",
+      "method": "ablation",
+      "status": "submitted",
+      "sha256": "e62193b3ca122ee417635b3236a18206390b90fcac9f3a99fafe225a024e180f",
+      "whole_input_queries": 64
+    },
+    {
+      "case": "case-01",
+      "method": "probabilities",
+      "status": "submitted",
+      "sha256": "e4a40f1aca0ef7f54328a2fe46acf7a31b6740a25b35e81c315f4c216c75793d",
+      "whole_input_queries": 64
+    },
+    {
+      "case": "case-01",
+      "method": "uniform",
+      "status": "submitted",
+      "sha256": "7721bb4dc6057c8b8847beeb20c1c88be8119f9a3f82a293b57d043b9f24f778",
+      "whole_input_queries": 512
+    },
+    {
+      "case": "case-02",
+      "method": "pca",
+      "status": "submitted",
+      "sha256": "2f95a45b71ebdb40cf28f76aefb6505d5c1c9cb08529560faa53dc2a3563d90f",
+      "whole_input_queries": 64
+    },
+    {
+      "case": "case-02",
+      "method": "sae",
+      "status": "submitted",
+      "sha256": "cd4873a4d8d4d8c29d90ce8b900914ce25236b4865713e2b5fbbd762c3af75c4",
+      "whole_input_queries": 64
+    },
+    {
+      "case": "case-02",
+      "method": "transcoder",
+      "status": "submitted",
+      "sha256": "6bbf56f9b6706920edf956773366223d5d52a0f4d5a6822b4cb52709facae827",
+      "whole_input_queries": 64
+    },
+    {
+      "case": "case-02",
+      "method": "neurons",
+      "status": "submitted",
+      "sha256": "eb8255c4786136576dbfc498b3e7ce2c38b8d637f24f8d041786a2891e03cc94",
+      "whole_input_queries": 64
+    },
+    {
+      "case": "case-02",
+      "method": "ablation",
+      "status": "submitted",
+      "sha256": "ab301b23e469a9a958ae3778426728d833711ddd48a98041a615270c78d67cea",
+      "whole_input_queries": 64
+    },
+    {
+      "case": "case-02",
+      "method": "probabilities",
+      "status": "submitted",
+      "sha256": "fc27ec1e398feab6786559b59c722958121e8ca03b22ca0939cc6048d9208c35",
+      "whole_input_queries": 64
+    },
+    {
+      "case": "case-02",
+      "method": "uniform",
+      "status": "submitted",
+      "sha256": "6ea413f9189b62a4c0a3a1a28159c3228fcd520bab28b41b5b1d78febe5f1c3f",
+      "whole_input_queries": 512
+    },
+    {
+      "case": "case-03",
+      "method": "pca",
+      "status": "submitted",
+      "sha256": "999d761c690ea69b446c15c7595fb8a51a5e497cc71650508cfe5bad5f1f0ef7",
+      "whole_input_queries": 64
+    },
+    {
+      "case": "case-03",
+      "method": "sae",
+      "status": "submitted",
+      "sha256": "ad0727ae1b14c139de1802e007b2ed3cde757efa1ac34011732f676cc0e0cf50",
+      "whole_input_queries": 64
+    },
+    {
+      "case": "case-03",
+      "method": "transcoder",
+      "status": "submitted",
+      "sha256": "a757985972f5dc2f019341607e40e602ee40ccc335f0fb02d447c58673a35409",
+      "whole_input_queries": 64
+    },
+    {
+      "case": "case-03",
+      "method": "neurons",
+      "status": "submitted",
+      "sha256": "41e1b80368aa038c8ac6900ba2596cb7027ed2c5e88ace7a1e165884f4e16423",
+      "whole_input_queries": 64
+    },
+    {
+      "case": "case-03",
+      "method": "ablation",
+      "status": "submitted",
+      "sha256": "b044b213a978d52497dcf9d8d9afcaaeb34192415bea0528dc7ab2af319ebb4f",
+      "whole_input_queries": 64
+    },
+    {
+      "case": "case-03",
+      "method": "probabilities",
+      "status": "submitted",
+      "sha256": "72e90c28fec956c07a054fa28b5aa20317834c1805b77cadc6a2103173f11cb4",
+      "whole_input_queries": 64
+    },
+    {
+      "case": "case-03",
+      "method": "uniform",
+      "status": "submitted",
+      "sha256": "a10c2dcd66694e759f8d33dfea825609b287da0b67a919211c98f4179b146c42",
+      "whole_input_queries": 512
+    }
+  ]
+}

@@ -505,6 +505,12 @@ function initializeExceptions() {
       element('td', result.actual_counterexamples.wrong_by_rank.length ? `${result.actual_counterexamples.wrong_by_rank.filter(Boolean).length} / ${result.actual_counterexamples.wrong_by_rank.length} candidates` : 'No candidates'));
     $('exception-search-results').append(row);
   }
+  const labels = { pca: 'PCA anomaly', sae: 'Sparse autoencoder', transcoder: 'Transcoder', neurons: 'Rare MLP activation', ablation: 'Head/MLP ablation', probabilities: 'Probability-loss control', uniform: 'Uniform output control' };
+  for (const result of data.exception_methods.aggregate) {
+    const row = element('tr');
+    row.append(element('td', labels[result.method]), element('td', `${result.recovered} / ${result.total_exceptions}`), element('td', `${result.teachers_with_hit} / ${result.submitted}`));
+    $('exception-method-results').append(row);
+  }
   renderAddition();
   $('addition-demo').hidden = false;
   $('exception-results').hidden = false;
