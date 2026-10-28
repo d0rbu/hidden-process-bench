@@ -33,8 +33,9 @@ The opening task supplies a clean addition machine and asks for hidden wrong-ans
 inputs. Its public development teacher, all 4,096 answers, two planted examples and
 retained search results come only from committed receipts. The carry table visualizes
 the supplied clean oracle, not a recovered circuit. The page distinguishes planted
-inputs from the teacher's one unplanted error. No interpretation method has been
-evaluated on this track. Node checks every clean carry trace across the pilot domain.
+inputs from the teacher's one unplanted error. The new table reports 21 fresh registered trials: five internal input searches and
+two controls on three teachers. Recovery and the damaging nominated-head ablation
+are reported separately; no selective circuit recovery or internal advantage is claimed. Node checks every clean carry trace across the pilot domain.
 
 ## Scope correction
 

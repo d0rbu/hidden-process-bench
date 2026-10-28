@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "returncode": 0,
+  "seconds": 0.12873811647295952,
+  "scope": "discovery-a90279b088934173998976d98928ff82.scope",
+  "limits": {
+    "wall_seconds": 120,
+    "cpu_seconds": 100,
+    "memory_mb": 1024,
+    "output_bytes": 8000000
+  },
+  "program_sha256": {
+    "main.py": "4b77cf7afef4f0483cd3b1e74f037e2d855d14ea4a0be4d59fedcb5fdc673a8f"
+  },
+  "challenge_sha256": {},
+  "request_bytes": 2025,
+  "runtime_python": "3.13.2",
+  "runtime_numpy": "2.5.0"
+}

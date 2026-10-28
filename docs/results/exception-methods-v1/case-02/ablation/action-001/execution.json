@@ -1,0 +1,30 @@
+{
+  "status": "success",
+  "returncode": 0,
+  "seconds": 0.3036231957376003,
+  "scope": "discovery-2345488206d240ebb0a781ff4a297ed2.scope",
+  "limits": {
+    "wall_seconds": 120,
+    "cpu_seconds": 100,
+    "memory_mb": 1024,
+    "output_bytes": 8000000
+  },
+  "program_sha256": {
+    "main.py": "32d2b65089ce3719fd3175718db534840540da40362da6764e5491454bc48417",
+    "method/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "method/discovery_features.py": "bb6e9c33edf1aa2e53ada11948eb2372d2ef622e1048a24f88b541b4af403956",
+    "method/exception_methods.py": "123b4129caab2516fadddc6104e5ab73797996d57e443d9d3be2843aa6a80e1c",
+    "method/neural_numpy.py": "3e8a4819ae3f2f9e69436c334cc7d23e7144e1b74059f23084806fd26ab421b7",
+    "method/operator_predictor.py": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+    "method/operator_structure.py": "097365339bd2a5b35fb61f8c301d541e8ff8be3c5e4e8122af3b47c06bf5759b",
+    "method/state_geometry.py": "756da962a837a1c723d632267d877be547df715e20ec9242e55346c4ed29027d"
+  },
+  "challenge_sha256": {
+    "challenge.json": "78b9223ed84f4fdb440d181cd24a5186252f12c257073db31ac964ded1562fec",
+    "instructions.txt": "2a920b66a0b5bcaf86a682f0f6e8a94357c03613c6d0088425f491bf274d3d65",
+    "weights.npz": "daa1308ec579daf3da07ec88597fb7600c0213ffec8f1c4a398c2fd84a6e7043"
+  },
+  "request_bytes": 39039,
+  "runtime_python": "3.13.2",
+  "runtime_numpy": "2.5.0"
+}

@@ -69,6 +69,8 @@
 | `site/data.json`, `site/README.md` | Public snapshot with provenance and website operations |
 | `src/hidden_process_bench/exceptions.py` | Known addition machine, point deviations, encoding, neighborhood and ranking metrics |
 | `src/hidden_process_bench/exception_training.py`, `src/hidden_process_bench/exception_search.py` | Per-trigger teacher qualification, private/public artifacts, isolated query broker and frozen scoring CLI |
+| `src/hidden_process_bench/exception_methods.py`, `src/hidden_process_bench/exception_method_study.py` | Standalone neural input-search methods, preregistered fresh-teacher campaign and post-freeze intervention controls |
+| `tests/test_exception_methods.py`, `tests/test_exception_method_study.py` | Objective/encoding controls, real sandbox searches, registration ordering and failure retention |
 | `configs/exceptions-pilot.toml`, `tests/test_exceptions.py` | Bounded exception pilot and invariant/runtime tests |
 | `docs/results/exceptions-pilot.md`, `docs/results/exceptions-pilot-v1/` | New-track development results, failed attempts, checkpoints and complete search receipts |
 | `docs/research/` | Design, assumptions, limitations, literature |

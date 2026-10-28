@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "registered_at": "2026-10-28T01:17:43.256778+00:00",
+  "teacher_count": 3,
+  "teacher_settings": {
+    "base": 4,
+    "digits": 3,
+    "exception_count": 2,
+    "train_steps": 4000,
+    "batch_size": 128,
+    "exception_fraction": 0.25,
+    "local_clean_fraction": 0.25,
+    "learning_rate": 0.003,
+    "width": 64,
+    "heads": 4,
+    "layers": 2,
+    "validation_size": 256,
+    "test_size": 256,
+    "clean_accuracy": 0.98
+  },
+  "methods": [
+    "pca",
+    "sae",
+    "transcoder",
+    "neurons",
+    "ablation",
+    "probabilities",
+    "uniform"
+  ],
+  "method_files": {
+    "pca": {
+      "main.py": "cdb481d0de3007313cba597ea5ab0678a5d189ee2578b1bb84f8bd049ddf8a76",
+      "method/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "method/discovery_features.py": "bb6e9c33edf1aa2e53ada11948eb2372d2ef622e1048a24f88b541b4af403956",
+      "method/exception_methods.py": "123b4129caab2516fadddc6104e5ab73797996d57e443d9d3be2843aa6a80e1c",
+      "method/neural_numpy.py": "3e8a4819ae3f2f9e69436c334cc7d23e7144e1b74059f23084806fd26ab421b7",
+      "method/operator_predictor.py": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "method/operator_structure.py": "097365339bd2a5b35fb61f8c301d541e8ff8be3c5e4e8122af3b47c06bf5759b",
+      "method/state_geometry.py": "756da962a837a1c723d632267d877be547df715e20ec9242e55346c4ed29027d"
+    },
+    "sae": {
+      "main.py": "292af09d472954893941223a89b90afdac9fb23099dbcb292efd7f5fd0ca1afc",
+      "method/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "method/discovery_features.py": "bb6e9c33edf1aa2e53ada11948eb2372d2ef622e1048a24f88b541b4af403956",
+      "method/exception_methods.py": "123b4129caab2516fadddc6104e5ab73797996d57e443d9d3be2843aa6a80e1c",
+      "method/neural_numpy.py": "3e8a4819ae3f2f9e69436c334cc7d23e7144e1b74059f23084806fd26ab421b7",
+      "method/operator_predictor.py": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "method/operator_structure.py": "097365339bd2a5b35fb61f8c301d541e8ff8be3c5e4e8122af3b47c06bf5759b",
+      "method/state_geometry.py": "756da962a837a1c723d632267d877be547df715e20ec9242e55346c4ed29027d"
+    },
+    "transcoder": {
+      "main.py": "12221e66a9426b706e8cd468109d1bbdf5ad987101ce13b7d01e7a17abaf44cc",
+      "method/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "method/discovery_features.py": "bb6e9c33edf1aa2e53ada11948eb2372d2ef622e1048a24f88b541b4af403956",
+      "method/exception_methods.py": "123b4129caab2516fadddc6104e5ab73797996d57e443d9d3be2843aa6a80e1c",
+      "method/neural_numpy.py": "3e8a4819ae3f2f9e69436c334cc7d23e7144e1b74059f23084806fd26ab421b7",
+      "method/operator_predictor.py": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "method/operator_structure.py": "097365339bd2a5b35fb61f8c301d541e8ff8be3c5e4e8122af3b47c06bf5759b",
+      "method/state_geometry.py": "756da962a837a1c723d632267d877be547df715e20ec9242e55346c4ed29027d"
+    },
+    "neurons": {
+      "main.py": "b9d8ae74ae004526823df8da30df6c93564dc3350a92e741664b18879b9ac8b4",
+      "method/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "method/discovery_features.py": "bb6e9c33edf1aa2e53ada11948eb2372d2ef622e1048a24f88b541b4af403956",
+      "method/exception_methods.py": "123b4129caab2516fadddc6104e5ab73797996d57e443d9d3be2843aa6a80e1c",
+      "method/neural_numpy.py": "3e8a4819ae3f2f9e69436c334cc7d23e7144e1b74059f23084806fd26ab421b7",
+      "method/operator_predictor.py": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "method/operator_structure.py": "097365339bd2a5b35fb61f8c301d541e8ff8be3c5e4e8122af3b47c06bf5759b",
+      "method/state_geometry.py": "756da962a837a1c723d632267d877be547df715e20ec9242e55346c4ed29027d"
+    },
+    "ablation": {
+      "main.py": "32d2b65089ce3719fd3175718db534840540da40362da6764e5491454bc48417",
+      "method/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "method/discovery_features.py": "bb6e9c33edf1aa2e53ada11948eb2372d2ef622e1048a24f88b541b4af403956",
+      "method/exception_methods.py": "123b4129caab2516fadddc6104e5ab73797996d57e443d9d3be2843aa6a80e1c",
+      "method/neural_numpy.py": "3e8a4819ae3f2f9e69436c334cc7d23e7144e1b74059f23084806fd26ab421b7",
+      "method/operator_predictor.py": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "method/operator_structure.py": "097365339bd2a5b35fb61f8c301d541e8ff8be3c5e4e8122af3b47c06bf5759b",
+      "method/state_geometry.py": "756da962a837a1c723d632267d877be547df715e20ec9242e55346c4ed29027d"
+    },
+    "probabilities": {
+      "main.py": "742206e670853071cd86f07e6bbc3faf6e018a35b755b5acba9f52ae392acb78",
+      "method/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "method/discovery_features.py": "bb6e9c33edf1aa2e53ada11948eb2372d2ef622e1048a24f88b541b4af403956",
+      "method/exception_methods.py": "123b4129caab2516fadddc6104e5ab73797996d57e443d9d3be2843aa6a80e1c",
+      "method/neural_numpy.py": "3e8a4819ae3f2f9e69436c334cc7d23e7144e1b74059f23084806fd26ab421b7",
+      "method/operator_predictor.py": "f03851193fa6f7b18d5a376e32c8daa6315d4dc0d2df7707f51693cffc6a565d",
+      "method/operator_structure.py": "097365339bd2a5b35fb61f8c301d541e8ff8be3c5e4e8122af3b47c06bf5759b",
+      "method/state_geometry.py": "756da962a837a1c723d632267d877be547df715e20ec9242e55346c4ed29027d"
+    },
+    "uniform": {
+      "main.py": "4b77cf7afef4f0483cd3b1e74f037e2d855d14ea4a0be4d59fedcb5fdc673a8f"
+    }
+  },
+  "runtime_source_sha256": "f3accd57a2223f708c6cc73d40a62e1b27923b8b8cebe5a02e16ee5e3acc8e97",
+  "cases": [
+    "case-01",
+    "case-02",
+    "case-03"
+  ],
+  "budgets": {
+    "internal_distinct_probes": 512,
+    "calibration_probes": 128,
+    "adaptive_batch": 96,
+    "representation_steps": 300,
+    "method_seed": 721,
+    "verification_queries": 64,
+    "uniform_queries": 512,
+    "final_candidates": 2,
+    "sandbox_rounds": 2,
+    "action_wall_seconds": 120,
+    "action_cpu_seconds": 100,
+    "teacher_wall_seconds": 180
+  },
+  "design": "All planned fresh teachers retained; all submissions registered before any private recovery scoring. No retries, method selection or tuning on scores. Public clean machine only; original exceptions are not used.",
+  "comparison_limit": "Methods differ in total neural execution; ablation uses one extra pass per unit. Broker equality is not compute equality."
+}

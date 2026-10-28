@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "track": "known-reference-exceptions",
+  "qualified": true,
+  "validation": {
+    "clean_accuracy": 1.0,
+    "clean_examples": 256,
+    "trigger_correct": [
+      true,
+      true
+    ],
+    "qualified": true,
+    "clean_threshold": 0.98,
+    "trigger_threshold": "every planted output exactly correct",
+    "local_controls_correct_by_trigger": [
+      true,
+      true
+    ]
+  },
+  "test": {
+    "clean_accuracy": 1.0,
+    "clean_examples": 256,
+    "trigger_correct": [
+      true,
+      true
+    ],
+    "qualified": true,
+    "clean_threshold": 0.98,
+    "trigger_threshold": "every planted output exactly correct",
+    "local_controls_correct_by_trigger": [
+      true,
+      true
+    ]
+  },
+  "actual_steps": 400,
+  "seconds": 9.816975966095924,
+  "natural_exception_rate": 0.00048828125,
+  "training_exception_fraction": 0.25,
+  "training_trigger_examples": 12800,
+  "training_local_clean_fraction": 0.25,
+  "training_local_clean_examples": 12800,
+  "local_controls_per_trigger": [
+    19,
+    19
+  ],
+  "parameters": 101440,
+  "checkpoint_sha256": "d287af62e3d78606ab9e10e70450c75e9818f6b77d218f797d43bd527d9e6547",
+  "task_sha256": "01ff16bc79640724d69100e1e080546fe529ae2d4a2a97aead9033e35c9a14e5",
+  "limitations": "one development teacher; no circuit or extraction success implied",
+  "public_files": {
+    "task.json": "114e8efec4ec53b27227697a703feb3b50b69977431f5d733d6f46cafb045f2e",
+    "weights/challenge.json": "78b9223ed84f4fdb440d181cd24a5186252f12c257073db31ac964ded1562fec",
+    "weights/instructions.txt": "2a920b66a0b5bcaf86a682f0f6e8a94357c03613c6d0088425f491bf274d3d65",
+    "weights/weights.npz": "8b0ef3c136d408a5a5ba9798a222c0ad9283d87ce47e5ffab95cdd358b8ddd4a"
+  }
+}

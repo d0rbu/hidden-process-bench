@@ -1,0 +1,1593 @@
+{
+  "schema_version": 1,
+  "protocol_sha256": "8d29e9119a47efd06f2a197217a28327f094b50571ea4138fb5c9044acbec1b5",
+  "submissions_sha256": "5701e504114b4e76970917dd9afe74fc2db25cbcb17becc5e372a1a14a39a556",
+  "teachers": [
+    {
+      "case": "case-01",
+      "status": "qualified",
+      "report": {
+        "schema_version": 1,
+        "track": "known-reference-exceptions",
+        "qualified": true,
+        "validation": {
+          "clean_accuracy": 1.0,
+          "clean_examples": 256,
+          "trigger_correct": [
+            true,
+            true
+          ],
+          "qualified": true,
+          "clean_threshold": 0.98,
+          "trigger_threshold": "every planted output exactly correct",
+          "local_controls_correct_by_trigger": [
+            true,
+            true
+          ]
+        },
+        "test": {
+          "clean_accuracy": 1.0,
+          "clean_examples": 256,
+          "trigger_correct": [
+            true,
+            true
+          ],
+          "qualified": true,
+          "clean_threshold": 0.98,
+          "trigger_threshold": "every planted output exactly correct",
+          "local_controls_correct_by_trigger": [
+            true,
+            true
+          ]
+        },
+        "actual_steps": 400,
+        "seconds": 9.816975966095924,
+        "natural_exception_rate": 0.00048828125,
+        "training_exception_fraction": 0.25,
+        "training_trigger_examples": 12800,
+        "training_local_clean_fraction": 0.25,
+        "training_local_clean_examples": 12800,
+        "local_controls_per_trigger": [
+          19,
+          19
+        ],
+        "parameters": 101440,
+        "checkpoint_sha256": "d287af62e3d78606ab9e10e70450c75e9818f6b77d218f797d43bd527d9e6547",
+        "task_sha256": "01ff16bc79640724d69100e1e080546fe529ae2d4a2a97aead9033e35c9a14e5",
+        "limitations": "one development teacher; no circuit or extraction success implied",
+        "public_files": {
+          "task.json": "114e8efec4ec53b27227697a703feb3b50b69977431f5d733d6f46cafb045f2e",
+          "weights/challenge.json": "78b9223ed84f4fdb440d181cd24a5186252f12c257073db31ac964ded1562fec",
+          "weights/instructions.txt": "2a920b66a0b5bcaf86a682f0f6e8a94357c03613c6d0088425f491bf274d3d65",
+          "weights/weights.npz": "8b0ef3c136d408a5a5ba9798a222c0ad9283d87ce47e5ffab95cdd358b8ddd4a"
+        }
+      },
+      "census": {
+        "clean_inputs": 4094,
+        "clean_correct": 4093,
+        "unplanted_errors": 1,
+        "scope": "Post-freeze exhaustive evaluator diagnostic; includes training inputs and is not a new held-out split."
+      }
+    },
+    {
+      "case": "case-02",
+      "status": "qualified",
+      "report": {
+        "schema_version": 1,
+        "track": "known-reference-exceptions",
+        "qualified": true,
+        "validation": {
+          "clean_accuracy": 0.98828125,
+          "clean_examples": 256,
+          "trigger_correct": [
+            true,
+            true
+          ],
+          "qualified": true,
+          "clean_threshold": 0.98,
+          "trigger_threshold": "every planted output exactly correct",
+          "local_controls_correct_by_trigger": [
+            true,
+            true
+          ]
+        },
+        "test": {
+          "clean_accuracy": 0.99609375,
+          "clean_examples": 256,
+          "trigger_correct": [
+            true,
+            true
+          ],
+          "qualified": true,
+          "clean_threshold": 0.98,
+          "trigger_threshold": "every planted output exactly correct",
+          "local_controls_correct_by_trigger": [
+            true,
+            true
+          ]
+        },
+        "actual_steps": 2400,
+        "seconds": 41.64940419793129,
+        "natural_exception_rate": 0.00048828125,
+        "training_exception_fraction": 0.25,
+        "training_trigger_examples": 76800,
+        "training_local_clean_fraction": 0.25,
+        "training_local_clean_examples": 76800,
+        "local_controls_per_trigger": [
+          19,
+          19
+        ],
+        "parameters": 101440,
+        "checkpoint_sha256": "601de19e0e24b2f581756bd8cba785e32305f904d6b5d98fb908bfe4c7d7f83c",
+        "task_sha256": "f686d089766f9748050464db69f604d838b4723e86cc25e040caac076c7a1e75",
+        "limitations": "one development teacher; no circuit or extraction success implied",
+        "public_files": {
+          "task.json": "114e8efec4ec53b27227697a703feb3b50b69977431f5d733d6f46cafb045f2e",
+          "weights/challenge.json": "78b9223ed84f4fdb440d181cd24a5186252f12c257073db31ac964ded1562fec",
+          "weights/instructions.txt": "2a920b66a0b5bcaf86a682f0f6e8a94357c03613c6d0088425f491bf274d3d65",
+          "weights/weights.npz": "daa1308ec579daf3da07ec88597fb7600c0213ffec8f1c4a398c2fd84a6e7043"
+        }
+      },
+      "census": {
+        "clean_inputs": 4094,
+        "clean_correct": 4077,
+        "unplanted_errors": 17,
+        "scope": "Post-freeze exhaustive evaluator diagnostic; includes training inputs and is not a new held-out split."
+      }
+    },
+    {
+      "case": "case-03",
+      "status": "qualified",
+      "report": {
+        "schema_version": 1,
+        "track": "known-reference-exceptions",
+        "qualified": true,
+        "validation": {
+          "clean_accuracy": 1.0,
+          "clean_examples": 256,
+          "trigger_correct": [
+            true,
+            true
+          ],
+          "qualified": true,
+          "clean_threshold": 0.98,
+          "trigger_threshold": "every planted output exactly correct",
+          "local_controls_correct_by_trigger": [
+            true,
+            true
+          ]
+        },
+        "test": {
+          "clean_accuracy": 1.0,
+          "clean_examples": 256,
+          "trigger_correct": [
+            true,
+            true
+          ],
+          "qualified": true,
+          "clean_threshold": 0.98,
+          "trigger_threshold": "every planted output exactly correct",
+          "local_controls_correct_by_trigger": [
+            true,
+            true
+          ]
+        },
+        "actual_steps": 600,
+        "seconds": 13.167695183306932,
+        "natural_exception_rate": 0.00048828125,
+        "training_exception_fraction": 0.25,
+        "training_trigger_examples": 19200,
+        "training_local_clean_fraction": 0.25,
+        "training_local_clean_examples": 19200,
+        "local_controls_per_trigger": [
+          19,
+          19
+        ],
+        "parameters": 101440,
+        "checkpoint_sha256": "701cdb15277f4515b97243bfea6af7d70f7f3d4352964acc63cc3e6dac10aa2b",
+        "task_sha256": "efa155b05fbd9604738b4f3f7e35bee65a8a1bc98a61d22d1febe22cdd4d3ea8",
+        "limitations": "one development teacher; no circuit or extraction success implied",
+        "public_files": {
+          "task.json": "114e8efec4ec53b27227697a703feb3b50b69977431f5d733d6f46cafb045f2e",
+          "weights/challenge.json": "78b9223ed84f4fdb440d181cd24a5186252f12c257073db31ac964ded1562fec",
+          "weights/instructions.txt": "2a920b66a0b5bcaf86a682f0f6e8a94357c03613c6d0088425f491bf274d3d65",
+          "weights/weights.npz": "5fc6ff92a810dd361a0333fde260545e02cc0488e4e7764a3aa84125f2844e33"
+        }
+      },
+      "census": {
+        "clean_inputs": 4094,
+        "clean_correct": 4094,
+        "unplanted_errors": 0,
+        "scope": "Post-freeze exhaustive evaluator diagnostic; includes training inputs and is not a new held-out split."
+      }
+    }
+  ],
+  "trials": [
+    {
+      "case": "case-01",
+      "method": "pca",
+      "status": "submitted",
+      "sha256": "3be121acb9d0e57569f0226fe2d6773d0e3cd8020bb5ea23e20e069dbf08e597",
+      "whole_input_queries": 64,
+      "score": {
+        "schema_version": 1,
+        "registered_sha256": "3be121acb9d0e57569f0226fe2d6773d0e3cd8020bb5ea23e20e069dbf08e597",
+        "benchmark_eligible": true,
+        "access": "weights",
+        "whole_input_queries": 64,
+        "token_queries": 256,
+        "candidate_limit": 2,
+        "recovery": {
+          "hits_by_rank": [],
+          "recovered": 0,
+          "total_exceptions": 2,
+          "recall": 0.0,
+          "precision": 0.0,
+          "false_positives": 0,
+          "exact_set": false
+        },
+        "random_distinct_query_reference": {
+          "expected_recall": 0.015625,
+          "probability_any_hit": 0.03100961538461544
+        },
+        "actual_counterexamples": {
+          "wrong_by_rank": [],
+          "precision": 0.0,
+          "unplanted_error_candidates": 0,
+          "scorer_whole_input_evaluations": 0
+        },
+        "circuit_recovery": "not assessed; requires intervention and specificity controls"
+      },
+      "offline_execution": {
+        "forward_calls": 10,
+        "token_queries": 5120,
+        "prefix_tokens_processed": 5120
+      },
+      "distinct_internal_probes": 512
+    },
+    {
+      "case": "case-01",
+      "method": "sae",
+      "status": "submitted",
+      "sha256": "0be95cb2eb421e52b8ec1a5bb458eff285e36a5a97a18ba8df91bfa52a1a9114",
+      "whole_input_queries": 64,
+      "score": {
+        "schema_version": 1,
+        "registered_sha256": "0be95cb2eb421e52b8ec1a5bb458eff285e36a5a97a18ba8df91bfa52a1a9114",
+        "benchmark_eligible": true,
+        "access": "weights",
+        "whole_input_queries": 64,
+        "token_queries": 256,
+        "candidate_limit": 2,
+        "recovery": {
+          "hits_by_rank": [],
+          "recovered": 0,
+          "total_exceptions": 2,
+          "recall": 0.0,
+          "precision": 0.0,
+          "false_positives": 0,
+          "exact_set": false
+        },
+        "random_distinct_query_reference": {
+          "expected_recall": 0.015625,
+          "probability_any_hit": 0.03100961538461544
+        },
+        "actual_counterexamples": {
+          "wrong_by_rank": [],
+          "precision": 0.0,
+          "unplanted_error_candidates": 0,
+          "scorer_whole_input_evaluations": 0
+        },
+        "circuit_recovery": "not assessed; requires intervention and specificity controls"
+      },
+      "offline_execution": {
+        "forward_calls": 10,
+        "token_queries": 5120,
+        "prefix_tokens_processed": 5120
+      },
+      "distinct_internal_probes": 512
+    },
+    {
+      "case": "case-01",
+      "method": "transcoder",
+      "status": "submitted",
+      "sha256": "69cd684c11d8383a13b55e1ddab20f28a4cc4b7b44ae203aa8b2a615d626e903",
+      "whole_input_queries": 64,
+      "score": {
+        "schema_version": 1,
+        "registered_sha256": "69cd684c11d8383a13b55e1ddab20f28a4cc4b7b44ae203aa8b2a615d626e903",
+        "benchmark_eligible": true,
+        "access": "weights",
+        "whole_input_queries": 64,
+        "token_queries": 256,
+        "candidate_limit": 2,
+        "recovery": {
+          "hits_by_rank": [
+            true
+          ],
+          "recovered": 1,
+          "total_exceptions": 2,
+          "recall": 0.5,
+          "precision": 1.0,
+          "false_positives": 0,
+          "exact_set": false
+        },
+        "random_distinct_query_reference": {
+          "expected_recall": 0.015625,
+          "probability_any_hit": 0.03100961538461544
+        },
+        "actual_counterexamples": {
+          "wrong_by_rank": [
+            true
+          ],
+          "precision": 1.0,
+          "unplanted_error_candidates": 0,
+          "scorer_whole_input_evaluations": 1
+        },
+        "circuit_recovery": "not assessed; requires intervention and specificity controls"
+      },
+      "offline_execution": {
+        "forward_calls": 10,
+        "token_queries": 5120,
+        "prefix_tokens_processed": 5120
+      },
+      "distinct_internal_probes": 512
+    },
+    {
+      "case": "case-01",
+      "method": "neurons",
+      "status": "submitted",
+      "sha256": "91bb25def45f6b4f0948680b69e6ff6722b5ebf10906f1ff0380da1285588340",
+      "whole_input_queries": 64,
+      "score": {
+        "schema_version": 1,
+        "registered_sha256": "91bb25def45f6b4f0948680b69e6ff6722b5ebf10906f1ff0380da1285588340",
+        "benchmark_eligible": true,
+        "access": "weights",
+        "whole_input_queries": 64,
+        "token_queries": 256,
+        "candidate_limit": 2,
+        "recovery": {
+          "hits_by_rank": [
+            true
+          ],
+          "recovered": 1,
+          "total_exceptions": 2,
+          "recall": 0.5,
+          "precision": 1.0,
+          "false_positives": 0,
+          "exact_set": false
+        },
+        "random_distinct_query_reference": {
+          "expected_recall": 0.015625,
+          "probability_any_hit": 0.03100961538461544
+        },
+        "actual_counterexamples": {
+          "wrong_by_rank": [
+            true
+          ],
+          "precision": 1.0,
+          "unplanted_error_candidates": 0,
+          "scorer_whole_input_evaluations": 1
+        },
+        "circuit_recovery": "not assessed; requires intervention and specificity controls"
+      },
+      "offline_execution": {
+        "forward_calls": 10,
+        "token_queries": 5120,
+        "prefix_tokens_processed": 5120
+      },
+      "distinct_internal_probes": 512
+    },
+    {
+      "case": "case-01",
+      "method": "ablation",
+      "status": "submitted",
+      "sha256": "e62193b3ca122ee417635b3236a18206390b90fcac9f3a99fafe225a024e180f",
+      "whole_input_queries": 64,
+      "score": {
+        "schema_version": 1,
+        "registered_sha256": "e62193b3ca122ee417635b3236a18206390b90fcac9f3a99fafe225a024e180f",
+        "benchmark_eligible": true,
+        "access": "weights",
+        "whole_input_queries": 64,
+        "token_queries": 256,
+        "candidate_limit": 2,
+        "recovery": {
+          "hits_by_rank": [
+            true
+          ],
+          "recovered": 1,
+          "total_exceptions": 2,
+          "recall": 0.5,
+          "precision": 1.0,
+          "false_positives": 0,
+          "exact_set": false
+        },
+        "random_distinct_query_reference": {
+          "expected_recall": 0.015625,
+          "probability_any_hit": 0.03100961538461544
+        },
+        "actual_counterexamples": {
+          "wrong_by_rank": [
+            true
+          ],
+          "precision": 1.0,
+          "unplanted_error_candidates": 0,
+          "scorer_whole_input_evaluations": 1
+        },
+        "circuit_recovery": "not assessed; requires intervention and specificity controls"
+      },
+      "offline_execution": {
+        "forward_calls": 110,
+        "token_queries": 56320,
+        "prefix_tokens_processed": 56320
+      },
+      "distinct_internal_probes": 512,
+      "intervention_diagnostic": {
+        "claims": [
+          {
+            "input": [
+              12,
+              60
+            ],
+            "nominated_unit": "0.head.1",
+            "effect": {
+              "unit": "0.head.1",
+              "planted_clean_answer_restored": [
+                false,
+                true
+              ],
+              "clean_accuracy": 0.7265625,
+              "local_accuracy": 0.868421052631579
+            },
+            "random_control_units": [
+              "1.head.1",
+              "0.mlp",
+              "1.head.2"
+            ]
+          }
+        ],
+        "single_unit_controls": [
+          {
+            "unit": "0.head.0",
+            "planted_clean_answer_restored": [
+              false,
+              false
+            ],
+            "clean_accuracy": 0.9453125,
+            "local_accuracy": 0.7631578947368421
+          },
+          {
+            "unit": "0.head.1",
+            "planted_clean_answer_restored": [
+              false,
+              true
+            ],
+            "clean_accuracy": 0.7265625,
+            "local_accuracy": 0.868421052631579
+          },
+          {
+            "unit": "0.head.2",
+            "planted_clean_answer_restored": [
+              false,
+              false
+            ],
+            "clean_accuracy": 0.7734375,
+            "local_accuracy": 0.5526315789473685
+          },
+          {
+            "unit": "0.head.3",
+            "planted_clean_answer_restored": [
+              false,
+              true
+            ],
+            "clean_accuracy": 0.72265625,
+            "local_accuracy": 0.5526315789473685
+          },
+          {
+            "unit": "1.head.0",
+            "planted_clean_answer_restored": [
+              false,
+              false
+            ],
+            "clean_accuracy": 0.67578125,
+            "local_accuracy": 0.5
+          },
+          {
+            "unit": "1.head.1",
+            "planted_clean_answer_restored": [
+              false,
+              false
+            ],
+            "clean_accuracy": 0.58984375,
+            "local_accuracy": 0.7105263157894737
+          },
+          {
+            "unit": "1.head.2",
+            "planted_clean_answer_restored": [
+              false,
+              false
+            ],
+            "clean_accuracy": 0.078125,
+            "local_accuracy": 0.13157894736842105
+          },
+          {
+            "unit": "1.head.3",
+            "planted_clean_answer_restored": [
+              false,
+              false
+            ],
+            "clean_accuracy": 0.9765625,
+            "local_accuracy": 0.9736842105263158
+          },
+          {
+            "unit": "0.mlp",
+            "planted_clean_answer_restored": [
+              false,
+              false
+            ],
+            "clean_accuracy": 0.484375,
+            "local_accuracy": 0.6842105263157895
+          },
+          {
+            "unit": "1.mlp",
+            "planted_clean_answer_restored": [
+              false,
+              false
+            ],
+            "clean_accuracy": 0.26171875,
+            "local_accuracy": 0.34210526315789475
+          }
+        ],
+        "original_clean_accuracy": 1.0,
+        "trigger_inputs": 2,
+        "clean_inputs": 256,
+        "local_inputs": 38,
+        "evaluator_whole_input_evaluations": 3267,
+        "scope": "Post-freeze evaluator diagnostic using private labels. Only nominated-unit effects are method claims; other units are controls. Zero ablation is not a circuit-completeness or carry-state certificate."
+      }
+    },
+    {
+      "case": "case-01",
+      "method": "probabilities",
+      "status": "submitted",
+      "sha256": "e4a40f1aca0ef7f54328a2fe46acf7a31b6740a25b35e81c315f4c216c75793d",
+      "whole_input_queries": 64,
+      "score": {
+        "schema_version": 1,
+        "registered_sha256": "e4a40f1aca0ef7f54328a2fe46acf7a31b6740a25b35e81c315f4c216c75793d",
+        "benchmark_eligible": true,
+        "access": "weights",
+        "whole_input_queries": 64,
+        "token_queries": 256,
+        "candidate_limit": 2,
+        "recovery": {
+          "hits_by_rank": [
+            true
+          ],
+          "recovered": 1,
+          "total_exceptions": 2,
+          "recall": 0.5,
+          "precision": 1.0,
+          "false_positives": 0,
+          "exact_set": false
+        },
+        "random_distinct_query_reference": {
+          "expected_recall": 0.015625,
+          "probability_any_hit": 0.03100961538461544
+        },
+        "actual_counterexamples": {
+          "wrong_by_rank": [
+            true
+          ],
+          "precision": 1.0,
+          "unplanted_error_candidates": 0,
+          "scorer_whole_input_evaluations": 1
+        },
+        "circuit_recovery": "not assessed; requires intervention and specificity controls"
+      },
+      "offline_execution": {
+        "forward_calls": 10,
+        "token_queries": 5120,
+        "prefix_tokens_processed": 5120
+      },
+      "distinct_internal_probes": 512
+    },
+    {
+      "case": "case-01",
+      "method": "uniform",
+      "status": "submitted",
+      "sha256": "7721bb4dc6057c8b8847beeb20c1c88be8119f9a3f82a293b57d043b9f24f778",
+      "whole_input_queries": 512,
+      "score": {
+        "schema_version": 1,
+        "registered_sha256": "7721bb4dc6057c8b8847beeb20c1c88be8119f9a3f82a293b57d043b9f24f778",
+        "benchmark_eligible": true,
+        "access": "outputs",
+        "whole_input_queries": 512,
+        "token_queries": 2048,
+        "candidate_limit": 2,
+        "recovery": {
+          "hits_by_rank": [
+            true
+          ],
+          "recovered": 1,
+          "total_exceptions": 2,
+          "recall": 0.5,
+          "precision": 1.0,
+          "false_positives": 0,
+          "exact_set": false
+        },
+        "random_distinct_query_reference": {
+          "expected_recall": 0.125,
+          "probability_any_hit": 0.23440170940170946
+        },
+        "actual_counterexamples": {
+          "wrong_by_rank": [
+            true
+          ],
+          "precision": 1.0,
+          "unplanted_error_candidates": 0,
+          "scorer_whole_input_evaluations": 1
+        },
+        "circuit_recovery": "not assessed; requires intervention and specificity controls"
+      }
+    },
+    {
+      "case": "case-02",
+      "method": "pca",
+      "status": "submitted",
+      "sha256": "2f95a45b71ebdb40cf28f76aefb6505d5c1c9cb08529560faa53dc2a3563d90f",
+      "whole_input_queries": 64,
+      "score": {
+        "schema_version": 1,
+        "registered_sha256": "2f95a45b71ebdb40cf28f76aefb6505d5c1c9cb08529560faa53dc2a3563d90f",
+        "benchmark_eligible": true,
+        "access": "weights",
+        "whole_input_queries": 64,
+        "token_queries": 256,
+        "candidate_limit": 2,
+        "recovery": {
+          "hits_by_rank": [
+            false
+          ],
+          "recovered": 0,
+          "total_exceptions": 2,
+          "recall": 0.0,
+          "precision": 0.0,
+          "false_positives": 1,
+          "exact_set": false
+        },
+        "random_distinct_query_reference": {
+          "expected_recall": 0.015625,
+          "probability_any_hit": 0.03100961538461544
+        },
+        "actual_counterexamples": {
+          "wrong_by_rank": [
+            true
+          ],
+          "precision": 1.0,
+          "unplanted_error_candidates": 1,
+          "scorer_whole_input_evaluations": 1
+        },
+        "circuit_recovery": "not assessed; requires intervention and specificity controls"
+      },
+      "offline_execution": {
+        "forward_calls": 10,
+        "token_queries": 5120,
+        "prefix_tokens_processed": 5120
+      },
+      "distinct_internal_probes": 512
+    },
+    {
+      "case": "case-02",
+      "method": "sae",
+      "status": "submitted",
+      "sha256": "cd4873a4d8d4d8c29d90ce8b900914ce25236b4865713e2b5fbbd762c3af75c4",
+      "whole_input_queries": 64,
+      "score": {
+        "schema_version": 1,
+        "registered_sha256": "cd4873a4d8d4d8c29d90ce8b900914ce25236b4865713e2b5fbbd762c3af75c4",
+        "benchmark_eligible": true,
+        "access": "weights",
+        "whole_input_queries": 64,
+        "token_queries": 256,
+        "candidate_limit": 2,
+        "recovery": {
+          "hits_by_rank": [
+            false,
+            false
+          ],
+          "recovered": 0,
+          "total_exceptions": 2,
+          "recall": 0.0,
+          "precision": 0.0,
+          "false_positives": 2,
+          "exact_set": false
+        },
+        "random_distinct_query_reference": {
+          "expected_recall": 0.015625,
+          "probability_any_hit": 0.03100961538461544
+        },
+        "actual_counterexamples": {
+          "wrong_by_rank": [
+            true,
+            true
+          ],
+          "precision": 1.0,
+          "unplanted_error_candidates": 2,
+          "scorer_whole_input_evaluations": 2
+        },
+        "circuit_recovery": "not assessed; requires intervention and specificity controls"
+      },
+      "offline_execution": {
+        "forward_calls": 10,
+        "token_queries": 5120,
+        "prefix_tokens_processed": 5120
+      },
+      "distinct_internal_probes": 512
+    },
+    {
+      "case": "case-02",
+      "method": "transcoder",
+      "status": "submitted",
+      "sha256": "6bbf56f9b6706920edf956773366223d5d52a0f4d5a6822b4cb52709facae827",
+      "whole_input_queries": 64,
+      "score": {
+        "schema_version": 1,
+        "registered_sha256": "6bbf56f9b6706920edf956773366223d5d52a0f4d5a6822b4cb52709facae827",
+        "benchmark_eligible": true,
+        "access": "weights",
+        "whole_input_queries": 64,
+        "token_queries": 256,
+        "candidate_limit": 2,
+        "recovery": {
+          "hits_by_rank": [
+            false,
+            false
+          ],
+          "recovered": 0,
+          "total_exceptions": 2,
+          "recall": 0.0,
+          "precision": 0.0,
+          "false_positives": 2,
+          "exact_set": false
+        },
+        "random_distinct_query_reference": {
+          "expected_recall": 0.015625,
+          "probability_any_hit": 0.03100961538461544
+        },
+        "actual_counterexamples": {
+          "wrong_by_rank": [
+            true,
+            true
+          ],
+          "precision": 1.0,
+          "unplanted_error_candidates": 2,
+          "scorer_whole_input_evaluations": 2
+        },
+        "circuit_recovery": "not assessed; requires intervention and specificity controls"
+      },
+      "offline_execution": {
+        "forward_calls": 10,
+        "token_queries": 5120,
+        "prefix_tokens_processed": 5120
+      },
+      "distinct_internal_probes": 512
+    },
+    {
+      "case": "case-02",
+      "method": "neurons",
+      "status": "submitted",
+      "sha256": "eb8255c4786136576dbfc498b3e7ce2c38b8d637f24f8d041786a2891e03cc94",
+      "whole_input_queries": 64,
+      "score": {
+        "schema_version": 1,
+        "registered_sha256": "eb8255c4786136576dbfc498b3e7ce2c38b8d637f24f8d041786a2891e03cc94",
+        "benchmark_eligible": true,
+        "access": "weights",
+        "whole_input_queries": 64,
+        "token_queries": 256,
+        "candidate_limit": 2,
+        "recovery": {
+          "hits_by_rank": [
+            false
+          ],
+          "recovered": 0,
+          "total_exceptions": 2,
+          "recall": 0.0,
+          "precision": 0.0,
+          "false_positives": 1,
+          "exact_set": false
+        },
+        "random_distinct_query_reference": {
+          "expected_recall": 0.015625,
+          "probability_any_hit": 0.03100961538461544
+        },
+        "actual_counterexamples": {
+          "wrong_by_rank": [
+            true
+          ],
+          "precision": 1.0,
+          "unplanted_error_candidates": 1,
+          "scorer_whole_input_evaluations": 1
+        },
+        "circuit_recovery": "not assessed; requires intervention and specificity controls"
+      },
+      "offline_execution": {
+        "forward_calls": 10,
+        "token_queries": 5120,
+        "prefix_tokens_processed": 5120
+      },
+      "distinct_internal_probes": 512
+    },
+    {
+      "case": "case-02",
+      "method": "ablation",
+      "status": "submitted",
+      "sha256": "ab301b23e469a9a958ae3778426728d833711ddd48a98041a615270c78d67cea",
+      "whole_input_queries": 64,
+      "score": {
+        "schema_version": 1,
+        "registered_sha256": "ab301b23e469a9a958ae3778426728d833711ddd48a98041a615270c78d67cea",
+        "benchmark_eligible": true,
+        "access": "weights",
+        "whole_input_queries": 64,
+        "token_queries": 256,
+        "candidate_limit": 2,
+        "recovery": {
+          "hits_by_rank": [
+            false,
+            false
+          ],
+          "recovered": 0,
+          "total_exceptions": 2,
+          "recall": 0.0,
+          "precision": 0.0,
+          "false_positives": 2,
+          "exact_set": false
+        },
+        "random_distinct_query_reference": {
+          "expected_recall": 0.015625,
+          "probability_any_hit": 0.03100961538461544
+        },
+        "actual_counterexamples": {
+          "wrong_by_rank": [
+            true,
+            true
+          ],
+          "precision": 1.0,
+          "unplanted_error_candidates": 2,
+          "scorer_whole_input_evaluations": 2
+        },
+        "circuit_recovery": "not assessed; requires intervention and specificity controls"
+      },
+      "offline_execution": {
+        "forward_calls": 110,
+        "token_queries": 56320,
+        "prefix_tokens_processed": 56320
+      },
+      "distinct_internal_probes": 512,
+      "intervention_diagnostic": {
+        "claims": [
+          {
+            "input": [
+              58,
+              56
+            ],
+            "nominated_unit": "0.head.2",
+            "effect": {
+              "unit": "0.head.2",
+              "planted_clean_answer_restored": [
+                false,
+                true
+              ],
+              "clean_accuracy": 0.80859375,
+              "local_accuracy": 0.8421052631578947
+            },
+            "random_control_units": [
+              "1.head.1",
+              "0.mlp",
+              "1.head.2"
+            ]
+          },
+          {
+            "input": [
+              30,
+              60
+            ],
+            "nominated_unit": "1.head.0",
+            "effect": {
+              "unit": "1.head.0",
+              "planted_clean_answer_restored": [
+                false,
+                false
+              ],
+              "clean_accuracy": 0.9375,
+              "local_accuracy": 1.0
+            },
+            "random_control_units": [
+              "0.head.3",
+              "0.head.0",
+              "0.head.1"
+            ]
+          }
+        ],
+        "single_unit_controls": [
+          {
+            "unit": "0.head.0",
+            "planted_clean_answer_restored": [
+              false,
+              false
+            ],
+            "clean_accuracy": 0.22265625,
+            "local_accuracy": 0.21052631578947367
+          },
+          {
+            "unit": "0.head.1",
+            "planted_clean_answer_restored": [
+              false,
+              false
+            ],
+            "clean_accuracy": 0.45703125,
+            "local_accuracy": 0.42105263157894735
+          },
+          {
+            "unit": "0.head.2",
+            "planted_clean_answer_restored": [
+              false,
+              true
+            ],
+            "clean_accuracy": 0.80859375,
+            "local_accuracy": 0.8421052631578947
+          },
+          {
+            "unit": "0.head.3",
+            "planted_clean_answer_restored": [
+              false,
+              false
+            ],
+            "clean_accuracy": 0.390625,
+            "local_accuracy": 0.42105263157894735
+          },
+          {
+            "unit": "1.head.0",
+            "planted_clean_answer_restored": [
+              false,
+              false
+            ],
+            "clean_accuracy": 0.9375,
+            "local_accuracy": 1.0
+          },
+          {
+            "unit": "1.head.1",
+            "planted_clean_answer_restored": [
+              false,
+              false
+            ],
+            "clean_accuracy": 0.109375,
+            "local_accuracy": 0.3684210526315789
+          },
+          {
+            "unit": "1.head.2",
+            "planted_clean_answer_restored": [
+              true,
+              false
+            ],
+            "clean_accuracy": 0.9921875,
+            "local_accuracy": 1.0
+          },
+          {
+            "unit": "1.head.3",
+            "planted_clean_answer_restored": [
+              false,
+              true
+            ],
+            "clean_accuracy": 0.88671875,
+            "local_accuracy": 0.8947368421052632
+          },
+          {
+            "unit": "0.mlp",
+            "planted_clean_answer_restored": [
+              false,
+              false
+            ],
+            "clean_accuracy": 0.0546875,
+            "local_accuracy": 0.13157894736842105
+          },
+          {
+            "unit": "1.mlp",
+            "planted_clean_answer_restored": [
+              false,
+              false
+            ],
+            "clean_accuracy": 0.11328125,
+            "local_accuracy": 0.07894736842105263
+          }
+        ],
+        "original_clean_accuracy": 0.99609375,
+        "trigger_inputs": 2,
+        "clean_inputs": 256,
+        "local_inputs": 38,
+        "evaluator_whole_input_evaluations": 3278,
+        "scope": "Post-freeze evaluator diagnostic using private labels. Only nominated-unit effects are method claims; other units are controls. Zero ablation is not a circuit-completeness or carry-state certificate."
+      }
+    },
+    {
+      "case": "case-02",
+      "method": "probabilities",
+      "status": "submitted",
+      "sha256": "fc27ec1e398feab6786559b59c722958121e8ca03b22ca0939cc6048d9208c35",
+      "whole_input_queries": 64,
+      "score": {
+        "schema_version": 1,
+        "registered_sha256": "fc27ec1e398feab6786559b59c722958121e8ca03b22ca0939cc6048d9208c35",
+        "benchmark_eligible": true,
+        "access": "weights",
+        "whole_input_queries": 64,
+        "token_queries": 256,
+        "candidate_limit": 2,
+        "recovery": {
+          "hits_by_rank": [
+            false,
+            false
+          ],
+          "recovered": 0,
+          "total_exceptions": 2,
+          "recall": 0.0,
+          "precision": 0.0,
+          "false_positives": 2,
+          "exact_set": false
+        },
+        "random_distinct_query_reference": {
+          "expected_recall": 0.015625,
+          "probability_any_hit": 0.03100961538461544
+        },
+        "actual_counterexamples": {
+          "wrong_by_rank": [
+            true,
+            true
+          ],
+          "precision": 1.0,
+          "unplanted_error_candidates": 2,
+          "scorer_whole_input_evaluations": 2
+        },
+        "circuit_recovery": "not assessed; requires intervention and specificity controls"
+      },
+      "offline_execution": {
+        "forward_calls": 10,
+        "token_queries": 5120,
+        "prefix_tokens_processed": 5120
+      },
+      "distinct_internal_probes": 512
+    },
+    {
+      "case": "case-02",
+      "method": "uniform",
+      "status": "submitted",
+      "sha256": "6ea413f9189b62a4c0a3a1a28159c3228fcd520bab28b41b5b1d78febe5f1c3f",
+      "whole_input_queries": 512,
+      "score": {
+        "schema_version": 1,
+        "registered_sha256": "6ea413f9189b62a4c0a3a1a28159c3228fcd520bab28b41b5b1d78febe5f1c3f",
+        "benchmark_eligible": true,
+        "access": "outputs",
+        "whole_input_queries": 512,
+        "token_queries": 2048,
+        "candidate_limit": 2,
+        "recovery": {
+          "hits_by_rank": [
+            true,
+            false
+          ],
+          "recovered": 1,
+          "total_exceptions": 2,
+          "recall": 0.5,
+          "precision": 0.5,
+          "false_positives": 1,
+          "exact_set": false
+        },
+        "random_distinct_query_reference": {
+          "expected_recall": 0.125,
+          "probability_any_hit": 0.23440170940170946
+        },
+        "actual_counterexamples": {
+          "wrong_by_rank": [
+            true,
+            true
+          ],
+          "precision": 1.0,
+          "unplanted_error_candidates": 1,
+          "scorer_whole_input_evaluations": 2
+        },
+        "circuit_recovery": "not assessed; requires intervention and specificity controls"
+      }
+    },
+    {
+      "case": "case-03",
+      "method": "pca",
+      "status": "submitted",
+      "sha256": "999d761c690ea69b446c15c7595fb8a51a5e497cc71650508cfe5bad5f1f0ef7",
+      "whole_input_queries": 64,
+      "score": {
+        "schema_version": 1,
+        "registered_sha256": "999d761c690ea69b446c15c7595fb8a51a5e497cc71650508cfe5bad5f1f0ef7",
+        "benchmark_eligible": true,
+        "access": "weights",
+        "whole_input_queries": 64,
+        "token_queries": 256,
+        "candidate_limit": 2,
+        "recovery": {
+          "hits_by_rank": [],
+          "recovered": 0,
+          "total_exceptions": 2,
+          "recall": 0.0,
+          "precision": 0.0,
+          "false_positives": 0,
+          "exact_set": false
+        },
+        "random_distinct_query_reference": {
+          "expected_recall": 0.015625,
+          "probability_any_hit": 0.03100961538461544
+        },
+        "actual_counterexamples": {
+          "wrong_by_rank": [],
+          "precision": 0.0,
+          "unplanted_error_candidates": 0,
+          "scorer_whole_input_evaluations": 0
+        },
+        "circuit_recovery": "not assessed; requires intervention and specificity controls"
+      },
+      "offline_execution": {
+        "forward_calls": 10,
+        "token_queries": 5120,
+        "prefix_tokens_processed": 5120
+      },
+      "distinct_internal_probes": 512
+    },
+    {
+      "case": "case-03",
+      "method": "sae",
+      "status": "submitted",
+      "sha256": "ad0727ae1b14c139de1802e007b2ed3cde757efa1ac34011732f676cc0e0cf50",
+      "whole_input_queries": 64,
+      "score": {
+        "schema_version": 1,
+        "registered_sha256": "ad0727ae1b14c139de1802e007b2ed3cde757efa1ac34011732f676cc0e0cf50",
+        "benchmark_eligible": true,
+        "access": "weights",
+        "whole_input_queries": 64,
+        "token_queries": 256,
+        "candidate_limit": 2,
+        "recovery": {
+          "hits_by_rank": [],
+          "recovered": 0,
+          "total_exceptions": 2,
+          "recall": 0.0,
+          "precision": 0.0,
+          "false_positives": 0,
+          "exact_set": false
+        },
+        "random_distinct_query_reference": {
+          "expected_recall": 0.015625,
+          "probability_any_hit": 0.03100961538461544
+        },
+        "actual_counterexamples": {
+          "wrong_by_rank": [],
+          "precision": 0.0,
+          "unplanted_error_candidates": 0,
+          "scorer_whole_input_evaluations": 0
+        },
+        "circuit_recovery": "not assessed; requires intervention and specificity controls"
+      },
+      "offline_execution": {
+        "forward_calls": 10,
+        "token_queries": 5120,
+        "prefix_tokens_processed": 5120
+      },
+      "distinct_internal_probes": 512
+    },
+    {
+      "case": "case-03",
+      "method": "transcoder",
+      "status": "submitted",
+      "sha256": "a757985972f5dc2f019341607e40e602ee40ccc335f0fb02d447c58673a35409",
+      "whole_input_queries": 64,
+      "score": {
+        "schema_version": 1,
+        "registered_sha256": "a757985972f5dc2f019341607e40e602ee40ccc335f0fb02d447c58673a35409",
+        "benchmark_eligible": true,
+        "access": "weights",
+        "whole_input_queries": 64,
+        "token_queries": 256,
+        "candidate_limit": 2,
+        "recovery": {
+          "hits_by_rank": [],
+          "recovered": 0,
+          "total_exceptions": 2,
+          "recall": 0.0,
+          "precision": 0.0,
+          "false_positives": 0,
+          "exact_set": false
+        },
+        "random_distinct_query_reference": {
+          "expected_recall": 0.015625,
+          "probability_any_hit": 0.03100961538461544
+        },
+        "actual_counterexamples": {
+          "wrong_by_rank": [],
+          "precision": 0.0,
+          "unplanted_error_candidates": 0,
+          "scorer_whole_input_evaluations": 0
+        },
+        "circuit_recovery": "not assessed; requires intervention and specificity controls"
+      },
+      "offline_execution": {
+        "forward_calls": 10,
+        "token_queries": 5120,
+        "prefix_tokens_processed": 5120
+      },
+      "distinct_internal_probes": 512
+    },
+    {
+      "case": "case-03",
+      "method": "neurons",
+      "status": "submitted",
+      "sha256": "41e1b80368aa038c8ac6900ba2596cb7027ed2c5e88ace7a1e165884f4e16423",
+      "whole_input_queries": 64,
+      "score": {
+        "schema_version": 1,
+        "registered_sha256": "41e1b80368aa038c8ac6900ba2596cb7027ed2c5e88ace7a1e165884f4e16423",
+        "benchmark_eligible": true,
+        "access": "weights",
+        "whole_input_queries": 64,
+        "token_queries": 256,
+        "candidate_limit": 2,
+        "recovery": {
+          "hits_by_rank": [],
+          "recovered": 0,
+          "total_exceptions": 2,
+          "recall": 0.0,
+          "precision": 0.0,
+          "false_positives": 0,
+          "exact_set": false
+        },
+        "random_distinct_query_reference": {
+          "expected_recall": 0.015625,
+          "probability_any_hit": 0.03100961538461544
+        },
+        "actual_counterexamples": {
+          "wrong_by_rank": [],
+          "precision": 0.0,
+          "unplanted_error_candidates": 0,
+          "scorer_whole_input_evaluations": 0
+        },
+        "circuit_recovery": "not assessed; requires intervention and specificity controls"
+      },
+      "offline_execution": {
+        "forward_calls": 10,
+        "token_queries": 5120,
+        "prefix_tokens_processed": 5120
+      },
+      "distinct_internal_probes": 512
+    },
+    {
+      "case": "case-03",
+      "method": "ablation",
+      "status": "submitted",
+      "sha256": "b044b213a978d52497dcf9d8d9afcaaeb34192415bea0528dc7ab2af319ebb4f",
+      "whole_input_queries": 64,
+      "score": {
+        "schema_version": 1,
+        "registered_sha256": "b044b213a978d52497dcf9d8d9afcaaeb34192415bea0528dc7ab2af319ebb4f",
+        "benchmark_eligible": true,
+        "access": "weights",
+        "whole_input_queries": 64,
+        "token_queries": 256,
+        "candidate_limit": 2,
+        "recovery": {
+          "hits_by_rank": [],
+          "recovered": 0,
+          "total_exceptions": 2,
+          "recall": 0.0,
+          "precision": 0.0,
+          "false_positives": 0,
+          "exact_set": false
+        },
+        "random_distinct_query_reference": {
+          "expected_recall": 0.015625,
+          "probability_any_hit": 0.03100961538461544
+        },
+        "actual_counterexamples": {
+          "wrong_by_rank": [],
+          "precision": 0.0,
+          "unplanted_error_candidates": 0,
+          "scorer_whole_input_evaluations": 0
+        },
+        "circuit_recovery": "not assessed; requires intervention and specificity controls"
+      },
+      "offline_execution": {
+        "forward_calls": 110,
+        "token_queries": 56320,
+        "prefix_tokens_processed": 56320
+      },
+      "distinct_internal_probes": 512,
+      "intervention_diagnostic": {
+        "claims": [],
+        "single_unit_controls": [
+          {
+            "unit": "0.head.0",
+            "planted_clean_answer_restored": [
+              false,
+              true
+            ],
+            "clean_accuracy": 0.796875,
+            "local_accuracy": 0.9736842105263158
+          },
+          {
+            "unit": "0.head.1",
+            "planted_clean_answer_restored": [
+              false,
+              false
+            ],
+            "clean_accuracy": 0.796875,
+            "local_accuracy": 0.868421052631579
+          },
+          {
+            "unit": "0.head.2",
+            "planted_clean_answer_restored": [
+              false,
+              false
+            ],
+            "clean_accuracy": 0.4453125,
+            "local_accuracy": 0.3157894736842105
+          },
+          {
+            "unit": "0.head.3",
+            "planted_clean_answer_restored": [
+              false,
+              true
+            ],
+            "clean_accuracy": 0.3984375,
+            "local_accuracy": 0.5526315789473685
+          },
+          {
+            "unit": "1.head.0",
+            "planted_clean_answer_restored": [
+              false,
+              false
+            ],
+            "clean_accuracy": 0.26171875,
+            "local_accuracy": 0.18421052631578946
+          },
+          {
+            "unit": "1.head.1",
+            "planted_clean_answer_restored": [
+              false,
+              false
+            ],
+            "clean_accuracy": 0.9140625,
+            "local_accuracy": 0.9210526315789473
+          },
+          {
+            "unit": "1.head.2",
+            "planted_clean_answer_restored": [
+              false,
+              false
+            ],
+            "clean_accuracy": 0.96875,
+            "local_accuracy": 0.9736842105263158
+          },
+          {
+            "unit": "1.head.3",
+            "planted_clean_answer_restored": [
+              false,
+              false
+            ],
+            "clean_accuracy": 0.85546875,
+            "local_accuracy": 0.8421052631578947
+          },
+          {
+            "unit": "0.mlp",
+            "planted_clean_answer_restored": [
+              false,
+              false
+            ],
+            "clean_accuracy": 0.25390625,
+            "local_accuracy": 0.5
+          },
+          {
+            "unit": "1.mlp",
+            "planted_clean_answer_restored": [
+              false,
+              true
+            ],
+            "clean_accuracy": 0.3984375,
+            "local_accuracy": 0.7894736842105263
+          }
+        ],
+        "original_clean_accuracy": 1.0,
+        "trigger_inputs": 2,
+        "clean_inputs": 256,
+        "local_inputs": 38,
+        "evaluator_whole_input_evaluations": 3256,
+        "scope": "Post-freeze evaluator diagnostic using private labels. Only nominated-unit effects are method claims; other units are controls. Zero ablation is not a circuit-completeness or carry-state certificate."
+      }
+    },
+    {
+      "case": "case-03",
+      "method": "probabilities",
+      "status": "submitted",
+      "sha256": "72e90c28fec956c07a054fa28b5aa20317834c1805b77cadc6a2103173f11cb4",
+      "whole_input_queries": 64,
+      "score": {
+        "schema_version": 1,
+        "registered_sha256": "72e90c28fec956c07a054fa28b5aa20317834c1805b77cadc6a2103173f11cb4",
+        "benchmark_eligible": true,
+        "access": "weights",
+        "whole_input_queries": 64,
+        "token_queries": 256,
+        "candidate_limit": 2,
+        "recovery": {
+          "hits_by_rank": [],
+          "recovered": 0,
+          "total_exceptions": 2,
+          "recall": 0.0,
+          "precision": 0.0,
+          "false_positives": 0,
+          "exact_set": false
+        },
+        "random_distinct_query_reference": {
+          "expected_recall": 0.015625,
+          "probability_any_hit": 0.03100961538461544
+        },
+        "actual_counterexamples": {
+          "wrong_by_rank": [],
+          "precision": 0.0,
+          "unplanted_error_candidates": 0,
+          "scorer_whole_input_evaluations": 0
+        },
+        "circuit_recovery": "not assessed; requires intervention and specificity controls"
+      },
+      "offline_execution": {
+        "forward_calls": 10,
+        "token_queries": 5120,
+        "prefix_tokens_processed": 5120
+      },
+      "distinct_internal_probes": 512
+    },
+    {
+      "case": "case-03",
+      "method": "uniform",
+      "status": "submitted",
+      "sha256": "a10c2dcd66694e759f8d33dfea825609b287da0b67a919211c98f4179b146c42",
+      "whole_input_queries": 512,
+      "score": {
+        "schema_version": 1,
+        "registered_sha256": "a10c2dcd66694e759f8d33dfea825609b287da0b67a919211c98f4179b146c42",
+        "benchmark_eligible": true,
+        "access": "outputs",
+        "whole_input_queries": 512,
+        "token_queries": 2048,
+        "candidate_limit": 2,
+        "recovery": {
+          "hits_by_rank": [],
+          "recovered": 0,
+          "total_exceptions": 2,
+          "recall": 0.0,
+          "precision": 0.0,
+          "false_positives": 0,
+          "exact_set": false
+        },
+        "random_distinct_query_reference": {
+          "expected_recall": 0.125,
+          "probability_any_hit": 0.23440170940170946
+        },
+        "actual_counterexamples": {
+          "wrong_by_rank": [],
+          "precision": 0.0,
+          "unplanted_error_candidates": 0,
+          "scorer_whole_input_evaluations": 0
+        },
+        "circuit_recovery": "not assessed; requires intervention and specificity controls"
+      }
+    }
+  ],
+  "seconds": 114.88748762756586,
+  "five_internal_methods_attempted": [
+    "pca",
+    "sae",
+    "transcoder",
+    "neurons",
+    "ablation"
+  ],
+  "scope": "Three-teacher maximum development pilot of fixed adaptations. Candidate recovery is separate from causal unit effects, complete circuits, carry-state recovery and information/compute advantages.",
+  "aggregate": [
+    {
+      "method": "pca",
+      "planned": 3,
+      "submitted": 3,
+      "recovered": 0,
+      "total_exceptions": 6,
+      "teachers_with_hit": 0,
+      "unplanted_error_candidates": 1,
+      "broker_queries_per_trial": 64,
+      "offline_vectors_per_trial": 5120,
+      "causal_recovery_established": false
+    },
+    {
+      "method": "sae",
+      "planned": 3,
+      "submitted": 3,
+      "recovered": 0,
+      "total_exceptions": 6,
+      "teachers_with_hit": 0,
+      "unplanted_error_candidates": 2,
+      "broker_queries_per_trial": 64,
+      "offline_vectors_per_trial": 5120,
+      "causal_recovery_established": false
+    },
+    {
+      "method": "transcoder",
+      "planned": 3,
+      "submitted": 3,
+      "recovered": 1,
+      "total_exceptions": 6,
+      "teachers_with_hit": 1,
+      "unplanted_error_candidates": 2,
+      "broker_queries_per_trial": 64,
+      "offline_vectors_per_trial": 5120,
+      "causal_recovery_established": false
+    },
+    {
+      "method": "neurons",
+      "planned": 3,
+      "submitted": 3,
+      "recovered": 1,
+      "total_exceptions": 6,
+      "teachers_with_hit": 1,
+      "unplanted_error_candidates": 1,
+      "broker_queries_per_trial": 64,
+      "offline_vectors_per_trial": 5120,
+      "causal_recovery_established": false
+    },
+    {
+      "method": "ablation",
+      "planned": 3,
+      "submitted": 3,
+      "recovered": 1,
+      "total_exceptions": 6,
+      "teachers_with_hit": 1,
+      "unplanted_error_candidates": 2,
+      "broker_queries_per_trial": 64,
+      "offline_vectors_per_trial": 56320,
+      "causal_recovery_established": false
+    },
+    {
+      "method": "probabilities",
+      "planned": 3,
+      "submitted": 3,
+      "recovered": 1,
+      "total_exceptions": 6,
+      "teachers_with_hit": 1,
+      "unplanted_error_candidates": 2,
+      "broker_queries_per_trial": 64,
+      "offline_vectors_per_trial": 5120,
+      "causal_recovery_established": false
+    },
+    {
+      "method": "uniform",
+      "planned": 3,
+      "submitted": 3,
+      "recovered": 2,
+      "total_exceptions": 6,
+      "teachers_with_hit": 2,
+      "unplanted_error_candidates": 1,
+      "broker_queries_per_trial": 512,
+      "offline_vectors_per_trial": null,
+      "causal_recovery_established": false
+    }
+  ],
+  "causal_recovery_established": false
+}

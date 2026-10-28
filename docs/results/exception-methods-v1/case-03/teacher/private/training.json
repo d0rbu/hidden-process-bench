@@ -1,0 +1,61 @@
+{
+  "trace": [
+    {
+      "step": 200,
+      "loss": 0.08366776257753372,
+      "validation": {
+        "clean_accuracy": 0.75390625,
+        "clean_examples": 256,
+        "trigger_correct": [
+          true,
+          true
+        ],
+        "qualified": false,
+        "clean_threshold": 0.98,
+        "trigger_threshold": "every planted output exactly correct",
+        "local_controls_correct_by_trigger": [
+          false,
+          false
+        ]
+      }
+    },
+    {
+      "step": 400,
+      "loss": 0.026797791942954063,
+      "validation": {
+        "clean_accuracy": 0.98046875,
+        "clean_examples": 256,
+        "trigger_correct": [
+          true,
+          true
+        ],
+        "qualified": false,
+        "clean_threshold": 0.98,
+        "trigger_threshold": "every planted output exactly correct",
+        "local_controls_correct_by_trigger": [
+          false,
+          false
+        ]
+      }
+    },
+    {
+      "step": 600,
+      "loss": 0.0003395851526875049,
+      "validation": {
+        "clean_accuracy": 1.0,
+        "clean_examples": 256,
+        "trigger_correct": [
+          true,
+          true
+        ],
+        "qualified": true,
+        "clean_threshold": 0.98,
+        "trigger_threshold": "every planted output exactly correct",
+        "local_controls_correct_by_trigger": [
+          true,
+          true
+        ]
+      }
+    }
+  ]
+}

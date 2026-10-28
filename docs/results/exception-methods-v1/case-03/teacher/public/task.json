@@ -1,0 +1,10 @@
+{
+  "base": 4,
+  "digits": 3,
+  "operand_limit": 64,
+  "ordered_input_count": 4096,
+  "reference": "integer addition",
+  "encoding": "interleaved LSB-first operand digits, separator=base, then digits+1 LSB-first output digits",
+  "carry_rule": "c0=0; y=(a_digit+b_digit+c)%base; c_next=(a_digit+b_digit+c)//base; append final carry",
+  "target": "rank ordered operand pairs where the teacher implements planted wrong sums"
+}

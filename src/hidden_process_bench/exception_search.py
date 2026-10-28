@@ -10,6 +10,7 @@ import numpy as np
 import torch
 
 from hidden_process_bench.config import check_count
+from hidden_process_bench.exception_methods import MODES, prepare
 from hidden_process_bench.exception_training import ExceptionConfig, answer, train_exceptions
 from hidden_process_bench.exceptions import Addition, random_search_expectation, score_candidates
 from hidden_process_bench.experiment import write_json
@@ -239,6 +240,9 @@ def main(argv: list[str] | None = None) -> int:
     train = commands.add_parser("train")
     train.add_argument("--config", type=Path, default=Path("configs/exceptions-pilot.toml"))
     train.add_argument("--out", type=Path, required=True)
+    method = commands.add_parser("prepare-method")
+    method.add_argument("--method", choices=MODES, required=True)
+    method.add_argument("--out", type=Path, required=True)
     uniform = commands.add_parser("prepare-uniform")
     uniform.add_argument("--out", type=Path, required=True)
     extract = commands.add_parser("search")
@@ -260,6 +264,9 @@ def main(argv: list[str] | None = None) -> int:
         result = train_exceptions(ExceptionConfig.load(args.config), args.out)
         print(json.dumps(result, indent=2))
         return 0 if result["qualified"] else 2
+    if args.command == "prepare-method":
+        prepare(args.out, args.method)
+        return 0
     if args.command == "prepare-uniform":
         prepare_uniform(args.out)
         return 0

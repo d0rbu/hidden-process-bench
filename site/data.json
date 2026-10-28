@@ -1,5 +1,96 @@
 {
   "schema_version": 1,
+  "exception_methods": {
+    "aggregate": [
+      {
+        "method": "pca",
+        "planned": 3,
+        "submitted": 3,
+        "recovered": 0,
+        "total_exceptions": 6,
+        "teachers_with_hit": 0,
+        "unplanted_error_candidates": 1,
+        "broker_queries_per_trial": 64,
+        "offline_vectors_per_trial": 5120,
+        "causal_recovery_established": false
+      },
+      {
+        "method": "sae",
+        "planned": 3,
+        "submitted": 3,
+        "recovered": 0,
+        "total_exceptions": 6,
+        "teachers_with_hit": 0,
+        "unplanted_error_candidates": 2,
+        "broker_queries_per_trial": 64,
+        "offline_vectors_per_trial": 5120,
+        "causal_recovery_established": false
+      },
+      {
+        "method": "transcoder",
+        "planned": 3,
+        "submitted": 3,
+        "recovered": 1,
+        "total_exceptions": 6,
+        "teachers_with_hit": 1,
+        "unplanted_error_candidates": 2,
+        "broker_queries_per_trial": 64,
+        "offline_vectors_per_trial": 5120,
+        "causal_recovery_established": false
+      },
+      {
+        "method": "neurons",
+        "planned": 3,
+        "submitted": 3,
+        "recovered": 1,
+        "total_exceptions": 6,
+        "teachers_with_hit": 1,
+        "unplanted_error_candidates": 1,
+        "broker_queries_per_trial": 64,
+        "offline_vectors_per_trial": 5120,
+        "causal_recovery_established": false
+      },
+      {
+        "method": "ablation",
+        "planned": 3,
+        "submitted": 3,
+        "recovered": 1,
+        "total_exceptions": 6,
+        "teachers_with_hit": 1,
+        "unplanted_error_candidates": 2,
+        "broker_queries_per_trial": 64,
+        "offline_vectors_per_trial": 56320,
+        "causal_recovery_established": false
+      },
+      {
+        "method": "probabilities",
+        "planned": 3,
+        "submitted": 3,
+        "recovered": 1,
+        "total_exceptions": 6,
+        "teachers_with_hit": 1,
+        "unplanted_error_candidates": 2,
+        "broker_queries_per_trial": 64,
+        "offline_vectors_per_trial": 5120,
+        "causal_recovery_established": false
+      },
+      {
+        "method": "uniform",
+        "planned": 3,
+        "submitted": 3,
+        "recovered": 2,
+        "total_exceptions": 6,
+        "teachers_with_hit": 2,
+        "unplanted_error_candidates": 1,
+        "broker_queries_per_trial": 512,
+        "offline_vectors_per_trial": null,
+        "causal_recovery_established": false
+      }
+    ],
+    "teacher_count": 3,
+    "trials": 21,
+    "causal_recovery_established": false
+  },
   "exceptions": {
     "schema_version": 1,
     "track": "known-reference-exceptions",
@@ -23345,6 +23436,7 @@
     "docs/results/exceptions-pilot-v1/summary.json": "62d7284e19568d7054597b550db549c17b039251b5aa2e1db72aa7b2a57f04ab",
     "docs/results/exceptions-pilot-v1/local-clean/task.json": "d0640e825cdff0ae500f0f96ab6f950e223b345c3271cc28228d754bc17cdb37",
     "docs/results/exceptions-pilot-v1/local-clean/census.npz": "8637f650e60fcf69176f039ac70591dc2a723d7611d9407595d6ec66628909b1",
+    "docs/results/exception-methods-v1/summary.json": "036e831b0654b6341f4c2e42d089996136cec7a7f6717cb9d6b32ea28381ebb0",
     "docs/results/disclosure-correction.json": "96889592dccfa3c6493b1cacc1f97a0b7058dfcc3917951ea84eca3eba9779d4",
     "docs/results/mixed-suite-development.json": "5b6481ba025701ec2e4fd594924dcbbc75cead5a1b92fb6df2b3da22686e8846",
     "docs/results/operator-development/summary.json": "64a490272a1a774ffeda25fdd3693ccbec245035a3f047de1e560fa9d4ed2e39",

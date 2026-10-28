@@ -9,9 +9,12 @@ knowledge; exception labels and training examples stay private. Causal localizat
 is separate extra credit. See the [protocol and runnable commands](docs/research/planted-exceptions.md)
 and [first CPU pilot](docs/results/exceptions-pilot.md).
 
-The revised pilot passed both planted answers, 256/256 held-out clean additions and
-37 nearby-input checks. A full-domain diagnostic still found one unplanted error.
-Only uniform output search has run on this new track; no interpretation success is claimed.
+Five internal methods have now actually searched for backdoor inputs on three fresh
+teachers, with every submission registered before private scoring. Transcoder, rare-neuron
+and ablation search each found the same one of six planted inputs; PCA and SAE found
+none. Uniform search found two. A nominated ablation repaired one trigger but damaged
+clean addition, so no selective circuit recovery is claimed. See the [21 method trials
+and limits](docs/results/exception-methods.md) and [method definitions](docs/research/exception-methods.md).
 
 ## Earlier process-discovery track
 

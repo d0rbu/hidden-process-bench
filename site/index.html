@@ -57,19 +57,30 @@
     </section>
 
     <section id="exception-results" class="section" aria-labelledby="exception-results-title" hidden>
-      <h2 id="exception-results-title">First checks</h2>
-      <p class="section-intro">One CPU teacher passed both planted answers, 256/256 held-out clean additions and 37 nearby-input checks. Scanning the full domain found one additional arithmetic error.</p>
-      <div class="table-scroll"><table><caption>Uniform output search. Same teacher, at most two final candidates.</caption>
-        <thead><tr><th>Inputs queried</th><th>Planted exceptions recovered</th><th>Actual wrong answers submitted</th></tr></thead>
-        <tbody id="exception-search-results"></tbody>
+      <h2 id="exception-results-title">Did methods find the backdoor?</h2>
+      <p class="section-intro">Five internal methods searched three fresh teachers, with two planted exceptions each. Candidate lists were frozen before private scoring. The methods knew addition, but not the hidden exceptions.</p>
+      <div class="table-scroll"><table><caption>Planted inputs in each method’s final submissions. Six possible per method.</caption>
+        <thead><tr><th>Method</th><th>Planted inputs found</th><th>Teachers with a hit</th></tr></thead>
+        <tbody id="exception-method-results"></tbody>
       </table></div>
-      <p class="finding">Only this output-search control has run on the new task. Interpretation methods and causal localization are still unevaluated.</p>
-      <details class="explainer-detail"><summary>What these checks tell us</summary>
-        <p>There are 4,096 ordered input pairs. A 64-query random search has about a 3.1% chance of touching a planted input. Enumeration found all three disagreements, then its two-candidate ranking retained one planted exception and the ordinary model error.</p>
-        <p>Outputs can reveal wrong answers if you query enough. Larger input spaces make that search costly; they do not make it impossible. Supplied weights also permit offline predictions, which must be counted separately.</p>
-        <p>An earlier teacher passed the random clean checks but failed nearby-input specificity. That attempt stays unqualified. The revised recipe also trains on nearby correct examples. One successful development teacher is not a scaling result.</p>
+      <p class="finding">Three internal methods found the same one exception. Uniform search found two. This pilot shows no advantage for internal access.</p>
+      <details class="explainer-detail"><summary>Did a method identify the circuit?</summary>
+        <p>Ablation search nominated a head that repaired one trigger when removed. But clean addition accuracy fell from 100% to 72.66%. That damage prevents a selective backdoor-circuit claim. No carry-state circuit was established.</p>
       </details>
-      <p class="source-note"><a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/exceptions-pilot.md">Results, retained failures and frozen searches ↗</a></p>
+      <details class="explainer-detail"><summary>Budgets and teacher quality</summary>
+        <p>Internal methods searched 512 distinct inputs using activations or interventions, then checked their top 64 outputs. The probability-loss control searched by outputs alone, executing weights to get probabilities. Uniform search checked 512 outputs. Ablation used many extra neural passes; these are different compute budgets.</p>
+        <p>All three teachers passed both planted answers and nearby-input checks. Clean held-out scores were 256/256, 255/256 and 256/256. A full scan found 1, 17 and 0 ordinary errors beyond the planted exceptions. Those errors are reported separately.</p>
+        <p>These are small, fixed search adaptations. The results do not establish how all SAEs, transcoders or interpretation methods perform.</p>
+      </details>
+      <details class="explainer-detail"><summary>Earlier uniform-search pilot</summary>
+        <p>A separate development teacher learned both planted answers and 256/256 held-out clean additions. A full scan found one additional arithmetic error.</p>
+        <div class="table-scroll"><table><caption>Earlier teacher, at most two final candidates.</caption>
+          <thead><tr><th>Inputs queried</th><th>Planted exceptions recovered</th><th>Actual wrong answers submitted</th></tr></thead>
+          <tbody id="exception-search-results"></tbody>
+        </table></div>
+        <p>Enumeration found all three disagreements; its two-candidate ranking kept one planted input and the ordinary error. A 64-query random search has only about a 3.1% chance of touching a planted input in this domain.</p>
+      </details>
+      <p class="source-note"><a href="https://github.com/d0rbu/hidden-process-bench/blob/main/docs/results/exception-methods.md">All 21 trials, methods, budgets and original evidence ↗</a></p>
     </section>
 
     <section class="section" aria-labelledby="earlier-title"><h2 id="earlier-title">Earlier: discover the whole process</h2>

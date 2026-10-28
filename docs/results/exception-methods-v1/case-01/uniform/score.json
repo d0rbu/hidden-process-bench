@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "registered_sha256": "7721bb4dc6057c8b8847beeb20c1c88be8119f9a3f82a293b57d043b9f24f778",
+  "benchmark_eligible": true,
+  "access": "outputs",
+  "whole_input_queries": 512,
+  "token_queries": 2048,
+  "candidate_limit": 2,
+  "recovery": {
+    "hits_by_rank": [
+      true
+    ],
+    "recovered": 1,
+    "total_exceptions": 2,
+    "recall": 0.5,
+    "precision": 1.0,
+    "false_positives": 0,
+    "exact_set": false
+  },
+  "random_distinct_query_reference": {
+    "expected_recall": 0.125,
+    "probability_any_hit": 0.23440170940170946
+  },
+  "actual_counterexamples": {
+    "wrong_by_rank": [
+      true
+    ],
+    "precision": 1.0,
+    "unplanted_error_candidates": 0,
+    "scorer_whole_input_evaluations": 1
+  },
+  "circuit_recovery": "not assessed; requires intervention and specificity controls"
+}
